@@ -15,7 +15,7 @@ export default function Footer() {
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "0%"]);
 
   return (
-    <footer ref={containerRef} className="relative bg-background text-foreground pt-24 pb-12 overflow-hidden border-t border-foreground/10">
+    <footer ref={containerRef} className="relative bg-black text-white pt-24 pb-12 overflow-hidden border-t-2 border-white">
       {/* Top Thin Image Strip Above Main Footer */}
       <div className="absolute top-0 left-0 w-full h-[120px] overflow-hidden -z-10">
         <motion.div style={{ y, height: "150%" }} className="relative w-full">
@@ -42,12 +42,12 @@ export default function Footer() {
                     </svg>
                  </div>
                  <div className="flex flex-col">
-                   <span className="font-playfair text-xl uppercase tracking-wider text-foreground">H S Detectives</span>
+                   <span className="font-playfair text-xl uppercase tracking-wider text-white">H S Detectives</span>
                    <span className="font-space text-xs text-accent tracking-widest uppercase">Since 2011</span>
                  </div>
                </div>
             </Link>
-            <p className="text-foreground/60 text-sm font-inter leading-relaxed max-w-xs">
+            <p className="text-white/80 text-sm font-inter leading-relaxed max-w-xs">
               A cinematic, licensed professional detective agency operating Pan India with 100% confidentiality.
             </p>
           </div>
@@ -56,11 +56,11 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-space text-xs text-accent tracking-widest uppercase">Quick Links</h4>
             <ul className="space-y-3 font-inter text-sm">
-              <li><Link href="/" className="text-foreground/60 hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-foreground/60 hover:text-foreground transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="text-foreground/60 hover:text-foreground transition-colors">Services</Link></li>
-              <li><Link href="/packages" className="text-foreground/60 hover:text-foreground transition-colors">Pricing Packages</Link></li>
-              <li><Link href="/locations" className="text-foreground/60 hover:text-foreground transition-colors">Locations</Link></li>
+              <li><Link href="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-white/70 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/services" className="text-white/70 hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/packages" className="text-white/70 hover:text-white transition-colors">Pricing Packages</Link></li>
+              <li><Link href="/locations" className="text-white/70 hover:text-white transition-colors">Locations</Link></li>
             </ul>
           </div>
 
@@ -68,24 +68,24 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-space text-xs text-accent tracking-widest uppercase">Services</h4>
             <ul className="space-y-3 font-inter text-sm">
-              <li><Link href="/services" className="text-foreground/60 hover:text-foreground transition-colors">Personal Investigation</Link></li>
-              <li><Link href="/services" className="text-foreground/60 hover:text-foreground transition-colors">Business Investigation</Link></li>
-              <li><Link href="/services" className="text-foreground/60 hover:text-foreground transition-colors">Matrimonial Checking</Link></li>
-              <li><Link href="/services" className="text-foreground/60 hover:text-foreground transition-colors">Debugging & Sweeping</Link></li>
+              <li><Link href="/services" className="text-white/70 hover:text-white transition-colors">Personal Investigation</Link></li>
+              <li><Link href="/services" className="text-white/70 hover:text-white transition-colors">Business Investigation</Link></li>
+              <li><Link href="/services" className="text-white/70 hover:text-white transition-colors">Matrimonial Checking</Link></li>
+              <li><Link href="/services" className="text-white/70 hover:text-white transition-colors">Debugging & Sweeping</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div className="space-y-6">
             <h4 className="font-space text-xs text-accent tracking-widest uppercase">Contact Us</h4>
-            <div className="space-y-4 font-inter text-sm text-foreground/60">
+            <div className="space-y-4 font-inter text-sm text-white/70">
               <p>Mumbai HQ, Maharashtra, India</p>
               <p>1800-456-7890 (Toll Free)</p>
               <p>info@hsdetectives.com</p>
             </div>
             <Link
               href="/contact"
-              className="inline-block mt-4 px-6 py-2 border border-foreground/20 text-foreground text-xs font-space uppercase tracking-widest hover:bg-foreground hover:text-background transition-all"
+              className="inline-block mt-4 px-6 py-2 border-2 border-white text-white text-xs font-space uppercase tracking-widest hover:bg-accent hover:border-accent transition-all"
             >
               Get In Touch
             </Link>
@@ -93,13 +93,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-inter text-xs text-foreground/40">
+        <div className="pt-8 border-t-2 border-white/20 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="font-inter text-xs text-white/60">
             &copy; {new Date().getFullYear()} H S Detectives. All rights reserved.
           </p>
-          <div className="flex gap-6 font-inter text-xs text-foreground/40">
-            <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-foreground transition-colors">Terms of Service</Link>
+          <div className="flex gap-6 font-inter text-xs text-white/60">
+            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

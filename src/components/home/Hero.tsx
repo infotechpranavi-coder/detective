@@ -112,14 +112,14 @@ export default function Hero() {
                 className="object-cover img-noir"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-white/45 dark:bg-black/70 mix-blend-screen dark:mix-blend-multiply" />
+              <div className="absolute inset-0 bg-black/60" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
       </div>
 
       {/* Layer 2: Gradient to black at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/35 to-background dark:from-black/20 dark:via-black/40 dark:to-black/90 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black z-[1]" />
 
       {/* Layer 3: tsParticles */}
       {init && (
@@ -178,28 +178,28 @@ export default function Hero() {
             variants={HERO_SLIDES[currentImageIndex].textAnim as Variants}
             className="flex flex-col items-center"
           >
-            <div className="mb-6 inline-flex items-center gap-2 border border-foreground/10 bg-foreground/5 backdrop-blur-md px-4 py-1.5 rounded-full">
+            <div className="mb-6 inline-flex items-center gap-2 border border-accent/30 bg-black/80 backdrop-blur-md px-4 py-1.5 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="font-space text-[10px] md:text-xs uppercase tracking-[0.2em] text-foreground/80">
+              <span className="font-space text-[10px] md:text-xs uppercase tracking-[0.2em] text-white">
                 {HERO_SLIDES[currentImageIndex].badge}
               </span>
             </div>
 
-            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-foreground mb-6 uppercase tracking-wider leading-[1.1] max-w-5xl">
-              {HERO_SLIDES[currentImageIndex].title1} <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-light to-accent-dark italic">{HERO_SLIDES[currentImageIndex].titleHighlight}</span>
+            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white mb-6 uppercase tracking-wider leading-[1.1] max-w-5xl">
+              {HERO_SLIDES[currentImageIndex].title1} <span className="text-accent italic">{HERO_SLIDES[currentImageIndex].titleHighlight}</span>
             </h1>
 
-            <p className="font-inter text-foreground/70 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="font-inter text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
               {HERO_SLIDES[currentImageIndex].description}
             </p>
           </motion.div>
         </AnimatePresence>
 
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5 absolute bottom-0 md:bottom-10 translate-y-full">
-          <Link href="/contact" className="px-8 py-4 bg-accent text-background font-space text-xs sm:text-sm uppercase tracking-widest font-bold hover:bg-foreground transition-colors duration-300">
+          <Link href="/contact" className="px-8 py-4 bg-accent text-white font-space text-xs sm:text-sm uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300">
             Discuss Your Case
           </Link>
-          <Link href="/services" className="px-8 py-4 bg-transparent border border-foreground/20 text-foreground font-space text-xs sm:text-sm uppercase tracking-widest hover:border-accent hover:text-accent transition-colors duration-300 flex items-center justify-center gap-2 group">
+          <Link href="/services" className="px-8 py-4 bg-transparent border-2 border-white text-white font-space text-xs sm:text-sm uppercase tracking-widest hover:border-accent hover:bg-accent transition-colors duration-300 flex items-center justify-center gap-2 group">
             Our Services
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
@@ -214,8 +214,8 @@ export default function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         style={{ opacity: opacityFade }}
       >
-        <span className="font-space text-[10px] uppercase tracking-[0.3em] text-foreground/40 rotate-90 origin-left translate-y-8 -translate-x-3 absolute left-0 w-max">Scroll</span>
-        <div className="w-[1px] h-16 bg-gradient-to-b from-accent/50 to-transparent relative overflow-hidden">
+        <span className="font-space text-[10px] uppercase tracking-[0.3em] text-white/60 rotate-90 origin-left translate-y-8 -translate-x-3 absolute left-0 w-max">Scroll</span>
+        <div className="w-[1px] h-16 bg-gradient-to-b from-accent to-transparent relative overflow-hidden">
           <motion.div 
             className="absolute top-0 left-0 w-full h-1/2 bg-accent"
             animate={{ top: ["-50%", "150%"] }}

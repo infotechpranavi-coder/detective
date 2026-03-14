@@ -25,13 +25,13 @@
   :root {
     --background: #000000;
     --foreground: #FFFFFF;
-    --secondary-bg: #111111;
-    --surface: #111111;
-    --card: #111111;
-    --text-secondary: #CFCFCF;
+    --secondary-bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --card: #FFFFFF;
+    --text-secondary: #000000;
     --text-muted: #666666;
-    --border-subtle: #2E2E2E;
-    --img-filter: grayscale(20%) contrast(1.1) brightness(0.85);
+    --border-subtle: #E5E5E5;
+    --img-filter: grayscale(0%) contrast(1.1) brightness(1);
     --selection-text: #FFFFFF;
     --body-image: none;
     --body-image-size: auto;
@@ -42,13 +42,13 @@
   .dark {
     --background: #000000;
     --foreground: #FFFFFF;
-    --secondary-bg: #111111;
-    --surface: #111111;
-    --card: #111111;
-    --text-secondary: #CFCFCF;
+    --secondary-bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --card: #FFFFFF;
+    --text-secondary: #000000;
     --text-muted: #666666;
-    --border-subtle: #2E2E2E;
-    --img-filter: grayscale(20%) contrast(1.1) brightness(0.85);
+    --border-subtle: #E5E5E5;
+    --img-filter: grayscale(0%) contrast(1.1) brightness(1);
     --selection-text: #FFFFFF;
     --body-image: none;
     --body-image-size: auto;
@@ -121,6 +121,12 @@ body {
 :root .bg-background\/70 { background-color: rgba(0, 0, 0, 0.7); }
 :root .bg-background\/80 { background-color: rgba(0, 0, 0, 0.8); }
 :root .bg-background\/90 { background-color: rgba(0, 0, 0, 0.9); }
+
+/* White background helpers */
+:root .bg-white\/50 { background-color: rgba(255, 255, 255, 0.5); }
+:root .bg-white\/70 { background-color: rgba(255, 255, 255, 0.7); }
+:root .bg-white\/80 { background-color: rgba(255, 255, 255, 0.8); }
+:root .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
 
 /* gradient fixes for hero section */
 :root .from-background\/30 { --tw-gradient-from: rgba(0, 0, 0, 0.3); }

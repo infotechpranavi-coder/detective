@@ -33,13 +33,13 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
-          scrolled ? "bg-background/90 backdrop-blur-md border-b border-border-subtle py-4" : "bg-transparent py-6"
+          scrolled ? "bg-white/95 backdrop-blur-md border-b-2 border-black py-4" : "bg-transparent py-6"
         }`}
       >
         <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group z-[101]">
-            <div className="relative w-14 h-14 flex items-center justify-center overflow-hidden bg-white rounded-full border border-border-subtle shadow-[0_0_15px_rgba(255,255,255,0.2)] p-1 group-hover:border-accent transition-colors duration-500 dark:shadow-[0_0_15px_rgba(0,0,0,0.8)] dark:border-white/20">
+            <div className="relative w-14 h-14 flex items-center justify-center overflow-hidden bg-white rounded-full border-2 border-black shadow-lg p-1 group-hover:border-accent transition-colors duration-500">
               <Image 
                 src="/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png" 
                 alt="HS Detectives Logo" 
@@ -49,10 +49,10 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-playfair text-lg leading-tight uppercase tracking-wider text-foreground group-hover:text-accent transition-colors duration-500">
+              <span className={`font-playfair text-lg leading-tight uppercase tracking-wider group-hover:text-accent transition-colors duration-500 ${scrolled ? 'text-black' : 'text-white'}`}>
                 H S Detectives
               </span>
-              <span className="font-space text-xs text-foreground/50 tracking-widest uppercase">Since 2011</span>
+              <span className={`font-space text-xs tracking-widest uppercase ${scrolled ? 'text-black/70' : 'text-white/70'}`}>Since 2011</span>
             </div>
           </Link>
 
@@ -65,7 +65,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.path}
                   className={`relative font-inter text-sm tracking-wide uppercase transition-colors duration-300 ${
-                    isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
+                    isActive ? "text-accent" : scrolled ? "text-black/70 hover:text-black" : "text-white/70 hover:text-white"
                   }`}
                 >
                   {link.name}
@@ -83,7 +83,11 @@ export default function Navbar() {
             })}
             <Link
               href="/contact"
-              className="ml-4 px-6 py-2 border border-border-subtle text-foreground text-sm font-space uppercase tracking-wider hover:bg-accent hover:border-accent hover:text-black transition-all duration-300"
+              className={`ml-4 px-6 py-2 border-2 text-sm font-space uppercase tracking-wider transition-all duration-300 ${
+                scrolled 
+                  ? "border-black text-black hover:bg-accent hover:border-accent hover:text-white" 
+                  : "border-white text-white hover:bg-accent hover:border-accent hover:text-white"
+              }`}
             >
               Get a Quote
             </Link>
@@ -92,7 +96,7 @@ export default function Navbar() {
           {/* Mobile Actions */}
           <div className="md:hidden flex items-center gap-4 z-[101]">
             <button
-              className="text-foreground"
+              className={scrolled ? "text-black" : "text-white"}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -109,7 +113,7 @@ export default function Navbar() {
             animate={{ opacity: 1, clipPath: "circle(150% at top right)" }}
             exit={{ opacity: 0, clipPath: "circle(0% at top right)" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 bg-background z-50 flex flex-col justify-center items-center"
+            className="fixed inset-0 bg-white z-50 flex flex-col justify-center items-center"
           >
             <nav className="flex flex-col gap-8 text-center">
               {navLinks.map((link) => (
@@ -118,7 +122,7 @@ export default function Navbar() {
                   href={link.path}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`font-playfair text-4xl uppercase tracking-wider ${
-                    pathname === link.path ? "text-accent" : "text-foreground"
+                    pathname === link.path ? "text-accent" : "text-black"
                   }`}
                 >
                   {link.name}

@@ -41,7 +41,7 @@ export default function TeamCredentials() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-playfair text-3xl md:text-5xl lg:text-6xl text-foreground uppercase tracking-wider leading-snug drop-shadow-xl max-w-4xl"
+            className="font-playfair text-3xl md:text-5xl lg:text-6xl text-white uppercase tracking-wider leading-snug drop-shadow-xl max-w-4xl"
           >
             A Team of Licensed Professional <span className="text-accent italic">Investigators</span>
           </motion.h2>
@@ -52,7 +52,7 @@ export default function TeamCredentials() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Qualifications</span>
-            <h3 className="font-playfair text-3xl text-foreground mt-4 uppercase tracking-wider">Credentials & Capabilities</h3>
+            <h3 className="font-playfair text-3xl text-white mt-4 uppercase tracking-wider">Credentials & Capabilities</h3>
           </motion.div>
         </div>
 
@@ -66,12 +66,12 @@ export default function TeamCredentials() {
           {CREDENTIALS.map((cred, i) => {
             const Icon = cred.icon;
             return (
-              <motion.div key={i} variants={fadeUp} className="bg-card border border-foreground/5 p-8 hover:border-accent/30 transition-colors group">
-                <div className="w-14 h-14 bg-background border border-foreground/10 rounded-full flex items-center justify-center mb-6 group-hover:border-accent group-hover:bg-accent/10 transition-colors">
+              <motion.div key={i} variants={fadeUp} className="bg-white border-2 border-black p-8 hover:border-accent transition-colors group">
+                <div className="w-14 h-14 bg-white border-2 border-black rounded-full flex items-center justify-center mb-6 group-hover:border-accent group-hover:bg-accent/10 transition-colors">
                   <Icon size={24} className="text-accent group-hover:scale-110 transition-transform" />
                 </div>
-                <h4 className="font-playfair text-xl text-foreground mb-3 uppercase tracking-wider">{cred.title}</h4>
-                <p className="font-inter text-sm text-foreground/50 leading-relaxed">{cred.desc}</p>
+                <h4 className="font-playfair text-xl text-black mb-3 uppercase tracking-wider group-hover:text-accent transition-colors">{cred.title}</h4>
+                <p className="font-inter text-sm text-black/70 leading-relaxed">{cred.desc}</p>
               </motion.div>
             );
           })}

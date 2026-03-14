@@ -74,7 +74,7 @@ export default function ServicesSlider() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-24 bg-card relative overflow-hidden border-t border-foreground/5">
+    <section className="py-24 bg-white relative overflow-hidden border-t-2 border-black">
       <div className="container mx-auto px-6 lg:px-12 mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -86,8 +86,8 @@ export default function ServicesSlider() {
             <div className="h-[1px] w-12 bg-accent" />
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Core Expertise</span>
           </div>
-          <h2 className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider">
-            Our Investigative<br /><span className="text-foreground/40 italic">Services</span>
+          <h2 className="font-playfair text-4xl md:text-5xl text-black uppercase tracking-wider">
+            Our Investigative<br /><span className="text-accent italic">Services</span>
           </h2>
         </motion.div>
 
@@ -101,14 +101,14 @@ export default function ServicesSlider() {
           <button 
             onClick={scrollPrev} 
             disabled={!prevBtnEnabled}
-            className={`w-12 h-12 flex items-center justify-center border transition-all ${prevBtnEnabled ? 'border-foreground/20 dark:border-white/30 text-foreground hover:bg-accent hover:border-accent hover:text-background' : 'border-foreground/10 text-foreground/20 cursor-not-allowed'}`}
+            className={`w-12 h-12 flex items-center justify-center border-2 transition-all ${prevBtnEnabled ? 'border-black text-black hover:bg-accent hover:border-accent hover:text-white' : 'border-black/20 text-black/20 cursor-not-allowed'}`}
           >
             <ChevronLeft size={20} />
           </button>
           <button 
             onClick={scrollNext} 
             disabled={!nextBtnEnabled}
-            className={`w-12 h-12 flex items-center justify-center border transition-all ${nextBtnEnabled ? 'border-foreground/20 dark:border-white/30 text-foreground hover:bg-accent hover:border-accent hover:text-background' : 'border-foreground/10 text-foreground/20 cursor-not-allowed'}`}
+            className={`w-12 h-12 flex items-center justify-center border-2 transition-all ${nextBtnEnabled ? 'border-black text-black hover:bg-accent hover:border-accent hover:text-white' : 'border-black/20 text-black/20 cursor-not-allowed'}`}
           >
             <ChevronRight size={20} />
           </button>
@@ -127,41 +127,41 @@ export default function ServicesSlider() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="group bg-surface border border-foreground/5 h-full flex flex-col"
+                    className="group bg-white border-2 border-black h-full flex flex-col hover:border-accent transition-colors duration-300"
                   >
                     {/* Top Image Half */}
-                    <div className="relative h-[220px] w-full overflow-hidden">
+                    <div className="relative h-[220px] w-full overflow-hidden bg-black">
                       <img 
                         src={service.image} 
                         alt={service.title} 
-                        className="w-full h-full object-cover img-noir transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-colors duration-500" />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
                       
                       {/* Icon */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-foreground/20 bg-background/40 backdrop-blur-md flex items-center justify-center pointer-events-none group-hover:border-accent/50 group-hover:text-accent transition-colors duration-500">
-                        <Icon size={24} className="text-foreground group-hover:text-accent transition-colors" />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full border-2 border-white bg-black/60 backdrop-blur-md flex items-center justify-center pointer-events-none group-hover:border-accent group-hover:bg-accent transition-colors duration-500">
+                        <Icon size={24} className="text-white group-hover:text-white transition-colors" />
                       </div>
 
                       {/* Category Label */}
                       <div className="absolute bottom-4 left-6">
-                        <span className="font-space text-[10px] text-accent tracking-widest uppercase bg-background/80 px-2 py-1 border border-foreground/10">{service.category}</span>
+                        <span className="font-space text-[10px] text-white tracking-widest uppercase bg-accent px-2 py-1 border-2 border-white">{service.category}</span>
                       </div>
                     </div>
 
                     {/* Bottom Content Half */}
-                    <div className="p-8 flex flex-col flex-grow relative">
-                      <h3 className="font-playfair text-xl text-foreground mb-4 uppercase tracking-wider">{service.title}</h3>
-                      <p className="font-inter text-sm text-foreground/50 leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                    <div className="p-8 flex flex-col flex-grow relative bg-white">
+                      <h3 className="font-playfair text-xl text-black mb-4 uppercase tracking-wider group-hover:text-accent transition-colors">{service.title}</h3>
+                      <p className="font-inter text-sm text-black/70 leading-relaxed mb-6 flex-grow">{service.desc}</p>
                       <Link 
                         href="/services" 
-                        className="inline-flex items-center gap-2 font-space text-[11px] uppercase tracking-widest text-accent hover:text-foreground transition-colors mt-auto w-max"
+                        className="inline-flex items-center gap-2 font-space text-[11px] uppercase tracking-widest text-accent hover:text-black transition-colors mt-auto w-max"
                       >
                         Know More <span className="text-lg leading-none">→</span>
                       </Link>
                       
                       {/* Hover subtle gradient overlay */}
-                      <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-accent-dark via-accent to-accent-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute inset-x-0 bottom-0 h-1 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   </motion.div>
                 </div>

@@ -50,7 +50,7 @@ export default function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-32 relative overflow-hidden bg-secondary-bg">
+    <section className="py-32 relative overflow-hidden bg-white border-t-2 border-black">
       {/* Blurred Background Texture */}
       <div className="absolute inset-0 z-0 pointer-events-none mix-blend-screen opacity-[0.04]">
         <Image
@@ -74,8 +74,8 @@ export default function Testimonials() {
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Client Feedback</span>
             <div className="h-[1px] w-12 bg-accent" />
           </motion.div>
-          <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider">
-            Words Of <span className="text-foreground/40 italic">Trust</span>
+          <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-black uppercase tracking-wider">
+            Words Of <span className="text-accent italic">Trust</span>
           </motion.h2>
         </motion.div>
 
@@ -85,28 +85,28 @@ export default function Testimonials() {
             <div className="flex -ml-4">
                {REVIEWS.map((review, i) => (
                  <div key={i} className="flex-[0_0_100%] md:flex-[0_0_80%] pl-4">
-                   <div className="bg-card border border-foreground/5 p-8 md:p-12 relative mt-12 rounded-sm group hover:border-accent/20 transition-colors">
+                   <div className="bg-white border-2 border-black p-8 md:p-12 relative mt-12 group hover:border-accent transition-colors">
                      {/* Quote Icon */}
-                     <Quote size={80} className="absolute top-6 right-6 text-foreground/5 group-hover:text-accent/10 dark:group-hover:text-accent/5 transition-colors" />
+                     <Quote size={80} className="absolute top-6 right-6 text-black/5 group-hover:text-accent/10 transition-colors" />
                      
                      {/* Avatar */}
-                     <div className="absolute -top-12 left-8 md:left-12 w-24 h-24 rounded-full border-2 border-foreground/20 p-1 bg-card">
+                     <div className="absolute -top-12 left-8 md:left-12 w-24 h-24 rounded-full border-2 border-black p-1 bg-white">
                        <div className="relative w-full h-full rounded-full overflow-hidden">
                          <Image 
                            src={review.image} 
                            alt={review.name} 
                            fill 
-                           className="object-cover img-noir group-hover:filter-none transition-all duration-500" 
+                           className="object-cover transition-all duration-500" 
                          />
                        </div>
                      </div>
 
                      <div className="pt-12">
-                       <p className="font-inter text-lg md:text-xl text-foreground/80 leading-relaxed mb-8 italic">
+                       <p className="font-inter text-lg md:text-xl text-black/80 leading-relaxed mb-8 italic">
                          "{review.text}"
                        </p>
                        <div>
-                         <h4 className="font-playfair text-xl text-foreground uppercase tracking-widest">{review.name}</h4>
+                         <h4 className="font-playfair text-xl text-black uppercase tracking-widest">{review.name}</h4>
                          <p className="font-space text-[10px] text-accent tracking-[0.2em] uppercase mt-1">{review.role}</p>
                        </div>
                      </div>
@@ -120,13 +120,13 @@ export default function Testimonials() {
           <div className="flex justify-center gap-4 mt-12">
             <button 
               onClick={scrollPrev} 
-              className="w-12 h-12 rounded-full border border-foreground/20 text-foreground flex items-center justify-center hover:bg-accent hover:border-accent hover:text-background transition-all"
+              className="w-12 h-12 rounded-full border-2 border-black text-black flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
               onClick={scrollNext} 
-              className="w-12 h-12 rounded-full border border-foreground/20 text-foreground flex items-center justify-center hover:bg-accent hover:border-accent hover:text-background transition-all"
+              className="w-12 h-12 rounded-full border-2 border-black text-black flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all"
             >
               <ChevronRight size={20} />
             </button>

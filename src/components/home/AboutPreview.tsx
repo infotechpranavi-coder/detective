@@ -7,7 +7,7 @@ import { fadeUp, fadeRight, staggerContainer, scaleUp } from "@/lib/animations";
 
 export default function AboutPreview() {
   return (
-    <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-white relative overflow-hidden border-t-2 border-black">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
           
@@ -24,12 +24,12 @@ export default function AboutPreview() {
               <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">The Agency</span>
             </motion.div>
 
-            <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.1]">
+            <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl lg:text-6xl text-black leading-[1.1]">
               INTELLIGENCE GATHERED.<br />
-              <span className="text-foreground/40 italic">SECRETS UNCOVERED.</span>
+              <span className="text-accent italic">SECRETS UNCOVERED.</span>
             </motion.h2>
 
-            <motion.div variants={fadeUp} className="space-y-6 text-foreground/70 font-inter text-base md:text-lg leading-relaxed max-w-2xl">
+            <motion.div variants={fadeUp} className="space-y-6 text-black/80 font-inter text-base md:text-lg leading-relaxed max-w-2xl">
               <p>
                 Established in 2011, H S Detectives has built a formidable reputation as India&apos;s most trusted private investigation agency. We specialize in complex corporate espionage, matrimonial verifications, and high-stakes surveillance operations.
               </p>
@@ -40,8 +40,8 @@ export default function AboutPreview() {
 
             <motion.div variants={fadeUp} className="pt-4 flex items-center gap-8">
               <Link href="/about" className="group relative inline-flex items-center gap-4 pb-2">
-                <span className="font-space text-sm tracking-widest text-foreground uppercase group-hover:text-accent transition-colors">Read Our Story</span>
-                <span className="w-8 h-[1px] bg-foreground group-hover:bg-accent group-hover:w-12 transition-all duration-300" />
+                <span className="font-space text-sm tracking-widest text-black uppercase group-hover:text-accent transition-colors">Read Our Story</span>
+                <span className="w-8 h-[1px] bg-black group-hover:bg-accent group-hover:w-12 transition-all duration-300" />
               </Link>
             </motion.div>
           </motion.div>
@@ -61,21 +61,21 @@ export default function AboutPreview() {
               height={700}
               animation="revealLeft"
               className="w-full aspect-[4/5] md:aspect-[3/4]"
-              containerClassName="border border-foreground/10"
-              overlay="bg-gradient-to-br from-white/10 via-accent/10 to-background/70 dark:from-black/20 dark:to-black/60 mix-blend-normal"
+              containerClassName="border-2 border-black"
+              overlay="bg-gradient-to-br from-black/20 via-accent/20 to-black/60 mix-blend-normal"
             />
 
             {/* Floating Logo Card - Bottom Left */}
             <motion.div 
               variants={fadeUp}
-              className="absolute -left-6 md:-left-12 -bottom-6 bg-background/85 backdrop-blur-md border border-foreground/10 p-5 md:p-6 flex items-center gap-4 z-10"
+              className="absolute -left-6 md:-left-12 -bottom-6 bg-white border-2 border-black p-5 md:p-6 flex items-center gap-4 z-10 shadow-lg"
             >
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-accent">
                 <path d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2ZM5.12 15C3.39 15 2 16.39 2 18.12V22H22V18.12C22 16.39 20.61 15 18.88 15H5.12Z" fill="currentColor"/>
               </svg>
               <div className="flex flex-col">
-                <span className="font-playfair text-foreground text-lg leading-tight uppercase tracking-wider">H S Detectives</span>
-                <span className="font-space text-accent/80 text-[10px] tracking-widest uppercase">Since 2011</span>
+                <span className="font-playfair text-black text-lg leading-tight uppercase tracking-wider">H S Detectives</span>
+                <span className="font-space text-accent text-[10px] tracking-widest uppercase">Since 2011</span>
               </div>
             </motion.div>
 
@@ -85,7 +85,7 @@ export default function AboutPreview() {
                 <motion.div 
                   key={i}
                   variants={scaleUp}
-                  className="bg-background/90 border border-foreground/15 px-4 py-2 font-space text-[10px] text-foreground tracking-widest uppercase shadow-2xl backdrop-blur-sm whitespace-nowrap"
+                  className="bg-white border-2 border-black px-4 py-2 font-space text-[10px] text-black tracking-widest uppercase shadow-lg whitespace-nowrap"
                 >
                   {stat}
                 </motion.div>

@@ -13,7 +13,7 @@ const ITEMS = [
 
 export default function Marquee() {
   return (
-    <div className="w-full bg-accent py-4 overflow-hidden flex items-center border-y border-accent-dark z-20 relative">
+    <div className="w-full bg-yellow-400 py-4 overflow-hidden flex items-center border-y-2 border-black z-20 relative">
       <motion.div
         className="flex whitespace-nowrap gap-10"
         animate={{ x: [0, -1000] }}
@@ -25,10 +25,10 @@ export default function Marquee() {
       >
         {[...ITEMS, ...ITEMS, ...ITEMS].map((item, i) => (
           <div key={i} className="flex items-center gap-10">
-            <span className="font-space text-background font-bold uppercase tracking-widest text-sm">
+            <span className="font-space text-black font-bold uppercase tracking-widest text-sm">
               {item}
             </span>
-            <span className="text-black/30">✦</span>
+            <span className="text-black">✦</span>
           </div>
         ))}
       </motion.div>

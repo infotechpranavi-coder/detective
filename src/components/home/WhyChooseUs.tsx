@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
         animation="parallax"
         parallaxY={parallaxY}
         containerClassName="absolute inset-0 z-0"
-        overlay="bg-white/65 dark:bg-black/82"
+        overlay="bg-black/80"
       />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -61,8 +61,8 @@ export default function WhyChooseUs() {
               <div className="h-[1px] w-12 bg-accent" />
               <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">The Advantage</span>
             </motion.div>
-            <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider leading-[1.1]">
-              Why Clients Trust<br /><span className="text-foreground/40 italic">H S Detectives</span>
+            <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-white uppercase tracking-wider leading-[1.1]">
+              Why Clients Trust<br /><span className="text-accent italic">H S Detectives</span>
             </motion.h2>
           </motion.div>
           
@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="text-foreground/60 font-inter text-sm max-w-sm"
+            className="text-white/80 font-inter text-sm max-w-sm"
           >
             When standard methods fail to produce the truth, individuals and corporations turn to us for definitive answers and actionable evidence.
           </motion.p>
@@ -88,15 +88,15 @@ export default function WhyChooseUs() {
             <motion.div 
               key={i} 
               variants={fadeUp}
-              className="bg-white/80 dark:bg-black/75 backdrop-blur-md border border-foreground/10 p-8 hover:border-accent/40 transition-colors duration-500 group relative overflow-hidden shadow-[0_18px_60px_rgba(242,10,10,0.08)]"
+              className="bg-white border-2 border-black p-8 hover:border-accent transition-colors duration-500 group relative overflow-hidden shadow-[0_18px_60px_rgba(242,10,10,0.15)]"
             >
-              <div className="font-space text-5xl text-foreground/5 font-bold absolute -top-4 -right-2 transition-transform duration-700 group-hover:-translate-y-2">{feature.num}</div>
+              <div className="font-space text-5xl text-black/10 font-bold absolute -top-4 -right-2 transition-transform duration-700 group-hover:-translate-y-2">{feature.num}</div>
               <div className="font-space flex flex-col mb-12">
                 <span className="text-accent text-[10px] tracking-widest uppercase mb-2">Advantage</span>
                 <span className="text-accent text-2xl font-bold tracking-wider">{feature.num}</span>
               </div>
-              <h3 className="font-playfair text-xl text-foreground mb-4 uppercase tracking-wider group-hover:text-accent transition-colors">{feature.title}</h3>
-              <p className="font-inter text-sm text-foreground/50 leading-relaxed">{feature.desc}</p>
+              <h3 className="font-playfair text-xl text-black mb-4 uppercase tracking-wider group-hover:text-accent transition-colors">{feature.title}</h3>
+              <p className="font-inter text-sm text-black/70 leading-relaxed">{feature.desc}</p>
             </motion.div>
           ))}
         </motion.div>
