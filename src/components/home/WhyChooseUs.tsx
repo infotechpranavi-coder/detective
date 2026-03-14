@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
             <motion.div 
               key={i} 
               variants={fadeUp}
-              className="bg-white border-2 border-black p-8 hover:border-accent transition-colors duration-500 group relative overflow-hidden shadow-[0_18px_60px_rgba(242,10,10,0.15)]"
+              className="bg-white border-2 border-black p-8 hover:border-accent transition-colors duration-500 group relative overflow-hidden shadow-[0_18px_60px_rgba(238,57,57,0.15)]"
             >
               <div className="font-space text-5xl text-black/10 font-bold absolute -top-4 -right-2 transition-transform duration-700 group-hover:-translate-y-2">{feature.num}</div>
               <div className="font-space flex flex-col mb-12">

@@ -2,7 +2,6 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -18,17 +17,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-32 bg-[#080808] relative overflow-hidden border-t border-foreground/5">
-      {/* Subtle Texture */}
-      <div className="absolute inset-0 z-0 pointer-events-none mix-blend-screen opacity-[0.06]">
-        <Image
-          src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1920&q=80"
-          alt="Texture"
-          fill
-          className="object-cover blur-[8px]"
-        />
-      </div>
-
+    <section className="py-32 bg-white relative overflow-hidden border-t-2 border-black">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
@@ -37,10 +26,10 @@ export default function FAQSection() {
                 <div className="h-[1px] w-12 bg-accent" />
                 <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Inquiries</span>
               </motion.div>
-              <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider mb-6">
-                Frequently Asked <br /><span className="text-foreground/40 italic">Questions</span>
+              <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-black uppercase tracking-wider mb-6">
+                Frequently Asked <br /><span className="text-accent italic">Questions</span>
               </motion.h2>
-              <motion.p variants={fadeUp} className="font-inter text-foreground/60 leading-relaxed mb-8">
+              <motion.p variants={fadeUp} className="font-inter text-black/70 leading-relaxed mb-8">
                 Hiring a private investigator is a significant decision. We believe in total transparency regarding our methods, legality, and deliverables.
               </motion.p>
             </motion.div>
@@ -57,13 +46,13 @@ export default function FAQSection() {
               {FAQS.map((faq, i) => {
                 const isOpen = openIndex === i;
                 return (
-                  <motion.div key={i} variants={fadeUp} className="border border-foreground/10 bg-background/40 backdrop-blur-md">
+                  <motion.div key={i} variants={fadeUp} className="border-2 border-black bg-white">
                     <button
-                      className="w-full flex items-center justify-between p-6 md:p-8 text-left group"
+                      className="w-full flex items-center justify-between p-6 md:p-8 text-left group hover:border-accent transition-colors"
                       onClick={() => setOpenIndex(isOpen ? null : i)}
                     >
-                      <h4 className={`font-playfair text-lg md:text-xl uppercase tracking-wider transition-colors ${isOpen ? 'text-accent' : 'text-foreground group-hover:text-accent/80'}`}>{faq.q}</h4>
-                      <div className={`shrink-0 ml-4 transition-transform duration-300 ${isOpen ? 'rotate-180 text-accent' : 'text-foreground/40'}`}>
+                      <h4 className={`font-playfair text-lg md:text-xl uppercase tracking-wider transition-colors ${isOpen ? 'text-accent' : 'text-black group-hover:text-accent'}`}>{faq.q}</h4>
+                      <div className={`shrink-0 ml-4 transition-transform duration-300 ${isOpen ? 'rotate-180 text-accent' : 'text-black/60'}`}>
                         {isOpen ? <Minus size={20} /> : <Plus size={20} />}
                       </div>
                     </button>
@@ -77,7 +66,7 @@ export default function FAQSection() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <div className="px-6 md:px-8 pb-8 pt-0 font-inter text-sm md:text-base text-foreground/60 leading-relaxed">
+                          <div className="px-6 md:px-8 pb-8 pt-0 font-inter text-sm md:text-base text-black/70 leading-relaxed">
                             {faq.a}
                           </div>
                         </motion.div>

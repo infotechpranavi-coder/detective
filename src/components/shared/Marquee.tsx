@@ -13,7 +13,7 @@ const ITEMS = [
 
 export default function Marquee() {
   return (
-    <div className="w-full bg-yellow-400 py-4 overflow-hidden flex items-center border-y-2 border-black z-20 relative">
+    <div className="w-full py-4 overflow-hidden flex items-center border-y-2 border-black z-20 relative" style={{ backgroundColor: "#EE3939" }}>
       <motion.div
         className="flex whitespace-nowrap gap-10"
         animate={{ x: [0, -1000] }}

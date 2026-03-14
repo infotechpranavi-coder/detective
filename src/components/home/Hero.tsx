@@ -196,7 +196,7 @@ export default function Hero() {
         </AnimatePresence>
 
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5 absolute bottom-0 md:bottom-10 translate-y-full">
-          <Link href="/contact" className="px-8 py-4 bg-accent text-white font-space text-xs sm:text-sm uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300">
+          <Link href="/contact" className="px-10 py-5 bg-accent text-white font-space text-sm sm:text-base uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300 shadow-lg">
             Discuss Your Case
           </Link>
           <Link href="/services" className="px-8 py-4 bg-transparent border-2 border-white text-white font-space text-xs sm:text-sm uppercase tracking-widest hover:border-accent hover:bg-accent transition-colors duration-300 flex items-center justify-center gap-2 group">

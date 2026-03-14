@@ -6,14 +6,14 @@
   --color-secondary-bg: var(--secondary-bg);
   --color-surface: var(--surface);
   --color-card: var(--card);
-  --color-accent: #F20A0A;
-  --color-accent-light: #FF4444;
-  --color-accent-dark: #B30000;
+  --color-accent: #EE3939;
+  --color-accent-light: #FF5555;
+  --color-accent-dark: #CC2E2E;
   --color-text-primary: var(--foreground);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-border-subtle: var(--border-subtle);
-  --color-border-accent: rgba(242, 10, 10, 0.25);
+  --color-border-accent: rgba(238, 57, 57, 0.25);
 
   --font-playfair: var(--font-playfair);
   --font-inter: var(--font-inter);
@@ -81,7 +81,7 @@ body {
 
 /* Custom Selection */
 ::selection {
-  background: rgba(242, 10, 10, 0.4);
+  background: rgba(238, 57, 57, 0.4);
   color: var(--selection-text);
 }
 
@@ -102,7 +102,7 @@ body {
 
 /* Accent gradient text helper */
 .accent-text {
-  background: linear-gradient(to right, #F20A0A, #FF4444, #B30000);
+  background: linear-gradient(to right, #EE3939, #FF5555, #CC2E2E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -46,7 +46,7 @@ const SERVICES = [
 
 export default function ServicesGrid() {
   return (
-    <section className="py-24 md:py-32 bg-background border-t border-foreground/5">
+    <section className="py-24 md:py-32 bg-white border-t-2 border-black">
       <div className="container mx-auto px-6 lg:px-12">
         
         <motion.div 
@@ -59,8 +59,8 @@ export default function ServicesGrid() {
           <motion.div variants={fadeUp} className="flex justify-center items-center gap-4 mb-4">
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Comprehensive Solutions</span>
           </motion.div>
-          <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider">
-            All Specialized <span className="text-foreground/40 italic">Services</span>
+          <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-black uppercase tracking-wider">
+            All Specialized <span className="text-accent italic">Services</span>
           </motion.h2>
         </motion.div>
 
@@ -74,34 +74,34 @@ export default function ServicesGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group bg-card border border-foreground/5 flex flex-col h-full hover:border-accent/30 transition-colors duration-500 overflow-hidden"
+                className="group bg-white border-2 border-black flex flex-col h-full hover:border-accent transition-colors duration-500 overflow-hidden"
               >
                 {/* Image Header */}
-                <div className="relative h-[220px] w-full overflow-hidden shrink-0">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover img-noir group-hover:scale-105 transition-transform duration-[700ms]" />
-                  <div className="absolute inset-0 bg-background/50 mix-blend-multiply" />
+                <div className="relative h-[220px] w-full overflow-hidden shrink-0 bg-black">
+                  <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[700ms]" />
+                  <div className="absolute inset-0 bg-black/40" />
                   
                   {/* Subtle bottom gradient */}
-                  <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background to-transparent pointer-events-none dark:from-[#0D0D0D]" />
+                  <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent pointer-events-none" />
 
                   {/* Number & Category */}
                   <div className="absolute bottom-4 left-6 z-10">
-                    <span className="font-bebas text-5xl text-foreground/40 group-hover:text-accent/60 transition-colors drop-shadow-lg leading-none block">{s.num}</span>
+                    <span className="font-bebas text-5xl text-white/60 group-hover:text-accent transition-colors drop-shadow-lg leading-none block">{s.num}</span>
                     <span className="font-space text-[10px] text-accent tracking-[0.15em] uppercase mt-1 block">{s.category}</span>
                   </div>
 
                   {/* Icon Center */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] rounded-full bg-foreground/10 backdrop-blur-md border border-foreground/20 flex items-center justify-center z-10 group-hover:scale-110 group-hover:border-accent/50 group-hover:bg-accent/10 transition-all duration-500">
-                    <Icon size={32} className="text-foreground group-hover:text-accent transition-colors" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] rounded-full bg-white/20 backdrop-blur-md border-2 border-white flex items-center justify-center z-10 group-hover:scale-110 group-hover:border-accent group-hover:bg-accent/20 transition-all duration-500">
+                    <Icon size={32} className="text-white group-hover:text-white transition-colors" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-8 flex flex-col flex-grow bg-white dark:bg-[#0D0D0D] relative z-20">
-                  <h3 className="font-playfair text-xl text-foreground uppercase tracking-wider mb-4 group-hover:text-accent transition-colors">{s.title}</h3>
-                  <p className="font-inter text-sm text-foreground/50 leading-relaxed max-w-md flex-grow">{s.desc}</p>
-                  <div className="mt-8 pt-6 border-t border-foreground/10 w-full flex justify-between items-center group-hover:border-accent/20 transition-colors">
-                    <Link href="/contact" className="font-space text-[10px] tracking-widest text-accent uppercase hover:text-foreground transition-colors">
+                <div className="p-8 flex flex-col flex-grow bg-white relative z-20">
+                  <h3 className="font-playfair text-xl text-black uppercase tracking-wider mb-4 group-hover:text-accent transition-colors">{s.title}</h3>
+                  <p className="font-inter text-sm text-black/70 leading-relaxed max-w-md flex-grow">{s.desc}</p>
+                  <div className="mt-8 pt-6 border-t-2 border-black w-full flex justify-between items-center group-hover:border-accent transition-colors">
+                    <Link href="/contact" className="font-space text-[10px] tracking-widest text-accent uppercase hover:text-black transition-colors">
                       Consult Now →
                     </Link>
                   </div>

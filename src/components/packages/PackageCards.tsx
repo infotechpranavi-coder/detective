@@ -50,7 +50,7 @@ const PACKAGES = [
 
 export default function PackageCards() {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-white border-t-2 border-black">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto"
@@ -65,44 +65,44 @@ export default function PackageCards() {
               <motion.div 
                 key={i}
                 variants={fadeUp}
-                className={`relative bg-card border flex flex-col ${pkg.featured ? 'border-accent shadow-[0_0_30px_rgba(242,10,10,0.18)] transform md:-translate-y-4' : 'border-foreground/10 mt-0 md:mt-4'}`}
+                className={`relative bg-white border-2 flex flex-col ${pkg.featured ? 'border-accent shadow-[0_0_30px_rgba(238,57,57,0.25)] transform md:-translate-y-4' : 'border-black mt-0 md:mt-4'}`}
               >
                 {pkg.featured && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-background font-space text-[10px] uppercase tracking-widest px-4 py-1.5 z-20">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-white font-space text-[10px] uppercase tracking-widest px-4 py-1.5 z-20">
                     Most Requested
                   </div>
                 )}
                 
                 {/* Header Image Strip */}
-                <div className={`relative w-full overflow-hidden ${pkg.featured ? 'h-[100px]' : 'h-[80px]'}`}>
-                  <img src={pkg.img} alt={pkg.name} className="w-full h-full object-cover img-noir" />
-                  <div className="absolute inset-0 bg-white/45 dark:bg-black/75" />
+                <div className={`relative w-full overflow-hidden bg-black ${pkg.featured ? 'h-[100px]' : 'h-[80px]'}`}>
+                  <img src={pkg.img} alt={pkg.name} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-black/40" />
                   
                   {/* Floating Icon */}
-                  <div className="absolute top-1/2 left-6 -translate-y-1/2 text-foreground/50">
-                    <Icon size={24} className={pkg.featured ? "text-accent" : ""} />
+                  <div className="absolute top-1/2 left-6 -translate-y-1/2">
+                    <Icon size={24} className={pkg.featured ? "text-accent" : "text-white"} />
                   </div>
                 </div>
 
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className={`font-playfair text-2xl uppercase tracking-wider mb-2 ${pkg.featured ? 'text-accent' : 'text-foreground'}`}>{pkg.name}</h3>
-                  <div className="font-bebas text-4xl text-foreground tracking-widest mb-4">
-                    {pkg.price} <span className="font-space text-sm tracking-normal text-foreground/40">{pkg.frequency}</span>
+                <div className="p-8 flex flex-col flex-grow bg-white">
+                  <h3 className={`font-playfair text-2xl uppercase tracking-wider mb-2 ${pkg.featured ? 'text-accent' : 'text-black'}`}>{pkg.name}</h3>
+                  <div className="font-bebas text-4xl text-black tracking-widest mb-4">
+                    {pkg.price} <span className="font-space text-sm tracking-normal text-black/60">{pkg.frequency}</span>
                   </div>
-                  <p className="font-inter text-sm text-foreground/60 mb-8 h-16">{pkg.desc}</p>
+                  <p className="font-inter text-sm text-black/70 mb-8 h-16">{pkg.desc}</p>
                   
                   <ul className="space-y-4 mb-8 flex-grow">
                     {pkg.features.map((feature, j) => (
                       <li key={j} className="flex flex-start gap-3">
-                        <Check size={16} className={`shrink-0 mt-0.5 ${pkg.featured ? 'text-accent' : 'text-foreground/40'}`} />
-                        <span className="font-inter text-sm text-foreground/80">{feature}</span>
+                        <Check size={16} className={`shrink-0 mt-0.5 ${pkg.featured ? 'text-accent' : 'text-black/50'}`} />
+                        <span className="font-inter text-sm text-black/80">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   <Link 
                     href="/contact" 
-                    className={`block w-full text-center py-4 font-space text-xs uppercase tracking-widest transition-all ${pkg.featured ? 'bg-accent text-background hover:bg-foreground' : 'bg-transparent border border-foreground/20 text-foreground hover:border-accent hover:text-accent'}`}
+                    className={`block w-full text-center py-4 font-space text-xs uppercase tracking-widest transition-all ${pkg.featured ? 'bg-accent text-white hover:bg-black hover:text-white' : 'bg-transparent border-2 border-black text-black hover:border-accent hover:text-accent hover:bg-accent hover:text-white'}`}
                   >
                     Select Plan
                   </Link>

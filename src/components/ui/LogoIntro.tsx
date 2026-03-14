@@ -74,7 +74,7 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
             className="absolute inset-0 pointer-events-none z-5"
             style={{
               background:
-                "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(242,10,10,0.04) 0%, transparent 70%)",
+                "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(238,57,57,0.04) 0%, transparent 70%)",
             }}
             animate={
               phase === "hold" || phase === "breathe"
@@ -96,7 +96,7 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
               >
                 <motion.div
                   className="w-[7px] h-[7px] rounded-full"
-                  style={{ backgroundColor: "#F20A0A" }}
+                  style={{ backgroundColor: "#EE3939" }}
                   animate={{ opacity: [1, 0.25, 1] }}
                   transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
                 />
@@ -127,12 +127,12 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
                 style={{
                   width: "3px",
                   height: `${6 + bar * 4}px`,
-                  backgroundColor: signalBars >= bar ? "#F20A0A" : "rgba(255,255,255,0.2)",
+                  backgroundColor: signalBars >= bar ? "#EE3939" : "rgba(255,255,255,0.2)",
                   borderRadius: "1px",
                 }}
                 animate={{
                   backgroundColor:
-                    signalBars >= bar ? "#F20A0A" : "rgba(255,255,255,0.2)",
+                    signalBars >= bar ? "#EE3939" : "rgba(255,255,255,0.2)",
                 }}
                 transition={{ duration: 0.3 }}
               />
@@ -183,7 +183,7 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
               style={{
                 width: size,
                 height: size,
-                border: "1px solid rgba(242,10,10,0.12)",
+                border: "1px solid rgba(238,57,57,0.12)",
                 willChange: "transform, opacity",
               }}
               initial={{ opacity: 0, scale: 0.85 }}
@@ -242,7 +242,7 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
                 width: 220,
                 height: 220,
                 background:
-                  "radial-gradient(circle, rgba(242,10,10,0.15) 0%, transparent 70%)",
+                  "radial-gradient(circle, rgba(238,57,57,0.15) 0%, transparent 70%)",
                 filter: "blur(20px)",
               }}
               animate={
@@ -269,9 +269,9 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
               >
                 <defs>
                   <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#F20A0A" />
-                    <stop offset="50%" stopColor="#FF6666" />
-                    <stop offset="100%" stopColor="#F20A0A" />
+                    <stop offset="0%" stopColor="#EE3939" />
+                    <stop offset="50%" stopColor="#FF5555" />
+                    <stop offset="100%" stopColor="#EE3939" />
                   </linearGradient>
                   <linearGradient id="accentGradWhite" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#ffffff" />
@@ -366,8 +366,8 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
                   top: "40%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
-                  backgroundColor: "#F20A0A",
-                  boxShadow: "0 0 12px 6px rgba(242,10,10,0.6)",
+                  backgroundColor: "#EE3939",
+                  boxShadow: "0 0 12px 6px rgba(238,57,57,0.6)",
                 }}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={
@@ -417,7 +417,7 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
               style={{
                 fontFamily: "'Space Mono', monospace",
                 fontSize: "clamp(8px, 1vw, 10px)",
-                color: "rgba(242,10,10,0.75)",
+                color: "rgba(238,57,57,0.75)",
                 letterSpacing: "0.45em",
                 textTransform: "uppercase",
                 textAlign: "center",
@@ -433,7 +433,7 @@ export default function LogoIntro({ onComplete }: LogoIntroProps) {
           {/* ── BOTTOM PROGRESS BAR ────────────────────────── */}
           <motion.div
             className="absolute bottom-0 left-0 z-30"
-            style={{ height: "1.5px", backgroundColor: "rgba(242,10,10,0.6)" }}
+            style={{ height: "1.5px", backgroundColor: "rgba(238,57,57,0.6)" }}
             initial={{ width: "0%" }}
             animate={{
               width:
@@ -606,7 +606,7 @@ function ScanSweep({ active }: { active: boolean }) {
           style={{
             height: "1px",
             background:
-              "linear-gradient(90deg, transparent 0%, rgba(242,10,10,0.5) 30%, rgba(255,255,255,0.8) 50%, rgba(242,10,10,0.5) 70%, transparent 100%)",
+              "linear-gradient(90deg, transparent 0%, rgba(238,57,57,0.5) 30%, rgba(255,255,255,0.8) 50%, rgba(238,57,57,0.5) 70%, transparent 100%)",
           }}
           initial={{ top: "0%", opacity: 0 }}
           animate={{ top: ["0%", "100%"], opacity: [0, 0.8, 0.8, 0] }}

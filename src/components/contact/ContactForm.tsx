@@ -123,7 +123,7 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="relative bg-white/84 dark:bg-[#0A0A0A]/80 backdrop-blur-xl border border-foreground/10 p-8 md:p-12 z-10 shadow-[0_24px_80px_rgba(242,10,10,0.12)]">
+            <div className="relative bg-white/84 dark:bg-[#0A0A0A]/80 backdrop-blur-xl border border-foreground/10 p-8 md:p-12 z-10 shadow-[0_24px_80px_rgba(238,57,57,0.12)]">
               <h3 className="font-playfair text-2xl text-foreground uppercase tracking-wider mb-8">Case Submission Panel</h3>
               
               {submitComplete ? (

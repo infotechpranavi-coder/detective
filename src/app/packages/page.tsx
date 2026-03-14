@@ -12,7 +12,7 @@ export const metadata = {
 export default function PackagesPage() {
   return (
     <PageTransition>
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-white">
         <PageHero 
           title="Investigation Packages" 
           subtitle="Transparent operational costs for our standard field services. Custom intelligence gathering available upon consultation."

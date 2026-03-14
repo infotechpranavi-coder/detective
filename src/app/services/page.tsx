@@ -13,7 +13,7 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <PageTransition>
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-white">
         <PageHero 
           title="Investigation Capabilities" 
           subtitle="Precision surveillance, digital forensics, and rigorous background verification tailored to uncover the facts you seek."

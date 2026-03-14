@@ -32,11 +32,11 @@ export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHe
         parallaxY={parallaxY}
         priority={true}
         containerClassName="absolute inset-0 z-0"
-        overlay="bg-white/40 dark:bg-black/75"
+        overlay="bg-black/70"
       />
       
       {/* Overlay layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-background dark:from-black/20 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 z-[1]" />
 
       <motion.div 
         className="container mx-auto px-6 lg:px-12 relative z-10"
@@ -45,21 +45,21 @@ export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHe
         animate="visible"
         style={{ opacity: opacityFade }}
       >
-        <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-2 mb-6 font-space text-[10px] md:text-sm uppercase tracking-widest text-foreground/50">
+        <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-2 mb-6 font-space text-[10px] md:text-sm uppercase tracking-widest text-white/70">
           <Link href="/" className="hover:text-accent transition-colors">Home</Link>
           {breadcrumbs.map((crumb, i) => (
             <span key={i} className="flex items-center gap-2">
-              <span className="text-foreground/20">/</span>
+              <span className="text-white/40">/</span>
               <Link href={crumb.href} className="hover:text-accent transition-colors">{crumb.label}</Link>
             </span>
           ))}
         </motion.div>
 
-        <motion.h1 variants={fadeUp} className="font-playfair text-5xl md:text-6xl lg:text-7xl text-foreground mb-4 uppercase tracking-wider leading-tight">
+        <motion.h1 variants={fadeUp} className="font-playfair text-5xl md:text-6xl lg:text-7xl text-white mb-4 uppercase tracking-wider leading-tight">
           {title}
         </motion.h1>
 
-        <motion.p variants={fadeUp} className="font-inter text-foreground/70 text-base md:text-lg max-w-2xl leading-relaxed">
+        <motion.p variants={fadeUp} className="font-inter text-white/90 text-base md:text-lg max-w-2xl leading-relaxed">
           {subtitle}
         </motion.p>
       </motion.div>
