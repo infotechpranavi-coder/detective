@@ -1,0 +1,171 @@
+"use client";
+
+import { motion } from "framer-motion";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight, Phone, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import { fadeUp, staggerContainer } from "@/lib/animations";
+
+const OFFICES = [
+  {
+    name: "Mumbai HQ",
+    type: "HEAD OFFICE",
+    image: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=700&h=400&q=80",
+    address: "Regus Alpha, 1st Floor, Main Street, Andheri West, Mumbai, Maharashtra 400053",
+    phone: "+91 98765 43210",
+    email: "hq@hsdetectives.com"
+  },
+  {
+    name: "Navi Mumbai",
+    type: "BRANCH",
+    image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=700&h=400&q=80",
+    address: "Vashi Cyber Park, Sector 30A, Vashi, Navi Mumbai, Maharashtra 400703",
+    phone: "+91 98765 43211",
+    email: "navimumbai@hsdetectives.com"
+  },
+  {
+    name: "Thane",
+    type: "BRANCH",
+    image: "https://images.unsplash.com/photo-1453873531674-2151bcd01b50?auto=format&fit=crop&w=700&h=400&q=80",
+    address: "Wagle Estate Road, 4th Floor, IT Park, Thane West, Maharashtra 400604",
+    phone: "+91 98765 43212",
+    email: "thane@hsdetectives.com"
+  }
+];
+
+export default function LocationSlider() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "center", skipSnaps: false });
+  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+  const [nextBtnEnabled, setNextBtnEnabled] = useState(true);
+
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setPrevBtnEnabled(emblaApi.canScrollPrev());
+    setNextBtnEnabled(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
+
+  return (
+    <section className="py-24 md:py-32 bg-background border-t border-foreground/5 relative overflow-hidden">
+      <div className="container mx-auto px-6 lg:px-12 flex flex-col items-center">
+        
+        <motion.div 
+          className="text-center max-w-2xl mx-auto mb-16"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div variants={fadeUp} className="flex justify-center items-center gap-4 mb-4">
+            <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Physical Presence</span>
+          </motion.div>
+          <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider">
+            Our <span className="text-foreground/40 italic">Offices</span>
+          </motion.h2>
+        </motion.div>
+
+        <div className="w-full relative max-w-[1200px] mx-auto">
+          {/* Controls */}
+          <div className="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 z-10 hidden md:block">
+            <button 
+              onClick={scrollPrev} 
+              disabled={!prevBtnEnabled}
+              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all bg-background/80 backdrop-blur-md ${prevBtnEnabled ? 'border-foreground/20 dark:border-white/30 text-foreground hover:bg-accent hover:border-accent hover:text-background' : 'border-foreground/10 text-foreground/20 cursor-not-allowed'}`}
+            >
+              <ChevronLeft size={20} />
+            </button>
+          </div>
+          <div className="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 z-10 hidden md:block">
+            <button 
+              onClick={scrollNext} 
+              disabled={!nextBtnEnabled}
+              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all bg-background/80 backdrop-blur-md ${nextBtnEnabled ? 'border-foreground/20 dark:border-white/30 text-foreground hover:bg-accent hover:border-accent hover:text-background' : 'border-foreground/10 text-foreground/20 cursor-not-allowed'}`}
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex -ml-6">
+              {OFFICES.map((office, i) => (
+                <div key={i} className="flex-[0_0_100%] md:flex-[0_0_80%] lg:flex-[0_0_50%] pl-6">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="bg-card border border-foreground/5 flex flex-col overflow-hidden group hover:border-accent/30 transition-colors duration-500 h-full"
+                  >
+                    {/* Top Image */}
+                    <div className="relative h-[240px] w-full overflow-hidden shrink-0">
+                      <img src={office.image} alt={office.name} className="w-full h-full object-cover img-noir group-hover:scale-[1.06] transition-transform duration-[700ms]" />
+                      <div className="absolute inset-0 bg-background/40 group-hover:bg-background/30 transition-colors duration-500" />
+                      
+                      {/* Badge */}
+                      <div className="absolute bottom-4 left-6 z-10">
+                        <span className={`font-space text-[10px] tracking-widest uppercase px-3 py-1.5 ${office.type === 'HEAD OFFICE' ? 'bg-accent text-background font-bold' : 'bg-background/70 text-foreground border border-foreground/20'}`}>
+                          {office.type}
+                        </span>
+                      </div>
+
+                      {/* Pulsing Pin */}
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                        <MapPin size={32} className="text-foreground drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] animate-bounce" fill="currentColor" />
+                        <div className="w-4 h-1 bg-background/50 rounded-[100%] blur-[2px] mt-1" />
+                      </div>
+                    </div>
+
+                    {/* Bottom Content */}
+                    <div className="p-8 flex flex-col flex-grow relative bg-white dark:bg-[#0D0D0D] z-20">
+                      <h3 className="font-playfair text-2xl text-foreground uppercase tracking-wider mb-6 group-hover:text-accent transition-colors">{office.name}</h3>
+                      
+                      <div className="space-y-4 mb-8 flex-grow">
+                        <div className="flex items-start gap-4">
+                          <MapPin size={18} className="text-foreground/40 shrink-0 mt-0.5" />
+                          <span className="font-inter text-sm text-foreground/60 leading-relaxed">{office.address}</span>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <Phone size={18} className="text-foreground/40 shrink-0" />
+                          <span className="font-inter text-sm text-foreground/60">{office.phone}</span>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <Mail size={18} className="text-foreground/40 shrink-0" />
+                          <span className="font-inter text-sm text-foreground/60">{office.email}</span>
+                        </div>
+                      </div>
+
+                      <Link 
+                        href={`https://maps.google.com/?q=${encodeURIComponent(office.address)}`}
+                        target="_blank"
+                        className="inline-flex items-center gap-3 font-space text-[10px] uppercase tracking-widest text-accent hover:text-foreground transition-colors border-b border-accent/30 hover:border-foreground/40 w-max pb-1"
+                      >
+                        Get Directions <span>→</span>
+                      </Link>
+                    </div>
+
+                  </motion.div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Mobile Controls */}
+          <div className="flex justify-center gap-4 mt-8 md:hidden">
+            <button onClick={scrollPrev} className="w-12 h-12 rounded-full border border-foreground/20 text-foreground flex items-center justify-center"><ChevronLeft size={20} /></button>
+            <button onClick={scrollNext} className="w-12 h-12 rounded-full border border-foreground/20 text-foreground flex items-center justify-center"><ChevronRight size={20} /></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

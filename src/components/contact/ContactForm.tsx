@@ -1,0 +1,213 @@
+"use client";
+
+import { motion } from "framer-motion";
+import CustomImage from "@/components/ui/CustomImage";
+import { fadeUp, fadeRight, staggerContainer, scaleUp } from "@/lib/animations";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import Image from "next/image";
+
+export default function ContactForm() {
+  const { register, handleSubmit, reset } = useForm();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitComplete, setSubmitComplete] = useState(false);
+
+  const onSubmit = async (data: any) => {
+    setIsSubmitting(true);
+    // Simulate delay
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    console.log(data);
+    setIsSubmitting(false);
+    setSubmitComplete(true);
+    reset();
+    setTimeout(() => setSubmitComplete(false), 5000);
+  };
+
+  return (
+    <section className="relative py-24 md:py-32 overflow-hidden border-b border-foreground/10">
+      <CustomImage 
+        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
+        alt="Dark City Lights"
+        animation="none"
+        containerClassName="absolute inset-0 z-0 h-full w-full"
+        className="object-cover object-center"
+        overlay="bg-white/88 dark:bg-black/95"
+      />
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          
+          {/* LEFT COLUMN - INFO */}
+          <motion.div 
+            className="lg:col-span-5 space-y-12"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+          >
+            <div>
+              <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
+                <div className="h-[1px] w-12 bg-accent" />
+                <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Connect</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider mb-6">
+                Secure <span className="text-foreground/40 italic">Communication</span>
+              </motion.h2>
+              <motion.p variants={fadeUp} className="font-inter text-foreground/60 leading-relaxed mb-10">
+                Reach out securely to discuss your situation. We maintain absolute confidentiality from the first touchpoint.
+              </motion.p>
+            </div>
+
+            {/* Inline Image "Confidential by Default" */}
+            <motion.div variants={fadeRight} className="relative w-full h-[200px] border border-foreground/10 mb-12 group overflow-hidden">
+               <Image 
+                 src="https://images.unsplash.com/photo-1520116468816-95b69f847357?auto=format&fit=crop&w=500&h=200&q=80"
+                 alt="Noir Atmosphere"
+                 fill
+                 className="object-cover object-[center_30%] img-noir group-hover:scale-105 transition-transform duration-700"
+               />
+               <div className="absolute inset-0 bg-background/60 mix-blend-multiply transition-colors duration-500 group-hover:bg-background/40" />
+               <div className="absolute inset-0 flex items-center justify-center p-6 text-center z-10 pointer-events-none">
+                 <span className="font-playfair italic text-xl md:text-2xl text-foreground tracking-wide">"Confidential by Default"</span>
+               </div>
+            </motion.div>
+
+            {/* Contact Details List */}
+            <motion.div variants={staggerContainer} className="space-y-6">
+              <motion.div variants={fadeUp} className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-foreground/5 border border-foreground/10 rounded-full flex items-center justify-center shrink-0">
+                  <Phone size={20} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Toll Free Support</h4>
+                  <p className="font-inter text-foreground text-lg tracking-wide">1800-456-7890</p>
+                </div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-foreground/5 border border-foreground/10 rounded-full flex items-center justify-center shrink-0">
+                  <Mail size={20} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Direct Email</h4>
+                  <p className="font-inter text-foreground text-lg tracking-wide">inbox@hsdetectives.com</p>
+                </div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-foreground/5 border border-foreground/10 rounded-full flex items-center justify-center shrink-0">
+                  <MapPin size={20} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Headquarters</h4>
+                  <p className="font-inter text-foreground text-base leading-relaxed max-w-[200px]">Regus Alpha, 1st Floor, Andheri West, Mumbai 400053</p>
+                </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          {/* RIGHT COLUMN - FORM */}
+          <motion.div 
+            className="lg:col-span-7 relative"
+            variants={scaleUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-10%" }}
+          >
+            {/* Blurred background decoration for form */}
+            <div className="absolute inset-0 -top-10 -bottom-10 -left-10 -right-10 pointer-events-none mix-blend-screen opacity-[0.08] hidden md:block z-0">
+              <Image 
+                src="https://images.unsplash.com/photo-1520116468816-95b69f847357?auto=format&fit=crop&w=600&q=80"
+                alt="Tech Flow"
+                fill
+                className="object-cover blur-[30px]"
+              />
+            </div>
+
+            <div className="relative bg-white/84 dark:bg-[#0A0A0A]/80 backdrop-blur-xl border border-foreground/10 p-8 md:p-12 z-10 shadow-[0_24px_80px_rgba(242,10,10,0.12)]">
+              <h3 className="font-playfair text-2xl text-foreground uppercase tracking-wider mb-8">Case Submission Panel</h3>
+              
+              {submitComplete ? (
+                <motion.div 
+                  initial={{ opacity: 0 }} animate={{ opacity: 1 }} 
+                  className="h-[400px] flex flex-col items-center justify-center text-center p-6 border border-accent/30 bg-accent/5"
+                >
+                  <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6">
+                    <Send size={24} className="text-accent" />
+                  </div>
+                  <h4 className="font-playfair text-xl text-foreground uppercase tracking-wider mb-2">Message Received</h4>
+                  <p className="font-inter text-foreground/60">Our senior investigator will contact you securely within 2 hours.</p>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase">Full Name or Alias</label>
+                      <input 
+                        {...register("name", { required: true })}
+                        className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase">Phone Number</label>
+                      <input 
+                        {...register("phone", { required: true })}
+                        className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors"
+                        placeholder="+91"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase">Secure Email</label>
+                    <input 
+                      type="email"
+                      {...register("email", { required: true })}
+                      className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors"
+                      placeholder="email@example.com"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase">Investigation Category</label>
+                    <div className="relative">
+                      <select 
+                        {...register("category")}
+                        className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors appearance-none"
+                      >
+                        <option value="personal">Personal Investigation</option>
+                        <option value="corporate">Corporate Investigation</option>
+                        <option value="matrimonial">Matrimonial Verification</option>
+                        <option value="debugging">Debugging & Sweeping</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-foreground/50">▼</div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase">Message Details</label>
+                    <textarea 
+                      {...register("message", { required: true })}
+                      rows={5}
+                      className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors resize-none"
+                      placeholder="Please provide initial context without sharing highly sensitive details yet..."
+                    />
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-accent text-background font-space font-bold py-5 uppercase tracking-widest hover:bg-foreground transition-colors duration-300 flex justify-center items-center gap-2"
+                  >
+                    {isSubmitting ? "Transmitting..." : "Send Securely"}
+                  </button>
+                </form>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
