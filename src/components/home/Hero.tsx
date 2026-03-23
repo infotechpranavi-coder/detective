@@ -119,11 +119,11 @@ export default function Hero() {
       </div>
 
       {/* Layer 2: Gradient to black at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black z-1" />
 
       {/* Layer 3: tsParticles */}
       {init && (
-        <div className="absolute inset-0 z-[2] opacity-50 mix-blend-screen pointer-events-none">
+        <div className="absolute inset-0 z-2 opacity-50 mix-blend-screen pointer-events-none">
           <Particles
             id="tsparticles"
             options={{
@@ -152,7 +152,7 @@ export default function Hero() {
       )}
 
       {/* Layer 4: Radar Sweep SVG */}
-      <div className="absolute right-[-10vw] top-[10vh] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] opacity-20 z-[2] pointer-events-none mix-blend-screen animate-spin-slow">
+      <div className="absolute right-[-10vw] top-[10vh] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] opacity-20 z-2 pointer-events-none mix-blend-screen animate-spin-slow">
         <svg viewBox="0 0 100 100" className="w-full h-full text-accent">
           <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.5" className="opacity-30" />
           <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.5" className="opacity-30" />
@@ -214,8 +214,7 @@ export default function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         style={{ opacity: opacityFade }}
       >
-        <span className="font-space text-[10px] uppercase tracking-[0.3em] text-white/60 rotate-90 origin-left translate-y-8 -translate-x-3 absolute left-0 w-max">Scroll</span>
-        <div className="w-[1px] h-16 bg-gradient-to-b from-accent to-transparent relative overflow-hidden">
+        <div className="w-px h-16 bg-linear-to-b from-accent to-transparent relative overflow-hidden">
           <motion.div 
             className="absolute top-0 left-0 w-full h-1/2 bg-accent"
             animate={{ top: ["-50%", "150%"] }}

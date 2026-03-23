@@ -24,6 +24,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "Membership", path: "/membership" },
     { name: "Packages", path: "/packages" },
     { name: "Locations", path: "/locations" },
     { name: "FAQ", path: "/faq" },
@@ -82,16 +83,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
-              className={`ml-4 px-6 py-2 border-2 text-sm font-space uppercase tracking-wider transition-all duration-300 ${
-                scrolled 
-                  ? "border-black text-black hover:bg-accent hover:border-accent hover:text-white" 
-                  : "border-white text-white hover:bg-accent hover:border-accent hover:text-white"
-              }`}
-            >
-              Get a Quote
-            </Link>
           </nav>
 
           {/* Mobile Actions */}
