@@ -49,14 +49,6 @@ const OFFICES = [
     email: "info@hsdetectives.com"
   },
   {
-    name: "Corporate Office",
-    type: "CORPORATE",
-    image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&h=400&q=80",
-    address: "A/514, Crystal Plaza, New Link Road, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053",
-    phone: "1800-456-7890",
-    email: "info@hsdetectives.com"
-  },
-  {
     name: "Goa Office",
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=700&h=400&q=80",
