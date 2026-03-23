@@ -2,6 +2,7 @@ import PageHero from "@/components/shared/PageHero";
 import ContactForm from "@/components/contact/ContactForm";
 import ConsultationStrip from "@/components/contact/ConsultationStrip";
 import OfficeMiniCards from "@/components/contact/OfficeMiniCards";
+import GoogleMapSection from "@/components/contact/GoogleMapSection";
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function ContactPage() {
           breadcrumbs={[ { label: "Contact", href: "/contact" } ]}
         />
         <ContactForm />
+        <GoogleMapSection />
         <ConsultationStrip />
         <OfficeMiniCards />
       </main>

@@ -99,7 +99,14 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Headquarters</h4>
-                  <p className="font-inter text-foreground text-base leading-relaxed max-w-[200px]">Regus Alpha, 1st Floor, Andheri West, Mumbai 400053</p>
+                  <a
+                    href="https://www.google.com/maps?q=H+S+Detectives+Agency+Mumbai,+crystal+plaza,+A/514,+New+Link+Rd,+Veera+Desai+Industrial+Estate,+Andheri+West,+Mumbai,+Maharashtra+400053&ftid=0x3be7b06618f08abb:0xc675e5f7f07f1ecd&entry=gps&shh=CAE&lucs=,94259550,94297699,94284457,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjEwLjIuODc3MzE3OTEwMBgAINeCAypRLDk0MjU5NTUwLDk0Mjk3Njk5LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=d87bc999-7f57-468b-8340-e5d438ebe1a2&g_st=iwb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-inter text-foreground text-base leading-relaxed max-w-[260px] underline-offset-4 hover:underline"
+                  >
+                    Crystal Plaza, A/514, New Link Rd, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053
+                  </a>
                 </div>
               </motion.div>
             </motion.div>
