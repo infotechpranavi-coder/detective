@@ -48,7 +48,7 @@ export default function ContactForm() {
           >
             <div>
               <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
-                <div className="h-[1px] w-12 bg-accent" />
+                <div className="h-px w-12 bg-accent" />
                 <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Connect</span>
               </motion.div>
               <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider mb-6">

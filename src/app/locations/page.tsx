@@ -16,7 +16,7 @@ export default function LocationsPage() {
         <PageHero 
           title="Our Network" 
           subtitle="A Pan-India presence to ensure swift, localized intelligence gathering no matter where the case leads."
-          image="https://images.unsplash.com/photo-1453873531674-2151bcd01b50?auto=format&fit=crop&w=1920&q=80"
+          image="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
           breadcrumbs={[ { label: "Locations", href: "/locations" } ]}
         />
         <LocationSlider />

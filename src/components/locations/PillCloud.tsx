@@ -1,14 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { scaleUp } from "@/lib/animations";
-
-const CITIES = [
-  "Mumbai", "New Delhi", "Bangalore", "Hyderabad", "Ahmedabad",
-  "Chennai", "Kolkata", "Surat", "Pune", "Jaipur", "Lucknow",
-  "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal", "Visakhapatnam",
-  "Pimpri-Chinchwad", "Patna", "Vadodara", "Ghaziabad", "Ludhiana"
-];
+import { SERVICE_LOCATIONS } from "@/lib/locations";
 
 export default function PillCloud() {
   return (
@@ -25,10 +20,10 @@ export default function PillCloud() {
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Coverage</span>
           </div>
           <h2 className="font-playfair text-3xl md:text-5xl lg:text-5xl text-foreground uppercase tracking-wider mb-6 leading-snug">
-            Extensive <span className="text-foreground/40 italic">Reach</span>
+            Mumbai Region <span className="text-foreground/40 italic">Coverage</span>
           </h2>
           <p className="font-inter text-foreground/50 text-sm max-w-xl mx-auto leading-relaxed">
-            Our operatives are stationed and ready to deploy in over 20+ major metropolitan zones, offering unparalleled agility.
+            We actively operate across key Mumbai and nearby Maharashtra locations for rapid on-ground investigation support.
           </p>
         </motion.div>
 
@@ -40,14 +35,19 @@ export default function PillCloud() {
           viewport={{ once: true, margin: "-10%" }}
           transition={{ staggerChildren: 0.05 }}
         >
-          {CITIES.map((city, i) => (
+          {SERVICE_LOCATIONS.map((location, i) => (
             <motion.div 
               key={i}
               variants={scaleUp}
               whileHover={{ scale: 1.05, borderColor: "rgba(201,168,76,0.5)", color: "#C9A84C" }}
-              className="px-6 py-3 rounded-full border border-foreground/10 bg-background text-foreground/80 font-space text-xs md:text-sm tracking-widest uppercase transition-colors cursor-default"
+              className="rounded-full border border-foreground/10 bg-background text-foreground/80 font-space text-xs md:text-sm tracking-widest uppercase transition-colors"
             >
-              {city}
+              <Link
+                href={`/locations/${location.slug}`}
+                className="block px-6 py-3"
+              >
+                {location.name}
+              </Link>
             </motion.div>
           ))}
         </motion.div>

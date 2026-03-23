@@ -25,7 +25,7 @@ export default function Footer() {
             fill
             className="object-cover object-[center_60%] opacity-40 mix-blend-luminosity"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 to-background" />
+          <div className="absolute inset-0 bg-linear-to-b from-background/40 to-background" />
         </motion.div>
       </div>
 

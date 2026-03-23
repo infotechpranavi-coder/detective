@@ -33,13 +33,13 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
+        className={`fixed top-0 w-full z-100 transition-all duration-500 ${
           scrolled ? "bg-white/95 backdrop-blur-md border-b-2 border-black py-4" : "bg-transparent py-6"
         }`}
       >
         <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group z-[101]">
+          <Link href="/" className="flex items-center gap-3 group z-101">
             <div className="relative w-14 h-14 flex items-center justify-center overflow-hidden bg-white rounded-full border-2 border-black shadow-lg p-1 group-hover:border-accent transition-colors duration-500">
               <Image 
                 src="/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png" 
@@ -73,7 +73,7 @@ export default function Navbar() {
                   {isActive && (
                     <motion.div
                       layoutId="nav-indicator"
-                      className="absolute -bottom-2 left-0 w-full h-[1px] bg-accent"
+                      className="absolute -bottom-2 left-0 w-full h-px bg-accent"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
@@ -95,7 +95,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile Actions */}
-          <div className="md:hidden flex items-center gap-4 z-[101]">
+          <div className="md:hidden flex items-center gap-4 z-101">
             <button
               className={scrolled ? "text-black" : "text-white"}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
