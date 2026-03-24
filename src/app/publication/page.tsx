@@ -27,6 +27,132 @@ const publications = [
     url: "https://www.newsheads.in/business/companies/how-h-s-detectives-is-revolutionizing-private-investigation-in-mumbai-with-law-enforcement-expertise-article-72926",
     image: "/rtfghj.png",
   },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Eshn News",
+    url: "https://eshnnews.com/2026/03/23/the-modern-investigator-how-h-s-detectives-agency-mumbai-is-solving-complex-cases-in-indias-financial-capital/",
+    image: "https://via.placeholder.com/900x500?text=Eshn+News",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Prime News of India",
+    url: "https://primenewsofindia.com/2026/03/23/the-modern-investigator-how-h-s-detectives-agency-mumbai-is-solving-complex-cases-in-indias-financial-capital/",
+    image: "https://via.placeholder.com/900x500?text=Prime+News+of+India",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Indian Prime Bulletin",
+    url: "https://indianprimebulletin.com/2026/03/23/the-modern-investigator-how-h-s-detectives-agency-mumbai-is-solving-complex-cases-in-indias-financial-capital/",
+    image: "https://via.placeholder.com/900x500?text=Indian+Prime+Bulletin",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Hindustan Insider",
+    url: "https://hindustaninsider.in/2026/03/23/the-modern-investigator-how-h-s-detectives-agency-mumbai-is-solving-complex-cases-in-indias-financial-capital/",
+    image: "https://via.placeholder.com/900x500?text=Hindustan+Insider",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "NT Business Times",
+    url: "https://ntbusinesstimes.com/2026/03/23/the-modern-investigator-how-h-s-detectives-agency-mumbai-is-solving-complex-cases-in-indias-financial-capital/",
+    image: "https://via.placeholder.com/900x500?text=NT+Business+Times",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Daily District News",
+    url: "https://www.dailydistrictnews.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Daily+District+News",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Newswire of India",
+    url: "https://www.newswireofindia.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Newswire+of+India",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "99 News",
+    url: "https://www.99news.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=99+News",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Insider News Times",
+    url: "https://www.insidernewstimes.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Insider+News+Times",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "News Today 24x7",
+    url: "https://www.newstoday24x7.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=News+Today+24x7",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "The India Forbes News",
+    url: "https://www.theindiaforbesnews.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=The+India+Forbes+News",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Today News Standard",
+    url: "https://www.todaynewsstandard.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Today+News+Standard",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Times News Express",
+    url: "https://www.timesnewsexpress.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Times+News+Express",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Indian Economics News",
+    url: "https://www.indianeconomicsnews.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Indian+Economics+News",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "The Republic News",
+    url: "https://www.therepublicnews.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=The+Republic+News",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "The Founder Stories",
+    url: "https://www.thefounderstories.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=The+Founder+Stories",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Bharat Headlines",
+    url: "https://www.bharatheadlines.top/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Bharat+Headlines",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Bharat Patrika",
+    url: "https://www.bharatpatrika.top/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Bharat+Patrika",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "The Khabar Mirror",
+    url: "https://www.thekhabarmirror.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=The+Khabar+Mirror",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "Mint News 24",
+    url: "https://www.mintnews24.co.in/2026/03/the-modern-investigator-how-h-s.html",
+    image: "https://via.placeholder.com/900x500?text=Mint+News+24",
+  },
+  {
+    title: "The Modern Investigator - How H S Detectives Agency Mumbai is solving complex cases in India's financial capital",
+    source: "DHunt",
+    url: "https://dhunt.in/13QJHN",
+    image: "https://via.placeholder.com/900x500?text=DHunt",
+  },
 ];
 
 export default function PublicationPage() {
@@ -38,31 +164,41 @@ export default function PublicationPage() {
           Read our latest coverage and published stories from leading media channels about H S Detectives.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-3">
           {publications.map((item, idx) => (
-            <article key={idx} className="rounded-2xl border border-black/10 bg-white overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <div className="relative h-40 md:h-48 overflow-hidden bg-zinc-100">
-                <img
-                  src={item.image}
-                  alt={`${item.source} preview`}
-                  className="h-full w-full object-contain"
-                  style={{ objectPosition: "center center" }}
-                />
+            <Link
+              key={idx}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative bg-white border border-black/10 p-8 rounded-lg hover:shadow-xl hover:scale-105 hover:border-accent transition-all duration-300 cursor-pointer"
+            >
+              {/* Accent circle */}
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-accent rounded-full"></div>
+              
+              {/* Card number */}
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-accent">
+                  {String(idx + 1).padStart(2, '0')}
+                </span>
               </div>
-              <div className="p-6">
-                <h2 className="text-lg font-semibold text-zinc-900 mb-2">{item.source}</h2>
-                <p className="text-sm text-zinc-600 mb-4 break-words">{item.title}</p>
-                <Link
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-accent font-semibold hover:text-accent/80"
-                >
-                  Read article
-                  <span aria-hidden>↗</span>
-                </Link>
+              
+              {/* Card label */}
+              <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-3">
+                {item.source}
+              </p>
+              
+              {/* Card heading */}
+              <h2 className="text-lg font-bold text-black mb-4">
+                {item.title}
+              </h2>
+              
+              {/* Read more text */}
+              <div className="inline-flex items-center gap-2 text-accent font-semibold group-hover:text-accent/80">
+                Read article
+                <span aria-hidden>↗</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

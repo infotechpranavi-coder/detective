@@ -34,18 +34,22 @@ export default function Footer() {
           {/* Logo Column */}
           <div className="space-y-6">
             <Link href="/" className="inline-block relative">
-               <div className="flex items-center gap-3">
-                 <div className="relative w-12 h-12 rounded-full border border-accent/40 flex items-center justify-center">
-                    {/* Silhouette SVG */}
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-accent">
-                      <path d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2ZM5.12 15C3.39 15 2 16.39 2 18.12V22H22V18.12C22 16.39 20.61 15 18.88 15H5.12Z" fill="currentColor"/>
-                    </svg>
-                 </div>
-                 <div className="flex flex-col">
-                   <span className="font-playfair text-xl uppercase tracking-wider text-white">H S Detectives</span>
-                   <span className="font-space text-xs text-accent tracking-widest uppercase">Since 2011</span>
-                 </div>
-               </div>
+              <div className="flex items-center gap-3">
+                <div className="relative w-14 h-14 rounded-full border-2 border-accent bg-white overflow-hidden flex items-center justify-center p-1">
+                  <Image
+                    src="/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png"
+                    alt="H S Detectives Logo"
+                    width={56}
+                    height={56}
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-playfair text-xl uppercase tracking-wider text-white">H S Detectives</span>
+                  <span className="font-space text-xs text-accent tracking-widest uppercase">Since 2011</span>
+                </div>
+              </div>
             </Link>
             <p className="text-white/80 text-sm font-inter leading-relaxed max-w-xs">
               A cinematic, licensed professional detective agency operating Pan India with 100% confidentiality.
