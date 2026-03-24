@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { newPublications } from "./publicationsData";
 
 const publications = [
   {
@@ -165,7 +166,7 @@ export default function PublicationPage() {
         </p>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {publications.map((item, idx) => (
+          {[...publications, ...newPublications].map((item: any, idx: number) => (
             <Link
               key={idx}
               href={item.url}
@@ -192,6 +193,12 @@ export default function PublicationPage() {
               <h2 className="text-lg font-bold text-black mb-4">
                 {item.title}
               </h2>
+              
+              {item.audience && (
+                <p className="text-sm font-medium text-zinc-600 mb-4">
+                  Potential Audience: <span className="font-bold text-black">{item.audience.toLocaleString()}</span>
+                </p>
+              )}
               
               {/* Read more text */}
               <div className="inline-flex items-center gap-2 text-accent font-semibold group-hover:text-accent/80">
