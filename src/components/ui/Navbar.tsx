@@ -24,6 +24,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "Certification", path: "/certificate" },
     { name: "Blog", path: "/blog" },
     { name: "Membership", path: "/membership" },
     { name: "Packages", path: "/packages" },
@@ -61,14 +62,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.path;
               return (
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative font-inter text-sm tracking-wide uppercase transition-colors duration-300 ${
+                  className={`relative font-inter text-[10px] lg:text-[11px] font-bold tracking-widest uppercase transition-colors duration-300 ${
                     isActive ? "text-accent" : scrolled ? "text-black/70 hover:text-black" : "text-white/70 hover:text-white"
                   }`}
                 >
@@ -109,13 +110,13 @@ export default function Navbar() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 bg-white z-50 flex flex-col justify-center items-center"
           >
-            <nav className="flex flex-col gap-8 text-center">
+            <nav className="flex flex-col gap-4 text-center py-20 overflow-y-auto w-full px-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`font-playfair text-4xl uppercase tracking-wider ${
+                  className={`font-playfair text-2xl uppercase tracking-wider ${
                     pathname === link.path ? "text-accent" : "text-black"
                   }`}
                 >
