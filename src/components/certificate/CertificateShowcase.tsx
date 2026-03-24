@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { ExternalLink, Award, Shield, CheckCircle } from "lucide-react";
@@ -93,7 +93,7 @@ const certificates: Certificate[] = [
 export default function CertificateShowcase() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -103,14 +103,14 @@ export default function CertificateShowcase() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
