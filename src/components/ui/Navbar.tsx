@@ -69,7 +69,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative font-inter text-[10px] lg:text-[11px] font-bold tracking-widest uppercase transition-colors duration-300 ${
+                  className={`relative font-inter text-[11px] lg:text-xs font-bold tracking-widest uppercase transition-colors duration-300 ${
                     isActive ? "text-accent" : scrolled ? "text-black/70 hover:text-black" : "text-white/70 hover:text-white"
                   }`}
                 >
@@ -89,9 +89,9 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile Actions */}
-          <div className="md:hidden flex items-center gap-4 z-101">
+          <div className="xl:hidden flex items-center gap-4 z-101">
             <button
-              className={scrolled ? "text-black" : "text-white"}
+              className={mobileMenuOpen ? "text-accent" : scrolled ? "text-black" : "text-white"}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
