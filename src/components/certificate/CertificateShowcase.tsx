@@ -88,6 +88,15 @@ const certificates: Certificate[] = [
     image: "/certificates/certificate.jpg",
     category: "Legal",
   },
+  {
+    id: 9,
+    title: "GAP Professional Certification",
+    issuer: "Wahid Ali Shaikh",
+    date: "Issued 2022",
+    description: "Official GAP professional certification validating core investigation skills and expertise.",
+    image: "/certificates/GAP 2206-Wahid Ali Shaikh (1)_page-0001.jpg",
+    category: "Professional",
+  },
 ];
 
 export default function CertificateShowcase() {
