@@ -30,6 +30,7 @@ export default function Navbar() {
     { name: "Packages", path: "/packages" },
     { name: "Locations", path: "/locations" },
     { name: "Publication", path: "/publication" },
+    { name: "Govt. Regulation", path: "/regulation" },
     { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
   ];
@@ -41,10 +42,10 @@ export default function Navbar() {
           scrolled ? "bg-white/95 backdrop-blur-md border-b-2 border-black py-4" : "bg-transparent py-6"
         }`}
       >
-        <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+        <div className="w-full pl-2 lg:pl-4 pr-6 lg:pr-12 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group z-101">
-            <div className="relative w-14 h-14 flex items-center justify-center overflow-hidden bg-white rounded-full border-2 border-black shadow-lg p-1 group-hover:border-accent transition-colors duration-500">
+          <Link href="/" className="flex-shrink-0 mr-auto flex items-center gap-3 group z-101">
+            <div className="relative w-14 h-14 flex items-center justify-center overflow-hidden bg-white rounded-full border-2 border-black shadow-[2px_2px_0px_#000] p-1 group-hover:border-accent group-hover:shadow-[2px_2px_0px_#cc0000] transition-all duration-500">
               <Image 
                 src="/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png" 
                 alt="HS Detectives Logo" 
@@ -54,22 +55,22 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className={`font-playfair text-lg leading-tight uppercase tracking-wider group-hover:text-accent transition-colors duration-500 ${scrolled ? 'text-black' : 'text-white'}`}>
+              <span className={`font-playfair text-base leading-tight uppercase tracking-wider group-hover:text-accent transition-colors duration-500 ${scrolled ? 'text-black' : 'text-white'}`}>
                 H S Detectives
               </span>
-              <span className={`font-space text-xs tracking-widest uppercase ${scrolled ? 'text-black/70' : 'text-white/70'}`}>Since 2011</span>
+              <span className={`font-space text-[10px] tracking-widest uppercase ${scrolled ? 'text-black/70' : 'text-white/70'}`}>Agency Mumbai</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-4">
+          <nav className="hidden xl:flex items-center gap-4 2xl:gap-6">
             {navLinks.map((link) => {
               const isActive = pathname === link.path;
               return (
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`relative font-inter text-[11px] lg:text-xs font-bold tracking-widest uppercase transition-colors duration-300 ${
+                  className={`relative whitespace-nowrap font-inter text-[11px] xl:text-[12px] font-bold tracking-widest uppercase transition-colors duration-300 ${
                     isActive ? "text-accent" : scrolled ? "text-black/70 hover:text-black" : "text-white/70 hover:text-white"
                   }`}
                 >

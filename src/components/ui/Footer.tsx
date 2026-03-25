@@ -47,7 +47,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-playfair text-xl uppercase tracking-wider text-white">H S Detectives</span>
-                  <span className="font-space text-xs text-accent tracking-widest uppercase">Since 2011</span>
+                  <span className="font-space text-xs text-accent tracking-widest uppercase">Agency Mumbai</span>
                 </div>
               </div>
             </Link>

@@ -11,27 +11,37 @@ const faqSections = [
     title: "Private Detective Agency FAQ (SEO Optimized)",
     items: [
       {
-        question: "1. What does a private detective agency in Mumbai do?",
+        question: "1. What makes H S Detectives different from other agencies in Mumbai?",
+        answer:
+          "Our agency operates under the strategic guidance of a Retired Deputy Commissioner of Police (DCP) from Maharashtra, ensuring all investigations are handled with high-level law enforcement expertise and legal compliance.",
+      },
+      {
+        question: "2. Do you provide bug sweeping or anti-spying services?",
+        answer:
+          "Yes. Through our technical arm, Indiebim Technology Solutions, we provide USA and Israel-trained TSCM services to detect hidden cameras, audio bugs, and GPS trackers in boardrooms and private residences.",
+      },
+      {
+        question: "3. How much does a private detective charge in Mumbai?",
+        answer:
+          "Our professional investigation services start from ₹45,000/- onwards. The final cost depends on the complexity and duration of the case. We offer structured 5, 10, and 15-day surveillance packages to suit different needs.",
+      },
+      {
+        question: "4. What does a private detective agency in Mumbai do?",
         answer:
           "A private detective agency investigates personal and corporate matters such as background checks, surveillance, fraud investigations, and missing person cases.",
       },
       {
-        question: "2. Is hiring a private detective in India legal?",
+        question: "5. Is hiring a private detective in India legal?",
         answer:
           "Yes, hiring a private detective for legal investigations like background verification or surveillance in public places is allowed in India.",
       },
       {
-        question: "3. How can I hire a private detective in Mumbai?",
+        question: "6. How can I hire a private detective in Mumbai?",
         answer:
           "You can contact our detective agency through phone, email, or the contact form on our website to discuss your case confidentially.",
       },
       {
-        question: "4. How much does a private detective charge in Mumbai?",
-        answer:
-          "The cost depends on the type of investigation, duration, and complexity. We provide a clear estimate after understanding your case.",
-      },
-      {
-        question: "5. Are private detective services confidential?",
+        question: "7. Are private detective services confidential?",
         answer:
           "Yes. All investigations and client details are handled with complete confidentiality and discretion.",
       },
