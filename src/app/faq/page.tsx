@@ -251,6 +251,86 @@ const faqSections = [
       },
     ],
   },
+  {
+    title: "Expert Insights & Legitimacy",
+    items: [
+      {
+        question: "41. How do I know your agency is legitimate and not a 'fly-by-night' operator?",
+        answer:
+          "H S Detectives is a registered corporate entity with a physical office in Mumbai. Our leadership by a Retired DCP and our long-standing reputation in the Maharashtra investigative circuit provide a layer of accountability that freelance or unorganized detectives cannot offer.",
+      },
+      {
+        question: "42. Can your evidence be used for divorce or child custody cases in India?",
+        answer:
+          "While private detectives cannot 'testify' as primary witnesses like the police, our documented reports, photographs, and video evidence serve as corroborative evidence. This helps your legal counsel build a stronger case in family or civil courts.",
+      },
+      {
+        question: "43. Why choose an agency with international TSCM (Bug Sweeping) training?",
+        answer:
+          "Most local agencies use basic, 'off-the-shelf' scanners. Our team uses industrial-grade equipment from the USA and Israel, capable of detecting sophisticated 'burst' transmitters and hidden spyware that standard devices miss.",
+      },
+      {
+        question: "44. Do you handle cases outside of Mumbai or internationally?",
+        answer:
+          "Yes. While we are headquartered in Mumbai, we have a network that covers the entire Mumbai Metropolitan Region (MMR), including Thane, Navi Mumbai, and Pune. For international requirements, we coordinate with verified global partners to ensure seamless cross-border investigations.",
+      },
+      {
+        question: "45. How do I choose a reliable private detective agency in Mumbai?",
+        answer:
+          "When hiring a detective in Mumbai, look for a physical office address, a law enforcement background, and technical certifications. Avoid agencies that guarantee illegal acts.",
+      },
+      {
+        question: "46. Why choose H S Detectives over a freelance private investigator?",
+        answer:
+          "H S Detectives is a registered corporate entity with an in-house technical arm. They offer specialized equipment and a multi-layered verification process.",
+      },
+      {
+        question: "47. What factors influence the cost of a private investigation in Mumbai?",
+        answer:
+          "Costs are determined by the number of field agents, the duration of surveillance, and the geographical spread. They provide a transparent fee structure.",
+      },
+      {
+        question: "48. How do I verify if a private detective in Mumbai is legitimate?",
+        answer:
+          "To verify a detective's legitimacy, check for a registered office address, verify their Retired Law Enforcement credentials, and ensure they follow ethical guidelines like the Indian Penal Code.",
+      },
+      {
+        question: "49. What is the process for hiring a private investigator in Mumbai?",
+        answer:
+          "1. Initial Consultation: Confidential discussion of your case. 2. Strategy Planning: Tailored investigation roadmap. 3. Fieldwork: Surveillance or data gathering. 4. Evidence Reporting: Documented reports with photos/videos.",
+      },
+      {
+        question: "50. Can I hire a private detective for child custody or divorce cases?",
+        answer:
+          "Yes. Investigators provide corroborative evidence, such as lifestyle checks or asset verification, which legal counsel can use to support claims in family court.",
+      },
+      {
+        question: "51. How do you protect clients from potential blackmail or data misuse?",
+        answer:
+          "We prioritize client safety by strictly adhering to a non-disclosure policy. All evidence is handed over exclusively to the client, and we do not store sensitive data after the case is closed. Our reputation, backed by a Retired DCP, is built on absolute integrity and professional ethics.",
+      },
+      {
+        question: "52. Why don't private detectives in India have a government-issued license?",
+        answer:
+          "Currently, there is no central licensing authority for private investigators in India, as the Private Detective Agencies (Regulation) Bill is still pending. Legitimate agencies like ours operate as registered business entities (MSME/GST registered) and follow the legal framework of the Indian Penal Code (IPC) and IT Act.",
+      },
+      {
+        question: "53. What happens if the target finds out they are being watched?",
+        answer:
+          "Our investigators are trained in 'covert surveillance' to remain undetected. If a situation becomes compromised, we immediately abort the operation to protect the client’s interests and privacy. We never use illegal methods like phone tapping or trespassing, which could make evidence inadmissible in court.",
+      },
+      {
+        question: "54. How is the fee structure determined?",
+        answer:
+          "Fees primarily cover operational costs, manpower, and technical resources deployed during the investigation. While we cannot 'guarantee' a specific outcome (as we only report factual truths), we provide transparent daily updates so you can decide whether to continue or pivot the strategy.",
+      },
+      {
+        question: "55. Can you track a person’s 'digital footprint' without hacking their accounts?",
+        answer:
+          "Yes. We use Open Source Intelligence (OSINT) to legally analyze public social media activity, forum posts, and archived digital records. This provides a comprehensive view of a person’s lifestyle and associations without violating the IT Act.",
+      },
+    ],
+  },
 ];
 
 const faqSchema = {

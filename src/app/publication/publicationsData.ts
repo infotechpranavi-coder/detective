@@ -209,3 +209,211 @@ export const newPublications = [
   { source: "Uttarakhand News Wire", audience: 1090, url: "https://uttarakhandnewswire.in/how-h-s-detectives-is-revolutionizing-private-investigation-in-mumbai-with-law-enforcement-expertise/" },
   { source: "Maharashtra Portal", audience: 1070, url: "https://maharastraportal.in/how-h-s-detectives-is-revolutionizing-private-investigation-in-mumbai-with-law-enforcement-expertise/" },
 ].map((p) => ({ ...p, title: TITLE }));
+
+export const latestPublications = [
+  {
+    title: "A New Era of Intelligence in India: Wahid Shaikh Builds a Unified Security Investigation Powerhouse",
+    source: "Eshn News",
+    url: "https://eshnnews.com/2026/03/25/a-new-era-of-intelligence-in-india-wahid-shaikh-builds-a-unified-security-investigation-powerhouse/"
+  },
+  {
+    title: "Redefining Private Intelligence in India: Wahid Shaikh’s Unified Vision for Security Investigation and Technology",
+    source: "Prime News of India",
+    url: "https://primenewsofindia.com/2026/03/25/redefining-private-intelligence-in-india-wahid-shaikhs-unified-vision-for-security-investigation-and-technology/"
+  },
+  {
+    title: "India’s Intelligence Revolution: Wahid Shaikh Forges a Unified Front in Investigation, Risk, and Tech Security",
+    source: "Indian Prime Bulletin",
+    url: "https://indianprimebulletin.com/2026/03/25/indias-intelligence-revolution-wahid-shaikh-forges-a-unified-front-in-investigation-risk-and-tech-security/"
+  },
+  {
+    title: "Building India’s Modern Intelligence Grid: Wahid Shaikh’s Strategic Integration Sets a New Benchmark",
+    source: "Hindustan Insider",
+    url: "https://hindustaninsider.in/2026/03/25/building-indias-modern-intelligence-grid-wahid-shaikhs-strategic-integration-sets-a-new-benchmark/"
+  },
+  {
+    title: "The Rise of an Integrated Intelligence Force in India: Wahid Shaikh’s Strategic Leap into the Future of Security",
+    source: "Urban Chronicle",
+    url: "https://urbanchronicle.in/2026/03/25/the-rise-of-an-integrated-intelligence-force-in-india-wahid-shaikh-strategic-leap-into-the-future-of-security/"
+  },
+  {
+    title: "Forging India’s Ultimate Intelligence Vanguard: Wahid Shaikh’s Integrated Approach to High-Stakes Investigation and Tech Security",
+    source: "Daily District News",
+    url: "https://www.dailydistrictnews.co.in/2026/03/forging-indias-ultimate-intelligence.html"
+  },
+  {
+    title: "India’s Next-Gen Security Vanguard: Wahid Shaikh Architects a Multi-Layered Intelligence Powerhouse",
+    source: "Newswire of India",
+    url: "https://www.newswireofindia.co.in/2026/03/indias-next-gen-security-vanguard-wahid.html"
+  },
+  {
+    title: "India’s Intelligence Revolution: Wahid Shaikh Architects a Powerhouse in Investigation, Risk, and Tech Security",
+    source: "99 News",
+    url: "https://www.99news.co.in/2026/03/indias-intelligence-revolution-wahid.html"
+  },
+  {
+    title: "Wahid Shaikh Unveils India’s First Fully Integrated Intelligence Hub – Merging Investigation, TSCM, and Technology",
+    source: "Insider News Times",
+    url: "https://www.insidernewstimes.co.in/2026/03/wahid-shaikh-unveils-indias-first-fully.html"
+  },
+  {
+    title: "Wahid Shaikh Pioneers India’s Unified Intelligence Front – A Convergence of Tech, Investigation, and Risk Mitigation",
+    source: "News Today 24x7",
+    url: "https://www.newstoday24x7.co.in/2026/03/wahid-shaikh-pioneers-indias-unified.html"
+  },
+  {
+    title: "Wahid Shaikh Pioneers India’s Unified Intelligence Front – A Convergence of Tech, Investigation, and Risk Mitigation",
+    source: "The India Forbes News",
+    url: "https://www.theindiaforbesnews.co.in/2026/03/wahid-shaikh-pioneers-indias-unified.html"
+  },
+  {
+    title: "Wahid Shaikh Unveils India’s Premier Integrated Intelligence Hub – A New Standard in Security and Investigation",
+    source: "Today News Standard",
+    url: "https://www.todaynewsstandard.co.in/2026/03/wahid-shaikh-unveils-indias-premier.html"
+  },
+  {
+    title: "Wahid Shaikh Introduces India’s All-in-One Intelligence Grid – Fusing Expert Investigation with High-Tech Security",
+    source: "Times News Express",
+    url: "https://www.timesnewsexpress.co.in/2026/03/wahid-shaikh-introduces-indias-all-in.html"
+  },
+  {
+    title: "India’s New Era of Security: Wahid Shaikh Directs an Integrated Grid of High-End Intelligence and Investigation",
+    source: "Indian Economics News",
+    url: "https://www.indianeconomicsnews.co.in/2026/03/indias-new-era-of-security-wahid-shaikh.html"
+  },
+  {
+    title: "India’s Ultimate Corporate Protection Force: Wahid Shaikh Directs an Integrated Intelligence and Security Powerhouse",
+    source: "The Republic News",
+    url: "https://www.therepublicnews.co.in/2026/03/indias-ultimate-corporate-protection.html"
+  },
+  {
+    title: "Wahid Shaikh Launches India’s First Fully Unified Intelligence Ecosystem – Redefining High-Tech Investigation and Security",
+    source: "The Republic Voice",
+    url: "https://www.therepublicvoice.top/2026/03/wahid-shaikh-launches-indias-first.html"
+  },
+  {
+    title: "Wahid Shaikh Establishes India’s First Multi-Layered Intelligence Force – A Landmark in Professional Investigation and Tech Safety",
+    source: "Bharat Headlines",
+    url: "https://www.bharatheadlines.top/2026/03/wahid-shaikh-establishes-indias-first.html"
+  },
+  {
+    title: "Wahid Shaikh Unveils India’s Next-Gen Intelligence Hub – A Masterstroke in Security, Tech, and Investigation Integration",
+    source: "Bharat Patrika",
+    url: "https://www.bharatpatrika.top/2026/03/wahid-shaikh-unveils-indias-next.html"
+  },
+  {
+    title: "Wahid Shaikh Unveils India’s Next-Gen Intelligence Hub – A Masterstroke in Security, Tech, and Investigation Integration",
+    source: "The Khabar Mirror",
+    url: "https://www.thekhabarmirror.co.in/2026/03/wahid-shaikh-unveils-indias-next.html"
+  },
+  {
+    title: "Wahid Shaikh Unveils India’s Premier Integrated Intelligence Hub – A New Benchmark in Security and High-Level Investigation",
+    source: "Mint News 24",
+    url: "https://www.mintnews24.co.in/2026/03/wahid-shaikh-unveils-indias-premier.html"
+  },
+  {
+    title: "A New Era of Intelligence in India: Wahid Shaikh Builds a Unified Security Investigation Powerhouse",
+    source: "DHunt",
+    url: "https://dhunt.in/13RTD0"
+  },
+  {
+    title: "HS Detectives: Leading Detective Services in Mumbai with Advanced Surveillance Solutions",
+    source: "Hind News Network",
+    url: "https://hindnewsnetwork.in/hs-detectives-leading-detective-services-in-mumbai-with-advanced-surveillance-solutions/"
+  },
+  {
+    title: "Top Private Investigation Agency in Mumbai: HS Detectives Delivers Result-Oriented Services",
+    source: "The Best News Place",
+    url: "https://thebestnewsplace.com/top-private-investigation-agency-in-mumbai-hs-detectives-delivers-result-oriented-services/"
+  },
+  {
+    title: "HS Detectives: Trusted Name for Background Verification & Detective Services in Mumbai",
+    source: "Digital India Daily",
+    url: "https://digitalindiadaily.com/hs-detectives-trusted-name-for-background-verification-detective-services-in-mumbai/"
+  },
+  {
+    title: "Mumbai Detective Services Redefined: HS Detectives Leads with Modern Investigation Techniques",
+    source: "Business Herald News",
+    url: "https://businessheraldnews.com/mumbai-detective-services-redefined-hs-detectives-leads-with-modern-investigation-techniques/"
+  },
+  {
+    title: "HS Detectives Agency Mumbai: Top Choice for Private Detective and Surveillance Services",
+    source: "Daily Top 10 News",
+    url: "https://dailytop10news.com/hs-detectives-agency-mumbai-top-choice-for-private-detective-and-surveillance-services/"
+  },
+  {
+    title: "Best Investigation Services in Mumbai: HS Detectives Ensures Professional & Confidential Results",
+    source: "Outfront India",
+    url: "https://outfrontindia.com/best-investigation-services-in-mumbai-hs-detectives-ensures-professional-confidential-results/"
+  },
+  {
+    title: "HS Detectives: Mumbai's Reliable Agency for Corporate Investigation and Fraud Detection",
+    source: "Indian Founder",
+    url: "https://indianfounder.com/hs-detectives-mumbais-reliable-agency-for-corporate-investigation-and-fraud-detection/"
+  },
+  {
+    title: "Private Detective Services in Mumbai: HS Detectives Offers Accurate & Discreet Solutions",
+    source: "Press Release India",
+    url: "https://pressreleaseindia.com/private-detective-services-in-mumbai-hs-detectives-offers-accurate-discreet-solutions/"
+  },
+  {
+    title: "HS Detectives Mumbai: Expert Surveillance & Private Investigation Services You Can Trust",
+    source: "Bharat Darpan News",
+    url: "https://bharatdarpannews.com/hs-detectives-mumbai-expert-surveillance-private-investigation-services-you-can-trust/"
+  },
+  {
+    title: "Affordable and Trusted Detective Services in Mumbai: HS Detectives Leads the Industry",
+    source: "The Digital News",
+    url: "https://thedigitalnews.in/affordable-and-trusted-detective-services-in-mumbai-hs-detectives-leads-the-industry/"
+  },
+  {
+    title: "HS Detectives Strengthens Position as Leading Private Detective Agency in Mumbai",
+    source: "For Breaking News",
+    url: "https://forbreakingnews.in/hs-detectives-strengthens-position-as-leading-private-detective-agency-in-mumbai/"
+  },
+  {
+    title: "Top Rated Detective Services in Mumbai: HS Detectives Ensures Confidential Investigations",
+    source: "Startup PR",
+    url: "https://startuppr.in/top-rated-detective-services-in-mumbai-hs-detectives-ensures-confidential-investigations/"
+  },
+  {
+    title: "HS Detectives Mumbai: Best Private Investigator for Matrimonial & Corporate Investigation",
+    source: "Website Directory",
+    url: "https://websitedirectory.co.in/hs-detectives-mumbai-best-private-investigator-for-matrimonial-corporate-investigation/"
+  },
+  {
+    title: "Expert Detective Services in Mumbai: HS Detectives Delivers Accurate Investigation Solutions",
+    source: "eIndia News",
+    url: "https://eindianews.com/expert-detective-services-in-mumbai-hs-detectives-delivers-accurate-investigation-solutions/"
+  },
+  {
+    title: "Mumbai's Trusted Detective Agency: HS Detectives Leads with Advanced Surveillance Technology",
+    source: "eMagazine India",
+    url: "https://emagazineindia.com/mumbais-trusted-detective-agency-hs-detectives-leads-with-advanced-surveillance-technology/"
+  },
+  {
+    title: "HS Detectives Offers Reliable Private Investigation Services in Mumbai and Across India",
+    source: "Hind Khabar",
+    url: "https://hindkhabar.in/hs-detectives-offers-reliable-private-investigation-services-in-mumbai-and-across-india/"
+  },
+  {
+    title: "Professional Detective Services in Mumbai by HS Detectives for Personal & Corporate Cases",
+    source: "Public Live",
+    url: "https://publiclive.co.in/professional-detective-services-in-mumbai-by-hs-detectives-for-personal-corporate-cases/"
+  },
+  {
+    title: "Top Private Detective Agency in Mumbai: HS Detectives Expands Advanced Investigation Services",
+    source: "Bharat Public",
+    url: "https://bharatpublic.com/top-private-detective-agency-in-mumbai-hs-detectives-expands-advanced-investigation-services/"
+  },
+  {
+    title: "HS Detectives Mumbai: Trusted Private Detective Agency for Confidential Investigation Services",
+    source: "India Ka Samachar",
+    url: "https://indiakasamachar.in/hs-detectives-mumbai-trusted-private-detective-agency-for-confidential-investigation-services/"
+  },
+  {
+    title: "Best Detective Services in Mumbai: HS Detectives Sets New Standards in Private Investigation",
+    source: "Hindi Junction",
+    url: "https://hindijunction.in/best-detective-services-in-mumbai-hs-detectives-sets-new-standards-in-private-investigation/"
+  }
+];

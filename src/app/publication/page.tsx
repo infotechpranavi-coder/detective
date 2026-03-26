@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { newPublications } from "./publicationsData";
+import { newPublications, latestPublications } from "./publicationsData";
 
 const publications = [
   {
@@ -166,7 +166,7 @@ export default function PublicationPage() {
         </p>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {[...publications, ...newPublications].map((item: any, idx: number) => (
+          {[...latestPublications, ...publications, ...newPublications].map((item: any, idx: number) => (
             <Link
               key={idx}
               href={item.url}

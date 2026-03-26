@@ -21,8 +21,8 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "Our Ethics", path: "/ethics" },
+    { name: "Clients", path: "/clients" },
     { name: "Services", path: "/services" },
     { name: "Certification", path: "/certificate" },
     { name: "Blog", path: "/blog" },
@@ -30,8 +30,6 @@ export default function Navbar() {
     { name: "Packages", path: "/packages" },
     { name: "Locations", path: "/locations" },
     { name: "Publication", path: "/publication" },
-    { name: "Govt. Regulation", path: "/regulation" },
-    { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
   ];
 
