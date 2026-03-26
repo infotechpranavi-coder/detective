@@ -282,9 +282,8 @@ export default function AboutPage() {
                   <h4 className="font-playfair text-3xl">Direct Inquiries</h4>
                   <div className="space-y-6">
                      <div>
-                        <p className="font-space text-[10px] text-red-600 uppercase mb-1">Email Addresses</p>
+                        <p className="font-space text-[10px] text-red-600 uppercase mb-1">Email Address</p>
                         <p className="font-inter text-lg">info@hsdetectives.com</p>
-                        <p className="font-inter text-lg">wahid@hsdetectives.com</p>
                      </div>
                      <div>
                         <p className="font-space text-[10px] text-red-600 uppercase mb-1">Mobile Support</p>

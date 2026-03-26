@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
 export default function Footer() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,6 +55,24 @@ export default function Footer() {
             <p className="text-white/80 text-sm font-inter leading-relaxed max-w-xs">
               A cinematic, licensed professional detective agency operating Pan India with 100% confidentiality.
             </p>
+            {/* Social Media Links */}
+            <div className="flex gap-4 pt-2">
+              <a href="https://www.facebook.com/hsdetectives/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
+                <Facebook size={20} />
+              </a>
+              <a href="https://www.instagram.com/hsdetectives/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
+                <Instagram size={20} />
+              </a>
+              <a href="https://in.linkedin.com/company/hsdetectives" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://www.youtube.com/@hsdetectives7128" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
+                <Youtube size={20} />
+              </a>
+              <a href="https://x.com/hsdetectives" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
+                <Twitter size={20} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
