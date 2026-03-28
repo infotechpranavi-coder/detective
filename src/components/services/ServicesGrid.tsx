@@ -95,7 +95,7 @@ export default function ServicesGrid() {
                   <p className="font-inter text-sm text-black/70 leading-relaxed max-w-md flex-grow">{s.desc}</p>
                   <div className="mt-8 pt-6 border-t-2 border-black w-full flex justify-between items-center group-hover:border-accent transition-colors">
                     <Link href={s.href} className="font-space text-[10px] tracking-widest text-accent uppercase hover:text-black transition-colors">
-                      Open Service Page ->
+                      Open Service Page {"->"}
                     </Link>
                   </div>
                 </div>
