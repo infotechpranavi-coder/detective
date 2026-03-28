@@ -1,5 +1,4 @@
 import PageTransition from "@/components/ui/PageTransition";
-import Image from "next/image";
 
 export const metadata = {
   title: "Memberships | H S Detectives",
@@ -15,6 +14,7 @@ type AssociationItem = {
   focus?: string;
   shortName: string;
   category: "India" | "International";
+  logo?: string;
 };
 
 const indiaAssociations: AssociationItem[] = [
@@ -27,6 +27,7 @@ const indiaAssociations: AssociationItem[] = [
     focus: "Government advocacy & Regulation",
     shortName: "APDI",
     category: "India",
+    logo: "/apdi-logo.jpg",
   },
   {
     name: "TPDIA (The Professional Detectives and Investigators Association)",
@@ -34,6 +35,7 @@ const indiaAssociations: AssociationItem[] = [
       "A prominent national organization with chapters across Maharashtra, Gujarat, and Tamil Nadu, focused on maintaining strict ethics and professional standards.",
     shortName: "TPDIA",
     category: "India",
+    logo: "https://tse2.mm.bing.net/th/id/OIP.tqmIgsKMpLEZmgtvKi3NdgHaDt?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   {
     name: "NIDA (National Institute of Detectives and Investigators)",
@@ -41,6 +43,7 @@ const indiaAssociations: AssociationItem[] = [
       "Widely associated with professional training and standard-setting within the Indian investigative community.",
     shortName: "NIDA",
     category: "India",
+    logo: "https://nida.nih.gov/sites/default/files/images/international_logo_2023_1200x800.jpg",
   },
 ];
 
@@ -54,6 +57,7 @@ const globalAssociations: AssociationItem[] = [
     focus: "Networking & International standards",
     shortName: "W.A.D.",
     category: "International",
+    logo: "/wad.jpg",
   },
   {
     name: "CII (Council of International Investigators)",
@@ -64,6 +68,7 @@ const globalAssociations: AssociationItem[] = [
     focus: "Elite professional ethics & trust",
     shortName: "CII",
     category: "International",
+    logo: "http://www.madhavmineral.com/wp-content/uploads/2023/10/Official_logo_of_the_Confederation_of_Indian_Industry_CII.png",
   },
   {
     name: "ABI (Association of British Investigators)",
@@ -74,6 +79,7 @@ const globalAssociations: AssociationItem[] = [
     focus: "Professional accreditation & Self-regulation",
     shortName: "ABI",
     category: "International",
+    logo: "http://www.firstintelligence.co.uk/img/preview/slide-620-1aib.jpg",
   },
   {
     name: "WAPI (World Association of Professional Investigators)",
@@ -81,6 +87,7 @@ const globalAssociations: AssociationItem[] = [
       "A global body covering multiple investigative domains, including public, corporate, and domestic private-sector work.",
     shortName: "WAPI",
     category: "International",
+    logo: "https://tse1.mm.bing.net/th/id/OIP.PxqHy14hQavvZf8svLpKVwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
   {
     name: "ASIS International (American Society for Industrial Security)",
@@ -88,6 +95,7 @@ const globalAssociations: AssociationItem[] = [
       "A major international organization for security professionals and a key network for corporate investigators worldwide.",
     shortName: "ASIS",
     category: "International",
+    logo: "https://tse2.mm.bing.net/th/id/OIP.nfMRMql6oV6_BBiN-Ew3mwHaG9?rs=1&pid=ImgDetMain&o=7&rm=3",
   },
 ];
 
@@ -155,20 +163,10 @@ export default function MembershipPage() {
                 >
                   <div className="flex md:block items-center justify-center">
                     <div className="w-28 h-28 mx-auto rounded-full border border-white/20 bg-white flex items-center justify-center overflow-hidden p-2">
-                      {item.shortName === "APDI" ? (
-                        <Image
-                          src="/apdi-logo.jpg"
-                          alt="APDI Logo"
-                          width={112}
-                          height={112}
-                          className="w-full h-full object-contain"
-                        />
-                      ) : item.shortName === "W.A.D." ? (
-                        <Image
-                          src="/wad.jpg"
-                          alt="WAD Logo"
-                          width={112}
-                          height={112}
+                      {item.logo ? (
+                        <img
+                          src={item.logo}
+                          alt={`${item.shortName} Logo`}
                           className="w-full h-full object-contain"
                         />
                       ) : (

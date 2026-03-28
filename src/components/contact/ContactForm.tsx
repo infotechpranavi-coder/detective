@@ -80,8 +80,8 @@ export default function ContactForm() {
                   <Phone size={20} className="text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Toll Free Support</h4>
-                  <p className="font-inter text-foreground text-lg tracking-wide">1800-456-7890</p>
+                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Mobile Support</h4>
+                  <p className="font-inter text-foreground text-lg tracking-wide">+91 99304 03115</p>
                 </div>
               </motion.div>
               <motion.div variants={fadeUp} className="flex items-start gap-4">

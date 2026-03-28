@@ -79,10 +79,13 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-space text-xs text-accent tracking-widest uppercase">Quick Links</h4>
             <ul className="space-y-3 font-inter text-sm">
-              <li><Link href="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-white/70 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/faq" className="text-white/70 hover:text-white transition-colors">FAQ</Link></li>
               <li><Link href="/regulation" className="text-white/70 hover:text-white transition-colors">Govt. Regulation</Link></li>
+              <li><Link href="/membership" className="text-white/70 hover:text-white transition-colors">Membership</Link></li>
+              <li><Link href="/certificate" className="text-white/70 hover:text-white transition-colors">Certification</Link></li>
+              <li><Link href="/case-study" className="text-white/70 hover:text-white transition-colors">Case Study</Link></li>
+              <li><Link href="/ethics" className="text-white/70 hover:text-white transition-colors">Our Ethics</Link></li>
+              <li><Link href="/information" className="text-white/70 hover:text-white transition-colors">Information</Link></li>
             </ul>
           </div>
 
@@ -109,7 +112,7 @@ export default function Footer() {
               >
                 Crystal Plaza, A/514, New Link Rd, Andheri West, Mumbai 400053
               </a>
-              <p>1800-456-7890 (Toll Free)</p>
+              <p>+91 99304 03115</p>
               <p>info@hsdetectives.com</p>
             </div>
             <Link

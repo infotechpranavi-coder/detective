@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useMemo, useState } from "react";
+import { Building2 } from "lucide-react";
 import { newPublications, latestPublications } from "./publicationsData";
 
 const publications = [
@@ -156,7 +158,62 @@ const publications = [
   },
 ];
 
+type PublicationItem = {
+  title: string;
+  source: string;
+  url: string;
+  image?: string;
+  audience?: number;
+};
+
+function getLogoCandidates(url: string) {
+  try {
+    const hostname = new URL(url).hostname.replace(/^www\./, "");
+    return [
+      `https://logo.clearbit.com/${hostname}`,
+      `https://www.google.com/s2/favicons?domain=${hostname}&sz=128`,
+    ];
+  } catch {
+    return [];
+  }
+}
+
+function SourceLogo({ source, url }: { source: string; url: string }) {
+  const candidates = useMemo(() => getLogoCandidates(url), [url]);
+  const [index, setIndex] = useState(0);
+  const [failed, setFailed] = useState(false);
+
+  const handleError = () => {
+    if (index < candidates.length - 1) {
+      setIndex(index + 1);
+      return;
+    }
+    setFailed(true);
+  };
+
+  if (failed || candidates.length === 0) {
+    return (
+      <div className="flex h-14 w-14 items-center justify-center rounded-full border border-black/10 bg-neutral-50">
+        <Building2 size={24} className="text-black/25" strokeWidth={1.5} />
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-black/10 bg-white p-2">
+      <img
+        src={candidates[index]}
+        alt={`${source} logo`}
+        className="h-10 w-10 object-contain"
+        onError={handleError}
+      />
+    </div>
+  );
+}
+
 export default function PublicationPage() {
+  const allPublications: PublicationItem[] = [...latestPublications, ...publications, ...newPublications];
+
   return (
     <main className="min-h-screen bg-background px-6 py-24 md:px-12">
       <section className="mx-auto max-w-5xl">
@@ -166,7 +223,7 @@ export default function PublicationPage() {
         </p>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {[...latestPublications, ...publications, ...newPublications].map((item: any, idx: number) => (
+          {allPublications.map((item, idx: number) => (
             <Link
               key={idx}
               href={item.url}
@@ -183,11 +240,13 @@ export default function PublicationPage() {
                   {String(idx + 1).padStart(2, '0')}
                 </span>
               </div>
-              
-              {/* Card label */}
-              <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-3">
-                {item.source}
-              </p>
+
+              <div className="mb-5 flex items-center gap-4">
+                <SourceLogo source={item.source} url={item.url} />
+                <p className="text-xs font-semibold tracking-widest text-accent uppercase">
+                  {item.source}
+                </p>
+              </div>
               
               {/* Card heading */}
               <h2 className="text-lg font-bold text-black mb-4">

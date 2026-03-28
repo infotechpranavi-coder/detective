@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import OurClients from "@/components/home/OurClients";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -11,6 +12,7 @@ interface AppShellProps {
 export default function AppShell({ children, navbar, footer }: AppShellProps) {
   const pathname = usePathname();
   const isIntroRoute = pathname === "/logointor";
+  const showClientsSection = pathname !== "/clients";
 
   if (isIntroRoute) {
     return <>{children}</>;
@@ -20,6 +22,7 @@ export default function AppShell({ children, navbar, footer }: AppShellProps) {
     <>
       {navbar}
       {children}
+      {showClientsSection ? <OurClients /> : null}
       {footer}
     </>
   );

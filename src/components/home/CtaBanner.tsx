@@ -51,10 +51,10 @@ export default function CtaBanner() {
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-6">
             <Link 
-              href="tel:18004567890" 
+              href="tel:+919930403115" 
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-space text-xs sm:text-sm uppercase tracking-widest hover:border-accent hover:bg-accent transition-colors duration-300"
             >
-              Call 1800-456-7890
+              Call +91 99304 03115
             </Link>
             <Link 
               href="/contact" 

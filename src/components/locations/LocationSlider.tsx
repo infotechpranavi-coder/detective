@@ -11,7 +11,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=700&h=400&q=80",
     address: "14th Road, Fortune Enclave, Sri Ram Nagar Colony, Banjara Hills, Hyderabad, Telangana 500873",
-    phone: "1800-456-7890",
+    phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
   {
@@ -19,7 +19,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=700&h=400&q=80",
     address: "Raw House No. 1, Elite Brookland, Baner - Balewadi Road, Baner, Pune, Maharashtra 411045 (Near Syngent)",
-    phone: "1800-456-7890",
+    phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
   {
@@ -29,7 +29,7 @@ const OFFICES = [
     address: "B/514, Crystal Plaza, New Link Rd, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053",
     mapUrl:
       "https://www.google.com/maps?q=H+S+Detectives+Agency+Mumbai,+crystal+plaza,+A/514,+New+Link+Rd,+Veera+Desai+Industrial+Estate,+Andheri+West,+Mumbai,+Maharashtra+400053&ftid=0x3be7b06618f08abb:0xc675e5f7f07f1ecd&entry=gps&shh=CAE&lucs=,94259550,94297699,94284457,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjEwLjIuODc3MzE3OTEwMBgAINeCAypRLDk0MjU5NTUwLDk0Mjk3Njk5LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=d87bc999-7f57-468b-8340-e5d438ebe1a2&g_st=iwb",
-    phone: "+91 98765 43210",
+    phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
   {
@@ -37,7 +37,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=700&h=400&q=80",
     address: "F-01 A/16, Haware Centurion Mall, Sect - 19, Near Seawoods Station, Nerul (E), Navi Mumbai, Maharashtra 400706",
-    phone: "1800-456-7890",
+    phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
   {
@@ -45,7 +45,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&h=400&q=80",
     address: "Shop No. 66, Ground Floor, Cinewonder Mall, Kapurbawdi, Thane West, Thane, Maharashtra 400607",
-    phone: "1800-456-7890",
+    phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
   {
@@ -53,7 +53,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=700&h=400&q=80",
     address: "Office number 09, 3rd Floor, Patto Centre Building, Patto Business Centre, Panaji, Goa - 403001",
-    phone: "1800-456-7890",
+    phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
   {
@@ -61,7 +61,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=700&h=400&q=80",
     address: "105, Shiva Rd, Pocket 14, Sector 8D, Rohini, Delhi, 110085",
-    phone: "1800-456-7890",
+    phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
 ];

@@ -9,8 +9,8 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const STATS = [
   { count: 15, suffix: "+", label: "Years Experience" },
   { count: 100, suffix: "%", label: "Confidentiality" },
-  { count: 3500, suffix: "+", label: "Cases Solved" },
-  { count: 3, suffix: "", label: "Offices Pan India" },
+  { count: 10000, suffix: "+", label: "Cases Solved" },
+  { count: 7, suffix: "", label: "Offices Pan India" },
 ];
 
 export default function StatsBand() {
