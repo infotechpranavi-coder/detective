@@ -79,6 +79,7 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-space text-xs text-accent tracking-widest uppercase">Quick Links</h4>
             <ul className="space-y-3 font-inter text-sm">
+              <li><Link href="/publication" className="text-white/70 hover:text-white transition-colors">Publication</Link></li>
               <li><Link href="/faq" className="text-white/70 hover:text-white transition-colors">FAQ</Link></li>
               <li><Link href="/regulation" className="text-white/70 hover:text-white transition-colors">Govt. Regulation</Link></li>
               <li><Link href="/membership" className="text-white/70 hover:text-white transition-colors">Membership</Link></li>

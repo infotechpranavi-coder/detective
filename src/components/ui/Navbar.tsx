@@ -6,12 +6,14 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { informationPageLinks } from "@/app/information/informationPagesData";
 import { serviceDetails } from "@/app/services/serviceData";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [informationOpen, setInformationOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -24,12 +26,11 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Blog", path: "/blog" },
+    { name: "About us", path: "/about" },
     { name: "Packages", path: "/packages" },
-    { name: "Publication", path: "/publication" },
+    { name: "Location", path: "/locations" },
     { name: "Clients", path: "/clients" },
-    { name: "Locations", path: "/locations" },
+    { name: "Blogs", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -134,7 +135,95 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            {navLinks.slice(2).map((link) => {
+            {navLinks.slice(2, 4).map((link) => {
+              const isActive = pathname === link.path;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.path}
+                  className={`relative whitespace-nowrap font-inter text-[11px] xl:text-[12px] font-bold tracking-widest uppercase transition-colors duration-300 ${
+                    isActive ? "text-accent" : baseNavClass
+                  }`}
+                >
+                  {link.name}
+                  {isActive && (
+                    <motion.div
+                      layoutId="nav-indicator"
+                      className="absolute -bottom-2 left-0 w-full h-px bg-accent"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
+
+            <div
+              className="relative"
+              onMouseEnter={() => setInformationOpen(true)}
+              onMouseLeave={() => setInformationOpen(false)}
+            >
+              <Link
+                href="/information"
+                className={`relative flex items-center gap-1 whitespace-nowrap font-inter text-[11px] xl:text-[12px] font-bold tracking-widest uppercase transition-colors duration-300 ${
+                  pathname === "/information" ||
+                  informationPageLinks.some((item) => pathname === item.href)
+                    ? "text-accent"
+                    : baseNavClass
+                }`}
+              >
+                Information
+                <ChevronDown size={14} className={`transition-transform ${informationOpen ? "rotate-180" : ""}`} />
+                {(pathname === "/information" ||
+                  informationPageLinks.some((item) => pathname === item.href)) && (
+                  <motion.div
+                    layoutId="nav-indicator"
+                    className="absolute -bottom-2 left-0 w-full h-px bg-accent"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+              </Link>
+
+              <AnimatePresence>
+                {informationOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-1/2 top-full mt-4 w-[320px] -translate-x-1/2 rounded-2xl border border-black/10 bg-white p-3 shadow-2xl"
+                  >
+                    <Link
+                      href="/information"
+                      className="block rounded-xl px-4 py-3 hover:bg-neutral-100 transition-colors"
+                    >
+                      <p className="font-space text-[10px] uppercase tracking-[0.2em] text-accent mb-1">
+                        Overview
+                      </p>
+                      <p className="font-inter text-sm font-semibold text-black">Information Hub</p>
+                    </Link>
+
+                    {informationPageLinks.map((item) => (
+                      <Link
+                        key={item.slug}
+                        href={item.href}
+                        className="block rounded-xl px-4 py-3 hover:bg-neutral-100 transition-colors"
+                      >
+                        <p className="font-space text-[10px] uppercase tracking-[0.2em] text-accent mb-1">
+                          Insight Page
+                        </p>
+                        <p className="font-inter text-sm font-semibold text-black">{item.navLabel}</p>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {navLinks.slice(4).map((link) => {
               const isActive = pathname === link.path;
               return (
                 <Link
@@ -180,6 +269,19 @@ export default function Navbar() {
             className="fixed inset-0 bg-white z-50 flex flex-col justify-center items-center"
           >
             <nav className="flex flex-col gap-4 text-center py-20 overflow-y-auto w-full px-6">
+              {navLinks.slice(0, 2).map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`font-playfair text-2xl uppercase tracking-wider ${
+                    pathname === link.path ? "text-accent" : "text-black"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+
               <Link
                 href="/services"
                 onClick={() => setMobileMenuOpen(false)}
@@ -205,7 +307,48 @@ export default function Navbar() {
                 ))}
               </div>
 
-              {navLinks.map((link) => (
+              {navLinks.slice(2, 4).map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`font-playfair text-2xl uppercase tracking-wider ${
+                    pathname === link.path ? "text-accent" : "text-black"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              <Link
+                href="/information"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`font-playfair text-2xl uppercase tracking-wider ${
+                  pathname === "/information" ||
+                  informationPageLinks.some((item) => pathname === item.href)
+                    ? "text-accent"
+                    : "text-black"
+                }`}
+              >
+                Information
+              </Link>
+
+              <div className="mb-4 flex flex-col gap-3 border-b border-black/10 pb-6">
+                {informationPageLinks.map((item) => (
+                  <Link
+                    key={item.slug}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`font-inter text-sm uppercase tracking-[0.2em] ${
+                      pathname === item.href ? "text-accent" : "text-black/70"
+                    }`}
+                  >
+                    {item.navLabel}
+                  </Link>
+                ))}
+              </div>
+
+              {navLinks.slice(4).map((link) => (
                 <Link
                   key={link.name}
                   href={link.path}
