@@ -30,7 +30,7 @@ export default function ServicesPage() {
                 Choose The <span className="text-accent italic">Investigation Track</span>
               </h2>
               <p className="font-inter text-base md:text-lg text-black/70 leading-relaxed">
-                Each division is built around a specialized workflow. Open a service page below to review investment, scope, deliverables, and the right next step for your case.
+                Open a service page below to review the full service description and the right next step for your case.
               </p>
             </div>
 
@@ -52,12 +52,9 @@ export default function ServicesPage() {
                   <p className="font-inter text-base text-black/70 leading-relaxed mb-5">
                     {service.heroSubtitle}
                   </p>
-                  <p className="font-inter text-sm text-black/55 mb-8">
-                    Investment: <span className="font-semibold text-black">{service.investment}</span>
-                  </p>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center px-7 py-4 bg-black text-white font-space text-xs uppercase tracking-[0.2em] hover:bg-accent transition-colors"
+                    className="inline-flex items-center justify-center px-7 py-4 mt-3 bg-black text-white font-space text-xs uppercase tracking-[0.2em] hover:bg-accent transition-colors"
                   >
                     Open Service Page
                   </Link>
