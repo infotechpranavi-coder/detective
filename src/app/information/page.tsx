@@ -112,29 +112,6 @@ const informationSections = [
   },
 ];
 
-const strategicPages = [
-  {
-    page: "Warning Signs",
-    url: "/warning-signs",
-    purpose: 'To act as a "Symptom Checker" for worried clients.',
-  },
-  {
-    page: "Client Protocol",
-    url: "/investigation-protocol",
-    purpose: "To educate the client on how to stay safe during an active case.",
-  },
-  {
-    page: "Compliance Corner",
-    url: "/legal-standards",
-    purpose: 'To prove that you are a high-level, "Clean" agency.',
-  },
-  {
-    page: "Right of Privacy",
-    url: "/privacy-rights",
-    purpose: 'To show your commitment to the "Betterment of Society."',
-  },
-];
-
 export default function InformationPage() {
   return (
     <PageTransition>
@@ -202,34 +179,6 @@ export default function InformationPage() {
           </div>
         </section>
 
-        <section className="py-24 bg-black text-white">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="max-w-4xl mb-14">
-              <p className="font-space text-[10px] uppercase tracking-[0.25em] text-red-500 mb-4">
-                Strategic Page Ideas
-              </p>
-              <h2 className="font-playfair text-4xl md:text-5xl uppercase tracking-tight mb-5">
-                Structured Expansion Ideas
-              </h2>
-              <p className="font-inter text-white/70 leading-relaxed">
-                These are strong future content directions that can help this site educate concerned visitors,
-                build authority, and convert serious inquiries with clear intent-focused pages.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {strategicPages.map((item) => (
-                <div key={item.page} className="rounded-[28px] border border-white/10 bg-white/5 p-8">
-                  <p className="font-space text-[10px] uppercase tracking-[0.2em] text-red-400 mb-3">
-                    {item.page}
-                  </p>
-                  <p className="font-inter text-sm text-white/50 mb-4">URL Suggestion: {item.url}</p>
-                  <p className="font-inter text-base text-white/80 leading-relaxed">{item.purpose}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
     </PageTransition>
   );
