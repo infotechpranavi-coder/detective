@@ -6,14 +6,15 @@
   --color-secondary-bg: var(--secondary-bg);
   --color-surface: var(--surface);
   --color-card: var(--card);
-  --color-accent: #EE3939;
-  --color-accent-light: #FF5555;
-  --color-accent-dark: #CC2E2E;
+  --color-accent: #C9A84C;
+  --color-primary: #C9A84C;
+  --color-accent-light: #D4B96A;
+  --color-accent-dark: #A68A3E;
   --color-text-primary: var(--foreground);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-border-subtle: var(--border-subtle);
-  --color-border-accent: rgba(238, 57, 57, 0.25);
+  --color-border-accent: rgba(201, 168, 76, 0.25);
 
   --font-playfair: var(--font-playfair);
   --font-inter: var(--font-inter);
@@ -25,14 +26,14 @@
   :root {
     --background: #000000;
     --foreground: #FFFFFF;
-    --secondary-bg: #FFFFFF;
-    --surface: #FFFFFF;
-    --card: #FFFFFF;
-    --text-secondary: #000000;
+    --secondary-bg: #0A0A0A;
+    --surface: #0F0F0F;
+    --card: #0D0D0D;
+    --text-secondary: #A1A1A1;
     --text-muted: #666666;
-    --border-subtle: #E5E5E5;
-    --img-filter: grayscale(0%) contrast(1.1) brightness(1);
-    --selection-text: #FFFFFF;
+    --border-subtle: #1A1A1A;
+    --img-filter: grayscale(15%) contrast(1.1) brightness(0.85);
+    --selection-text: #000000;
     --body-image: none;
     --body-image-size: auto;
     --body-image-position: center;
@@ -42,20 +43,21 @@
   .dark {
     --background: #000000;
     --foreground: #FFFFFF;
-    --secondary-bg: #FFFFFF;
-    --surface: #FFFFFF;
-    --card: #FFFFFF;
-    --text-secondary: #000000;
+    --secondary-bg: #0A0A0A;
+    --surface: #0F0F0F;
+    --card: #0D0D0D;
+    --text-secondary: #A1A1A1;
     --text-muted: #666666;
-    --border-subtle: #E5E5E5;
-    --img-filter: grayscale(0%) contrast(1.1) brightness(1);
-    --selection-text: #FFFFFF;
+    --border-subtle: #1A1A1A;
+    --img-filter: grayscale(15%) contrast(1.1) brightness(0.85);
+    --selection-text: #000000;
     --body-image: none;
     --body-image-size: auto;
     --body-image-position: center;
     --body-image-repeat: no-repeat;
   }
 }
+
 
 body {
   background-color: var(--background);
