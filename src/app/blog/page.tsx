@@ -15,7 +15,7 @@ const posts = [
     title: "Confidentiality First: Client Trust with H S Detectives",
     excerpt: "Privacy-first investigation workflows that keep your data secure.",
     date: "2026-03-22",
-    image: "https://images.unsplash.com/photo-1521812815661-9c8b7f1d62c1?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "pan-india-network",

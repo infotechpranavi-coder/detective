@@ -254,15 +254,7 @@ export default function Navbar() {
                           );
                         })}
 
-                        {/* View all services link */}
-                        <div className="mt-2 px-5 pt-2 border-t border-black/8">
-                          <Link
-                            href="/services"
-                            className="font-space text-[10px] uppercase tracking-[0.18em] text-red-600 hover:text-red-700 transition-colors"
-                          >
-                            View All Services →
-                          </Link>
-                        </div>
+
                       </div>
 
                       {/* Right column – sub-services */}

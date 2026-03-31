@@ -5,52 +5,51 @@ import CustomImage from "@/components/ui/CustomImage";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, User, Briefcase, Heart, Link as LinkIcon, Search, Shield } from "lucide-react";
+import { ChevronLeft, ChevronRight, User, Briefcase, Heart, Search, Shield } from "lucide-react";
 
 const SERVICES = [
   {
     title: "Personal Investigation",
-    desc: "Discrete surveillance and background checks to provide you with the truth you need about individuals in your personal life.",
+    desc: "Discrete surveillance, pre-matrimonial checks, loyalty tests, missing person tracing, and background verifications for individuals.",
     image: "https://images.unsplash.com/photo-1453873531674-2151bcd01b50?auto=format&fit=crop&w=600&q=80",
     icon: User,
-    category: "01 // INDIVIDUAL"
+    category: "01 // INDIVIDUAL",
+    href: "/services/personal-investigation",
   },
   {
-    title: "Business Investigation",
-    desc: "Protecting your corporate interests through employee verifications, competitor analysis, and fraud detection.",
+    title: "Corporate Investigation",
+    desc: "Protecting your business through employee background verification, fraud investigation, due diligence, asset tracing, and undercover operations.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
     icon: Briefcase,
-    category: "02 // CORPORATE"
+    category: "02 // CORPORATE",
+    href: "/services/corporate-investigation",
   },
   {
-    title: "Pre Matrimonial",
-    desc: "Comprehensive background checks, financial mapping, and character verification before you make life's biggest commitment.",
-    image: "https://images.unsplash.com/photo-1519671282429-b44660ead0a7?auto=format&fit=crop&w=600&q=80",
-    icon: Heart,
-    category: "03 // MATRIMONIAL"
-  },
-  {
-    title: "Post Matrimonial",
-    desc: "Confidential investigation into suspected infidelity, hidden assets, or gathering evidence for legal proceedings.",
-    image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=600&q=80",
-    icon: LinkIcon, // Custom lucide isn't real 'Rings'
-    category: "04 // MATRIMONIAL"
-  },
-  {
-    title: "Divorce Case Evidence",
-    desc: "Legally admissible evidence gathering to support child custody battles, alimony claims, and divorce settlements.",
-    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=600&q=80",
-    icon: Search,
-    category: "05 // LEGAL"
-  },
-  {
-    title: "Debugging & Sweeping",
-    desc: "Advanced electronic countermeasures to detect and remove hidden cameras, listening devices, and GPS trackers.",
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=600&q=80",
+    title: "TSCM Services",
+    desc: "Advanced bug sweeping, hidden camera detection, RF signal analysis, and electronic counter-surveillance for offices, homes, and vehicles.",
+    image: "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?auto=format&fit=crop&w=600&q=80",
     icon: Shield,
-    category: "06 // TECHNICAL"
-  }
+    category: "03 // TECHNICAL",
+    href: "/services/tscm-services",
+  },
+  {
+    title: "Risk Management",
+    desc: "Comprehensive IP protection, brand protection, risk advisory, business continuity support, and forensic investigation services.",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+    icon: Search,
+    category: "04 // RISK",
+    href: "/services/risk-management",
+  },
+  {
+    title: "Surveillance",
+    desc: "Expert physical surveillance, employee monitoring, matrimonial surveillance, fraud investigation monitoring, and real-time field intelligence.",
+    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80",
+    icon: Heart,
+    category: "05 // SURVEILLANCE",
+    href: "/services/surveillance-shadowing",
+  },
 ];
+
 
 export default function ServicesSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "start" });
@@ -154,7 +153,7 @@ export default function ServicesSlider() {
                       <h3 className="font-playfair text-xl text-black mb-4 uppercase tracking-wider group-hover:text-accent transition-colors">{service.title}</h3>
                       <p className="font-inter text-sm text-black/70 leading-relaxed mb-6 flex-grow">{service.desc}</p>
                       <Link 
-                        href="/services" 
+                        href={service.href} 
                         className="inline-flex items-center gap-2 font-space text-[11px] uppercase tracking-widest text-accent hover:text-black transition-colors mt-auto w-max"
                       >
                         Know More <span className="text-lg leading-none">→</span>
