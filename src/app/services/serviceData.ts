@@ -269,6 +269,48 @@ export const serviceDetails: ServiceDetail[] = [
     ],
   },
   {
+    slug: "risk-management",
+    navLabel: "Risk Management",
+    heroTitle: "Risk Management",
+    heroSubtitle:
+      "HS Detectives agency Mumbai provides comprehensive risk management services to protect your business, assets, and intellectual property from threats.",
+    ctaLabel: "Request a Risk Assessment",
+    categoryLabel: "Service Page",
+    image:
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1920&q=80",
+    content: [
+      "Risk management is a critical discipline for any organization looking to protect its assets, reputation, and people. HS Detectives agency Mumbai offers a comprehensive suite of risk management investigation services designed to identify, assess, and mitigate threats before they cause damage.",
+      "Our risk management services cover intellectual property protection, brand protection, risk advisory, business continuity management support, and forensic investigation. Each service is tailored to the specific risk environment of your organization.",
+      "We combine investigative intelligence, surveillance techniques, forensic analysis, and strategic advisory to deliver a 360-degree risk management solution. Our team works closely with your legal, compliance, and operational teams to ensure findings are actionable and aligned with your objectives.",
+      "Whether you are protecting valuable IP, defending your brand from counterfeiting, or seeking expert forensic support for a dispute, our risk management services provide the intelligence and evidence needed to protect what matters most.",
+    ],
+    serviceIncludes: [
+      "Intellectual property (IP) protection",
+      "Brand protection investigations",
+      "Risk advisory and threat assessment",
+      "Business continuity (BCMS) support",
+      "Forensic investigation services",
+      "Comprehensive risk management reports",
+    ],
+    idealFor: [
+      "Organizations with valuable IP or proprietary assets",
+      "Brands facing counterfeit or infringement threats",
+      "Companies seeking strategic risk intelligence",
+      "Legal and compliance teams requiring forensic support",
+    ],
+    reporting: [
+      "Comprehensive risk assessment and intelligence reports",
+      "Forensic-grade evidence documentation",
+      "Actionable mitigation strategy recommendations",
+    ],
+    trustPoints: [
+      "Holistic 360-degree risk coverage",
+      "Aligned with legal and compliance requirements",
+      "Experienced investigators and risk advisors",
+      "Confidential and professionally managed",
+    ],
+  },
+  {
     slug: "debugging-sweeping",
     navLabel: "Debugging & Sweeping",
     heroTitle: "Debugging & Sweeping",
