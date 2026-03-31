@@ -25,9 +25,18 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "H S Detectives | Cinematic Detective Agency Since 2011",
-  description: "A cinematic, fully animated multi-page detective agency.",
+  title: "H S Detectives | Best Private Detective Agency in Mumbai & Pan-India",
+  description: "H S Detectives is a premier private investigation agency in Mumbai offering 100% confidential personal, corporate, and surveillance services since 2011. Professional investigators for matrimonial, fraud, and technical sweeping cases.",
+  keywords: "Private Detective Mumbai, Private Investigator Thane, Investigation Agency Navi Mumbai, Matrimonial Investigation Mumbai, Corporate Detective India, HS Detectives",
+  openGraph: {
+    title: "H S Detectives | Expert Private Investigation Services in Mumbai",
+    description: "Professional and confidential detective services. Specialized in personal, corporate, and matrimonial investigations since 2011.",
+    url: "https://hsdetectives.com",
+    siteName: "H S Detectives",
+    type: "website",
+  }
 };
+
 
 import Cursor from "@/components/ui/Cursor";
 import Navbar from "@/components/ui/Navbar";

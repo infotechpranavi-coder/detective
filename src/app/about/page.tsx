@@ -3,10 +3,12 @@ import PageTransition from "@/components/ui/PageTransition";
 import Image from "next/image";
 
 export const metadata = {
-  title: "About Us | H S Detectives Agency Mumbai",
+  title: "About Us | H S Detectives Agency Mumbai | Top Investigators Since 2011",
   description:
-    "About H S Detectives Agency Mumbai, India's premier private investigation and intelligence firm.",
+    "Learn about H S Detectives, Mumbai's premier private investigation firm. Led by Wahid Shaikh and retired DCP K.S. Shareef, we offer expert intelligence since 2011.",
+  keywords: "Wahid Shaikh, K.S. Shareef, Private Detective Mumbai, About HS Detectives, Best Investigation Agency India",
 };
+
 
 const corporateInfo = [
   { label: "Founded", value: "2011" },

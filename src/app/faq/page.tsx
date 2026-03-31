@@ -1,10 +1,11 @@
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata = {
-  title: "FAQ | H S Detectives",
-  description:
-    "Frequently asked questions about private detective services, matrimonial investigations, surveillance, and corporate investigations in Mumbai.",
+  title: "Private Detective FAQ | Common Investigation Questions | H S Detectives",
+  description: "Get answers to frequently asked questions about private investigation costs, matrimonial checks, and corporate surveillance in Mumbai and India.",
+  keywords: "Private Detective FAQ, Investigation Costs Mumbai, How to Hire a Detective, Matrimonial Investigation Help",
 };
+
 
 const faqSections = [
   {

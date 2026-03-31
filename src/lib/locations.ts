@@ -12,6 +12,8 @@ export type ServiceLocation = {
   description: string;
   highlights: string[];
   extraSections?: ExtraSection[];
+  title: string;
+  metaDescription: string;
 };
 
 export const SERVICE_LOCATIONS: ServiceLocation[] = [
@@ -28,6 +30,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Affordable Pricing",
       "Available Across Mumbai & Navi Mumbai",
     ],
+    title: "Best Private Detective Agency in Mumbai | H S Detectives",
+    metaDescription: "Reliable and confidential private detective agency in Mumbai. We provide matrimonial, corporate, and surveillance investigations with 100% discretion and professional results.",
   },
   {
     name: "Thane",
@@ -42,6 +46,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Thane",
     ],
+    title: "Expert Private Detectives in Thane | H S Detectives Agency",
+    metaDescription: "Searching for a trusted detective agency in Thane? H S Detectives offers professional investigation services for personal and corporate cases with guaranteed confidentiality.",
   },
   {
     name: "Navi Mumbai",
@@ -56,6 +62,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Navi Mumbai",
     ],
+    title: "Top Private Detective Agency in Navi Mumbai | Highly Confidential",
+    metaDescription: "Leading private investigators in Navi Mumbai. Specialized in matrimonial verification, corporate fraud detection, and professional surveillance services.",
   },
   {
     name: "Palghar",
@@ -70,6 +78,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Palghar",
     ],
+    title: "Professional Private Detectives in Palghar | H S Detectives",
+    metaDescription: "Elite detective agency in Palghar providing premium investigation solutions for sensitive personal and corporate matters. Trusted and discreet intelligence services.",
   },
   {
     name: "Mira Bhayandar",
@@ -84,6 +94,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Mira Bhayandar",
     ],
+    title: "Best Private Investigator in Mira Bhayandar | Discreet Services",
+    metaDescription: "Professional detective agency in Mira Bhayandar specializing in uncovering hidden truths with advanced techniques. Reliable investigation services you can trust.",
   },
   {
     name: "Andheri",
@@ -98,6 +110,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Andheri",
     ],
+    title: "Top Private Detective Agency in Andheri East & West | H S Detectives",
+    metaDescription: "Experienced private investigators in Andheri providing matrimonial, corporate, and surveillance solutions. Accurate results with complete privacy guaranteed.",
   },
   {
     name: "Bandra",
@@ -112,6 +126,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Bandra",
     ],
+    title: "Elite Private Investigators in Bandra | Confidential Services",
+    metaDescription: "Professional detective services in Bandra. We offer ethical and evidence-based investigations for high-profile personal and business matters.",
   },
   {
     name: "BKC",
@@ -136,6 +152,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Corporate Detective Agency in BKC | Business & Personal Intel",
+    metaDescription: "Specialized corporate and personal investigation services in BKC. Professional gathering of evidence and verifying facts with absolute discretion.",
   },
   {
     name: "Borivali",
@@ -150,6 +168,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Borivali",
     ],
+    title: "Trusted Private Investigator in Borivali | H S Detectives Agency",
+    metaDescription: "Get the truth today with our professional detectives in Borivali. Confidential investigations for suspect spouse, fraud, and employee vetting.",
   },
   {
     name: "Churchgate",
@@ -174,6 +194,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Best Private Detective in Churchgate | 100% Discreet Results",
+    metaDescription: "Uncover hidden truths with our Churchgate detective agency. Specialized in high-profile cases, surveillance, and verifiable background checks.",
   },
   {
     name: "Dadar",
@@ -199,6 +221,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Private Detective Agency in Dadar | Full Mumbai Coverage",
+    metaDescription: "Top-rated detectives in Dadar offering professional surveillance and background verification. Covering Churchgate, Marine Lines, Colaba, and Fort.",
   },
   {
     name: "Vashi",
@@ -226,6 +250,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Corporate & Personal Detectives in Vashi | H S Detectives",
+    metaDescription: "Professional investigation services in Vashi. Expertise in matrimonial cases, employee fraud detection, and background verification with 100% privacy.",
   },
   {
     name: "Panvel",
@@ -251,6 +277,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Reliable Private Detective Agency in Panvel | Highly Discreet",
+    metaDescription: "Confidential investigators in Panvel for matrimonial and corporate cases. Ethical practices and accurate evidence gathering you can rely on.",
   },
   {
     name: "Mumbai Central",
@@ -278,6 +306,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Detective Services in Mumbai Central | 100% Verified Intel",
+    metaDescription: "Discreet investigation services in Mumbai Central. Specializing in matrimonial verification, surveillance, and corporate theft detection.",
   },
   {
     name: "Powai",
@@ -292,6 +322,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Powai",
     ],
+    title: "Top Rated Detective Agency in Powai | Corporate & Personal",
+    metaDescription: "Expert private investigators in Powai for matrimonial checks and corporate security. Reliable, timely, and highly confidential investigative solutions.",
   },
   {
     name: "Mulund",
@@ -337,6 +369,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Best Private Detective Agency in Mulund | H S Detectives",
+    metaDescription: "Professional investigation services in Mulund. Specialists in matrimonial, corporate fraud detection, and background vetting with full discretion.",
   },
   {
     name: "Kurla",
@@ -363,6 +397,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         ],
       },
     ],
+    title: "Trusted Private Investigator in Kurla | H S Detectives Agency",
+    metaDescription: "Searching for a trusted detective in Kurla? We offer comprehensive investigation services for personal and corporate needs with accurate reporting.",
   },
   {
     name: "Goregaon",
@@ -377,6 +413,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Goregaon",
     ],
+    title: "Private Detective Agency in Goregaon East & West | Best Rates",
+    metaDescription: "Professional detective services in Goregaon. Expertise in spouse verification, background checks, and corporate surveillance with guaranteed results.",
   },
   {
     name: "Malad",
@@ -391,6 +429,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Malad",
     ],
+    title: "Best Private Investigator in Malad | H S Detectives Agency",
+    metaDescription: "Reliable detective agency in Malad providing expert investigative services for personal, corporate, and legal matters with 100% secrecy.",
   },
   {
     name: "Juhu",
@@ -405,6 +445,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Juhu",
     ],
+    title: "High Profile Detective Agency in Juhu | Elite Investigations",
+    metaDescription: "Premium detective services in Juhu for high-profile personal and corporate intelligence. Clarity, protection, and peace of mind through expert results.",
   },
   {
     name: "Santacruz",
@@ -419,6 +461,8 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
       "Transparent & Affordable Pricing",
       "Strong Local Presence in Santacruz",
     ],
+    title: "Cyber & Personal Detective in Santacruz | H S Detectives",
+    metaDescription: "Specialized detective services in Santacruz for cyber threats and corporate fraud. We gather actionable evidence with complete confidentiality.",
   },
 ];
 

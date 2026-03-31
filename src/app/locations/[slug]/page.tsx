@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
@@ -7,6 +8,27 @@ import { CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 type LocationPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const location = GET_LOCATION_BY_SLUG(slug);
+
+  if (!location) {
+    return {
+      title: "Location Not Found",
+    };
+  }
+
+  return {
+    title: location.title,
+    description: location.metaDescription,
+    openGraph: {
+      title: location.title,
+      description: location.metaDescription,
+      type: "website",
+    },
+  };
+}
 
 export async function generateStaticParams() {
   return SERVICE_LOCATIONS.map((location) => ({ slug: location.slug }));

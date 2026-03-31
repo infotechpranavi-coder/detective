@@ -3,9 +3,11 @@ import CertificateShowcase from "@/components/certificate/CertificateShowcase";
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata = {
-  title: "Certificates & Accreditations | H S Detectives",
-  description: "Our certifications, licenses, and professional accreditations that validate our expertise and commitment to excellence.",
+  title: "Professional Certifications & Licenses | H S Detectives",
+  description: "View our credentials, government licenses, and global accreditations. Verified private investigators with recognized security standards in Mumbai and India.",
+  keywords: "Private Detective License India, Certified Investigators, ISO Certified Detective Agency, H S Detectives Credentials",
 };
+
 
 export default function CertificatePage() {
   return (

@@ -3,9 +3,11 @@ import RegulationContent from "@/components/regulation/RegulationContent";
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata = {
-  title: "Government Regulation | H S Detectives",
-  description: "Learn about the strict laws and government regulations we adhere to, ensuring 100% compliance in all our private investigation and TSCM operations.",
+  title: "Government Regulation & Compliance | H S Detectives",
+  description: "Explore our strict adherence to Indian laws (IPC, IT Act) and global investigation standards. 100% compliant and legally sound detective operations.",
+  keywords: "Detective Regulation India, Investigation Laws IPC, IT Act Detective, Complaint Private Investigators",
 };
+
 
 export default function RegulationPage() {
   return (

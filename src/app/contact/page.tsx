@@ -6,9 +6,11 @@ import GoogleMapSection from "@/components/contact/GoogleMapSection";
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata = {
-  title: "Contact | H S Detectives",
-  description: "Securely contact H S Detectives for a confidential consultation.",
+  title: "Contact Us | H S Detectives | Confidential Consultation in Mumbai",
+  description: "Securely contact H S Detectives for a confidential consultation. Professional investigation services in Mumbai, Thane, Navi Mumbai and across India.",
+  keywords: "Contact Detective Mumbai, Hire Private Investigator, Confidential Investigation Mumbai, HS Detectives Contact Number",
 };
+
 
 export default function ContactPage() {
   return (

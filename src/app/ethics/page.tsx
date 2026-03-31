@@ -1,10 +1,12 @@
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata = {
-  title: "Our Ethics & Legal Framework | H S Detectives Agency Mumbai",
+  title: "Ethics & Legal Standards | Private Investigation Mumbai | H S Detectives",
   description:
-    "At H S Detectives Agency Mumbai, we believe that private intelligence must be rooted in public integrity. Learn about our legal compliance and ethical standards.",
+    "Explore our ethical framework and legal compliance. Led by a retired DCP, H S Detectives Mumbai ensures all investigations are handled with the highest integrity and IPC alignment.",
+  keywords: "Private Detective Ethics, Legal Compliance Investigation, Investigation Law India, Ethical Detective Mumbai",
 };
+
 
 const ethicsSections = [
   {
