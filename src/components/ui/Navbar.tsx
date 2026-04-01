@@ -39,6 +39,14 @@ const serviceTree = [
   },
 ];
 
+const externalTscmLinks: Record<string, string> = {
+  "corporate-tscm-services": "https://tscm.in/corporate-tscm-service/",
+  "residential-tscm-services": "https://tscm.in/residential-tscm-service/",
+  "corporate-bug-sweeping": "https://tscm.in/business-bug-sweep/",
+  "home-bug-sweep": "https://tscm.in/home-bug-sweep/",
+  "debugging-service": "https://tscm.in/debugging-services/",
+};
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -81,6 +89,11 @@ export default function Navbar() {
   const baseNavClass = scrolled
     ? "text-black/70 hover:text-black"
     : "text-white/70 hover:text-white";
+
+  const getSubServiceHref = (parentSlug: string, subSlug: string) =>
+    parentSlug === "tscm-services" && externalTscmLinks[subSlug]
+      ? externalTscmLinks[subSlug]
+      : `/services/${parentSlug}/${subSlug}`;
 
   const handleServicesEnter = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -288,7 +301,7 @@ export default function Navbar() {
                               {(subServicesByParent[activeParent] ?? []).map((sub) => (
                                 <Link
                                   key={sub.slug}
-                                  href={`/services/${activeParent}/${sub.slug}`}
+                                  href={getSubServiceHref(activeParent, sub.slug)}
                                   className="flex items-start gap-3 px-4 py-2.5 rounded-xl hover:bg-neutral-50 group transition-colors"
                                 >
                                   <div className="mt-1.5 w-1 h-1 rounded-full bg-black/20 group-hover:bg-red-500 flex-shrink-0 transition-colors" />
@@ -536,7 +549,7 @@ export default function Navbar() {
                                 {(subServicesByParent[parent.slug] ?? []).map((sub) => (
                                   <Link
                                     key={sub.slug}
-                                    href={`/services/${parent.slug}/${sub.slug}`}
+                                    href={getSubServiceHref(parent.slug, sub.slug)}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="block py-1.5 font-inter text-[12px] text-black/60 hover:text-black transition-colors"
                                   >
