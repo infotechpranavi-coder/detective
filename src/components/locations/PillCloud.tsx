@@ -20,10 +20,10 @@ export default function PillCloud() {
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Coverage</span>
           </div>
           <h2 className="font-playfair text-3xl md:text-5xl lg:text-5xl text-foreground uppercase tracking-wider mb-6 leading-snug">
-            Mumbai Region <span className="text-foreground/40 italic">Coverage</span>
+            Pan-India <span className="text-foreground/40 italic">Coverage</span>
           </h2>
           <p className="font-inter text-foreground/50 text-sm max-w-xl mx-auto leading-relaxed">
-            We actively operate across key Mumbai and nearby Maharashtra locations for rapid on-ground investigation support.
+            We actively operate across Mumbai, Maharashtra, and major Indian cities for rapid on-ground investigation support.
           </p>
         </motion.div>
 

@@ -5,15 +5,57 @@ import CustomImage from "@/components/ui/CustomImage";
 import { fadeUp, fadeRight, staggerContainer, scaleUp } from "@/lib/animations";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 
+type ContactFormValues = {
+  name: string;
+  phone: string;
+  email: string;
+  category: string;
+  message: string;
+  captcha: string;
+};
+
+const createCaptcha = () => {
+  const left = Math.floor(Math.random() * 8) + 2;
+  const right = Math.floor(Math.random() * 8) + 1;
+
+  return {
+    left,
+    right,
+    answer: String(left + right),
+  };
+};
+
 export default function ContactForm() {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    setError,
+    clearErrors,
+    formState: { errors },
+  } = useForm<ContactFormValues>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitComplete, setSubmitComplete] = useState(false);
+  const [captcha, setCaptcha] = useState(createCaptcha);
+  const captchaPrompt = useMemo(
+    () => `${captcha.left} + ${captcha.right}`,
+    [captcha.left, captcha.right]
+  );
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: ContactFormValues) => {
+    if (data.captcha.trim() !== captcha.answer) {
+      setError("captcha", {
+        type: "validate",
+        message: "Please solve the CAPTCHA correctly.",
+      });
+      setCaptcha(createCaptcha());
+      return;
+    }
+
+    clearErrors("captcha");
     setIsSubmitting(true);
     // Simulate delay
     await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -21,6 +63,7 @@ export default function ContactForm() {
     setIsSubmitting(false);
     setSubmitComplete(true);
     reset();
+    setCaptcha(createCaptcha());
     setTimeout(() => setSubmitComplete(false), 5000);
   };
 
@@ -69,7 +112,7 @@ export default function ContactForm() {
                />
                <div className="absolute inset-0 bg-background/60 mix-blend-multiply transition-colors duration-500 group-hover:bg-background/40" />
                <div className="absolute inset-0 flex items-center justify-center p-6 text-center z-10 pointer-events-none">
-                 <span className="font-playfair italic text-xl md:text-2xl text-foreground tracking-wide">"Confidential by Default"</span>
+                 <span className="font-playfair italic text-xl md:text-2xl text-foreground tracking-wide">&ldquo;Confidential by Default&rdquo;</span>
                </div>
             </motion.div>
 
@@ -200,6 +243,31 @@ export default function ContactForm() {
                       className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors resize-none"
                       placeholder="Please provide initial context without sharing highly sensitive details yet..."
                     />
+                  </div>
+
+                  <div className="space-y-3 border border-foreground/10 bg-background/40 p-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <label className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase block mb-2">
+                          CAPTCHA Verification
+                        </label>
+                        <p className="font-inter text-sm text-foreground/70">
+                          Solve this to confirm you are human.
+                        </p>
+                      </div>
+                      <div className="font-space text-lg tracking-[0.2em] text-accent">
+                        {captchaPrompt} =
+                      </div>
+                    </div>
+                    <input
+                      {...register("captcha", { required: "Please solve the CAPTCHA." })}
+                      className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors"
+                      placeholder="Enter answer"
+                      inputMode="numeric"
+                    />
+                    {errors.captcha ? (
+                      <p className="font-inter text-sm text-red-600">{errors.captcha.message}</p>
+                    ) : null}
                   </div>
 
                   <button 

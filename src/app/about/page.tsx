@@ -5,8 +5,8 @@ import Image from "next/image";
 export const metadata = {
   title: "About Us | H S Detectives Agency Mumbai | Top Investigators Since 2011",
   description:
-    "Learn about H S Detectives, Mumbai's premier private investigation firm. Led by Wahid Shaikh and retired DCP K.S. Shareef, we offer expert intelligence since 2011.",
-  keywords: "Wahid Shaikh, K.S. Shareef, Private Detective Mumbai, About HS Detectives, Best Investigation Agency India",
+    "Learn about H S Detectives, Mumbai's premier private investigation firm. Meet our leadership, TSCM experts, and cyber security specialists delivering expert intelligence since 2011.",
+  keywords: "Wahid Shaikh, RK Chaudhry, Munir Ahmed, Prasanna Venkatesan, Dev Dhankar, Private Detective Mumbai, About HS Detectives, Best Investigation Agency India",
 };
 
 
@@ -22,36 +22,41 @@ const corporateInfo = [
 const leadershipTeam = [
   {
     name: "Wahid Shaikh",
-    role: "Founder & Chief Investigator",
+    role: "CEO and TSCM Expert",
+    image: "/WahidShaikh.png",
     description:
-      "With over 12 years of specialized experience in private intelligence and risk management, Wahid Shaikh is the visionary behind H S Detectives Agency Mumbai. His expertise spans asset tracing, corporate due diligence, and complex matrimonial investigations. As the head of the group, he also leads IndieBim Technology Solutions Private Limited, ensuring that every physical investigation is supported by world-class technical counter-measures.",
-  },
-  {
-    name: "K.S. Shareef",
-    role: "Strategic Consultant (Retired DCP, Crime Branch)",
-    description:
-      "Bringing the weight of elite law enforcement to our agency, K.S. Shareef served as the Deputy Commissioner of Police for the Crime Branch, Maharashtra. His legendary career in criminal investigation gives H S Detectives Agency Mumbai a unique strategic advantage. He ensures that our investigative methodologies are legally sound, forensic-grade, and capable of standing up to the highest levels of scrutiny.",
+      "12 years of vast experience in fields like Data Lickeage Protection, Privacy Prevention, Cyber Security, Corporate Security, Intelligence, Corporate Investigation, Risk Management, and TSCM.",
   },
   {
     name: "RK Chaudhry",
-    role: "Senior Technical Liaison (TSCM Expert)",
+    role: "TSCM Expert",
+    image: "/RKChaudhry.png",
     description:
-      "A veteran with 15 years of deep-domain experience, RK Chaudhry bridges the gap between field work and technical security. As a master of debugging from IndieBim Technology Solutions Private Limited, he ensures that our clients' private environments remain clean while our field detectives gather the intelligence needed to solve their cases.",
+      "15 years of experience in the fields like Privacy Prevention, Cyber Security, Corporate Security, Intelligence, Corporate Investigation, Bug Sweeping, Debugging and TSCM",
+  },
+  {
+    name: "Munir Ahmed",
+    role: "TSCM Expert",
+    image: "/MunirAhmed.png",
+    description:
+      "Expert in Technical Surveillance Counter Measure and Debugging. 4 Years of Experience in Bug Sweeping, Data Lickeage Prevention, and Corporate Security.",
   },
 ];
 
 const technicalExperts = [
   {
     name: "Prasanna Venkatesan",
-    role: "Cyber Risk Management Expert",
+    role: "Cyber Security Expert (Corporate Security and Information Risk Management)",
+    image: "/PrasannaVenkatesan.png",
     description:
-      "USA educated and trained with 13+ years of experience. An IRCA Accredited and BSI Certified Lead Auditor who ensures that all digital evidence gathered by H S Detectives meets global privacy and security standards.",
+      "Educated and trained from USA, having 13 years’ experience in Corporate Security and Information Risk Management. Certified in IRCA Accredited, BSI Certified Lead Auditor ISO 27001:2005. Certified HIPAA Professional (CHP) from ecfirst USA. Certified Risk and Information security professional (CRISP) from BSI. Having knowledge of Cloud and Mobile Security, with Cyber Security, Data Privacy and IT Security.",
   },
   {
     name: "Dev Dhankar",
-    role: "Ethical Hacker & Offensive Security",
+    role: "Cyber Security Expert (Ethical Hacker)",
+    image: "/DevDhankar.png",
     description:
-      "The technical engine behind our digital forensics. Certified in Practical Ethical Hacking (USA), he ensures that network vulnerabilities and digital leaks are identified and plugged during high-stakes corporate investigations.",
+      "Educated from USA & well trained in Network and Web Application Penetration Testing. Knowledge of various Networking Tools and Technologies like Zabbix, Nagios, RAID, Radius, HA PROXY, HA Clustering, RouterOS, NAS, iperf, Packet Tracer. Proficient in several industry-standard testing tools including – Nmap, Nessus, Burpsuite, Metasploit, Sqlmap. Knowledge of Bash & Python scripting. Working knowledge of Networking Devices and Protocols (CCNA). Certified in Practical Ethical Hacking and ‘PWK by Offensive Security’",
   },
 ];
 
@@ -187,7 +192,7 @@ export default function AboutPage() {
               </h2>
               <div className="h-1 w-24 bg-red-600 mb-8" />
               <p className="text-white/60 font-inter max-w-3xl leading-relaxed">
-                H S Detectives Agency Mumbai is led by professionals who bring together private intelligence experience, elite law-enforcement insight, and technical counter-surveillance expertise.
+                Our team brings together leadership in intelligence, deep TSCM capability, bug sweeping expertise, and internationally trained cyber security specialists.
               </p>
             </div>
 
@@ -199,6 +204,14 @@ export default function AboutPage() {
                 >
                   <div className="absolute top-0 right-0 p-6 opacity-5 font-bebas text-7xl text-white group-hover:opacity-10 pointer-events-none">
                     {i + 1}
+                  </div>
+                  <div className="relative z-10 mb-6 h-64 overflow-hidden rounded-xl border border-white/10 bg-white p-3">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-contain p-3"
+                    />
                   </div>
                   <h3 className="font-playfair text-2xl text-red-100 mb-2 relative z-10">{member.name}</h3>
                   <p className="font-space text-[10px] uppercase tracking-[0.2em] text-red-500 mb-6 relative z-10">
@@ -235,6 +248,14 @@ export default function AboutPage() {
                     key={i}
                     className="p-8 border border-neutral-200 dark:border-white/10 rounded-2xl bg-neutral-50 dark:bg-black"
                   >
+                    <div className="relative mb-6 h-64 overflow-hidden rounded-xl border border-neutral-200 dark:border-white/10 bg-white p-3">
+                      <Image
+                        src={expert.image}
+                        alt={expert.name}
+                        fill
+                        className="object-contain p-3"
+                      />
+                    </div>
                     <h4 className="font-playfair text-2xl text-foreground mb-2">{expert.name}</h4>
                     <p className="font-space text-[10px] uppercase tracking-[0.2em] text-red-600 mb-4">
                       {expert.role}

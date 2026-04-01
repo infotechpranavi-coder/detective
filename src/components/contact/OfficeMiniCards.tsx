@@ -1,12 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const OFFICES = [
-  { name: "Mumbai HQ", img: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=400&h=200&q=80" },
-  { name: "Navi Mumbai", img: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=400&h=200&q=80" },
-  { name: "Thane", img: "https://images.unsplash.com/photo-1453873531674-2151bcd01b50?auto=format&fit=crop&w=400&h=200&q=80" }
+  {
+    name: "Goa",
+    img: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&h=500&q=80",
+    href: "https://maps.app.goo.gl/ijbiitE7TDrSoofHA?g_st=iwb",
+  },
+  {
+    name: "Navi Mumbai",
+    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&h=500&q=80",
+    href: "https://maps.app.goo.gl/eSNcfQYVayoKxFLt7?g_st=iwb",
+  },
+  {
+    name: "Thane",
+    img: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&h=500&q=80",
+    href: "https://maps.app.goo.gl/HMFysuoR8y3ZSyT3A?g_st=iwb",
+  },
 ];
 
 export default function OfficeMiniCards() {
@@ -36,17 +49,24 @@ export default function OfficeMiniCards() {
             <motion.div 
               key={i}
               variants={fadeUp}
-              className="relative h-[160px] md:h-[200px] border border-foreground/10 group overflow-hidden"
+              className="group"
             >
-              <img 
-                src={office.img} 
-                alt={office.name} 
-                className="w-full h-full object-cover img-noir group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-colors duration-500" />
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="font-space text-sm tracking-widest text-foreground uppercase bg-background/50 backdrop-blur-sm px-4 py-2 border border-foreground/10">{office.name}</span>
-              </div>
+              <Link
+                href={office.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block h-[160px] overflow-hidden border border-foreground/10 md:h-[200px]"
+              >
+                <img 
+                  src={office.img} 
+                  alt={office.name} 
+                  className="h-full w-full object-cover img-noir transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-background/60 transition-colors duration-500 group-hover:bg-background/40" />
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <span className="font-space text-sm tracking-widest text-foreground uppercase bg-background/50 backdrop-blur-sm px-4 py-2 border border-foreground/10">{office.name}</span>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

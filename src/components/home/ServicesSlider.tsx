@@ -11,7 +11,7 @@ const SERVICES = [
   {
     title: "Personal Investigation",
     desc: "Discrete surveillance, pre-matrimonial checks, loyalty tests, missing person tracing, and background verifications for individuals.",
-    image: "https://images.unsplash.com/photo-1453873531674-2151bcd01b50?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80",
     icon: User,
     category: "01 // INDIVIDUAL",
     href: "/services/personal-investigation",
@@ -19,7 +19,7 @@ const SERVICES = [
   {
     title: "Corporate Investigation",
     desc: "Protecting your business through employee background verification, fraud investigation, due diligence, asset tracing, and undercover operations.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
     icon: Briefcase,
     category: "02 // CORPORATE",
     href: "/services/corporate-investigation",
@@ -27,7 +27,7 @@ const SERVICES = [
   {
     title: "TSCM Services",
     desc: "Advanced bug sweeping, hidden camera detection, RF signal analysis, and electronic counter-surveillance for offices, homes, and vehicles.",
-    image: "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
     icon: Shield,
     category: "03 // TECHNICAL",
     href: "/services/tscm-services",

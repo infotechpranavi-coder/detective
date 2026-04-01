@@ -37,6 +37,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=700&h=400&q=80",
     address: "F-01 A/16, Haware Centurion Mall, Sect - 19, Near Seawoods Station, Nerul (E), Navi Mumbai, Maharashtra 400706",
+    mapUrl: "https://maps.app.goo.gl/eSNcfQYVayoKxFLt7?g_st=iwb",
     phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
@@ -45,6 +46,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&h=400&q=80",
     address: "Shop No. 66, Ground Floor, Cinewonder Mall, Kapurbawdi, Thane West, Thane, Maharashtra 400607",
+    mapUrl: "https://maps.app.goo.gl/HMFysuoR8y3ZSyT3A?g_st=iwb",
     phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
@@ -53,6 +55,7 @@ const OFFICES = [
     type: "BRANCH",
     image: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=700&h=400&q=80",
     address: "Office number 09, 3rd Floor, Patto Centre Building, Patto Business Centre, Panaji, Goa - 403001",
+    mapUrl: "https://maps.app.goo.gl/ijbiitE7TDrSoofHA?g_st=iwb",
     phone: "+91 99304 03115",
     email: "info@hsdetectives.com"
   },
