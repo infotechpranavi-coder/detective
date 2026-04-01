@@ -43,6 +43,7 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import Scanline from "@/components/ui/Scanline";
 import PageTransition from "@/components/ui/PageTransition";
+import FloatingContactButtons from "@/components/ui/FloatingContactButtons";
 import AppShell from "../components/AppShell";
 
 export default function RootLayout({
@@ -57,6 +58,7 @@ export default function RootLayout({
       >
         <Cursor />
         <Scanline />
+        <FloatingContactButtons />
         <AppShell navbar={<Navbar />} footer={<Footer />}>
           {children}
         </AppShell>

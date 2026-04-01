@@ -28,6 +28,12 @@ const createCaptcha = () => {
   };
 };
 
+const INITIAL_CAPTCHA = {
+  left: 8,
+  right: 7,
+  answer: "15",
+};
+
 export default function ContactForm() {
   const {
     register,
@@ -39,7 +45,7 @@ export default function ContactForm() {
   } = useForm<ContactFormValues>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitComplete, setSubmitComplete] = useState(false);
-  const [captcha, setCaptcha] = useState(createCaptcha);
+  const [captcha, setCaptcha] = useState(INITIAL_CAPTCHA);
   const captchaPrompt = useMemo(
     () => `${captcha.left} + ${captcha.right}`,
     [captcha.left, captcha.right]
