@@ -6,7 +6,18 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
-const OFFICES = [
+type Office = {
+  name: string;
+  type: string;
+  image: string;
+  address: string;
+  phone: string;
+  email: string;
+  mapUrl?: string;
+  cardHref?: string;
+};
+
+const OFFICES: readonly Office[] = [
   {
     name: "Mumbai",
     type: "HEAD OFFICE",
@@ -70,8 +81,6 @@ const OFFICES = [
     email: "info@hsdetectives.com",
   },
 ] as const;
-
-type Office = (typeof OFFICES)[number];
 
 function OfficeCard({
   office,
