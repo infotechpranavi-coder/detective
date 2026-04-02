@@ -100,9 +100,12 @@ export default function ContactForm() {
                 <div className="h-px w-12 bg-accent" />
                 <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Connect</span>
               </motion.div>
-              <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider mb-6">
+              <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider mb-2">
                 Secure <span className="text-foreground/40 italic">Communication</span>
               </motion.h2>
+              <motion.p variants={fadeUp} className="font-playfair text-2xl md:text-3xl text-accent uppercase tracking-wider mb-4">
+                24/7
+              </motion.p>
               <motion.p variants={fadeUp} className="font-inter text-foreground/60 leading-relaxed mb-10">
                 Reach out securely to discuss your situation. We maintain absolute confidentiality from the first touchpoint.
               </motion.p>
@@ -129,7 +132,7 @@ export default function ContactForm() {
                   <Phone size={20} className="text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Mobile Support</h4>
+                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Mobile Support 24/7</h4>
                   <p className="font-inter text-foreground text-lg tracking-wide">+91 99304 03115</p>
                 </div>
               </motion.div>
@@ -156,6 +159,28 @@ export default function ContactForm() {
                   >
                     Crystal Plaza, A/514, New Link Rd, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053
                   </a>
+                </div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-foreground/5 border border-foreground/10 rounded-full flex items-center justify-center shrink-0">
+                  <Mail size={20} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Appointment</h4>
+                  <p className="font-inter text-foreground text-base leading-relaxed">
+                    Prior appointment required for office visit.
+                  </p>
+                </div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-foreground/5 border border-foreground/10 rounded-full flex items-center justify-center shrink-0">
+                  <Phone size={20} className="text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Consultation</h4>
+                  <p className="font-inter text-foreground text-base leading-relaxed">
+                    Free consultation over call and office visit.
+                  </p>
                 </div>
               </motion.div>
             </motion.div>
@@ -233,9 +258,9 @@ export default function ContactForm() {
                       >
                         <option value="personal">Personal Investigation</option>
                         <option value="corporate">Corporate Investigation</option>
-                        <option value="matrimonial">Matrimonial Verification</option>
-                        <option value="debugging">Debugging & Sweeping</option>
-                        <option value="other">Other</option>
+                        <option value="tscm">TSCM Services</option>
+                        <option value="risk-management">Risk Management</option>
+                        <option value="surveillance">Surveillance</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-foreground/50">▼</div>
                     </div>
