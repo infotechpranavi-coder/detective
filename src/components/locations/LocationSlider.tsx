@@ -92,27 +92,28 @@ function OfficeCard({
   imageHeightClass?: string;
 }) {
   const router = useRouter();
-  const actionHref = office.cardHref ?? office.mapUrl ?? `https://maps.google.com/?q=${encodeURIComponent(office.address)}`;
-  const actionLabel = office.cardHref ? "Contact Office" : "Get Directions";
+  const cardHref = office.cardHref ?? null;
+  const actionHref = cardHref ?? office.mapUrl ?? `https://maps.google.com/?q=${encodeURIComponent(office.address)}`;
+  const actionLabel = cardHref ? "Contact Office" : "Get Directions";
 
   return (
     <div
       className={`bg-card border border-foreground/5 flex flex-col overflow-hidden group hover:border-accent/30 transition-colors duration-500 h-full ${
-        office.cardHref ? "cursor-pointer" : ""
+        cardHref ? "cursor-pointer" : ""
       } ${className}`}
-      onClick={office.cardHref ? () => router.push(office.cardHref) : undefined}
+      onClick={cardHref ? () => router.push(cardHref) : undefined}
       onKeyDown={
-        office.cardHref
+        cardHref
           ? (event) => {
               if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
-                router.push(office.cardHref);
+                router.push(cardHref);
               }
             }
           : undefined
       }
-      role={office.cardHref ? "link" : undefined}
-      tabIndex={office.cardHref ? 0 : undefined}
+      role={cardHref ? "link" : undefined}
+      tabIndex={cardHref ? 0 : undefined}
     >
       <div className={`relative w-full overflow-hidden shrink-0 ${imageHeightClass}`}>
         <img src={office.image} alt={office.name} className="w-full h-full object-cover img-noir group-hover:scale-[1.06] transition-transform duration-700" />
@@ -158,7 +159,7 @@ function OfficeCard({
 
         <Link
           href={actionHref}
-          target={office.cardHref ? undefined : "_blank"}
+          target={cardHref ? undefined : "_blank"}
           onClick={(event) => event.stopPropagation()}
           className="inline-flex items-center gap-3 font-space text-[10px] uppercase tracking-widest text-accent hover:text-foreground transition-colors border-b border-accent/30 hover:border-foreground/40 w-max pb-1"
         >
