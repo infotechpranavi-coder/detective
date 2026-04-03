@@ -74,7 +74,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden border-b border-foreground/10">
+    <section className="relative overflow-hidden border-b border-foreground/10 py-16 sm:py-20 md:py-32">
       <CustomImage 
         src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
         alt="Dark City Lights"
@@ -85,11 +85,11 @@ export default function ContactForm() {
       />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-24">
           
           {/* LEFT COLUMN - INFO */}
           <motion.div 
-            className="lg:col-span-5 space-y-12"
+            className="space-y-10 lg:col-span-5 lg:space-y-12"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -100,10 +100,10 @@ export default function ContactForm() {
                 <div className="h-px w-12 bg-accent" />
                 <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Connect</span>
               </motion.div>
-              <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-foreground uppercase tracking-wider mb-2">
+              <motion.h2 variants={fadeUp} className="mb-2 font-playfair text-3xl uppercase tracking-wide text-foreground sm:text-4xl md:text-5xl md:tracking-wider">
                 Secure <span className="text-foreground/40 italic">Communication</span>
               </motion.h2>
-              <motion.p variants={fadeUp} className="font-playfair text-2xl md:text-3xl text-accent uppercase tracking-wider mb-4">
+              <motion.p variants={fadeUp} className="mb-4 font-playfair text-xl uppercase tracking-wide text-accent sm:text-2xl md:text-3xl md:tracking-wider">
                 24/7
               </motion.p>
               <motion.p variants={fadeUp} className="font-inter text-foreground/60 leading-relaxed mb-10">
@@ -112,7 +112,7 @@ export default function ContactForm() {
             </div>
 
             {/* Inline Image "Confidential by Default" */}
-            <motion.div variants={fadeRight} className="relative w-full h-[200px] border border-foreground/10 mb-12 group overflow-hidden">
+            <motion.div variants={fadeRight} className="group relative mb-8 h-[180px] w-full overflow-hidden border border-foreground/10 sm:mb-12 sm:h-[200px]">
                <Image 
                  src="https://images.unsplash.com/photo-1520116468816-95b69f847357?auto=format&fit=crop&w=500&h=200&q=80"
                  alt="Noir Atmosphere"
@@ -121,7 +121,7 @@ export default function ContactForm() {
                />
                <div className="absolute inset-0 bg-background/60 mix-blend-multiply transition-colors duration-500 group-hover:bg-background/40" />
                <div className="absolute inset-0 flex items-center justify-center p-6 text-center z-10 pointer-events-none">
-                 <span className="font-playfair italic text-xl md:text-2xl text-foreground tracking-wide">&ldquo;Confidential by Default&rdquo;</span>
+                 <span className="font-playfair italic text-lg tracking-wide text-foreground sm:text-xl md:text-2xl">&ldquo;Confidential by Default&rdquo;</span>
                </div>
             </motion.div>
 
@@ -133,7 +133,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Mobile Support 24/7</h4>
-                  <p className="font-inter text-foreground text-lg tracking-wide">+91 99304 03115</p>
+                  <p className="break-all font-inter text-base tracking-wide text-foreground sm:text-lg">+91 99304 03115</p>
                 </div>
               </motion.div>
               <motion.div variants={fadeUp} className="flex items-start gap-4">
@@ -142,7 +142,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Direct Email</h4>
-                  <p className="font-inter text-foreground text-lg tracking-wide">info@hsdetectives.com</p>
+                  <p className="break-all font-inter text-base tracking-wide text-foreground sm:text-lg">info@hsdetectives.com</p>
                 </div>
               </motion.div>
               <motion.div variants={fadeUp} className="flex items-start gap-4">
@@ -155,7 +155,7 @@ export default function ContactForm() {
                     href="https://www.google.com/maps?q=H+S+Detectives+Agency+Mumbai,+crystal+plaza,+A/514,+New+Link+Rd,+Veera+Desai+Industrial+Estate,+Andheri+West,+Mumbai,+Maharashtra+400053&ftid=0x3be7b06618f08abb:0xc675e5f7f07f1ecd&entry=gps&shh=CAE&lucs=,94259550,94297699,94284457,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjEwLjIuODc3MzE3OTEwMBgAINeCAypRLDk0MjU5NTUwLDk0Mjk3Njk5LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=d87bc999-7f57-468b-8340-e5d438ebe1a2&g_st=iwb"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-inter text-foreground text-base leading-relaxed max-w-[260px] underline-offset-4 hover:underline"
+                    className="max-w-full font-inter text-sm leading-relaxed text-foreground underline-offset-4 hover:underline sm:max-w-[260px] sm:text-base"
                   >
                     Crystal Plaza, A/514, New Link Rd, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053
                   </a>
@@ -204,13 +204,13 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="relative bg-white/84 dark:bg-[#0A0A0A]/80 backdrop-blur-xl border border-foreground/10 p-8 md:p-12 z-10 shadow-[0_24px_80px_rgba(238,57,57,0.12)]">
-              <h3 className="font-playfair text-2xl text-foreground uppercase tracking-wider mb-8">Case Submission Panel</h3>
+            <div className="relative z-10 border border-foreground/10 bg-white/84 p-5 shadow-[0_24px_80px_rgba(238,57,57,0.12)] backdrop-blur-xl sm:p-8 md:p-12 dark:bg-[#0A0A0A]/80">
+              <h3 className="mb-6 font-playfair text-xl uppercase tracking-wide text-foreground sm:mb-8 sm:text-2xl sm:tracking-wider">Case Submission Panel</h3>
               
               {submitComplete ? (
                 <motion.div 
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} 
-                  className="h-[400px] flex flex-col items-center justify-center text-center p-6 border border-accent/30 bg-accent/5"
+                  className="flex h-[320px] flex-col items-center justify-center border border-accent/30 bg-accent/5 p-6 text-center sm:h-[400px]"
                 >
                   <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6">
                     <Send size={24} className="text-accent" />

@@ -91,7 +91,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center pt-20 bg-background">
+    <section ref={containerRef} className="relative flex min-h-[720px] w-full items-center justify-center overflow-hidden bg-background pt-20 sm:min-h-screen">
       {/* 3D Cinematic Slider Layer */}
       <div className="absolute inset-0 z-0 h-[120%] -top-[10%] w-full" style={{ transform: "translateY(0)" }}>
         <motion.div style={{ y: parallaxY }} className="w-full h-full relative">
@@ -152,7 +152,7 @@ export default function Hero() {
       )}
 
       {/* Layer 4: Radar Sweep SVG */}
-      <div className="absolute right-[-10vw] top-[10vh] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] opacity-20 z-2 pointer-events-none mix-blend-screen animate-spin-slow">
+      <div className="absolute right-[-18vw] top-[14vh] z-2 hidden h-[60vw] w-[60vw] max-h-[800px] max-w-[800px] animate-spin-slow pointer-events-none mix-blend-screen opacity-20 sm:block sm:right-[-10vw] sm:top-[10vh]">
         <svg viewBox="0 0 100 100" className="w-full h-full text-accent">
           <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.5" className="opacity-30" />
           <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.5" className="opacity-30" />
@@ -163,7 +163,7 @@ export default function Hero() {
       </div>
 
       <motion.div 
-        className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col items-center text-center mt-10 h-[300px] md:h-[400px] justify-center"
+        className="container relative z-10 mx-auto mt-6 flex h-auto min-h-[360px] flex-col items-center justify-center px-6 pb-28 text-center sm:mt-10 sm:h-[300px] sm:pb-24 md:h-[400px] lg:px-12"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
@@ -178,28 +178,28 @@ export default function Hero() {
             variants={HERO_SLIDES[currentImageIndex].textAnim as Variants}
             className="flex flex-col items-center"
           >
-            <div className="mb-6 inline-flex items-center gap-2 border border-accent/30 bg-black/80 backdrop-blur-md px-4 py-1.5 rounded-full">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-black/80 px-3 py-1.5 backdrop-blur-md sm:mb-6 sm:px-4">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="font-space text-[10px] md:text-xs uppercase tracking-[0.2em] text-white">
+              <span className="font-space text-[9px] uppercase tracking-[0.16em] text-white sm:text-[10px] md:text-xs md:tracking-[0.2em]">
                 {HERO_SLIDES[currentImageIndex].badge}
               </span>
             </div>
 
-            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white mb-6 uppercase tracking-wider leading-[1.1] max-w-5xl">
+            <h1 className="mb-5 max-w-5xl font-playfair text-3xl leading-[1.1] tracking-wide text-white uppercase sm:text-4xl md:mb-6 md:text-6xl lg:text-7xl lg:tracking-wider">
               {HERO_SLIDES[currentImageIndex].title1} <span className="text-accent italic">{HERO_SLIDES[currentImageIndex].titleHighlight}</span>
             </h1>
 
-            <p className="font-inter text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="mx-auto mb-8 max-w-2xl font-inter text-sm leading-relaxed text-white/90 sm:text-base md:mb-10 md:text-lg">
               {HERO_SLIDES[currentImageIndex].description}
             </p>
           </motion.div>
         </AnimatePresence>
 
-        <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5 absolute bottom-0 md:bottom-10 translate-y-full">
-          <Link href="/contact" className="px-10 py-5 bg-accent text-white font-space text-sm sm:text-base uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors duration-300 shadow-lg">
+        <motion.div variants={fadeUp} className="absolute bottom-0 flex w-full translate-y-full flex-col gap-3 px-4 sm:w-auto sm:flex-row sm:gap-5 sm:px-0 md:bottom-10">
+          <Link href="/contact" className="bg-accent px-6 py-4 text-center font-space text-xs font-bold uppercase tracking-[0.18em] text-white shadow-lg transition-colors duration-300 hover:bg-white hover:text-black sm:px-10 sm:py-5 sm:text-base sm:tracking-widest">
             Discuss Your Case
           </Link>
-          <Link href="/services" className="px-8 py-4 bg-transparent border-2 border-white text-white font-space text-xs sm:text-sm uppercase tracking-widest hover:border-accent hover:bg-accent transition-colors duration-300 flex items-center justify-center gap-2 group">
+          <Link href="/services" className="group flex items-center justify-center gap-2 border-2 border-white bg-transparent px-6 py-4 font-space text-[11px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:border-accent hover:bg-accent sm:px-8 sm:text-sm sm:tracking-widest">
             Our Services
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
@@ -208,7 +208,7 @@ export default function Hero() {
 
       {/* Scroll Down Indicator */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3"
+        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-3 sm:flex md:bottom-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}

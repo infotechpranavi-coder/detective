@@ -95,6 +95,9 @@ export default function Navbar() {
       ? externalTscmLinks[subSlug]
       : `/services/${parentSlug}/${subSlug}`;
 
+  const isExternalSubServiceLink = (parentSlug: string, subSlug: string) =>
+    parentSlug === "tscm-services" && Boolean(externalTscmLinks[subSlug]);
+
   const handleServicesEnter = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setServicesOpen(true);
@@ -302,6 +305,16 @@ export default function Navbar() {
                                 <Link
                                   key={sub.slug}
                                   href={getSubServiceHref(activeParent, sub.slug)}
+                                  target={
+                                    isExternalSubServiceLink(activeParent, sub.slug)
+                                      ? "_blank"
+                                      : undefined
+                                  }
+                                  rel={
+                                    isExternalSubServiceLink(activeParent, sub.slug)
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
                                   className="flex items-start gap-3 px-4 py-2.5 rounded-xl hover:bg-neutral-50 group transition-colors"
                                 >
                                   <div className="mt-1.5 w-1 h-1 rounded-full bg-black/20 group-hover:bg-red-500 flex-shrink-0 transition-colors" />
@@ -550,6 +563,16 @@ export default function Navbar() {
                                   <Link
                                     key={sub.slug}
                                     href={getSubServiceHref(parent.slug, sub.slug)}
+                                    target={
+                                      isExternalSubServiceLink(parent.slug, sub.slug)
+                                        ? "_blank"
+                                        : undefined
+                                    }
+                                    rel={
+                                      isExternalSubServiceLink(parent.slug, sub.slug)
+                                        ? "noopener noreferrer"
+                                        : undefined
+                                    }
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="block py-1.5 font-inter text-[12px] text-black/60 hover:text-black transition-colors"
                                   >
