@@ -3,12 +3,31 @@ import { CheckCheck, FileText, ShieldCheck, Sparkles } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import type { ServiceDetail } from "@/app/services/serviceData";
+import { subServicesByParent } from "@/app/services/subServiceData";
 
 type ServiceDetailPageProps = {
   service: ServiceDetail;
 };
 
 export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
+  const linkedSubServices = subServicesByParent[service.slug] ?? [];
+
+  const getSubServiceHref = (item: string) => {
+    const directLink = service.serviceIncludeLinks?.[item];
+
+    if (directLink) {
+      return directLink;
+    }
+
+    const matchingSubService = linkedSubServices.find(
+      (subService) => subService.navLabel.toLowerCase() === item.toLowerCase()
+    );
+
+    return matchingSubService
+      ? `/services/${service.slug}/${matchingSubService.slug}`
+      : null;
+  };
+
   return (
     <PageTransition>
       <main className="min-h-screen bg-white">
@@ -44,14 +63,33 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
                   </p>
 
                   <div className="mb-8 flex flex-wrap gap-3">
-                    {service.serviceIncludes.slice(0, 6).map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full border border-red-600/20 bg-red-600/5 px-4 py-2 font-space text-[10px] uppercase tracking-[0.18em] text-red-600"
-                      >
-                        {item}
-                      </span>
-                    ))}
+                    {service.serviceIncludes.slice(0, 6).map((item) => {
+                      const href = getSubServiceHref(item);
+                      const isExternal = href?.startsWith("http");
+
+                      if (href) {
+                        return (
+                          <Link
+                            key={item}
+                            href={href}
+                            target={isExternal ? "_blank" : undefined}
+                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            className="rounded-full border border-red-600/20 bg-red-600/5 px-4 py-2 font-space text-[10px] uppercase tracking-[0.18em] text-red-600 transition-colors hover:border-red-600/40 hover:bg-red-600/10"
+                          >
+                            {item}
+                          </Link>
+                        );
+                      }
+
+                      return (
+                        <span
+                          key={item}
+                          className="rounded-full border border-red-600/20 bg-red-600/5 px-4 py-2 font-space text-[10px] uppercase tracking-[0.18em] text-red-600"
+                        >
+                          {item}
+                        </span>
+                      );
+                    })}
                   </div>
 
                   <div className="space-y-6 rounded-[28px] border border-black/10 bg-neutral-50 p-8 md:p-10">
@@ -75,11 +113,30 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
                       What This Covers
                     </p>
                     <div className="space-y-3">
-                      {service.serviceIncludes.map((item) => (
-                        <p key={item} className="font-inter text-sm leading-relaxed text-white/80">
-                          {item}
-                        </p>
-                      ))}
+                      {service.serviceIncludes.map((item) => {
+                        const href = getSubServiceHref(item);
+                        const isExternal = href?.startsWith("http");
+
+                        if (href) {
+                          return (
+                            <Link
+                              key={item}
+                              href={href}
+                              target={isExternal ? "_blank" : undefined}
+                              rel={isExternal ? "noopener noreferrer" : undefined}
+                              className="block font-inter text-sm leading-relaxed text-white/80 transition-colors hover:text-red-300"
+                            >
+                              {item}
+                            </Link>
+                          );
+                        }
+
+                        return (
+                          <p key={item} className="font-inter text-sm leading-relaxed text-white/80">
+                            {item}
+                          </p>
+                        );
+                      })}
                     </div>
                   </article>
 

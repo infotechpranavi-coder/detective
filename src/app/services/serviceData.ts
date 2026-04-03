@@ -8,6 +8,7 @@ export type ServiceDetail = {
   image: string;
   content: string[];
   serviceIncludes: string[];
+  serviceIncludeLinks?: Record<string, string>;
   idealFor: string[];
   reporting: string[];
   trustPoints: string[];
@@ -36,7 +37,6 @@ export const serviceDetails: ServiceDetail[] = [
       "Loyalty tests",
       "Missing person investigations",
       "Background checks",
-      "Private investigator in Mumbai support",
     ],
     idealFor: [
       "Relationship concerns requiring discreet fact verification",
@@ -73,12 +73,11 @@ export const serviceDetails: ServiceDetail[] = [
       "     As a trusted provider of corporate investigation services, we focus on delivering precise results        while maintaining strict privacy and ethical standards. Our tailored solutions help organizations    operate with confidence and security.",
     ],
     serviceIncludes: [
-      "Business investigation services",
-      "Fraud investigation company support",
-      "Due diligence Services",
-      "Employee background verification",
-      "Corporate fraud detection",
-      "Workplace misconduct investigations",
+      "Employee Background Verification",
+      "Fraud Investigation",
+      "Due Diligence Services",
+      "Asset Tracing",
+      "Undercover Operations",
     ],
     idealFor: [
       "Businesses entering partnerships or vendor relationships",
@@ -116,13 +115,19 @@ export const serviceDetails: ServiceDetail[] = [
       "Protect your privacy and safeguard your business with our trusted TSCM services. Contact us today for a confidential security assessment.",
     ],
     serviceIncludes: [
-      "Bug sweeping",
-      "Electronic surveillance detection",
-      "RF signal analysis",
-      "Data security audits",
-      "Counter-surveillance consulting",
-      "Office, vehicle, and residential sweeps",
+      "Corporate TSCM Services",
+      "Residential TSCM Services",
+      "Corporate Bug Sweeping",
+      "Home Bug Sweep",
+      "Debugging Service",
     ],
+    serviceIncludeLinks: {
+      "Corporate TSCM Services": "https://tscm.in/corporate-tscm-service/",
+      "Residential TSCM Services": "https://tscm.in/residential-tscm-service/",
+      "Corporate Bug Sweeping": "https://tscm.in/business-bug-sweep/",
+      "Home Bug Sweep": "https://tscm.in/home-bug-sweep/",
+      "Debugging Service": "https://tscm.in/debugging-services/",
+    },
     idealFor: [
       "Businesses protecting confidential discussions",
       "Government and executive environments",
@@ -159,12 +164,11 @@ export const serviceDetails: ServiceDetail[] = [
       "If you need dependable Covert surveillance investigation, contact us today for a confidential consultation and secure your peace of mind.",
     ],
     serviceIncludes: [
-      "Investigation agency surveillance",
-      "Covert monitoring",
-      "Mobile tracking (legal use)",
-      "Employee surveillance",
-      "Matrimonial case surveillance",
-      "Fraud investigation monitoring",
+      "Covid Monitoring",
+      "Employee Surveillance",
+      "Matrimonial Surveillance",
+      "Fraud Investigation Monitoring",
+      "Physical Surveillance",
     ],
     idealFor: [
       "Personal matters that require real-time verification",
@@ -285,12 +289,11 @@ export const serviceDetails: ServiceDetail[] = [
       "Whether you are protecting valuable IP, defending your brand from counterfeiting, or seeking expert forensic support for a dispute, our risk management services provide the intelligence and evidence needed to protect what matters most.",
     ],
     serviceIncludes: [
-      "Intellectual property (IP) protection",
-      "Brand protection investigations",
-      "Risk advisory and threat assessment",
-      "Business continuity (BCMS) support",
-      "Forensic investigation services",
-      "Comprehensive risk management reports",
+      "IP Protection",
+      "Brand Protection",
+      "Risk Advisory",
+      "Business Continuity (BCMS)",
+      "Forensic Investigation",
     ],
     idealFor: [
       "Organizations with valuable IP or proprietary assets",

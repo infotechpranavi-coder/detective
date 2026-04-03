@@ -1,30 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
-const posts = [
-  {
-    id: "modern-investigator",
-    title: "The Modern Investigator: H S Detectives in Mumbai",
-    excerpt: "How H S Detectives uses tech and law enforcement partnership to solve corporate and personal cases.",
-    date: "2026-03-23",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "confidentiality-first",
-    title: "Confidentiality First: Client Trust with H S Detectives",
-    excerpt: "Privacy-first investigation workflows that keep your data secure.",
-    date: "2026-03-22",
-    image: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "pan-india-network",
-    title: "Pan-India Network: Rapid Response across Cities",
-    excerpt: "A fast-response case study showing nationwide reach and rapid deployment.",
-    date: "2026-03-20",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-  },
-];
+import { blogPosts } from "./blogPosts";
 
 export default function BlogIndex() {
   return (
@@ -34,7 +11,7 @@ export default function BlogIndex() {
         <p className="mb-12 text-zinc-700">Latest research, case studies, and investigator stories from H S Detectives.</p>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {posts.map((post) => (
+          {blogPosts.map((post) => (
             <Link
               key={post.id}
               href={`/blog/${post.id}`}

@@ -1,41 +1,13 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
-
-const posts = [
-  {
-    id: "modern-investigator",
-    title: "The Modern Investigator: H S Detectives in Mumbai",
-    date: "2026-03-23",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80",
-    content: `### Case Study: Corporate due diligence
-
-H S Detectives deployed a mixed team of retired officers and cyber analysts to build a watertight case for a multinational's internal audit. ...`,
-  },
-  {
-    id: "confidentiality-first",
-    title: "Confidentiality First: Client Trust with H S Detectives",
-    date: "2026-03-22",
-    image: "https://images.unsplash.com/photo-1521812815661-9c8b7f1d62c1?auto=format&fit=crop&w=1200&q=80",
-    content: `### Protecting identities
-
-Client identities are disguised and case files encrypted according to military-grade standards. ...`,
-  },
-  {
-    id: "pan-india-network",
-    title: "Pan-India Network: Rapid Response across Cities",
-    date: "2026-03-20",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-    content: `### Rapid investigative mobilization
-
-With presence in 12 states, teams can reach any major city in under 72 hours. ...`,
-  },
-];
+import { blogPosts } from "../blogPosts";
 
 interface Props {
   params: { slug: string };
 }
 
 export default function BlogPost({ params }: Props) {
-  const post = posts.find((p) => p.id === params.slug);
+  const post = blogPosts.find((p) => p.id === params.slug);
   if (!post) return notFound();
 
   return (
@@ -50,8 +22,50 @@ export default function BlogPost({ params }: Props) {
             className="h-80 w-full object-cover"
           />
         </div>
-        <article className="prose prose-zinc max-w-none">
-          <p>{post.content}</p>
+        <article className="max-w-none">
+          <div className="space-y-5">
+            {post.intro.map((paragraph) => (
+              <p key={paragraph} className="text-base leading-8 text-zinc-700">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          <div className="mt-10 space-y-10">
+            {post.sections.map((section) => (
+              <section key={section.title}>
+                <h2 className="mb-4 text-2xl font-semibold text-zinc-900">{section.title}</h2>
+
+                {section.paragraphs?.length ? (
+                  <div className="space-y-4">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph} className="text-base leading-8 text-zinc-700">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                ) : null}
+
+                {section.bullets?.length ? (
+                  <ul className="space-y-3 text-base leading-8 text-zinc-700">
+                    {section.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </section>
+            ))}
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-red-200 bg-red-50 p-6">
+            <p className="mb-4 text-base leading-7 text-zinc-700">{post.cta.text}</p>
+            <Link
+              href={post.cta.href}
+              className="inline-flex rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-red-700"
+            >
+              {post.cta.label}
+            </Link>
+          </div>
         </article>
       </section>
     </main>
