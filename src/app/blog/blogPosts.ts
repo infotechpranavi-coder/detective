@@ -24,27 +24,27 @@ export const blogPosts: BlogPost[] = [
     id: "modern-investigator",
     title: "The Modern Investigator: H S Detectives Agency Mumbai",
     excerpt:
-      "How modern investigation in Mumbai blends field expertise, digital intelligence, and legal precision.",
+      "The shift from traditional shadowing to high-tech intelligence at H S Detectives Agency Mumbai.",
     date: "2026-04-03",
     image:
       "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80",
     intro: [
-      "The image of a private eye with a magnifying glass is a relic of the past. In 2026, the modern investigator in Mumbai is a blend of a data strategist, a tech specialist, and a local field expert.",
-      "At H S Detectives Agency Mumbai, we have spent 15 years evolving our methodology to bridge the gap between traditional boots-on-the-ground investigation and cutting-edge digital intelligence.",
+      "The image of a private eye with a magnifying glass is a relic of the past. In 2026, the Modern Investigator in Mumbai is a blend of a data strategist, a tech specialist, and a local field expert.",
+      "At H S Detectives Agency Mumbai, we have spent 15 years evolving our methodology to bridge the gap between traditional boots on the ground investigation and cutting-edge digital intelligence.",
     ],
     sections: [
       {
         title: "Why Technology Matters in 2026",
         paragraphs: [
-          "Investigation in a hyper-connected city like Mumbai requires more than just following a lead. It requires the ability to identify, interpret, and act on digital footprints with speed and accuracy.",
-          "H S Detectives Agency Mumbai uses military-grade TSCM techniques and AI-assisted data analysis to support both corporate and personal investigations that once would have been considered too complex or too fragmented to solve efficiently.",
+          "Investigation in a hyper-connected city like Mumbai requires more than just following a lead. It requires intercepting digital footprints, interpreting them accurately, and acting with speed.",
+          "H S Detectives Agency Mumbai utilizes military-grade TSCM, or Technical Surveillance Counter-Measures, along with AI-driven data analytics to solve corporate and personal cases that were previously considered unsolvable.",
         ],
       },
       {
         title: "The H S Advantage",
         bullets: [
-          "Tech-Law Synergy: Our understanding of Mumbai's legal landscape helps ensure that evidence gathered by H S Detectives Agency Mumbai is actionable and prepared for legal scrutiny.",
-          "Rapid Digital Forensics: From recovering deleted data to tracing anonymous digital threats, our Andheri-based team works at the edge of modern investigative practice.",
+          "Tech-Law Synergy: Our deep understanding of Mumbai's legal landscape helps ensure every piece of evidence gathered by H S Detectives Agency Mumbai is admissible in court.",
+          "Rapid Digital Forensics: From recovering deleted data to tracing anonymous digital threats, our Andheri-based tech hub is at the forefront of the industry.",
         ],
       },
     ],
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
     id: "confidentiality-first",
     title: "Confidentiality First: Client Trust with H S Detectives Agency Mumbai",
     excerpt:
-      "Why privacy, encrypted workflows, and disciplined data handling are central to every investigation we run.",
+      "Why data privacy, encrypted workflows, and disciplined handling are central to every investigation we run.",
     date: "2026-04-03",
     image:
       "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1200&q=80",
@@ -69,16 +69,19 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         title: 'Our "Zero-Trust" Protocol',
+        paragraphs: [
+          "As of 2026, H S Detectives Agency Mumbai has implemented a Zero-Trust Investigation Workflow designed to reduce risk at every stage of the case lifecycle.",
+        ],
         bullets: [
-          "Data Compartmentalization: Our field agents access only the data required for their assigned role.",
-          "Encrypted Reporting: Client communications are handled through encrypted channels designed to reduce the risk of unauthorized interception.",
-          "The DPDP Advantage: Our workflows are aligned with India's Digital Personal Data Protection standards so client identity and case information remain protected throughout the process.",
+          "Data Compartmentalization: Our field agents only access the specific data needed for their assigned task.",
+          "Encrypted Reporting: All client communications are handled via 256-bit encrypted channels to prevent third-party interception.",
+          "The DPDP Advantage: We are fully aligned with India's latest Digital Personal Data Protection standards, helping ensure your identity remains shielded at every stage.",
         ],
       },
       {
         title: "Building 15 Years of Trust",
         paragraphs: [
-          "With over 163 verified reviews and a 15-year history, the reputation of H S Detectives Agency Mumbai is built not only on the cases we solve, but also on the confidence our clients place in our discretion.",
+          "With over 163+ verified reviews and a 15-year history, the reputation of H S Detectives Agency Mumbai is built on the secrets we keep, not just the cases we solve.",
           "Trust is earned through consistency, professionalism, and the ability to protect sensitive information at every stage of an investigation.",
         ],
       },
@@ -93,28 +96,28 @@ export const blogPosts: BlogPost[] = [
     id: "pan-india-network",
     title: "Pan-India Network: Rapid Response across Cities",
     excerpt:
-      "How our multi-city network helps deploy local investigative expertise quickly across India's key metros.",
+      "How our 7-city infrastructure helps deploy local investigative expertise quickly across India's key metros.",
     date: "2026-04-03",
     image:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
     intro: [
       "High-stakes investigations do not wait for travel plans. Whether it is a corporate fraud case in Delhi, a matrimonial check in Pune, or a TSCM sweep in Goa, time is the enemy.",
-      "H S Detectives Agency Mumbai addresses the geographic gap with a Pan-India rapid response network designed to put experienced investigators on the ground in major Indian metros quickly and efficiently.",
+      "H S Detectives Agency Mumbai has solved the geographic gap by building a Pan-India Rapid Response Network that puts experts on the ground in major Indian metros within 4 hours.",
     ],
     sections: [
       {
         title: "The Power of 7 Hubs",
         bullets: [
-          "Thane and Navi Mumbai for MMR coverage",
-          "Pune and Goa for strength across the western region",
-          "Delhi, Hyderabad, and Bangalore for broader national reach",
+          "Thane and Navi Mumbai for MMR excellence.",
+          "Pune and Goa for western region strength.",
+          "Delhi, Hyderabad, and Bangalore for national reach.",
         ],
       },
       {
         title: "Why Local Matters",
         paragraphs: [
-          "A team arriving from Mumbai may have resources, but local nuance matters. Regional expertise improves surveillance quality, strengthens verification work, and reduces operational friction.",
-          "The H S Detectives Agency Mumbai network relies on investigators who understand local dialects, geography, and social patterns. That local intelligence helps keep surveillance discreet and background checks thorough.",
+          "A Mumbai team sent to Delhi without local nuance risks slower execution and weaker context. Regional expertise improves surveillance quality, strengthens verification work, and reduces operational friction.",
+          "The H S Detectives Agency Mumbai network consists of regional experts who understand local dialects, geography, and social structures. That regional intelligence helps keep surveillance covert and background checks thorough.",
         ],
       },
     ],

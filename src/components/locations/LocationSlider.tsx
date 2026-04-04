@@ -26,7 +26,7 @@ const OFFICES: readonly Office[] = [
     mapUrl:
       "https://www.google.com/maps?q=H+S+Detectives+Agency+Mumbai,+crystal+plaza,+A/514,+New+Link+Rd,+Veera+Desai+Industrial+Estate,+Andheri+West,+Mumbai,+Maharashtra+400053&ftid=0x3be7b06618f08abb:0xc675e5f7f07f1ecd&entry=gps&shh=CAE&lucs=,94259550,94297699,94284457,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjEwLjIuODc3MzE3OTEwMBgAINeCAypRLDk0MjU5NTUwLDk0Mjk3Njk5LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=d87bc999-7f57-468b-8340-e5d438ebe1a2&g_st=iwb",
     phone: "+91 99304 03115",
-    email: "info@hsdetectives.com",
+    email: "hsdetectives123@gmail.com",
   },
   {
     name: "Thane",
@@ -35,7 +35,7 @@ const OFFICES: readonly Office[] = [
     address: "Shop No. 66, Ground Floor, Cinewonder Mall, Kapurbawdi, Thane West, Thane, Maharashtra 400607",
     mapUrl: "https://maps.app.goo.gl/HMFysuoR8y3ZSyT3A?g_st=iwb",
     phone: "+91 99304 03115",
-    email: "info@hsdetectives.com",
+    email: "hsdetectives123@gmail.com",
   },
   {
     name: "Navi Mumbai",
@@ -44,7 +44,7 @@ const OFFICES: readonly Office[] = [
     address: "F-01 A/16, Haware Centurion Mall, Sect - 19, Near Seawoods Station, Nerul (E), Navi Mumbai, Maharashtra 400706",
     mapUrl: "https://maps.app.goo.gl/eSNcfQYVayoKxFLt7?g_st=iwb",
     phone: "+91 99304 03115",
-    email: "info@hsdetectives.com",
+    email: "hsdetectives123@gmail.com",
   },
   {
     name: "Pune",
@@ -53,7 +53,7 @@ const OFFICES: readonly Office[] = [
     address: "Raw House No. 1, Elite Brookland, Baner - Balewadi Road, Baner, Pune, Maharashtra 411045 (Near Syngent)",
     cardHref: "/contact",
     phone: "+91 99304 03115",
-    email: "info@hsdetectives.com",
+    email: "hsdetectives123@gmail.com",
   },
   {
     name: "Goa",
@@ -62,7 +62,7 @@ const OFFICES: readonly Office[] = [
     address: "Office number 09, 3rd Floor, Patto Centre Building, Patto Business Centre, Panaji, Goa - 403001",
     mapUrl: "https://maps.app.goo.gl/ijbiitE7TDrSoofHA?g_st=iwb",
     phone: "+91 99304 03115",
-    email: "info@hsdetectives.com",
+    email: "hsdetectives123@gmail.com",
   },
   {
     name: "Hyderabad",
@@ -71,7 +71,7 @@ const OFFICES: readonly Office[] = [
     address: "14th Road, Fortune Enclave, Sri Ram Nagar Colony, Banjara Hills, Hyderabad, Telangana 500873",
     cardHref: "/contact",
     phone: "+91 99304 03115",
-    email: "info@hsdetectives.com",
+    email: "hsdetectives123@gmail.com",
   },
   {
     name: "Delhi",
@@ -80,7 +80,7 @@ const OFFICES: readonly Office[] = [
     address: "105, Shiva Rd, Pocket 14, Sector 8D, Rohini, Delhi, 110085",
     cardHref: "/contact",
     phone: "+91 99304 03115",
-    email: "info@hsdetectives.com",
+    email: "hsdetectives123@gmail.com",
   },
 ] as const;
 

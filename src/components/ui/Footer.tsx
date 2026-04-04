@@ -22,6 +22,39 @@ const serviceLinksOne = [
   { label: "Fraud Investigation", href: "/services/surveillance-shadowing/fraud-investigation-monitoring" },
 ] as const;
 
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/hsdetectives/",
+    icon: Facebook,
+    className: "from-[#5b7bd5] to-[#3b5998] hover:shadow-[0_0_18px_rgba(91,123,213,0.45)]",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/hsdetectives/",
+    icon: Instagram,
+    className: "from-[#ff9966] via-[#fd5949] to-[#d6249f] hover:shadow-[0_0_18px_rgba(253,89,73,0.4)]",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://in.linkedin.com/company/hsdetectives",
+    icon: Linkedin,
+    className: "from-[#2d8cff] to-[#0a66c2] hover:shadow-[0_0_18px_rgba(10,102,194,0.4)]",
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@hsdetectives7128",
+    icon: Youtube,
+    className: "from-[#ff5f5f] to-[#ff0000] hover:shadow-[0_0_18px_rgba(255,0,0,0.35)]",
+  },
+  {
+    label: "X",
+    href: "https://x.com/hsdetectives",
+    icon: Twitter,
+    className: "from-[#5f6772] to-[#222831] hover:shadow-[0_0_18px_rgba(95,103,114,0.35)]",
+  },
+] as const;
+
 export default function Footer() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -72,22 +105,24 @@ export default function Footer() {
               A cinematic, licensed professional detective agency operating Pan India with 100% confidentiality.
             </p>
             {/* Social Media Links */}
-            <div className="flex gap-4 pt-2">
-              <a href="https://www.facebook.com/hsdetectives/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
-                <Facebook size={20} />
-              </a>
-              <a href="https://www.instagram.com/hsdetectives/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
-                <Instagram size={20} />
-              </a>
-              <a href="https://in.linkedin.com/company/hsdetectives" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://www.youtube.com/@hsdetectives7128" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
-                <Youtube size={20} />
-              </a>
-              <a href="https://x.com/hsdetectives" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent transition-all duration-300 hover:scale-110">
-                <Twitter size={20} />
-              </a>
+            <div className="flex flex-wrap gap-3 pt-2">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className={`group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-white/12 bg-linear-to-br ${social.className} transition-all duration-300 hover:-translate-y-1 hover:scale-105`}
+                  >
+                    <span className="absolute inset-x-1 top-1 h-1/2 rounded-full bg-white/20 blur-sm transition-opacity duration-300 group-hover:opacity-70" />
+                    <Icon size={18} className="relative z-10 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -147,9 +182,10 @@ export default function Footer() {
               </a>
               <div className="space-y-1">
                 <p>+91 99304 03115</p>
+                <p>+91 98670 30564</p>
                 <p>+91 91525 31394</p>
               </div>
-              <p>info@hsdetectives.com</p>
+              <p>hsdetectives123@gmail.com</p>
             </div>
             <Link
               href="/contact"

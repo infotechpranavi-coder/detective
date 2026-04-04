@@ -1,13 +1,35 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../blogPosts";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function BlogPost({ params }: Props) {
-  const post = blogPosts.find((p) => p.id === params.slug);
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({ slug: post.id }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPosts.find((item) => item.id === slug);
+
+  if (!post) {
+    return {
+      title: "Blog Post Not Found",
+    };
+  }
+
+  return {
+    title: `${post.title} | H S Detectives Blog`,
+    description: post.excerpt,
+  };
+}
+
+export default async function BlogPost({ params }: Props) {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.id === slug);
   if (!post) return notFound();
 
   return (
