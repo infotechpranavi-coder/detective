@@ -156,7 +156,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h4 className="font-space text-sm text-accent tracking-widest uppercase">Services 1</h4>
+            <h4 className="font-space text-sm text-accent tracking-widest uppercase">Top Services</h4>
             <ul className="space-y-3 font-inter text-base">
               {serviceLinksOne.map((service) => (
                 <li key={service.href}>
@@ -185,7 +185,7 @@ export default function Footer() {
                 <p>+91 98670 30564</p>
                 <p>+91 91525 31394</p>
               </div>
-              <p>hsdetectives123@gmail.com</p>
+              <p>info@hsdetectives.com</p>
             </div>
             <Link
               href="/contact"

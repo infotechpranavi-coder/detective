@@ -88,10 +88,10 @@ export default function PrivacyPolicyPage() {
               <p className="leading-relaxed">
                 For data queries, contact our Data Grievance Officer at:{" "}
                 <a
-                  href="mailto:hsdetectives123@gmail.com"
+                  href="mailto:info@hsdetectives.com"
                   className="text-accent hover:text-white transition-colors"
                 >
-                  hsdetectives123@gmail.com
+                  info@hsdetectives.com
                 </a>
               </p>
             </section>

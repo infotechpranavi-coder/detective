@@ -142,7 +142,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase mb-1">Direct Email</h4>
-                  <p className="break-all font-inter text-base tracking-wide text-foreground sm:text-lg">hsdetectives123@gmail.com</p>
+                  <p className="break-all font-inter text-base tracking-wide text-foreground sm:text-lg">info@hsdetectives.com</p>
                 </div>
               </motion.div>
               <motion.div variants={fadeUp} className="flex items-start gap-4">
