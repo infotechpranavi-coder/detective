@@ -46,6 +46,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitComplete, setSubmitComplete] = useState(false);
   const [captcha, setCaptcha] = useState(INITIAL_CAPTCHA);
+  const [submitError, setSubmitError] = useState("");
   const captchaPrompt = useMemo(
     () => `${captcha.left} + ${captcha.right}`,
     [captcha.left, captcha.right]
@@ -62,15 +63,44 @@ export default function ContactForm() {
     }
 
     clearErrors("captcha");
+    setSubmitError("");
     setIsSubmitting(true);
-    // Simulate delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log(data);
-    setIsSubmitting(false);
-    setSubmitComplete(true);
-    reset();
-    setCaptcha(createCaptcha());
-    setTimeout(() => setSubmitComplete(false), 5000);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          category: data.category,
+          message: data.message,
+        }),
+      });
+
+      const result = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error || "Unable to send your message right now.");
+      }
+
+      setSubmitComplete(true);
+      reset();
+      setCaptcha(createCaptcha());
+      setTimeout(() => setSubmitComplete(false), 5000);
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Unable to send your message right now.";
+      setSubmitError(message);
+      setCaptcha(createCaptcha());
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -308,6 +338,10 @@ export default function ContactForm() {
                   >
                     {isSubmitting ? "Transmitting..." : "Send Securely"}
                   </button>
+
+                  {submitError ? (
+                    <p className="font-inter text-sm text-red-600">{submitError}</p>
+                  ) : null}
                 </form>
               )}
             </div>
