@@ -42,6 +42,12 @@ export default function AboutPreview() {
               <p>
                 From Mumbai, Thane, and Navi Mumbai to Delhi, Pune, and Hyderabad, we support clients who need reliable fact-finding before taking critical personal or business decisions. Our investigators handle background checks, due diligence, fraud review, asset tracing, bug sweeping, and field surveillance with a process designed to protect privacy, preserve evidence quality, and deliver clear reporting you can act on.
               </p>
+              <div className="rounded-sm border border-black/10 bg-black/[0.03] p-5">
+                <h3 className="font-space text-xs uppercase tracking-[0.2em] text-black">Why Partner With Us</h3>
+                <p className="mt-3">
+                  H S Detectives combines confidential private investigation experience, local Mumbai intelligence, and pan-India operational reach to support personal, corporate, matrimonial, and surveillance cases. Clients partner with us for discreet execution, evidence-led reporting, legally compliant methods, and fast response when decisions carry emotional, legal, or financial risk. Every assignment is handled with professionalism, privacy, and a clear strategy built around verified facts.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div variants={fadeUp} className="pt-4 flex items-center gap-8">

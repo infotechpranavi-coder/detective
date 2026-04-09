@@ -12,7 +12,7 @@ import PageTransition from "@/components/ui/PageTransition";
 export const metadata: Metadata = {
   title: "H S Detectives | Private Detective Agency in Mumbai",
   description:
-    "Confidential private investigation services in Mumbai for personal, corporate, surveillance, and matrimonial cases.",
+    "Professional investigation services in Mumbai for surveillance, fraud, and background checks. Learn more with H S Detectives.",
 };
 
 export default function Home() {
