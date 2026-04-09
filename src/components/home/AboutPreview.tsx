@@ -39,6 +39,9 @@ export default function AboutPreview() {
               <p>
                 Operating with absolute discretion, our licensed team of former intelligence officers and modern cyber-security experts ensures that you receive undeniable proof, legally obtained and completely confidential.
               </p>
+              <p>
+                From Mumbai, Thane, and Navi Mumbai to Delhi, Pune, and Hyderabad, we support clients who need reliable fact-finding before taking critical personal or business decisions. Our investigators handle background checks, due diligence, fraud review, asset tracing, bug sweeping, and field surveillance with a process designed to protect privacy, preserve evidence quality, and deliver clear reporting you can act on.
+              </p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="pt-4 flex items-center gap-8">

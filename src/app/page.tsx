@@ -1,5 +1,6 @@
 "use client";
 
+import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import Marquee from "@/components/shared/Marquee";
 import AboutPreview from "@/components/home/AboutPreview";
@@ -9,6 +10,12 @@ import StatsBand from "@/components/home/StatsBand";
 import Testimonials from "@/components/home/Testimonials";
 import CtaBanner from "@/components/home/CtaBanner";
 import PageTransition from "@/components/ui/PageTransition";
+
+export const metadata: Metadata = {
+  title: "H S Detectives | Private Detective Agency in Mumbai",
+  description:
+    "Confidential private investigation services in Mumbai for personal, corporate, surveillance, and matrimonial cases.",
+};
 
 export default function Home() {
   return (
