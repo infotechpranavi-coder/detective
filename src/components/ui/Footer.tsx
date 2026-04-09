@@ -6,6 +6,9 @@ import { useRef } from "react";
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
+const FOOTER_BADGE_LINK = "https://www.sulekha.com/h-s-detectives-andheri-west-mumbai-contact-address";
+const GOOGLE_REVIEW_LINK = "https://www.google.com/maps/place/H+S+Detectives+Agency+Mumbai/@19.1408821,72.8322471,17z/data=!3m1!5s0x3be7b63c8ca7ede1:0x13b840c0c5a5b631!4m8!3m7!1s0x3be7b06618f08abb:0xc675e5f7f07f1ecd!8m2!3d19.1408821!4d72.8322471!9m1!1b1!16s%2Fg%2F11b7fy77fm?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D";
+
 const serviceAreas = [
   { label: "Personal Investigation", href: "/services/personal-investigation" },
   { label: "Corporate Investigation", href: "/services/corporate-investigation" },
@@ -153,6 +156,24 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <div className="space-y-2 pt-2">
+              <h5 className="font-space text-[10px] text-white/70 tracking-[0.2em] uppercase">Sulekha</h5>
+              <a
+                href={FOOTER_BADGE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden rounded-xl border border-white/20 bg-white/5 p-2 transition-colors hover:border-accent/80 hover:bg-white/10"
+                aria-label="Open H S Detectives listing on Sulekha"
+              >
+                <Image
+                  src="/1979530-removebg-preview.png"
+                  alt="H S Detectives Sulekha listing"
+                  width={320}
+                  height={120}
+                  className="h-auto w-full object-contain"
+                />
+              </a>
+            </div>
           </div>
 
           <div className="space-y-6">
@@ -166,6 +187,21 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <a
+              href={GOOGLE_REVIEW_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block max-w-[180px] overflow-hidden rounded-xl border border-white/20 bg-white/5 p-2 transition-colors hover:border-accent/80 hover:bg-white/10"
+              aria-label="Open Google Reviews for H S Detectives"
+            >
+              <Image
+                src="/images-removebg-preview.png"
+                alt="Google review badge"
+                width={180}
+                height={72}
+                className="h-auto w-full object-contain"
+              />
+            </a>
           </div>
 
           {/* Contact */}
@@ -193,18 +229,13 @@ export default function Footer() {
             >
               Get In Touch
             </Link>
+
           </div>
         </div>
 
         {/* Bottom */}
         <div className="pt-8 border-t-2 border-white/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-inter text-xs text-white/60">
-            &copy; {new Date().getFullYear()} H S Detectives. All rights reserved.
-          </p>
           <div className="flex flex-wrap justify-center gap-6 font-inter text-xs text-white/60">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms and Conditions</Link>
-            <Link href="/refund-and-cancellation-policy" className="hover:text-white transition-colors">Refund and Cancellation Policy</Link>
             <Link href="/sitemap-page" className="hover:text-white transition-colors">Sitemap</Link>
           </div>
         </div>

@@ -63,9 +63,9 @@ const TABS = [
       { title: "Counter-Surveillance", desc: "Identifying if you are being illegally monitored by third parties." }
     ],
     pricingTable: [
-      { duration: "05 Days", investment: "₹45,000/-", scope: "Short-term pattern verification: Confirming suspicions or quick checks." },
-      { duration: "10 Days", investment: "₹75,000/-", scope: "RECOMMENDED: Identifying consistent habits and routines.", recommended: true },
-      { duration: "15 Days", investment: "₹1,00,000/-", scope: "Comprehensive Deep-Dive: Full-scale investigative shadowing for legal evidence." }
+      { duration: "5 Days", investment: "45k", scope: "Short-term pattern verification: Confirming suspicions or quick checks." },
+      { duration: "10 Days", investment: "75k", scope: "RECOMMENDED: Identifying consistent habits and routines.", recommended: true },
+      { duration: "15 Days", investment: "1L", scope: "Comprehensive Deep-Dive: Full-scale investigative shadowing for legal evidence." }
     ],
     deliverable: "Detailed surveillance logs and high-definition evidence files.",
     cta: "Get Surveillance Support"
@@ -159,8 +159,8 @@ export default function PackageCards() {
                       <tbody>
                         {activeData.pricingTable.map((row, i) => (
                           <tr key={i} className={`font-inter text-sm border-b border-black/5 ${row.recommended ? 'bg-accent/5' : ''}`}>
-                            <td className="p-4 border-r border-black/5 font-bold">{row.duration}</td>
-                            <td className="p-4 border-r border-black/5 font-playfair text-lg">{row.investment}</td>
+                            <td className="p-4 border-r border-black/5 font-bold text-black">{row.duration}</td>
+                            <td className="p-4 border-r border-black/5 font-playfair text-lg text-black">{row.investment}</td>
                             <td className="p-4 text-black/60 leading-relaxed">
                               {row.recommended && <span className="font-space text-[9px] text-accent uppercase font-bold block mb-1">Recommended</span>}
                               {row.scope}
@@ -224,3 +224,4 @@ export default function PackageCards() {
     </section>
   );
 }
+

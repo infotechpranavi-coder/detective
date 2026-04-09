@@ -283,7 +283,7 @@ export default function ContactForm() {
                     <label className="font-space text-[10px] text-foreground/50 tracking-[0.2em] uppercase">Investigation Category</label>
                     <div className="relative">
                       <select 
-                        {...register("category")}
+                        {...register("category", { required: true })}
                         className="w-full bg-background/50 border border-foreground/20 p-4 font-inter text-foreground focus:outline-none focus:border-accent transition-colors appearance-none"
                       >
                         <option value="personal">Personal Investigation</option>

@@ -31,7 +31,7 @@ export default function AboutPreview() {
 
             <motion.div variants={fadeUp} className="space-y-6 text-black/80 font-inter text-base md:text-lg leading-relaxed max-w-2xl">
               <p>
-                Established in 2011, H S Detectives has built a formidable reputation as India&apos;s most trusted private investigation agency. We specialize in complex corporate espionage, matrimonial verifications, and high-stakes surveillance operations.
+                Established in 2011, H S Detectives has built a formidable reputation as India&apos;s most trusted private investigation agency, trusted by BFSI institutions and corporates for high-sensitivity assignments. We specialize in complex corporate espionage, matrimonial verifications, and high-stakes surveillance operations.
               </p>
               <p>
                 Operating with absolute discretion, our licensed team of former intelligence officers and modern cyber-security experts ensures that you receive undeniable proof, legally obtained and completely confidential.
@@ -48,7 +48,7 @@ export default function AboutPreview() {
 
           {/* RIGHT COLUMN - 40% */}
           <motion.div 
-            className="lg:col-span-5 relative"
+            className="relative mt-16 sm:mt-20 lg:col-span-5 lg:mt-0"
             variants={fadeRight}
             initial="hidden"
             whileInView="visible"
@@ -74,14 +74,14 @@ export default function AboutPreview() {
                 <path d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2ZM5.12 15C3.39 15 2 16.39 2 18.12V22H22V18.12C22 16.39 20.61 15 18.88 15H5.12Z" fill="currentColor"/>
               </svg>
               <div className="flex flex-col">
-                <span className="font-playfair text-black text-lg leading-tight uppercase tracking-wider">H S Detectives</span>
-                <span className="font-space text-accent text-[10px] tracking-widest uppercase">Since 2011</span>
+                <span className="font-playfair text-black text-lg leading-tight uppercase tracking-wider">Trusted by</span>
+                <span className="font-space text-accent text-[10px] tracking-widest uppercase">BFSI &amp; Corporates</span>
               </div>
             </motion.div>
 
             {/* Floating Stats Grid - Bottom Right (overlapping) */}
             <div className="absolute -right-4 md:-right-8 bottom-12 grid grid-cols-1 gap-3 z-10">
-              {["100% Success", "15+ Yrs", "3 Offices", "Pan India"].map((stat, i) => (
+              {["100% Success", "15+ Yrs", "7 Offices", "Pan India"].map((stat, i) => (
                 <motion.div 
                   key={i}
                   variants={scaleUp}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { PhoneCall } from "lucide-react";
 
 const PHONE_NUMBER = "+919930403115";
-const WHATSAPP_LINK = "https://wa.aisensy.com/+919152531394";
+const WHATSAPP_LINK = "https://wa.me/919930403115";
 const CALL_LINK = `tel:${PHONE_NUMBER}`;
 
 function WhatsAppIcon({ className = "" }: { className?: string }) {
