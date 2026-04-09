@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { PhoneCall } from "lucide-react";
 
@@ -24,31 +23,51 @@ function WhatsAppIcon({ className = "" }: { className?: string }) {
 export default function FloatingContactButtons() {
   return (
     <>
-      <div className="fixed inset-x-0 bottom-0 z-[90] border-t border-white/15 bg-black/95 p-3 backdrop-blur-md lg:hidden">
-        <div className="mx-auto grid max-w-md grid-cols-[1fr_auto_1fr] gap-4">
-          <a
+      <div className="fixed inset-x-0 bottom-4 z-[90] px-4 lg:hidden">
+        <div className="mx-auto flex max-w-md items-center justify-between">
+          <motion.a
             href={CALL_LINK}
             aria-label="Call +91 99304 03115"
-            className="flex min-h-12 items-center justify-center rounded-full bg-[linear-gradient(135deg,#ff5a5a,#d62828)] px-4 text-center font-space text-[11px] uppercase tracking-[0.18em] text-white"
+            className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#ff5a5a,#d62828)] text-white shadow-[0_14px_34px_rgba(220,38,38,0.35)]"
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: [1, 1.03, 1] }}
+            transition={{
+              opacity: { duration: 0.35, ease: "easeOut" },
+              y: { duration: 0.35, ease: "easeOut" },
+              scale: { duration: 3.6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+            }}
+            whileTap={{ scale: 0.96 }}
           >
-            Call Now
-          </a>
-          <a
+            <motion.span
+              className="absolute inset-1 rounded-full bg-white/12 blur-[2px]"
+              animate={{ scale: [1, 1.07, 1], opacity: [0.16, 0.3, 0.16] }}
+              transition={{ duration: 2.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            />
+            <PhoneCall size={20} className="relative z-10 h-6 w-6" />
+          </motion.a>
+
+          <motion.a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-[linear-gradient(135deg,#34d97b,#1fa855)] text-white"
+            className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#34d97b,#1fa855)] text-white shadow-[0_14px_34px_rgba(37,211,102,0.38)]"
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: [1, 1.04, 1] }}
+            transition={{
+              opacity: { duration: 0.35, delay: 0.08, ease: "easeOut" },
+              y: { duration: 0.35, delay: 0.08, ease: "easeOut" },
+              scale: { duration: 3.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+            }}
+            whileTap={{ scale: 0.96 }}
           >
-            <WhatsAppIcon className="h-6 w-6" />
-          </a>
-          <Link
-            href="/contact-detectives-mumbai"
-            aria-label="Open inquiry form"
-            className="flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/8 px-4 text-center font-space text-[11px] uppercase tracking-[0.18em] text-white"
-          >
-            Inquiry
-          </Link>
+            <motion.span
+              className="absolute inset-1 rounded-full bg-white/12 blur-[2px]"
+              animate={{ scale: [1, 1.08, 1], opacity: [0.18, 0.34, 0.18] }}
+              transition={{ duration: 2.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            />
+            <WhatsAppIcon className="relative z-10 h-[26px] w-[26px]" />
+          </motion.a>
         </div>
       </div>
 
