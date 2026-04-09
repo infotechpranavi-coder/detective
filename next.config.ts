@@ -27,6 +27,17 @@ const locationSeoSlugs = [
   "santacruz",
 ];
 
+const serviceCategorySeoSlugs = [
+  "business-investigation",
+  "matrimonial-checking",
+  "debugging-sweeping",
+  "personal-investigation",
+  "corporate-investigation",
+  "tscm-services",
+  "risk-management",
+  "surveillance-shadowing",
+];
+
 const nextConfig: NextConfig = {
   compress: true,
   async redirects() {
@@ -127,6 +138,11 @@ const nextConfig: NextConfig = {
         destination: "/services/:category/:slug-services",
         permanent: true,
       },
+      ...serviceCategorySeoSlugs.map((slug) => ({
+        source: `/services/${slug}`,
+        destination: `/services/${slug}-services`,
+        permanent: true,
+      })),
       {
         source: "/publication-media-channels-hs-detectvies",
         destination: "/publication-media-channels-hs-detectives",
@@ -233,6 +249,10 @@ const nextConfig: NextConfig = {
         source: "/services/:category/:slug-services",
         destination: "/services/:category/:slug",
       },
+      ...serviceCategorySeoSlugs.map((slug) => ({
+        source: `/services/${slug}-services`,
+        destination: `/services/${slug}`,
+      })),
     ];
   },
   async headers() {
