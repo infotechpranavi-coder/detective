@@ -112,6 +112,17 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source:
+          "/services/corporate-investigation/fraud-investigation-company-support-services",
+        destination: "/services/Corporate-Fraud-Investigation-services-in-mumbai",
+        permanent: true,
+      },
+      {
+        source: "/services/Corporate Fraud-Investigation-services-in-mumbai",
+        destination: "/services/Corporate-Fraud-Investigation-services-in-mumbai",
+        permanent: true,
+      },
+      {
         source: "/services/:category/:slug((?!.*-services$).+)",
         destination: "/services/:category/:slug-services",
         permanent: true,
@@ -131,6 +142,16 @@ const nextConfig: NextConfig = {
         destination: "/locations-detectives-agency-in-mumbai",
         permanent: true,
       },
+      ...locationSeoSlugs.map((slug) => ({
+        source: `/locations/${slug}`,
+        destination: `/locations/${slug}-detectives-agency-in-mumbai`,
+        permanent: true,
+      })),
+      ...locationSeoSlugs.map((slug) => ({
+        source: `/locations/${slug}-detectives-agency-in-${slug}`,
+        destination: `/locations/${slug}-detectives-agency-in-mumbai`,
+        permanent: true,
+      })),
     ];
   },
   async rewrites() {
@@ -199,8 +220,13 @@ const nextConfig: NextConfig = {
         source: "/warning-signs-Red-Flag-Detection",
         destination: "/warning-signs",
       },
+      {
+        source: "/services/Corporate-Fraud-Investigation-services-in-mumbai",
+        destination:
+          "/services/corporate-investigation/fraud-investigation-company-support",
+      },
       ...locationSeoSlugs.map((slug) => ({
-        source: `/locations/${slug}-detectives-agency-in-${slug}`,
+        source: `/locations/${slug}-detectives-agency-in-mumbai`,
         destination: `/locations/${slug}`,
       })),
       {

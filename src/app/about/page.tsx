@@ -85,10 +85,10 @@ const reasons = [
 
 const officePresence = [
   { label: "Mumbai", href: "/locations/mumbai-detectives-agency-in-mumbai" },
-  { label: "Delhi NCR", href: "/locations/delhi-detectives-agency-in-delhi" },
+  { label: "Delhi NCR", href: "/locations/delhi-detectives-agency-in-mumbai" },
   { label: "Bangalore", href: "/locations-detectives-agency-in-mumbai" },
-  { label: "Pune", href: "/locations/pune-detectives-agency-in-pune" },
-  { label: "Hyderabad", href: "/locations/hyderabad-detectives-agency-in-hyderabad" },
+  { label: "Pune", href: "/locations/pune-detectives-agency-in-mumbai" },
+  { label: "Hyderabad", href: "/locations/hyderabad-detectives-agency-in-mumbai" },
 ];
 
 export default function AboutPage() {

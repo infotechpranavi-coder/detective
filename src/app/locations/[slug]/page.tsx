@@ -53,7 +53,7 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
           image="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
           breadcrumbs={[
             { label: "Locations", href: "/locations-detectives-agency-in-mumbai" },
-            { label: locationName, href: `/locations/${slug}-detectives-agency-in-${slug}` },
+            { label: locationName, href: `/locations/${slug}-detectives-agency-in-mumbai` },
           ]}
         />
 
