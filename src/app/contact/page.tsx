@@ -1,6 +1,5 @@
 import PageHero from "@/components/shared/PageHero";
 import ContactForm from "@/components/contact/ContactForm";
-import ConsultationStrip from "@/components/contact/ConsultationStrip";
 import OfficeMiniCards from "@/components/contact/OfficeMiniCards";
 import GoogleMapSection from "@/components/contact/GoogleMapSection";
 import PageTransition from "@/components/ui/PageTransition";
@@ -24,7 +23,6 @@ export default function ContactPage() {
         />
         <ContactForm />
         <GoogleMapSection />
-        <ConsultationStrip />
         <OfficeMiniCards />
       </main>
     </PageTransition>
