@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import Marquee from "@/components/shared/Marquee";
