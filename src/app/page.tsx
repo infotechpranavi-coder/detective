@@ -10,9 +10,9 @@ import CtaBanner from "@/components/home/CtaBanner";
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata: Metadata = {
-  title: "H S Detectives | Private Detective Agency in Mumbai",
+  title: "H S Detectives | Mumbai's Leading Investigation Agency",
   description:
-    "Professional investigation services in Mumbai for surveillance, fraud, and background checks. Learn more with H S Detectives.",
+    "Professional private investigation in Mumbai specializing in surveillance, corporate fraud, and background checks. Secure the truth today with H S Detectives.",
 };
 
 export default function Home() {
