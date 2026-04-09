@@ -50,7 +50,7 @@ export default function Testimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-32 relative overflow-hidden bg-white border-t-2 border-black">
+    <section className="relative overflow-hidden border-t-2 border-black bg-white py-24 md:py-32">
       {/* Blurred Background Texture */}
       <div className="absolute inset-0 z-0 pointer-events-none mix-blend-screen opacity-[0.04]">
         <Image
@@ -63,7 +63,7 @@ export default function Testimonials() {
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <motion.div 
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="mx-auto mb-16 max-w-2xl text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -79,18 +79,18 @@ export default function Testimonials() {
           </motion.h2>
         </motion.div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative mx-auto max-w-4xl">
           {/* Slider */}
           <div className="overflow-hidden px-4 md:px-0" ref={emblaRef}>
             <div className="flex -ml-4">
                {REVIEWS.map((review, i) => (
                  <div key={i} className="flex-[0_0_100%] md:flex-[0_0_80%] pl-4">
-                   <div className="bg-white border-2 border-black p-8 md:p-12 relative mt-12 group hover:border-accent transition-colors">
+                   <div className="group relative mt-12 border-2 border-black bg-white p-6 transition-colors hover:border-accent sm:p-8 md:p-12">
                      {/* Quote Icon */}
                      <Quote size={80} className="absolute top-6 right-6 text-black/5 group-hover:text-accent/10 transition-colors" />
                      
                      {/* Avatar */}
-                     <div className="absolute -top-12 left-8 md:left-12 w-24 h-24 rounded-full border-2 border-black p-1 bg-white">
+                     <div className="absolute -top-10 left-6 h-20 w-20 rounded-full border-2 border-black bg-white p-1 sm:-top-12 sm:left-8 sm:h-24 sm:w-24 md:left-12">
                        <div className="relative w-full h-full rounded-full overflow-hidden">
                          <Image 
                            src={review.image} 
@@ -101,8 +101,8 @@ export default function Testimonials() {
                        </div>
                      </div>
 
-                     <div className="pt-12">
-                       <p className="font-inter text-lg md:text-xl text-black/80 leading-relaxed mb-8 italic">
+                     <div className="pt-10 sm:pt-12">
+                       <p className="mb-8 font-inter text-base leading-relaxed text-black/80 italic sm:text-lg md:text-xl">
                          "{review.text}"
                        </p>
                        <div>
@@ -117,16 +117,16 @@ export default function Testimonials() {
           </div>
 
           {/* Controls */}
-          <div className="flex justify-center gap-4 mt-12">
+          <div className="mt-12 flex justify-center gap-4">
             <button 
               onClick={scrollPrev} 
-              className="w-12 h-12 rounded-full border-2 border-black text-black flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all"
+              className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-black text-black transition-all hover:bg-accent hover:border-accent hover:text-white"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
               onClick={scrollNext} 
-              className="w-12 h-12 rounded-full border-2 border-black text-black flex items-center justify-center hover:bg-accent hover:border-accent hover:text-white transition-all"
+              className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-black text-black transition-all hover:bg-accent hover:border-accent hover:text-white"
             >
               <ChevronRight size={20} />
             </button>

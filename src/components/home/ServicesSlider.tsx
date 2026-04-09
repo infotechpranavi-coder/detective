@@ -74,7 +74,7 @@ export default function ServicesSlider() {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden border-t-2 border-black">
-      <div className="container mx-auto px-6 lg:px-12 mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
+      <div className="container mx-auto mb-16 flex flex-col gap-8 px-6 lg:px-12 md:flex-row md:items-end md:justify-between">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ export default function ServicesSlider() {
 
         {/* Slider Controls */}
         <motion.div 
-          className="flex items-center gap-4"
+          className="flex items-center gap-4 self-start md:self-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -120,7 +120,7 @@ export default function ServicesSlider() {
             {SERVICES.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-6">
+                <div key={index} className="flex-[0_0_100%] pl-6 md:flex-[0_0_50%] lg:flex-[0_0_33.33%]">
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -133,6 +133,8 @@ export default function ServicesSlider() {
                       <img 
                         src={service.image} 
                         alt={service.title} 
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
@@ -149,7 +151,7 @@ export default function ServicesSlider() {
                     </div>
 
                     {/* Bottom Content Half */}
-                    <div className="p-8 flex flex-col flex-grow relative bg-white">
+                    <div className="relative flex flex-grow flex-col bg-white p-6 sm:p-8">
                       <h3 className="font-playfair text-xl text-black mb-4 uppercase tracking-wider group-hover:text-accent transition-colors">{service.title}</h3>
                       <p className="font-inter text-sm text-black/70 leading-relaxed mb-6 flex-grow">{service.desc}</p>
                       <Link 

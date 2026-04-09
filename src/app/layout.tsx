@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter, Space_Mono, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   title: "H S Detectives | Best Private Detective Agency in Mumbai & Pan-India",
   description: "H S Detectives is a premier private investigation agency in Mumbai offering 100% confidential personal, corporate, and surveillance services since 2011. Professional investigators for matrimonial, fraud, and technical sweeping cases.",
   keywords: "Private Detective Mumbai, Private Investigator Thane, Investigation Agency Navi Mumbai, Matrimonial Investigation Mumbai, Corporate Detective India, HS Detectives",
+  icons: {
+    icon: "/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png",
+    shortcut: "/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png",
+    apple: "/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png",
+  },
   openGraph: {
     title: "H S Detectives | Expert Private Investigation Services in Mumbai",
     description: "Professional and confidential detective services. Specialized in personal, corporate, and matrimonial investigations since 2011.",
@@ -35,6 +40,12 @@ export const metadata: Metadata = {
     siteName: "H S Detectives",
     type: "website",
   }
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 
@@ -54,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${playfair.variable} ${inter.variable} ${spaceMono.variable} ${bebasNeue.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden`}
+        className={`${playfair.variable} ${inter.variable} ${spaceMono.variable} ${bebasNeue.variable} bg-background pb-20 font-sans text-foreground antialiased overflow-x-hidden lg:pb-0`}
       >
         <Cursor />
         <Scanline />

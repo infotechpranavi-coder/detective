@@ -69,10 +69,10 @@ export default function AboutPreview() {
             />
 
             {/* Floating Logo Card - Bottom Left */}
-            <Link href="/clients" className="absolute -left-6 md:-left-12 -bottom-6 z-10">
+            <Link href="/clients" className="mt-4 inline-block lg:absolute lg:-left-12 lg:-bottom-6 lg:mt-0 z-10">
               <motion.div 
                 variants={fadeUp}
-                className="bg-white border-2 border-black p-5 md:p-6 flex items-center gap-4 shadow-lg transition-colors hover:border-accent"
+                className="flex items-center gap-4 border-2 border-black bg-white p-4 shadow-lg transition-colors hover:border-accent sm:p-5 md:p-6"
               >
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-accent">
                   <path d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2ZM5.12 15C3.39 15 2 16.39 2 18.12V22H22V18.12C22 16.39 20.61 15 18.88 15H5.12Z" fill="currentColor"/>
@@ -85,12 +85,12 @@ export default function AboutPreview() {
             </Link>
 
             {/* Floating Stats Grid - Bottom Right (overlapping) */}
-            <div className="absolute -right-4 md:-right-8 bottom-12 grid grid-cols-1 gap-3 z-10">
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:absolute lg:-right-8 lg:bottom-12 lg:mt-0 lg:grid-cols-1 z-10">
               {[...aboutStats.map((stat) => ({ label: stat, href: "/about" })), ...locationStats.map((stat) => ({ label: stat, href: "/locations" }))].map((stat, i) => (
                 <Link key={stat.label} href={stat.href}>
                 <motion.div 
                   variants={scaleUp}
-                  className="bg-white border-2 border-black px-4 py-2 font-space text-[10px] text-black tracking-widest uppercase shadow-lg whitespace-nowrap transition-colors hover:border-accent"
+                  className="bg-white border-2 border-black px-3 py-2 text-center font-space text-[10px] text-black tracking-widest uppercase shadow-lg transition-colors hover:border-accent sm:px-4 whitespace-nowrap"
                 >
                   {stat.label}
                 </motion.div>

@@ -127,17 +127,17 @@ export default function Navbar() {
       <header
         className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md border-b-2 border-black py-4"
-            : "bg-transparent py-6"
+            ? "bg-white/95 backdrop-blur-md border-b-2 border-black py-3 sm:py-4"
+            : "bg-transparent py-4 sm:py-6"
         }`}
       >
-        <div className="w-full pl-2 lg:pl-4 pr-6 lg:pr-12 flex justify-between items-center">
+        <div className="flex w-full items-center justify-between pl-2 pr-4 sm:pr-6 lg:pl-4 lg:pr-12">
           {/* Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 mr-auto flex items-center gap-3 group z-[101]"
+            className="group z-[101] mr-auto flex min-w-0 flex-shrink items-center gap-2 sm:gap-3"
           >
-            <div className="relative w-14 h-14 flex items-center justify-center overflow-hidden bg-white rounded-full border-2 border-black shadow-[2px_2px_0px_#000] p-1 group-hover:border-accent group-hover:shadow-[2px_2px_0px_#cc0000] transition-all duration-500">
+            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border-2 border-black bg-white p-1 shadow-[2px_2px_0px_#000] transition-all duration-500 group-hover:border-accent group-hover:shadow-[2px_2px_0px_#cc0000] sm:h-14 sm:w-14">
               <Image
                 src="/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png"
                 alt="HS Detectives Logo"
@@ -146,18 +146,16 @@ export default function Navbar() {
                 priority
               />
             </div>
-            <div className="flex flex-col">
+            <div className="flex min-w-0 flex-col">
               <span
-                className={`font-playfair text-xl leading-tight uppercase tracking-wider group-hover:text-accent transition-colors duration-500 ${
+                className={`font-playfair text-sm leading-tight uppercase tracking-wide transition-colors duration-500 group-hover:text-accent sm:text-lg lg:text-xl ${
                   scrolled ? "text-black" : "text-white"
                 }`}
               >
                 H S Detectives
               </span>
               <span
-                className={`font-space text-sm tracking-widest uppercase ${
-                  scrolled ? "text-accent" : "text-accent"
-                }`}
+                className="font-space text-[9px] uppercase tracking-[0.22em] text-accent sm:text-xs lg:text-sm"
               >
                 Since 2011
               </span>
@@ -165,7 +163,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-4 2xl:gap-6">
+          <nav className="hidden min-[992px]:flex items-center gap-4 2xl:gap-6">
             {navLinks.slice(0, 2).map((link) => {
               const isActive = pathname === link.path;
               return (
@@ -455,7 +453,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile hamburger */}
-          <div className="xl:hidden flex items-center gap-4 z-[101]">
+          <div className="flex items-center gap-4 z-[101] min-[992px]:hidden">
             <button
               className={mobileMenuOpen ? "text-accent" : scrolled ? "text-black" : "text-white"}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

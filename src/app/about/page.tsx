@@ -119,7 +119,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-4 bg-white dark:bg-black border border-neutral-200 dark:border-white/10 rounded-2xl p-8 shadow-xl sticky top-24">
+              <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl dark:border-white/10 dark:bg-black sm:p-8 lg:col-span-4 lg:sticky lg:top-24">
                 <div className="flex flex-col items-center text-center mb-8">
                   <div className="relative w-24 h-24 mb-4 border-2 border-red-600 rounded-full p-1 bg-white overflow-hidden">
                     <Image
@@ -137,10 +137,10 @@ export default function AboutPage() {
                   {corporateInfo.map((info, i) => (
                     <div
                       key={i}
-                      className="flex justify-between gap-4 border-b border-neutral-100 dark:border-neutral-800 pb-3 last:border-0 last:pb-0"
+                      className="flex flex-col gap-1 border-b border-neutral-100 pb-3 last:border-0 last:pb-0 dark:border-neutral-800 sm:flex-row sm:justify-between sm:gap-4"
                     >
                       <span className="font-space text-xs text-foreground/50 uppercase tracking-tighter">{info.label}</span>
-                      <span className="font-inter text-sm font-semibold text-right">{info.value}</span>
+                      <span className="font-inter text-sm font-semibold sm:text-right">{info.value}</span>
                     </div>
                   ))}
                 </div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                   <p className="font-inter text-lg text-foreground/70 leading-relaxed">
                     While based in Mumbai, our rapid-response network supports assignments across key locations in India, allowing our teams to move quickly wherever facts need to be verified on the ground.
                   </p>
-                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                  <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
                     {officePresence.map((city, i) => (
                       <a
                         key={i}
@@ -286,7 +286,7 @@ export default function AboutPage() {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white dark:bg-black p-12 rounded-[32px] border border-neutral-200 dark:border-white/10 shadow-xl">
+            <div className="grid grid-cols-1 gap-8 rounded-[32px] border border-neutral-200 bg-white p-6 shadow-xl dark:border-white/10 dark:bg-black sm:p-8 md:grid-cols-2 md:gap-12 md:p-12">
               <div className="space-y-8">
                 <h4 className="font-playfair text-3xl">Direct Inquiries</h4>
                 <div className="space-y-6">

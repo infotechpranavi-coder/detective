@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {/* Logo Column */}
           <div className="space-y-6">
             <Link href="/" className="inline-block relative">
@@ -203,24 +203,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mx-auto mb-10 w-full max-w-3xl rounded-[22px] border border-white/10 bg-white/5 p-4">
+        <div className="mx-auto mb-8 w-full max-w-2xl rounded-[20px] border border-white/10 bg-white/5 p-3 sm:mb-10 sm:max-w-3xl sm:p-4">
           <div className="mb-4 flex items-center gap-3">
             <div className="h-px w-8 bg-accent" />
             <h4 className="font-space text-[11px] text-accent tracking-[0.18em] uppercase">Reviews & Listings</h4>
           </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
             <a
               href={FOOTER_BADGE_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open H S Detectives listing on Sulekha"
             >
               <Image
                 src="/1979530-removebg-preview.png"
                 alt="H S Detectives Sulekha listing"
-                width={170}
-                height={68}
+                width={140}
+                height={56}
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -228,14 +228,14 @@ export default function Footer() {
               href={GOOGLE_REVIEW_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Google Reviews for H S Detectives"
             >
               <Image
                 src="/images-removebg-preview.png"
                 alt="Google review badge"
-                width={170}
-                height={68}
+                width={140}
+                height={56}
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -243,14 +243,14 @@ export default function Footer() {
               href={JUSTDIAL_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Justdial listing for H S Detectives"
             >
               <Image
                 src="/jdlogosvg.svg"
                 alt="Justdial listing badge"
-                width={170}
-                height={68}
+                width={140}
+                height={56}
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -258,14 +258,14 @@ export default function Footer() {
               href={FACEBOOK_REVIEW_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Facebook reviews for H S Detectives"
             >
               <Image
                 src="/fac.jpg"
                 alt="Facebook review badge"
-                width={170}
-                height={68}
+                width={140}
+                height={56}
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -273,14 +273,14 @@ export default function Footer() {
               href={TRUSTPILOT_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Trustpilot reviews for H S Detectives"
             >
               <Image
                 src="/logo-white.svg"
                 alt="Trustpilot review badge"
-                width={170}
-                height={68}
+                width={140}
+                height={56}
                 className="h-auto w-full object-contain"
               />
             </a>

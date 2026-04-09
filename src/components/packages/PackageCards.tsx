@@ -81,7 +81,7 @@ export default function PackageCards() {
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Tab Controls */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-16 md:mb-20">
+        <div className="mb-16 flex flex-wrap justify-center gap-2 md:mb-20 md:gap-4">
           {TABS.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -89,7 +89,7 @@ export default function PackageCards() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-3 px-6 py-4 font-space text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-500 border-2 ${
+                className={`flex items-center gap-2 px-4 py-3 font-space text-[9px] uppercase tracking-[0.18em] transition-all duration-500 border-2 sm:gap-3 sm:px-6 sm:py-4 sm:text-[10px] md:text-xs md:tracking-[0.2em] ${
                   isActive 
                     ? "bg-black border-black text-white shadow-[0_20px_40px_rgba(0,0,0,0.1)]" 
                     : "bg-white border-black/5 text-black/40 hover:border-black/20 hover:text-black"
@@ -147,8 +147,8 @@ export default function PackageCards() {
                 </div>
 
                 {activeData.pricingTable && (
-                  <div className="mt-12 overflow-hidden border border-black/10 rounded-xl shadow-sm">
-                    <table className="w-full text-left border-collapse">
+                  <div className="mt-12 overflow-x-auto rounded-xl border border-black/10 shadow-sm">
+                    <table className="min-w-[640px] w-full border-collapse text-left">
                       <thead>
                         <tr className="bg-black text-white font-space text-[10px] uppercase tracking-widest">
                           <th className="p-4 border-r border-white/10">Duration</th>
@@ -175,7 +175,7 @@ export default function PackageCards() {
 
               {/* Right Side: Deliverable & CTA Panel */}
               <div className="lg:col-span-5">
-                <div className="sticky top-32 p-10 bg-black text-white rounded-2xl shadow-2xl space-y-10 border border-white/10 overflow-hidden group">
+                <div className="group overflow-hidden rounded-2xl border border-white/10 bg-black p-6 text-white shadow-2xl space-y-8 sm:p-8 lg:sticky lg:top-32 lg:p-10 lg:space-y-10">
                   {/* Decorative background circle */}
                   <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent/20 rounded-full blur-[80px] pointer-events-none group-hover:bg-accent/30 transition-colors duration-700" />
                   
