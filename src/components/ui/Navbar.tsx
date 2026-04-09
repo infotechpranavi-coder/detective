@@ -148,15 +148,15 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span
-                className={`font-playfair text-base leading-tight uppercase tracking-wider group-hover:text-accent transition-colors duration-500 ${
+                className={`font-playfair text-xl leading-tight uppercase tracking-wider group-hover:text-accent transition-colors duration-500 ${
                   scrolled ? "text-black" : "text-white"
                 }`}
               >
                 H S Detectives
               </span>
               <span
-                className={`font-space text-[10px] tracking-widest uppercase ${
-                  scrolled ? "text-black/70" : "text-white/70"
+                className={`font-space text-sm tracking-widest uppercase ${
+                  scrolled ? "text-accent" : "text-accent"
                 }`}
               >
                 Since 2011

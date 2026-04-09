@@ -84,11 +84,11 @@ const reasons = [
 ];
 
 const officePresence = [
-  "Mumbai",
-  "Delhi NCR",
-  "Bangalore",
-  "Pune",
-  "Hyderabad",
+  { label: "Mumbai", href: "/locations/mumbai" },
+  { label: "Delhi NCR", href: "/locations/delhi" },
+  { label: "Bangalore", href: "/locations" },
+  { label: "Pune", href: "/locations/pune" },
+  { label: "Hyderabad", href: "/locations/hyderabad" },
 ];
 
 export default function AboutPage() {
@@ -170,12 +170,13 @@ export default function AboutPage() {
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                     {officePresence.map((city, i) => (
-                      <div
+                      <a
                         key={i}
-                        className="px-4 py-3 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/5 text-center shadow-sm"
+                        href={city.href}
+                        className="px-4 py-3 rounded-lg bg-white dark:bg-black border border-neutral-200 dark:border-white/5 text-center shadow-sm transition-colors hover:border-red-600"
                       >
-                        <span className="font-space text-[10px] uppercase tracking-widest">{city}</span>
-                      </div>
+                        <span className="font-space text-[10px] uppercase tracking-widest">{city.label}</span>
+                      </a>
                     ))}
                   </div>
                 </div>

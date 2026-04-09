@@ -8,6 +8,9 @@ import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
 const FOOTER_BADGE_LINK = "https://www.sulekha.com/h-s-detectives-andheri-west-mumbai-contact-address";
 const GOOGLE_REVIEW_LINK = "https://www.google.com/maps/place/H+S+Detectives+Agency+Mumbai/@19.1408821,72.8322471,17z/data=!3m1!5s0x3be7b63c8ca7ede1:0x13b840c0c5a5b631!4m8!3m7!1s0x3be7b06618f08abb:0xc675e5f7f07f1ecd!8m2!3d19.1408821!4d72.8322471!9m1!1b1!16s%2Fg%2F11b7fy77fm?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D";
+const TRUSTPILOT_LINK = "https://www.trustpilot.com/review/hsdetectives.com";
+const FACEBOOK_REVIEW_LINK = "https://www.facebook.com/hsdetectives/reviews/?id=100064041000573&sk=reviews";
+const JUSTDIAL_LINK = "https://www.justdial.com/Thane/H-S-Detectives-Wonder-Mall-Thane-West/022PXX22-XX22-180731182043-I2V7_BZDET?rand3=&rand2=&rand1=";
 
 const serviceAreas = [
   { label: "Personal Investigation", href: "/services/personal-investigation" },
@@ -156,24 +159,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <div className="space-y-2 pt-2">
-              <h5 className="font-space text-[10px] text-white/70 tracking-[0.2em] uppercase">Sulekha</h5>
-              <a
-                href={FOOTER_BADGE_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden rounded-xl border border-white/20 bg-white/5 p-2 transition-colors hover:border-accent/80 hover:bg-white/10"
-                aria-label="Open H S Detectives listing on Sulekha"
-              >
-                <Image
-                  src="/1979530-removebg-preview.png"
-                  alt="H S Detectives Sulekha listing"
-                  width={320}
-                  height={120}
-                  className="h-auto w-full object-contain"
-                />
-              </a>
-            </div>
           </div>
 
           <div className="space-y-6">
@@ -187,21 +172,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <a
-              href={GOOGLE_REVIEW_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block max-w-[180px] overflow-hidden rounded-xl border border-white/20 bg-white/5 p-2 transition-colors hover:border-accent/80 hover:bg-white/10"
-              aria-label="Open Google Reviews for H S Detectives"
-            >
-              <Image
-                src="/images-removebg-preview.png"
-                alt="Google review badge"
-                width={180}
-                height={72}
-                className="h-auto w-full object-contain"
-              />
-            </a>
           </div>
 
           {/* Contact */}
@@ -216,10 +186,10 @@ export default function Footer() {
               >
                 Crystal Plaza, A/514, New Link Rd, Andheri West, Mumbai 400053
               </a>
-              <div className="space-y-1">
-                <p>+91 99304 03115</p>
-                <p>+91 98670 30564</p>
-                <p>+91 91525 31394</p>
+              <div className="flex flex-col gap-2">
+                <p className="leading-none">+91 99304 03115</p>
+                <p className="leading-none">+91 98670 30564</p>
+                <p className="leading-none">+91 91525 31394</p>
               </div>
               <p>info@hsdetectives.com</p>
             </div>
@@ -230,6 +200,90 @@ export default function Footer() {
               Get In Touch
             </Link>
 
+          </div>
+        </div>
+
+        <div className="mx-auto mb-10 w-full max-w-3xl rounded-[22px] border border-white/10 bg-white/5 p-4">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="h-px w-8 bg-accent" />
+            <h4 className="font-space text-[11px] text-accent tracking-[0.18em] uppercase">Reviews & Listings</h4>
+          </div>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            <a
+              href={FOOTER_BADGE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              aria-label="Open H S Detectives listing on Sulekha"
+            >
+              <Image
+                src="/1979530-removebg-preview.png"
+                alt="H S Detectives Sulekha listing"
+                width={170}
+                height={68}
+                className="h-auto w-full object-contain"
+              />
+            </a>
+            <a
+              href={GOOGLE_REVIEW_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              aria-label="Open Google Reviews for H S Detectives"
+            >
+              <Image
+                src="/images-removebg-preview.png"
+                alt="Google review badge"
+                width={170}
+                height={68}
+                className="h-auto w-full object-contain"
+              />
+            </a>
+            <a
+              href={JUSTDIAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              aria-label="Open Justdial listing for H S Detectives"
+            >
+              <Image
+                src="/jdlogosvg.svg"
+                alt="Justdial listing badge"
+                width={170}
+                height={68}
+                className="h-auto w-full object-contain"
+              />
+            </a>
+            <a
+              href={FACEBOOK_REVIEW_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              aria-label="Open Facebook reviews for H S Detectives"
+            >
+              <Image
+                src="/fac.jpg"
+                alt="Facebook review badge"
+                width={170}
+                height={68}
+                className="h-auto w-full object-contain"
+              />
+            </a>
+            <a
+              href={TRUSTPILOT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1.5 transition-colors hover:border-accent/80 hover:bg-white/10"
+              aria-label="Open Trustpilot reviews for H S Detectives"
+            >
+              <Image
+                src="/logo-white.svg"
+                alt="Trustpilot review badge"
+                width={170}
+                height={68}
+                className="h-auto w-full object-contain"
+              />
+            </a>
           </div>
         </div>
 

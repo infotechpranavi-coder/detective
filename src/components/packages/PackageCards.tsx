@@ -160,7 +160,7 @@ export default function PackageCards() {
                         {activeData.pricingTable.map((row, i) => (
                           <tr key={i} className={`font-inter text-sm border-b border-black/5 ${row.recommended ? 'bg-accent/5' : ''}`}>
                             <td className="p-4 border-r border-black/5 font-bold text-black">{row.duration}</td>
-                            <td className="p-4 border-r border-black/5 font-playfair text-lg text-black">{row.investment}</td>
+                            <td className="p-4 border-r border-black/5 font-bold text-black">{row.investment}</td>
                             <td className="p-4 text-black/60 leading-relaxed">
                               {row.recommended && <span className="font-space text-[9px] text-accent uppercase font-bold block mb-1">Recommended</span>}
                               {row.scope}

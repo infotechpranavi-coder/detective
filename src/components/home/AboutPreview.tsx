@@ -5,6 +5,9 @@ import CustomImage from "@/components/ui/CustomImage";
 import Link from "next/link";
 import { fadeUp, fadeRight, staggerContainer, scaleUp } from "@/lib/animations";
 
+const aboutStats = ["100% Success", "15+ Yrs"];
+const locationStats = ["7 Offices", "Pan India"];
+
 export default function AboutPreview() {
   return (
     <section className="py-24 md:py-32 bg-white relative overflow-hidden border-t-2 border-black">
@@ -66,29 +69,32 @@ export default function AboutPreview() {
             />
 
             {/* Floating Logo Card - Bottom Left */}
-            <motion.div 
-              variants={fadeUp}
-              className="absolute -left-6 md:-left-12 -bottom-6 bg-white border-2 border-black p-5 md:p-6 flex items-center gap-4 z-10 shadow-lg"
-            >
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-accent">
-                <path d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2ZM5.12 15C3.39 15 2 16.39 2 18.12V22H22V18.12C22 16.39 20.61 15 18.88 15H5.12Z" fill="currentColor"/>
-              </svg>
-              <div className="flex flex-col">
-                <span className="font-playfair text-black text-lg leading-tight uppercase tracking-wider">Trusted by</span>
-                <span className="font-space text-accent text-[10px] tracking-widest uppercase">BFSI &amp; Corporates</span>
-              </div>
-            </motion.div>
+            <Link href="/clients" className="absolute -left-6 md:-left-12 -bottom-6 z-10">
+              <motion.div 
+                variants={fadeUp}
+                className="bg-white border-2 border-black p-5 md:p-6 flex items-center gap-4 shadow-lg transition-colors hover:border-accent"
+              >
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-accent">
+                  <path d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2ZM5.12 15C3.39 15 2 16.39 2 18.12V22H22V18.12C22 16.39 20.61 15 18.88 15H5.12Z" fill="currentColor"/>
+                </svg>
+                <div className="flex flex-col">
+                  <span className="font-playfair text-black text-lg leading-tight uppercase tracking-wider">Trusted by</span>
+                  <span className="font-space text-accent text-[10px] tracking-widest uppercase">BFSI &amp; Corporates</span>
+                </div>
+              </motion.div>
+            </Link>
 
             {/* Floating Stats Grid - Bottom Right (overlapping) */}
             <div className="absolute -right-4 md:-right-8 bottom-12 grid grid-cols-1 gap-3 z-10">
-              {["100% Success", "15+ Yrs", "7 Offices", "Pan India"].map((stat, i) => (
+              {[...aboutStats.map((stat) => ({ label: stat, href: "/about" })), ...locationStats.map((stat) => ({ label: stat, href: "/locations" }))].map((stat, i) => (
+                <Link key={stat.label} href={stat.href}>
                 <motion.div 
-                  key={i}
                   variants={scaleUp}
-                  className="bg-white border-2 border-black px-4 py-2 font-space text-[10px] text-black tracking-widest uppercase shadow-lg whitespace-nowrap"
+                  className="bg-white border-2 border-black px-4 py-2 font-space text-[10px] text-black tracking-widest uppercase shadow-lg whitespace-nowrap transition-colors hover:border-accent"
                 >
-                  {stat}
+                  {stat.label}
                 </motion.div>
+                </Link>
               ))}
             </div>
 

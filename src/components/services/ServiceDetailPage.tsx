@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CheckCheck, FileText, ShieldCheck, Sparkles } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
+import ServiceFaqSection from "@/components/services/ServiceFaqSection";
 import type { ServiceDetail } from "@/app/services/serviceData";
 import { subServicesByParent } from "@/app/services/subServiceData";
 
@@ -193,6 +194,8 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
             </div>
           </div>
         </section>
+
+        <ServiceFaqSection />
       </main>
     </PageTransition>
   );

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CheckCheck, FileText, ShieldCheck, Sparkles, ArrowLeft } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
+import ServiceFaqSection from "@/components/services/ServiceFaqSection";
 import type { SubService } from "@/app/services/subServiceData";
 import { richSubServiceContent } from "@/app/services/subServiceRichContent";
 
@@ -249,6 +250,8 @@ export default function SubServiceDetailPage({ service }: SubServiceDetailPagePr
             </div>
           </div>
         </section>
+
+        <ServiceFaqSection />
       </main>
     </PageTransition>
   );
