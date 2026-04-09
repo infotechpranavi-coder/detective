@@ -35,7 +35,7 @@ export default function CategoryIntro() {
                 Protecting your personal life requires discretion and tact. Whether it's verifying the background of a prospective alliance or investigating suspected infidelity, our discreet agents gather irrefutable evidence.
               </motion.p>
               <motion.div variants={fadeUp}>
-                <Link href="/contact" className="inline-flex items-center gap-3 text-accent font-space text-xs uppercase tracking-widest hover:text-black transition-colors border-b-2 border-accent hover:border-black pb-1">
+                <Link href="/contact-detectives-mumbai" className="inline-flex items-center gap-3 text-accent font-space text-xs uppercase tracking-widest hover:text-black transition-colors border-b-2 border-accent hover:border-black pb-1">
                   Discuss a personal case <span>→</span>
                 </Link>
               </motion.div>
@@ -59,7 +59,7 @@ export default function CategoryIntro() {
                 Corporate fraud, intellectual property theft, and employee misconduct can cripple a business. We provide deep-dive intelligence and covert surveillance to safeguard your commercial interests.
               </motion.p>
               <motion.div variants={fadeUp}>
-                <Link href="/contact" className="inline-flex items-center gap-3 text-accent font-space text-xs uppercase tracking-widest hover:text-black transition-colors border-b-2 border-accent hover:border-black pb-1">
+                <Link href="/contact-detectives-mumbai" className="inline-flex items-center gap-3 text-accent font-space text-xs uppercase tracking-widest hover:text-black transition-colors border-b-2 border-accent hover:border-black pb-1">
                   Discuss a corporate case <span>→</span>
                 </Link>
               </motion.div>

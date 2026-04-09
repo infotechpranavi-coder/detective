@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: {
       label: "Explore Our Locations",
-      href: "/locations",
+      href: "/locations-detectives-agency-in-mumbai",
       text: "From Mumbai to the rest of India, get local expertise with national scale.",
     },
   },

@@ -166,5 +166,5 @@ export const informationPages: InformationPageData[] = [
 export const informationPageLinks = informationPages.map(({ slug, navLabel }) => ({
   slug,
   navLabel,
-  href: `/${slug}`,
+  href: slug === "warning-signs" ? "/warning-signs-Red-Flag-Detection" : `/${slug}`,
 }));

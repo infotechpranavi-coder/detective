@@ -51,7 +51,7 @@ export default function PackageCta() {
 
           <motion.div variants={fadeUp}>
             <Link 
-              href="/contact" 
+              href="/contact-detectives-mumbai" 
               className="px-10 py-5 bg-accent text-white font-space text-sm uppercase tracking-[0.2em] hover:bg-black hover:text-white hover:scale-105 transition-all duration-500 font-bold"
             >
               Contact Directory

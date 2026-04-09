@@ -136,14 +136,14 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-space text-sm text-accent tracking-widest uppercase">Quick Links</h4>
             <ul className="space-y-3 font-inter text-base">
-              <li><Link href="/publication" className="text-white/70 hover:text-white transition-colors">Publication</Link></li>
+              <li><Link href="/publication-media-channels-hs-detectives" className="text-white/70 hover:text-white transition-colors">Publication</Link></li>
               <li><Link href="/faq" className="text-white/70 hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link href="/regulation" className="text-white/70 hover:text-white transition-colors">Govt. Regulation</Link></li>
-              <li><Link href="/membership" className="text-white/70 hover:text-white transition-colors">Membership</Link></li>
-              <li><Link href="/certificate" className="text-white/70 hover:text-white transition-colors">Certification</Link></li>
-              <li><Link href="/case-study" className="text-white/70 hover:text-white transition-colors">Case Study</Link></li>
+              <li><Link href="/regulation-Private-Detective-Agencies-Regulation-Bill" className="text-white/70 hover:text-white transition-colors">Govt. Regulation</Link></li>
+              <li><Link href="/membership-detectives-association" className="text-white/70 hover:text-white transition-colors">Membership</Link></li>
+              <li><Link href="/certificate-of-hs-detectives" className="text-white/70 hover:text-white transition-colors">Certification</Link></li>
+              <li><Link href="/case-Investigation-Notes" className="text-white/70 hover:text-white transition-colors">Case Study</Link></li>
               <li><Link href="/ethics" className="text-white/70 hover:text-white transition-colors">Our Ethics</Link></li>
-              <li><Link href="/information" className="text-white/70 hover:text-white transition-colors">Information</Link></li>
+              <li><Link href="/information-Intelligence-brief-services" className="text-white/70 hover:text-white transition-colors">Information</Link></li>
             </ul>
           </div>
 
@@ -194,7 +194,7 @@ export default function Footer() {
               <p>info@hsdetectives.com</p>
             </div>
             <Link
-              href="/contact"
+              href="/contact-detectives-mumbai"
               className="inline-block mt-4 px-6 py-3 border-2 border-white text-white text-sm font-space uppercase tracking-widest hover:bg-accent hover:border-accent transition-all"
             >
               Get In Touch

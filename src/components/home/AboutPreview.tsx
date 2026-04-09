@@ -42,7 +42,7 @@ export default function AboutPreview() {
             </motion.div>
 
             <motion.div variants={fadeUp} className="pt-4 flex items-center gap-8">
-              <Link href="/about" className="group relative inline-flex items-center gap-4 pb-2">
+              <Link href="/about-HS-detectives-mumbai" className="group relative inline-flex items-center gap-4 pb-2">
                 <span className="font-space text-sm tracking-widest text-black uppercase group-hover:text-accent transition-colors">Read Our Story</span>
                 <span className="w-8 h-[1px] bg-black group-hover:bg-accent group-hover:w-12 transition-all duration-300" />
               </Link>
@@ -86,7 +86,7 @@ export default function AboutPreview() {
 
             {/* Floating Stats Grid - Bottom Right (overlapping) */}
             <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:absolute lg:-right-8 lg:bottom-12 lg:mt-0 lg:grid-cols-1 z-10">
-              {[...aboutStats.map((stat) => ({ label: stat, href: "/about" })), ...locationStats.map((stat) => ({ label: stat, href: "/locations" }))].map((stat, i) => (
+              {[...aboutStats.map((stat) => ({ label: stat, href: "/about-HS-detectives-mumbai" })), ...locationStats.map((stat) => ({ label: stat, href: "/locations-detectives-agency-in-mumbai" }))].map((stat, i) => (
                 <Link key={stat.label} href={stat.href}>
                 <motion.div 
                   variants={scaleUp}

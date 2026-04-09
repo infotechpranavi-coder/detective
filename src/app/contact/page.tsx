@@ -20,7 +20,7 @@ export default function ContactPage() {
           title="Initiate Contact" 
           subtitle="All communications are strictly protected by client-agency confidentiality privileges."
           image="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[ { label: "Contact", href: "/contact" } ]}
+          breadcrumbs={[ { label: "Contact", href: "/contact-detectives-mumbai" } ]}
         />
         <ContactForm />
         <GoogleMapSection />

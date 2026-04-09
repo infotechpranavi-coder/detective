@@ -11,12 +11,14 @@ const sitemapSections = [
     title: "Main Pages",
     links: [
       { label: "Home", href: "/" },
-      { label: "About", href: "/about" },
+      { label: "About", href: "/about-HS-detectives-mumbai" },
       { label: "Services", href: "/services" },
-      { label: "Locations", href: "/locations" },
+      { label: "Packages", href: "/packages-detectives-mumbai" },
+      { label: "Locations", href: "/locations-detectives-agency-in-mumbai" },
+      { label: "Clients", href: "/clients-hs-detectives" },
       { label: "Blog", href: "/blog" },
-      { label: "Case Study", href: "/case-study" },
-      { label: "Contact", href: "/contact" },
+      { label: "Case Study", href: "/case-Investigation-Notes" },
+      { label: "Contact", href: "/contact-detectives-mumbai" },
     ],
   },
   {
@@ -35,39 +37,43 @@ const sitemapSections = [
   {
     title: "Key Subservices",
     links: [
-      { label: "Pre-Matrimonial Investigations", href: "/services/personal-investigation/pre-matrimonial-investigations" },
-      { label: "Post-Matrimonial Surveillance", href: "/services/personal-investigation/post-matrimonial-surveillance" },
-      { label: "Employee Background Verification", href: "/services/corporate-investigation/employee-background-verification" },
-      { label: "Asset Tracing", href: "/services/corporate-investigation/asset-tracing" },
-      { label: "Corporate TSCM Services", href: "/services/tscm-services/corporate-tscm-services" },
-      { label: "Home Bug Sweep", href: "/services/tscm-services/home-bug-sweep" },
-      { label: "IP Protection", href: "/services/risk-management/ip-protection" },
-      { label: "Forensic Investigation", href: "/services/risk-management/forensic-investigation" },
-      { label: "Employee Surveillance", href: "/services/surveillance-shadowing/employee-surveillance" },
-      { label: "Physical Surveillance", href: "/services/surveillance-shadowing/physical-surveillance" },
+      { label: "Pre-Matrimonial Investigations", href: "/services/personal-investigation/pre-matrimonial-investigations-services" },
+      { label: "Post-Matrimonial Surveillance", href: "/services/personal-investigation/post-matrimonial-surveillance-services" },
+      { label: "Employee Background Verification", href: "/services/corporate-investigation/employee-background-verification-services" },
+      { label: "Asset Tracing", href: "/services/corporate-investigation/asset-tracing-services" },
+      { label: "Corporate TSCM Services", href: "https://tscm.in/corporate-tscm-service/" },
+      { label: "Home Bug Sweep", href: "https://tscm.in/home-bug-sweep/" },
+      { label: "IP Protection", href: "/services/risk-management/ip-protection-services" },
+      { label: "Forensic Investigation", href: "/services/risk-management/forensic-investigation-services" },
+      { label: "Employee Surveillance", href: "/services/surveillance-shadowing/employee-surveillance-services" },
+      { label: "Physical Surveillance", href: "/services/surveillance-shadowing/physical-surveillance-services" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Publication", href: "/publication" },
+      { label: "Publication", href: "/publication-media-channels-hs-detectives" },
       { label: "FAQ", href: "/faq" },
-      { label: "Government Regulation", href: "/regulation" },
-      { label: "Membership", href: "/membership" },
-      { label: "Certification", href: "/certificate" },
-      { label: "Our Ethics", href: "/ethics" },
-      { label: "Information", href: "/information" },
+      { label: "Government Regulation", href: "/regulation-Private-Detective-Agencies-Regulation-Bill" },
+      { label: "Membership", href: "/membership-detectives-association" },
+      { label: "Certification", href: "/certificate-of-hs-detectives" },
+      { label: "Our Ethics", href: "/ethics-HS-Detectives-Standard-Legal-Compliance" },
+      { label: "Information", href: "/information-Intelligence-brief-services" },
+      { label: "Warning Signs", href: "/warning-signs-Red-Flag-Detection" },
+      { label: "Privacy Rights", href: "/legal-standards-right-of-privacy" },
+      { label: "Compliance Corner", href: "/legal-standards-compliance-corner" },
+      { label: "Investigation Protocol", href: "/investigation-protocol-client-protocol" },
     ],
   },
   {
     title: "Locations",
     links: [
-      { label: "Mumbai", href: "/locations/mumbai" },
-      { label: "Thane", href: "/locations/thane" },
-      { label: "Navi Mumbai", href: "/locations/navi-mumbai" },
-      { label: "Pune", href: "/locations/pune" },
-      { label: "Delhi", href: "/locations/delhi" },
-      { label: "Hyderabad", href: "/locations/hyderabad" },
+      { label: "Mumbai", href: "/locations/mumbai-detectives-agency-in-mumbai" },
+      { label: "Thane", href: "/locations/thane-detectives-agency-in-thane" },
+      { label: "Navi Mumbai", href: "/locations/navi-mumbai-detectives-agency-in-navi-mumbai" },
+      { label: "Pune", href: "/locations/pune-detectives-agency-in-pune" },
+      { label: "Delhi", href: "/locations/delhi-detectives-agency-in-delhi" },
+      { label: "Hyderabad", href: "/locations/hyderabad-detectives-agency-in-hyderabad" },
     ],
   },
   {
@@ -109,9 +115,14 @@ export default function SitemapPage() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="font-inter text-sm leading-relaxed text-white/80 transition-colors hover:text-white break-all"
+                        className="block transition-colors hover:text-white"
                       >
-                        {link.href}
+                        <span className="font-space text-[10px] uppercase tracking-[0.2em] text-accent">
+                          {link.label}
+                        </span>
+                        <span className="mt-1 block font-inter text-sm leading-relaxed text-white/80 break-all">
+                          {link.href}
+                        </span>
                       </Link>
                     </li>
                   ))}

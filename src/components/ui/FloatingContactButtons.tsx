@@ -43,7 +43,7 @@ export default function FloatingContactButtons() {
             <WhatsAppIcon className="h-6 w-6" />
           </a>
           <Link
-            href="/contact"
+            href="/contact-detectives-mumbai"
             aria-label="Open inquiry form"
             className="flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/8 px-4 text-center font-space text-[11px] uppercase tracking-[0.18em] text-white"
           >

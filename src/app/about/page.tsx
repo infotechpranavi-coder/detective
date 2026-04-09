@@ -84,11 +84,11 @@ const reasons = [
 ];
 
 const officePresence = [
-  { label: "Mumbai", href: "/locations/mumbai" },
-  { label: "Delhi NCR", href: "/locations/delhi" },
-  { label: "Bangalore", href: "/locations" },
-  { label: "Pune", href: "/locations/pune" },
-  { label: "Hyderabad", href: "/locations/hyderabad" },
+  { label: "Mumbai", href: "/locations/mumbai-detectives-agency-in-mumbai" },
+  { label: "Delhi NCR", href: "/locations/delhi-detectives-agency-in-delhi" },
+  { label: "Bangalore", href: "/locations-detectives-agency-in-mumbai" },
+  { label: "Pune", href: "/locations/pune-detectives-agency-in-pune" },
+  { label: "Hyderabad", href: "/locations/hyderabad-detectives-agency-in-hyderabad" },
 ];
 
 export default function AboutPage() {
@@ -99,7 +99,7 @@ export default function AboutPage() {
           title="About The Agency"
           subtitle="India's premier private investigation and intelligence firm built on integrity, precision, and absolute confidentiality."
           image="https://images.unsplash.com/photo-1520116468816-95b69f847357?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[{ label: "About", href: "/about" }]}
+          breadcrumbs={[{ label: "About", href: "/about-HS-detectives-mumbai" }]}
         />
 
         <section className="py-24 bg-linear-to-b from-background to-neutral-50 dark:to-neutral-900/20">

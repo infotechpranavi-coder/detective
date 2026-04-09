@@ -78,12 +78,12 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About us", path: "/about" },
-    { name: "Packages", path: "/packages" },
-    { name: "Location", path: "/locations" },
+    { name: "About us", path: "/about-HS-detectives-mumbai" },
+    { name: "Packages", path: "/packages-detectives-mumbai" },
+    { name: "Location", path: "/locations-detectives-agency-in-mumbai" },
     { name: "Clients", path: "/clients" },
     { name: "Blogs", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/contact-detectives-mumbai" },
   ];
 
   const baseNavClass = scrolled
@@ -362,7 +362,7 @@ export default function Navbar() {
               onMouseLeave={() => setInformationOpen(false)}
             >
               <Link
-                href="/information"
+                href="/information-Intelligence-brief-services"
                 className={`relative flex items-center gap-1 whitespace-nowrap font-inter text-[11px] xl:text-[12px] font-bold tracking-widest uppercase transition-colors duration-300 ${
                   pathname === "/information" ||
                   informationPageLinks.some((item) => pathname === item.href)
@@ -397,7 +397,7 @@ export default function Navbar() {
                     className="absolute left-1/2 top-full mt-4 w-[320px] -translate-x-1/2 rounded-2xl border border-black/10 bg-white p-3 shadow-2xl"
                   >
                     <Link
-                      href="/information"
+                      href="/information-Intelligence-brief-services"
                       className="block rounded-xl px-4 py-3 hover:bg-neutral-100 transition-colors"
                     >
                       <p className="font-space text-[10px] uppercase tracking-[0.2em] text-accent mb-1">
@@ -623,7 +623,7 @@ export default function Navbar() {
                   >
                     <div className="bg-neutral-50 rounded-2xl p-3 mb-2 flex flex-col gap-1">
                       <Link
-                        href="/information"
+                        href="/information-Intelligence-brief-services"
                         onClick={() => setMobileMenuOpen(false)}
                         className="block py-2 px-3 rounded-xl font-inter text-[13px] font-bold text-black hover:bg-white transition-colors"
                       >

@@ -17,7 +17,7 @@ export default function CertificatePage() {
           title="Certificates & Accreditations"
           subtitle="Our elite professional certifications, government licenses, and industry accreditations that validate our global commitment to uncompromising security standards."
           image="/certification-hero.png"
-          breadcrumbs={[{ label: "Certificates", href: "/certificate" }]}
+          breadcrumbs={[{ label: "Certificates", href: "/certificate-of-hs-detectives" }]}
         />
         <CertificateShowcase />
       </main>
