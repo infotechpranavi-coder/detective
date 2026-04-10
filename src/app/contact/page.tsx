@@ -3,12 +3,23 @@ import ContactForm from "@/components/contact/ContactForm";
 import OfficeMiniCards from "@/components/contact/OfficeMiniCards";
 import GoogleMapSection from "@/components/contact/GoogleMapSection";
 import PageTransition from "@/components/ui/PageTransition";
+import { createPageMetadata } from "@/lib/pageSeo";
 
-export const metadata = {
-  title: "Contact Us | H S Detectives | Confidential Consultation in Mumbai",
-  description: "Securely contact H S Detectives for a confidential consultation. Professional investigation services in Mumbai, Thane, Navi Mumbai and across India.",
-  keywords: "Contact Detective Mumbai, Hire Private Investigator, Confidential Investigation Mumbai, HS Detectives Contact Number",
-};
+export const metadata = createPageMetadata({
+  title: "Contact Detective Agency in Mumbai - HS Detectives",
+  description:
+    "Contact a trusted detective agency in Mumbai for confidential investigation services, quick response, and professional support for personal and corporate cases.",
+  keywords: [
+    "contact detective agency Mumbai",
+    "detective agency phone number Mumbai",
+    "hire private detective Mumbai",
+    "best detective agency Mumbai contact",
+    "investigation services Mumbai contact",
+    "corporate investigation Mumbai contact",
+    "personal investigation Mumbai contact",
+  ],
+  canonical: "https://www.hsdetectives.com/contact-detectives-mumbai",
+});
 
 
 export default function ContactPage() {

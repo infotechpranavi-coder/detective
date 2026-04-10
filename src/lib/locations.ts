@@ -16,6 +16,26 @@ export type ServiceLocation = {
   metaDescription: string;
 };
 
+const LOCATION_ROUTE_PREFIX = "detectives-agency-in-";
+
+export const getLocationRouteSlug = (slug: string) => `${LOCATION_ROUTE_PREFIX}${slug}`;
+
+export const getLocationPath = (slug: string) => `/locations/${getLocationRouteSlug(slug)}`;
+
+const normalizeLocationSlug = (rawSlug: string) => {
+  const slug = rawSlug.trim().toLowerCase();
+
+  if (slug.startsWith(LOCATION_ROUTE_PREFIX)) {
+    return slug.slice(LOCATION_ROUTE_PREFIX.length);
+  }
+
+  if (slug.includes("-detectives-agency-in-")) {
+    return slug.split("-detectives-agency-in-")[0];
+  }
+
+  return slug;
+};
+
 export const SERVICE_LOCATIONS: ServiceLocation[] = [
   {
     name: "Hyderabad",
@@ -515,5 +535,5 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
 ];
 
 export const GET_LOCATION_BY_SLUG = (slug: string) =>
-  SERVICE_LOCATIONS.find((location) => location.slug === slug);
+  SERVICE_LOCATIONS.find((location) => location.slug === normalizeLocationSlug(slug));
 

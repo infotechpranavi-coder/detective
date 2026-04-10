@@ -1,10 +1,25 @@
+import { createPageMetadata } from "@/lib/pageSeo";
 ﻿import SubServiceDetailPage from "@/components/services/SubServiceDetailPage";
 import { subServiceMap } from "@/app/services/subServiceData";
 
-export const metadata = {
-  title: "Due Diligence Services | H S Detectives",
-  description: "Comprehensive due diligence investigation services to verify business partners and opportunities.",
-};
+export const metadata = createPageMetadata({
+  title: "Due Diligence Services in Mumbai - HS Detectives",
+  description:
+    "HS Detectives Mumbai due diligence services in Mumbai for businesses and investors, offering thorough background checks, financial analysis, and risk assessment to ensure informed decisions.",
+  keywords: [
+    "due diligence services Mumbai",
+    "corporate due diligence Mumbai",
+    "financial due diligence Mumbai",
+    "legal due diligence Mumbai",
+    "business verification services Mumbai",
+    "investment due diligence Mumbai",
+    "risk assessment services Mumbai",
+    "background verification for companies Mumbai",
+    "vendor due diligence Mumbai",
+    "business intelligence services Mumbai",
+  ],
+  canonical: "https://www.hsdetectives.com/services/corporate-investigation/due-diligence-services",
+});
 
 export default function Page() {
   return <SubServiceDetailPage service={subServiceMap["due-diligence-services"]} />;

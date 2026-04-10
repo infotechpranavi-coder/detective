@@ -8,12 +8,27 @@ import StatsBand from "@/components/home/StatsBand";
 import Testimonials from "@/components/home/Testimonials";
 import CtaBanner from "@/components/home/CtaBanner";
 import PageTransition from "@/components/ui/PageTransition";
+import { createPageMetadata } from "@/lib/pageSeo";
 
-export const metadata: Metadata = {
-  title: "H S Detectives | Mumbai's Leading Investigation Agency",
+export const metadata = createPageMetadata({
+  title: "Hs detective in Mumbai - HS Detectives",
   description:
-    "Professional private investigation in Mumbai specializing in surveillance, corporate fraud, and background checks. Secure the truth today with H S Detectives.",
-};
+    "HS detective services in Mumbai offering confidential investigations, surveillance, background checks, and corporate intelligence. Trusted, discreet, and result-oriented solutions.",
+  keywords: [
+    "HS detective in Mumbai",
+    "private detective Mumbai",
+    "best detective agency Mumbai",
+    "confidential investigation services Mumbai",
+    "personal investigation Mumbai",
+    "corporate investigation Mumbai",
+    "surveillance services Mumbai",
+    "background verification Mumbai",
+    "detective services Mumbai",
+    "legal investigation services Mumbai",
+    "top detective agency Mumbai",
+  ],
+  canonical: "https://www.hsdetectives.com/",
+});
 
 export default function Home() {
   return (

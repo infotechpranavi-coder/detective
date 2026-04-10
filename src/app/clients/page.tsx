@@ -1,10 +1,25 @@
 import PageTransition from "@/components/ui/PageTransition";
 import ClientsView from "./ClientsView";
+import { createPageMetadata } from "@/lib/pageSeo";
 
-export const metadata = {
-  title: "Our Trusted Clients | H S Detectives Agency Mumbai",
-  description: "Recognized and trusted by industry leaders across corporate, banking, infrastructure, and hospitality sectors. See our extensive client list.",
-};
+export const metadata = createPageMetadata({
+  title: "Detective Agency Corporate Portfolio - HS Detectives",
+  description:
+    "Hs Detectives Mumbai Explore our detective agency corporate portfolio showcasing expertise in corporate investigations, risk analysis, due diligence, and confidential business solutions.",
+  keywords: [
+    "detective agency corporate portfolio",
+    "corporate investigation services",
+    "corporate detective agency",
+    "fraud investigation services",
+    "employee verification services",
+    "corporate intelligence services",
+    "background verification company",
+    "corporate surveillance services",
+    "private detective for companies",
+    "professional detective agency Mumbai",
+  ],
+  canonical: "https://www.hsdetectives.com/clients-hs-detectives",
+});
 
 export default function ClientsPage() {
   return (

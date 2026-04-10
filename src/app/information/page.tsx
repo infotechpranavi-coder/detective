@@ -1,11 +1,24 @@
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
+import { createPageMetadata } from "@/lib/pageSeo";
 
-export const metadata = {
-  title: "Information | H S Detectives",
+export const metadata = createPageMetadata({
+  title: "Intelligence Brief Services in Mumbai - HS Detectives",
   description:
-    "Intelligence Brief Services from H S Detectives Agency Mumbai, delivering focused, confidential, and decision-ready information for sensitive personal and business matters.",
-};
+    "HS Detectives Mumbai Professional intelligence brief services in Mumbai offering strategic insights, background checks, and risk assessment with complete confidentiality.",
+  keywords: [
+    "intelligence brief services Mumbai",
+    "corporate intelligence Mumbai",
+    "business intelligence services Mumbai",
+    "risk assessment services Mumbai",
+    "confidential intelligence reports",
+    "private intelligence services Mumbai",
+    "investigative intelligence services",
+    "competitor analysis Mumbai",
+    "security intelligence services",
+  ],
+  canonical: "https://www.hsdetectives.com/information-Intelligence-brief-services",
+});
 
 const informationContent = [
   "HS Detectives agency Intelligence brief services provide concise, accurate, and actionable insights to support informed decision-making for businesses and individuals. In a rapidly changing environment, having access to verified intelligence helps reduce risks and identify opportunities effectively.",

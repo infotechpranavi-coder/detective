@@ -1,13 +1,28 @@
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import Image from "next/image";
+import { createPageMetadata } from "@/lib/pageSeo";
 
-export const metadata = {
-  title: "About Us | H S Detectives Agency Mumbai | Top Investigators Since 2011",
+export const metadata = createPageMetadata({
+  title: "Private detective agency in Mumbai - HS Detectives",
   description:
-    "Learn about H S Detectives, Mumbai's premier private investigation firm. Meet our leadership, TSCM experts, and cyber security specialists delivering expert intelligence since 2011.",
-  keywords: "Wahid Shaikh, RK Chaudhry, Munir Ahmed, Prasanna Venkatesan, Dev Dhankar, Private Detective Mumbai, About HS Detectives, Best Investigation Agency India",
-};
+    "Trusted private detective agency in Mumbai offering discreet investigation services including surveillance, background checks, matrimonial cases, and corporate investigations.",
+  keywords: [
+    "private detective agency in Mumbai",
+    "private investigator Mumbai",
+    "best detective agency Mumbai",
+    "detective services Mumbai",
+    "confidential investigation Mumbai",
+    "surveillance services Mumbai",
+    "background verification Mumbai",
+    "matrimonial investigation Mumbai",
+    "corporate investigation Mumbai",
+    "personal investigation services Mumbai",
+    "professional detectives Mumbai",
+    "legal investigation Mumbai",
+  ],
+  canonical: "https://www.hsdetectives.com/about-HS-detectives-mumbai",
+});
 
 
 const corporateInfo = [
@@ -84,11 +99,11 @@ const reasons = [
 ];
 
 const officePresence = [
-  { label: "Mumbai", href: "/locations/mumbai-detectives-agency-in-mumbai" },
-  { label: "Delhi NCR", href: "/locations/delhi-detectives-agency-in-mumbai" },
+  { label: "Mumbai", href: "/locations/detectives-agency-in-mumbai" },
+  { label: "Delhi NCR", href: "/locations/detectives-agency-in-delhi" },
   { label: "Bangalore", href: "/locations-detectives-agency-in-mumbai" },
-  { label: "Pune", href: "/locations/pune-detectives-agency-in-mumbai" },
-  { label: "Hyderabad", href: "/locations/hyderabad-detectives-agency-in-mumbai" },
+  { label: "Pune", href: "/locations/detectives-agency-in-pune" },
+  { label: "Hyderabad", href: "/locations/detectives-agency-in-hyderabad" },
 ];
 
 export default function AboutPage() {

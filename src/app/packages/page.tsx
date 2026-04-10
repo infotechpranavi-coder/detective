@@ -3,11 +3,25 @@ import PackageCards from "@/components/packages/PackageCards";
 import FAQSection from "@/components/packages/FAQSection";
 import PackageCta from "@/components/packages/PackageCta";
 import PageTransition from "@/components/ui/PageTransition";
+import { createPageMetadata } from "@/lib/pageSeo";
 
-export const metadata = {
-  title: "Packages | H S Detectives",
-  description: "Transparent investigation packages and pricing for corporate and personal matters.",
-};
+export const metadata = createPageMetadata({
+  title: "Hs Detectives Investigation Packages - HS Detectives",
+  description:
+    "Professional detective investigation packages by HS Detectives. Get confidential, reliable, and result-oriented services for personal, corporate, and legal investigations.",
+  keywords: [
+    "investigation packages cost Mumbai",
+    "background verification services",
+    "corporate investigation services",
+    "personal investigation services",
+    "confidential investigation services",
+    "post matrimonial investigation",
+    "fraud investigation services",
+    "detective agency packages",
+    "professional investigation services",
+  ],
+  canonical: "https://www.hsdetectives.com/packages-detectives-mumbai",
+});
 
 export default function PackagesPage() {
   return (

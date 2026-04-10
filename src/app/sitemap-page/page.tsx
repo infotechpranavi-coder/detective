@@ -68,12 +68,12 @@ const sitemapSections = [
   {
     title: "Locations",
     links: [
-      { label: "Mumbai", href: "/locations/mumbai-detectives-agency-in-mumbai" },
-      { label: "Thane", href: "/locations/thane-detectives-agency-in-mumbai" },
-      { label: "Navi Mumbai", href: "/locations/navi-mumbai-detectives-agency-in-mumbai" },
-      { label: "Pune", href: "/locations/pune-detectives-agency-in-mumbai" },
-      { label: "Delhi", href: "/locations/delhi-detectives-agency-in-mumbai" },
-      { label: "Hyderabad", href: "/locations/hyderabad-detectives-agency-in-mumbai" },
+      { label: "Mumbai", href: "/locations/detectives-agency-in-mumbai" },
+      { label: "Thane", href: "/locations/detectives-agency-in-thane" },
+      { label: "Navi Mumbai", href: "/locations/detectives-agency-in-navi-mumbai" },
+      { label: "Pune", href: "/locations/detectives-agency-in-pune" },
+      { label: "Delhi", href: "/locations/detectives-agency-in-delhi" },
+      { label: "Hyderabad", href: "/locations/detectives-agency-in-hyderabad" },
     ],
   },
   {

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { scaleUp } from "@/lib/animations";
-import { SERVICE_LOCATIONS } from "@/lib/locations";
+import { SERVICE_LOCATIONS, getLocationPath } from "@/lib/locations";
 
 export default function PillCloud() {
   return (
@@ -43,7 +43,7 @@ export default function PillCloud() {
               className="rounded-full border border-foreground/10 bg-background text-foreground/80 font-space text-xs md:text-sm tracking-widest uppercase transition-colors"
             >
               <Link
-                href={`/locations/${location.slug}`}
+                href={getLocationPath(location.slug)}
                 className="block px-6 py-3"
               >
                 {location.name}

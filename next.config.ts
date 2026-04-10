@@ -160,12 +160,17 @@ const nextConfig: NextConfig = {
       },
       ...locationSeoSlugs.map((slug) => ({
         source: `/locations/${slug}`,
-        destination: `/locations/${slug}-detectives-agency-in-mumbai`,
+        destination: `/locations/detectives-agency-in-${slug}`,
+        permanent: true,
+      })),
+      ...locationSeoSlugs.map((slug) => ({
+        source: `/locations/${slug}-detectives-agency-in-mumbai`,
+        destination: `/locations/detectives-agency-in-${slug}`,
         permanent: true,
       })),
       ...locationSeoSlugs.map((slug) => ({
         source: `/locations/${slug}-detectives-agency-in-${slug}`,
-        destination: `/locations/${slug}-detectives-agency-in-mumbai`,
+        destination: `/locations/detectives-agency-in-${slug}`,
         permanent: true,
       })),
     ];
