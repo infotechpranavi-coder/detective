@@ -19,14 +19,28 @@ export const metadata = createPageMetadata({
     "corporate investigation Mumbai contact",
     "personal investigation Mumbai contact",
   ],
-  canonical: "https://www.hsdetectives.com/contact-detectives-mumbai",
+  canonical: "https://www.hsdetectives.com/contact-us",
 });
 
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact HS Detectives",
+  url: "https://www.hsdetectives.com/contact-us",
+  about: {
+    "@type": "Organization",
+    name: "HS Detectives",
+  },
+};
 
 export default function ContactPage() {
   return (
     <>
       <GoogleTagHead />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
       <>
       <PageTransition>
       <main className="min-h-screen bg-background">
@@ -34,7 +48,7 @@ export default function ContactPage() {
           title="Initiate Contact" 
           subtitle="All communications are strictly protected by client-agency confidentiality privileges."
           image="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[ { label: "Contact", href: "/contact-detectives-mumbai" } ]}
+          breadcrumbs={[ { label: "Contact", href: "/contact-us" } ]}
         />
         <ContactForm />
         <GoogleMapSection />

@@ -12,14 +12,14 @@ const sitemapSections = [
     title: "Main Pages",
     links: [
       { label: "Home", href: "/" },
-      { label: "About", href: "/about-HS-detectives-mumbai" },
+      { label: "About", href: "/about-us" },
       { label: "Services", href: "/services" },
-      { label: "Packages", href: "/packages-detectives-mumbai" },
+      { label: "Packages", href: "/investigation-packages-india" },
       { label: "Locations", href: "/locations-detectives-agency-in-mumbai" },
-      { label: "Clients", href: "/clients-hs-detectives" },
+      { label: "Clients", href: "/our-corporate-clients" },
       { label: "Blog", href: "/blog" },
       { label: "Case Study", href: "/case-Investigation-Notes" },
-      { label: "Contact", href: "/contact-detectives-mumbai" },
+      { label: "Contact", href: "/contact-us" },
     ],
   },
   {
@@ -59,7 +59,7 @@ const sitemapSections = [
       { label: "Membership", href: "/membership-detectives-association" },
       { label: "Certification", href: "/certificate-of-hs-detectives" },
       { label: "Our Ethics", href: "/ethics-HS-Detectives-Standard-Legal-Compliance" },
-      { label: "Information", href: "/information-Intelligence-brief-services" },
+      { label: "Information", href: "/public-intelligence-awareness" },
       { label: "Warning Signs", href: "/warning-signs-Red-Flag-Detection" },
       { label: "Privacy Rights", href: "/legal-standards-right-of-privacy" },
       { label: "Compliance Corner", href: "/legal-standards-compliance-corner" },
@@ -69,12 +69,12 @@ const sitemapSections = [
   {
     title: "Locations",
     links: [
-      { label: "Mumbai", href: "/locations/detectives-agency-in-mumbai" },
-      { label: "Thane", href: "/locations/detectives-agency-in-thane" },
-      { label: "Navi Mumbai", href: "/locations/detectives-agency-in-navi-mumbai" },
-      { label: "Pune", href: "/locations/detectives-agency-in-pune" },
-      { label: "Delhi", href: "/locations/detectives-agency-in-delhi" },
-      { label: "Hyderabad", href: "/locations/detectives-agency-in-hyderabad" },
+      { label: "Mumbai", href: "/locations-detectives-agency-in-mumbai" },
+      { label: "Thane", href: "/locations-detectives-agency-in-thane" },
+      { label: "Navi Mumbai", href: "/locations-detectives-agency-in-navi-mumbai" },
+      { label: "Pune", href: "/locations-detectives-agency-in-pune" },
+      { label: "Delhi", href: "/locations-detectives-agency-in-delhi" },
+      { label: "Hyderabad", href: "/locations-detectives-agency-in-hyderabad" },
     ],
   },
   {
@@ -141,3 +141,4 @@ export default function SitemapPage() {
     </>
   );
 }
+

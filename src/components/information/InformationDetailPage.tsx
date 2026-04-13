@@ -18,7 +18,7 @@ export default function InformationDetailPage({
           subtitle={page.heroSubtitle}
           image={page.image}
           breadcrumbs={[
-            { label: "Information", href: "/information-Intelligence-brief-services" },
+            { label: "Information", href: "/public-intelligence-awareness" },
             { label: page.shortTitle, href: `/${page.slug}` },
           ]}
         />
@@ -73,13 +73,13 @@ export default function InformationDetailPage({
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/contact-detectives-mumbai"
+                  href="/contact-us"
                   className="inline-flex items-center justify-center rounded-full border-2 border-white px-7 py-3 font-space text-xs uppercase tracking-[0.25em] text-white transition-all hover:border-red-500 hover:bg-red-600"
                 >
                   Request Confidential Help
                 </Link>
                 <Link
-                  href="/information-Intelligence-brief-services"
+                  href="/public-intelligence-awareness"
                   className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3 font-space text-xs uppercase tracking-[0.25em] text-white/80 transition-all hover:border-white hover:text-white"
                 >
                   Back to Information

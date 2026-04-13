@@ -1,5 +1,6 @@
 import { createPageMetadata } from "@/lib/pageSeo";
 import GoogleTagHead from "@/components/GoogleTagHead";
+import ServicesSchema from "@/components/ServicesSchema";
 ﻿import SubServiceDetailPage from "@/components/services/SubServiceDetailPage";
 import { subServiceMap } from "@/app/services/subServiceData";
 
@@ -21,6 +22,7 @@ export default function Page() {
   return (
     <>
       <GoogleTagHead />
+      <ServicesSchema />
       <>
       <SubServiceDetailPage service={subServiceMap["fraud-investigation-monitoring"]} />
     </>

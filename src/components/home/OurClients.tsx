@@ -98,7 +98,7 @@ export default function OurClients() {
 
         <div className="text-center">
           <Link
-            href="/clients"
+            href="/our-corporate-clients"
             className="inline-flex items-center justify-center px-10 py-4 bg-accent text-white font-space text-xs md:text-sm uppercase tracking-[0.25em] hover:bg-black transition-colors"
           >
             View All

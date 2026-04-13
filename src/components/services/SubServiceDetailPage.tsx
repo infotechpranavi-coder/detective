@@ -241,7 +241,7 @@ export default function SubServiceDetailPage({ service }: SubServiceDetailPagePr
                   {service.ctaLabel}
                 </h3>
                 <Link
-                  href="/contact-detectives-mumbai"
+                  href="/contact-us"
                   className="inline-block rounded-full bg-red-600 px-6 py-3 font-space text-[10px] uppercase tracking-[0.18em] text-white transition-all hover:bg-red-700 hover:shadow-[0_8px_30px_rgba(220,38,38,0.4)] sm:px-10 sm:py-4 sm:text-[11px] sm:tracking-[0.2em]"
                 >
                   Contact Us

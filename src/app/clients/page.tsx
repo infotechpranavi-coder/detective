@@ -19,7 +19,7 @@ export const metadata = createPageMetadata({
     "private detective for companies",
     "professional detective agency Mumbai",
   ],
-  canonical: "https://www.hsdetectives.com/clients-hs-detectives",
+  canonical: "https://www.hsdetectives.com/our-corporate-clients",
 });
 
 export default function ClientsPage() {

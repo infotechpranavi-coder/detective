@@ -143,7 +143,7 @@ export default function Footer() {
               <li><Link href="/certificate-of-hs-detectives" className="text-white/70 hover:text-white transition-colors">Certification</Link></li>
               <li><Link href="/case-Investigation-Notes" className="text-white/70 hover:text-white transition-colors">Case Study</Link></li>
               <li><Link href="/ethics" className="text-white/70 hover:text-white transition-colors">Our Ethics</Link></li>
-              <li><Link href="/information-Intelligence-brief-services" className="text-white/70 hover:text-white transition-colors">Information</Link></li>
+              <li><Link href="/public-intelligence-awareness" className="text-white/70 hover:text-white transition-colors">Information</Link></li>
             </ul>
           </div>
 
@@ -194,7 +194,7 @@ export default function Footer() {
               <p>info@hsdetectives.com</p>
             </div>
             <Link
-              href="/contact-detectives-mumbai"
+              href="/contact-us"
               className="inline-block mt-4 px-6 py-3 border-2 border-white text-white text-sm font-space uppercase tracking-widest hover:bg-accent hover:border-accent transition-all"
             >
               Get In Touch

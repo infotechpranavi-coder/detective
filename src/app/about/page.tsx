@@ -22,7 +22,7 @@ export const metadata = createPageMetadata({
     "professional detectives Mumbai",
     "legal investigation Mumbai",
   ],
-  canonical: "https://www.hsdetectives.com/about-HS-detectives-mumbai",
+  canonical: "https://www.hsdetectives.com/about-us",
 });
 
 
@@ -100,24 +100,74 @@ const reasons = [
 ];
 
 const officePresence = [
-  { label: "Mumbai", href: "/locations/detectives-agency-in-mumbai" },
-  { label: "Delhi NCR", href: "/locations/detectives-agency-in-delhi" },
+  { label: "Mumbai", href: "/locations-detectives-agency-in-mumbai" },
+  { label: "Delhi NCR", href: "/locations-detectives-agency-in-delhi" },
   { label: "Bangalore", href: "/locations-detectives-agency-in-mumbai" },
-  { label: "Pune", href: "/locations/detectives-agency-in-pune" },
-  { label: "Hyderabad", href: "/locations/detectives-agency-in-hyderabad" },
+  { label: "Pune", href: "/locations-detectives-agency-in-pune" },
+  { label: "Hyderabad", href: "/locations-detectives-agency-in-hyderabad" },
 ];
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      name: "About HS Detectives",
+      url: "https://www.hsdetectives.com/about-us",
+      description:
+        "HS Detectives is a professional private detective agency in India offering confidential investigation services including matrimonial, corporate, and surveillance investigations.",
+      about: {
+        "@type": "Organization",
+        name: "HS Detectives",
+        url: "https://www.hsdetectives.com",
+      },
+    },
+    {
+      "@type": "Organization",
+      name: "HS Detectives",
+      url: "https://www.hsdetectives.com",
+      logo: "https://www.hsdetectives.com/logo.png",
+      foundingDate: "2010",
+      founder: {
+        "@type": "Person",
+        name: "Founder Name",
+      },
+      description:
+        "HS Detectives is a trusted detective agency in India providing discreet and reliable investigation services for individuals and businesses.",
+      areaServed: {
+        "@type": "Country",
+        name: "India",
+      },
+      knowsAbout: [
+        "Private Investigation",
+        "Matrimonial Investigation",
+        "Corporate Investigation",
+        "Surveillance Services",
+        "Background Verification",
+      ],
+      sameAs: [
+        "https://www.facebook.com/hsdetectives",
+        "https://www.instagram.com/hsdetectives",
+      ],
+    },
+  ],
+};
 
 export default function AboutPage() {
   return (
     <>
       <GoogleTagHead />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       <PageTransition>
       <main className="min-h-screen bg-background text-foreground">
         <PageHero
           title="About The Agency"
           subtitle="India's premier private investigation and intelligence firm built on integrity, precision, and absolute confidentiality."
           image="https://images.unsplash.com/photo-1520116468816-95b69f847357?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[{ label: "About", href: "/about-HS-detectives-mumbai" }]}
+          breadcrumbs={[{ label: "About", href: "/about-us" }]}
         />
 
         <section className="py-24 bg-linear-to-b from-background to-neutral-50 dark:to-neutral-900/20">
@@ -336,3 +386,4 @@ export default function AboutPage() {
     </>
   );
 }
+

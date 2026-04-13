@@ -4,6 +4,7 @@ import PageTransition from "@/components/ui/PageTransition";
 import Link from "next/link";
 import { serviceDetails } from "./serviceData";
 import GoogleTagHead from "@/components/GoogleTagHead";
+import ServicesSchema from "@/components/ServicesSchema";
 
 export const metadata = {
   title: "Services | H S Detectives",
@@ -14,6 +15,7 @@ export default function ServicesPage() {
   return (
     <>
       <GoogleTagHead />
+      <ServicesSchema />
       <>
       <PageTransition>
       <main className="min-h-screen bg-white">

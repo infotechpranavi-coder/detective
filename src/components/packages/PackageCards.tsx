@@ -208,7 +208,7 @@ export default function PackageCards() {
                     </div>
 
                     <Link
-                      href="/contact-detectives-mumbai"
+                      href="/contact-us"
                       className="group flex items-center justify-between w-full bg-accent hover:bg-white text-white hover:text-black p-6 font-space text-[10px] uppercase tracking-[0.3em] font-bold transition-all duration-500"
                     >
                       {activeData.cta}

@@ -1,6 +1,7 @@
 import ServiceDetailPage from "@/components/services/ServiceDetailPage";
 import { serviceDetailMap } from "@/app/services/serviceData";
 import GoogleTagHead from "@/components/GoogleTagHead";
+import ServicesSchema from "@/components/ServicesSchema";
 
 export const metadata = {
   title: "Debugging & Sweeping | H S Detectives",
@@ -12,6 +13,7 @@ export default function DebuggingSweepingPage() {
   return (
     <>
       <GoogleTagHead />
+      <ServicesSchema />
       <>
       <ServiceDetailPage service={serviceDetailMap["debugging-sweeping"]} />
     </>

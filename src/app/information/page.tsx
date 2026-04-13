@@ -18,7 +18,7 @@ export const metadata = createPageMetadata({
     "competitor analysis Mumbai",
     "security intelligence services",
   ],
-  canonical: "https://www.hsdetectives.com/information-Intelligence-brief-services",
+  canonical: "https://www.hsdetectives.com/public-intelligence-awareness",
 });
 
 const informationContent = [
@@ -38,7 +38,7 @@ export default function InformationPage() {
           title="Information"
           subtitle="Intelligence Brief Services delivering clear, discreet, and decision-focused information for personal, corporate, surveillance, and technical matters."
           image="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[{ label: "Information", href: "/information-Intelligence-brief-services" }]}
+          breadcrumbs={[{ label: "Information", href: "/public-intelligence-awareness" }]}
         />
 
         <section className="py-24 bg-white">

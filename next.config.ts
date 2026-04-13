@@ -74,12 +74,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/contact",
-        destination: "/contact-detectives-mumbai",
+        destination: "/contact-us",
+        permanent: true,
+      },
+      {
+        source: "/contact-detectives-mumbai",
+        destination: "/contact-us",
         permanent: true,
       },
       {
         source: "/packages",
-        destination: "/packages-detectives-mumbai",
+        destination: "/investigation-packages-india",
+        permanent: true,
+      },
+      {
+        source: "/packages-detectives-mumbai",
+        destination: "/investigation-packages-india",
         permanent: true,
       },
       {
@@ -88,13 +98,28 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/locations/detectives-agency-in-bkc",
+        destination: "/locations-detectives-agency-in-bkc",
+        permanent: true,
+      },
+      {
         source: "/clients",
-        destination: "/clients-hs-detectives",
+        destination: "/our-corporate-clients",
+        permanent: true,
+      },
+      {
+        source: "/clients-hs-detectives",
+        destination: "/our-corporate-clients",
         permanent: true,
       },
       {
         source: "/information",
-        destination: "/information-Intelligence-brief-services",
+        destination: "/public-intelligence-awareness",
+        permanent: true,
+      },
+      {
+        source: "/information-Intelligence-brief-services",
+        destination: "/public-intelligence-awareness",
         permanent: true,
       },
       {
@@ -119,7 +144,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/about",
-        destination: "/about-HS-detectives-mumbai",
+        destination: "/about-us",
+        permanent: true,
+      },
+      {
+        source: "/about-HS-detectives-mumbai",
+        destination: "/about-us",
         permanent: true,
       },
       {
@@ -160,17 +190,22 @@ const nextConfig: NextConfig = {
       },
       ...locationSeoSlugs.map((slug) => ({
         source: `/locations/${slug}`,
-        destination: `/locations/detectives-agency-in-${slug}`,
+        destination: `/locations-detectives-agency-in-${slug}`,
+        permanent: true,
+      })),
+      ...locationSeoSlugs.map((slug) => ({
+        source: `/locations/detectives-agency-in-${slug}`,
+        destination: `/locations-detectives-agency-in-${slug}`,
         permanent: true,
       })),
       ...locationSeoSlugs.map((slug) => ({
         source: `/locations/${slug}-detectives-agency-in-mumbai`,
-        destination: `/locations/detectives-agency-in-${slug}`,
+        destination: `/locations-detectives-agency-in-${slug}`,
         permanent: true,
       })),
       ...locationSeoSlugs.map((slug) => ({
         source: `/locations/${slug}-detectives-agency-in-${slug}`,
-        destination: `/locations/detectives-agency-in-${slug}`,
+        destination: `/locations-detectives-agency-in-${slug}`,
         permanent: true,
       })),
     ];
@@ -202,11 +237,11 @@ const nextConfig: NextConfig = {
         destination: "/membership",
       },
       {
-        source: "/contact-detectives-mumbai",
+        source: "/contact-us",
         destination: "/contact",
       },
       {
-        source: "/packages-detectives-mumbai",
+        source: "/investigation-packages-india",
         destination: "/packages",
       },
       {
@@ -214,11 +249,11 @@ const nextConfig: NextConfig = {
         destination: "/locations",
       },
       {
-        source: "/clients-hs-detectives",
+        source: "/our-corporate-clients",
         destination: "/clients",
       },
       {
-        source: "/information-Intelligence-brief-services",
+        source: "/public-intelligence-awareness",
         destination: "/information",
       },
       {
@@ -234,7 +269,7 @@ const nextConfig: NextConfig = {
         destination: "/investigation-protocol",
       },
       {
-        source: "/about-HS-detectives-mumbai",
+        source: "/about-us",
         destination: "/about",
       },
       {
@@ -246,10 +281,12 @@ const nextConfig: NextConfig = {
         destination:
           "/services/corporate-investigation/fraud-investigation-company-support",
       },
-      ...locationSeoSlugs.map((slug) => ({
-        source: `/locations/${slug}-detectives-agency-in-mumbai`,
-        destination: `/locations/${slug}`,
-      })),
+      ...locationSeoSlugs
+        .filter((slug) => slug !== "mumbai")
+        .map((slug) => ({
+          source: `/locations-detectives-agency-in-${slug}`,
+          destination: `/locations/detectives-agency-in-${slug}`,
+        })),
       {
         source: "/services/:category/:slug-services",
         destination: "/services/:category/:slug",

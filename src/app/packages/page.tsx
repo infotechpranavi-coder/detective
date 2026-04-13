@@ -21,7 +21,7 @@ export const metadata = createPageMetadata({
     "detective agency packages",
     "professional investigation services",
   ],
-  canonical: "https://www.hsdetectives.com/packages-detectives-mumbai",
+  canonical: "https://www.hsdetectives.com/investigation-packages-india",
 });
 
 export default function PackagesPage() {
@@ -35,7 +35,7 @@ export default function PackagesPage() {
           title="Investigation Packages" 
           subtitle="Transparent operational costs for our standard field services. Custom intelligence gathering available upon consultation."
           image="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[ { label: "Packages", href: "/packages-detectives-mumbai" } ]}
+          breadcrumbs={[ { label: "Packages", href: "/investigation-packages-india" } ]}
         />
         <PackageCards />
         <FAQSection />

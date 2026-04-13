@@ -12,7 +12,11 @@ interface AppShellProps {
 export default function AppShell({ children, navbar, footer }: AppShellProps) {
   const pathname = usePathname();
   const isIntroRoute = pathname === "/logointor";
-  const showClientsSection = pathname !== "/clients";
+  const isClientsRoute =
+    pathname === "/clients" ||
+    pathname === "/clients-hs-detectives" ||
+    pathname === "/our-corporate-clients";
+  const showClientsSection = !isClientsRoute;
 
   if (isIntroRoute) {
     return <>{children}</>;

@@ -5,7 +5,7 @@ const faqItems = [
     question: "1. How much does a private detective charge in Mumbai?",
     answer:
       "Our professional investigation services start from Rs 45,000/- onwards. The final cost depends on the complexity and duration of the case. We offer structured 5, 10, and 15-day surveillance packages to suit different needs.",
-    href: "/packages-detectives-mumbai",
+    href: "/investigation-packages-india",
     cta: "View Packages",
   },
   {

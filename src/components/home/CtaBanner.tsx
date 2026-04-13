@@ -57,7 +57,7 @@ export default function CtaBanner() {
               Call +91 99304 03115
             </Link>
             <Link 
-              href="/contact-detectives-mumbai" 
+              href="/contact-us" 
               className="px-8 py-4 bg-accent border-2 border-accent text-white font-space text-xs sm:text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 font-bold"
             >
               Book An Appointment

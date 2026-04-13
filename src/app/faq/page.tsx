@@ -338,16 +338,32 @@ const faqSections = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqSections
-    .flatMap((section) => section.items)
-    .map((item) => ({
+  mainEntity: [
+    {
       "@type": "Question",
-      name: item.question.replace(/^\d+\.\s*/, ""),
+      name: "Is hiring a detective legal in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.answer,
+        text: "Yes, hiring a private detective agency is legal in India for personal and corporate investigations.",
       },
-    })),
+    },
+    {
+      "@type": "Question",
+      name: "How confidential are your services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We maintain 100% confidentiality and privacy for all clients.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the cost of hiring a detective?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The cost depends on the type and duration of the investigation. Contact us for a custom quote.",
+      },
+    },
+  ],
 };
 
 export default function FaqPage() {
