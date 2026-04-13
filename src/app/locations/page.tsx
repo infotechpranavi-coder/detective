@@ -24,7 +24,7 @@ const locationsPageSchema = {
     addressCountry: "IN",
   },
   telephone: "+91 99304 03115",
-  url: "https://www.hsdetectives.com/locations-detectives-agency-in-mumbai",
+  url: "https://www.hsdetectives.com/hs-detectivs-locations",
   areaServed: "Mumbai",
   priceRange: "$$",
 };
@@ -44,7 +44,7 @@ export default function LocationsPage() {
           title="Our Network" 
           subtitle="A Pan-India presence to ensure swift, localized intelligence gathering no matter where the case leads."
           image="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[ { label: "Locations", href: "/locations-detectives-agency-in-mumbai" } ]}
+          breadcrumbs={[ { label: "Locations", href: "/hs-detectivs-locations" } ]}
         />
         <LocationSlider />
         <IndiaMap />

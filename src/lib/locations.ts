@@ -20,7 +20,10 @@ const LOCATION_ROUTE_PREFIX = "detectives-agency-in-";
 
 export const getLocationRouteSlug = (slug: string) => `${LOCATION_ROUTE_PREFIX}${slug}`;
 
-export const getLocationPath = (slug: string) => `/locations-${getLocationRouteSlug(slug)}`;
+export const getLocationPath = (slug: string) =>
+  slug === "mumbai"
+    ? "/hs-detectivs-locations"
+    : `/locations-${getLocationRouteSlug(slug)}`;
 
 const normalizeLocationSlug = (rawSlug: string) => {
   const slug = rawSlug.trim().toLowerCase();

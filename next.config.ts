@@ -94,7 +94,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/locations",
-        destination: "/locations-detectives-agency-in-mumbai",
+        destination: "/hs-detectivs-locations",
+        permanent: true,
+      },
+      {
+        source: "/locations-detectives-agency-in-mumbai",
+        destination: "/hs-detectivs-locations",
         permanent: true,
       },
       {
@@ -185,7 +190,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/locations-detetcives-agency-in-mumbai",
-        destination: "/locations-detectives-agency-in-mumbai",
+        destination: "/hs-detectivs-locations",
         permanent: true,
       },
       ...locationSeoSlugs.map((slug) => ({
@@ -245,7 +250,7 @@ const nextConfig: NextConfig = {
         destination: "/packages",
       },
       {
-        source: "/locations-detectives-agency-in-mumbai",
+        source: "/hs-detectivs-locations",
         destination: "/locations",
       },
       {
