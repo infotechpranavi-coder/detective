@@ -4,6 +4,7 @@ import OfficeMiniCards from "@/components/contact/OfficeMiniCards";
 import GoogleMapSection from "@/components/contact/GoogleMapSection";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = createPageMetadata({
   title: "Contact Detective Agency in Mumbai - HS Detectives",
@@ -24,7 +25,10 @@ export const metadata = createPageMetadata({
 
 export default function ContactPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-background">
         <PageHero 
           title="Initiate Contact" 
@@ -37,5 +41,7 @@ export default function ContactPage() {
         <OfficeMiniCards />
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

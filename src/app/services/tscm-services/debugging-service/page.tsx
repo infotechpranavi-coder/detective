@@ -1,3 +1,5 @@
+import GoogleTagHead from "@/components/GoogleTagHead";
+
 ﻿import SubServiceDetailPage from "@/components/services/SubServiceDetailPage";
 import { subServiceMap } from "@/app/services/subServiceData";
 
@@ -7,6 +9,13 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <SubServiceDetailPage service={subServiceMap["debugging-service"]} />;
+  return (
+    <>
+      <GoogleTagHead />
+      <>
+      <SubServiceDetailPage service={subServiceMap["debugging-service"]} />
+    </>
+    </>
+  );
 }
 

@@ -1,6 +1,7 @@
 import InformationDetailPage from "@/components/information/InformationDetailPage";
 import { informationPages } from "@/app/information/informationPagesData";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 const page = informationPages.find((item) => item.slug === "investigation-protocol")!;
 
@@ -23,5 +24,12 @@ export const metadata = createPageMetadata({
 });
 
 export default function InvestigationProtocolPage() {
-  return <InformationDetailPage page={page} />;
+  return (
+    <>
+      <GoogleTagHead />
+      <>
+      <InformationDetailPage page={page} />
+    </>
+    </>
+  );
 }

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
 import {
   GET_LOCATION_BY_SLUG,
   SERVICE_LOCATIONS,
@@ -494,9 +495,33 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
   }
 
   const { name: locationName, intro, description, highlights, extraSections } = location;
+  const locationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: `Detective Agency in ${locationName} - HS Detectives`,
+    image: `https://www.hsdetectives.com/${location.slug}.jpg`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Crystal Plaza, A/514, New Link Rd, Veera Desai Industrial Estate, Andheri West",
+      addressLocality: "Mumbai",
+      addressRegion: "MH",
+      postalCode: "400053",
+      addressCountry: "IN",
+    },
+    telephone: "+91 99304 03115",
+    url: `https://www.hsdetectives.com${getLocationPath(location.slug)}`,
+    areaServed: locationName,
+    priceRange: "$$",
+  };
 
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
+      />
+      <PageTransition>
       <main className="min-h-screen bg-background">
         <PageHero
           title={`${locationName} Investigations`}
@@ -588,6 +613,7 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
 
       </main>
     </PageTransition>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Refund and Cancellation Policy | H S Detectives",
@@ -7,7 +8,10 @@ export const metadata = {
 
 export default function RefundAndCancellationPolicyPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-background text-foreground">
         <section className="container mx-auto px-6 lg:px-12 py-24 lg:py-28">
           <div className="max-w-4xl">
@@ -77,5 +81,7 @@ export default function RefundAndCancellationPolicyPage() {
         </section>
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

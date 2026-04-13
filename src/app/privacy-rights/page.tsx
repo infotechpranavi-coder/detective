@@ -1,5 +1,6 @@
 import InformationDetailPage from "@/components/information/InformationDetailPage";
 import { informationPages } from "@/app/information/informationPagesData";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 const page = informationPages.find((item) => item.slug === "privacy-rights")!;
 
@@ -10,5 +11,12 @@ export const metadata = {
 };
 
 export default function PrivacyRightsPage() {
-  return <InformationDetailPage page={page} />;
+  return (
+    <>
+      <GoogleTagHead />
+      <>
+      <InformationDetailPage page={page} />
+    </>
+    </>
+  );
 }

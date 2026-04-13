@@ -3,6 +3,7 @@ import Testimonials from "@/components/home/Testimonials";
 import PageTransition from "@/components/ui/PageTransition";
 import Link from "next/link";
 import { serviceDetails } from "./serviceData";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Services | H S Detectives",
@@ -11,7 +12,10 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-white">
         <PageHero
           title="Investigation Capabilities"
@@ -67,5 +71,7 @@ export default function ServicesPage() {
         <Testimonials />
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

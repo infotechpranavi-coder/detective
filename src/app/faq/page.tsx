@@ -1,4 +1,5 @@
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Private Detective FAQ | Common Investigation Questions | H S Detectives",
@@ -351,7 +352,10 @@ const faqSchema = {
 
 export default function FaqPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-linear-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-foreground">
         <script
           type="application/ld+json"
@@ -399,5 +403,7 @@ export default function FaqPage() {
         </section>
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

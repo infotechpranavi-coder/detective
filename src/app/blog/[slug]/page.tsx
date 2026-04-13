@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../blogPosts";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -33,7 +34,9 @@ export default async function BlogPost({ params }: Props) {
   if (!post) return notFound();
 
   return (
-    <main className="min-h-screen bg-background px-6 py-24 md:px-12">
+    <>
+      <GoogleTagHead />
+      <main className="min-h-screen bg-background px-6 py-24 md:px-12">
       <section className="mx-auto max-w-4xl bg-white rounded-2xl border border-black/10 p-8 shadow-sm">
         <p className="text-sm uppercase tracking-wider text-accent mb-4">{post.date}</p>
         <h1 className="text-4xl font-bold text-zinc-900 mb-6">{post.title}</h1>
@@ -91,5 +94,6 @@ export default async function BlogPost({ params }: Props) {
         </article>
       </section>
     </main>
+    </>
   );
 }

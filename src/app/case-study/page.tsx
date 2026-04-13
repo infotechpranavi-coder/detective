@@ -1,5 +1,6 @@
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Case Study | H S Detectives",
@@ -112,7 +113,10 @@ const caseStudies = [
 
 export default function CaseStudyPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-white">
         <PageHero
           title="Case Study"
@@ -193,5 +197,7 @@ export default function CaseStudyPage() {
         </section>
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

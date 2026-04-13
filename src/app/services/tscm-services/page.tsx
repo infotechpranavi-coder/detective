@@ -1,5 +1,6 @@
 import ServiceDetailPage from "@/components/services/ServiceDetailPage";
 import { serviceDetailMap } from "@/app/services/serviceData";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "TSCM Services (Indiebim) | H S Detectives",
@@ -8,5 +9,12 @@ export const metadata = {
 };
 
 export default function TscmServicesPage() {
-  return <ServiceDetailPage service={serviceDetailMap["tscm-services"]} />;
+  return (
+    <>
+      <GoogleTagHead />
+      <>
+      <ServiceDetailPage service={serviceDetailMap["tscm-services"]} />
+    </>
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Sitemap | H S Detectives",
@@ -89,7 +90,10 @@ const sitemapSections = [
 
 export default function SitemapPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-background text-foreground">
         <section className="container mx-auto px-6 py-24 lg:px-12 lg:py-28">
           <div className="max-w-4xl">
@@ -133,5 +137,7 @@ export default function SitemapPage() {
         </section>
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

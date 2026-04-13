@@ -1,5 +1,6 @@
 import ServiceDetailPage from "@/components/services/ServiceDetailPage";
 import { serviceDetailMap } from "@/app/services/serviceData";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Personal Investigation | H S Detectives",
@@ -8,5 +9,12 @@ export const metadata = {
 };
 
 export default function PersonalInvestigationPage() {
-  return <ServiceDetailPage service={serviceDetailMap["personal-investigation"]} />;
+  return (
+    <>
+      <GoogleTagHead />
+      <>
+      <ServiceDetailPage service={serviceDetailMap["personal-investigation"]} />
+    </>
+    </>
+  );
 }

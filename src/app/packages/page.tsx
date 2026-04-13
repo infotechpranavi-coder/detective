@@ -4,6 +4,7 @@ import FAQSection from "@/components/packages/FAQSection";
 import PackageCta from "@/components/packages/PackageCta";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = createPageMetadata({
   title: "Hs Detectives Investigation Packages - HS Detectives",
@@ -25,7 +26,10 @@ export const metadata = createPageMetadata({
 
 export default function PackagesPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-white">
         <PageHero 
           title="Investigation Packages" 
@@ -38,5 +42,7 @@ export default function PackagesPage() {
         <PackageCta />
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

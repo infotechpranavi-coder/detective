@@ -1,5 +1,6 @@
 import ServiceDetailPage from "@/components/services/ServiceDetailPage";
 import { serviceDetailMap } from "@/app/services/serviceData";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Surveillance & Shadowing | H S Detectives",
@@ -8,5 +9,12 @@ export const metadata = {
 };
 
 export default function SurveillanceShadowingPage() {
-  return <ServiceDetailPage service={serviceDetailMap["surveillance-shadowing"]} />;
+  return (
+    <>
+      <GoogleTagHead />
+      <>
+      <ServiceDetailPage service={serviceDetailMap["surveillance-shadowing"]} />
+    </>
+    </>
+  );
 }

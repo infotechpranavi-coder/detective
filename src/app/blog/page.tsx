@@ -1,11 +1,16 @@
 "use client";
 
+import GoogleTagHead from "@/components/GoogleTagHead";
+
 import Link from "next/link";
 import { blogPosts } from "./blogPosts";
 
 export default function BlogIndex() {
   return (
-    <main className="min-h-screen bg-background px-6 py-24 md:px-12">
+    <>
+      <GoogleTagHead />
+      <>
+      <main className="min-h-screen bg-background px-6 py-24 md:px-12">
       <section className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-6">Blog</h1>
         <p className="mb-12 text-zinc-700">Latest research, case studies, and investigator stories from H S Detectives.</p>
@@ -35,5 +40,7 @@ export default function BlogIndex() {
         </div>
       </section>
     </main>
+    </>
+    </>
   );
 }

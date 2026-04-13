@@ -2,6 +2,7 @@ import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import Image from "next/image";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = createPageMetadata({
   title: "Private detective agency in Mumbai - HS Detectives",
@@ -108,7 +109,9 @@ const officePresence = [
 
 export default function AboutPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <PageTransition>
       <main className="min-h-screen bg-background text-foreground">
         <PageHero
           title="About The Agency"
@@ -330,5 +333,6 @@ export default function AboutPage() {
         </section>
       </main>
     </PageTransition>
+    </>
   );
 }

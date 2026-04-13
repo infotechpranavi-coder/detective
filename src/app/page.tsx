@@ -9,6 +9,48 @@ import Testimonials from "@/components/home/Testimonials";
 import CtaBanner from "@/components/home/CtaBanner";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
+
+const homePageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "HS Detectives",
+      url: "https://www.hsdetectives.com",
+      logo: "https://www.hsdetectives.com/logo.png",
+      sameAs: [
+        "https://www.facebook.com/hsdetectives",
+        "https://www.instagram.com/hsdetectives",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91 99304 03115",
+        contactType: "Customer Support",
+        areaServed: "IN",
+        availableLanguage: ["English", "Hindi"],
+      },
+    },
+    {
+      "@type": "ProfessionalService",
+      name: "HS Detectives",
+      image: "https://www.hsdetectives.com/office.jpg",
+      telephone: "+91 99304 03115",
+      priceRange: "$$",
+      areaServed: ["Mumbai", "Delhi", "Pune", "Hyderabad"],
+      url: "https://www.hsdetectives.com",
+    },
+    {
+      "@type": "WebSite",
+      url: "https://www.hsdetectives.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://www.hsdetectives.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
 
 export const metadata = createPageMetadata({
   title: "Hs detective in Mumbai - HS Detectives",
@@ -32,7 +74,14 @@ export const metadata = createPageMetadata({
 
 export default function Home() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }}
+      />
+      <PageTransition>
       <main className="min-h-screen bg-background">
         <Hero />
         <Marquee />
@@ -44,5 +93,7 @@ export default function Home() {
         <CtaBanner />
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

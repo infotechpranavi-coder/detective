@@ -1,6 +1,7 @@
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = createPageMetadata({
   title: "Intelligence Brief Services in Mumbai - HS Detectives",
@@ -28,7 +29,10 @@ const informationContent = [
 
 export default function InformationPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-white">
         <PageHero
           title="Information"
@@ -72,5 +76,7 @@ export default function InformationPage() {
         </section>
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

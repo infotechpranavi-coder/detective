@@ -1,4 +1,5 @@
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Memberships | H S Detectives",
@@ -103,7 +104,10 @@ const allAssociations = [...indiaAssociations, ...globalAssociations];
 
 export default function MembershipPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-black text-white">
         <section className="container mx-auto px-6 lg:px-12 py-24 lg:py-28">
           <div className="max-w-6xl">
@@ -220,5 +224,7 @@ export default function MembershipPage() {
         </section>
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

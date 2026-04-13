@@ -1,6 +1,7 @@
 import PageHero from "@/components/shared/PageHero";
 import RegulationContent from "@/components/regulation/RegulationContent";
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Government Regulation & Compliance | H S Detectives",
@@ -11,7 +12,10 @@ export const metadata = {
 
 export default function RegulationPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-background">
         <PageHero
           title="Govt. Regulation"
@@ -22,5 +26,7 @@ export default function RegulationPage() {
         <RegulationContent />
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

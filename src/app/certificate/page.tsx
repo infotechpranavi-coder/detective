@@ -1,6 +1,7 @@
 import PageHero from "@/components/shared/PageHero";
 import CertificateShowcase from "@/components/certificate/CertificateShowcase";
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Professional Certifications & Licenses | H S Detectives",
@@ -11,7 +12,10 @@ export const metadata = {
 
 export default function CertificatePage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-background">
         <PageHero
           title="Certificates & Accreditations"
@@ -22,5 +26,7 @@ export default function CertificatePage() {
         <CertificateShowcase />
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

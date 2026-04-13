@@ -1,6 +1,7 @@
 import PageTransition from "@/components/ui/PageTransition";
 import ClientsView from "./ClientsView";
 import { createPageMetadata } from "@/lib/pageSeo";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = createPageMetadata({
   title: "Detective Agency Corporate Portfolio - HS Detectives",
@@ -23,10 +24,15 @@ export const metadata = createPageMetadata({
 
 export default function ClientsPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-[#0D0D0D] text-white">
         <ClientsView />
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

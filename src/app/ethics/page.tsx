@@ -1,4 +1,5 @@
 import PageTransition from "@/components/ui/PageTransition";
+import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
   title: "Ethics & Legal Standards | Private Investigation Mumbai | H S Detectives",
@@ -71,7 +72,10 @@ const ethicsSections = [
 
 export default function EthicsPage() {
   return (
-    <PageTransition>
+    <>
+      <GoogleTagHead />
+      <>
+      <PageTransition>
       <main className="min-h-screen bg-linear-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-foreground">
         <section className="container mx-auto px-6 lg:px-12 py-24 lg:py-28">
           <div className="max-w-5xl rounded-2xl border border-white/20 bg-white/90 p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] mb-12">
@@ -126,5 +130,7 @@ export default function EthicsPage() {
         </section>
       </main>
     </PageTransition>
+    </>
+    </>
   );
 }

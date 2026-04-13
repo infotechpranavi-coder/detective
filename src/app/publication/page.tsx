@@ -1,5 +1,7 @@
 "use client";
 
+import GoogleTagHead from "@/components/GoogleTagHead";
+
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Building2 } from "lucide-react";
@@ -215,7 +217,10 @@ export default function PublicationPage() {
   const allPublications: PublicationItem[] = [...latestPublications, ...publications, ...newPublications];
 
   return (
-    <main className="min-h-screen bg-background px-6 py-24 md:px-12">
+    <>
+      <GoogleTagHead />
+      <>
+      <main className="min-h-screen bg-background px-6 py-24 md:px-12">
       <section className="mx-auto max-w-5xl">
         <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-black mb-8">Publications</h1>
         <p className="mb-10 text-lg text-zinc-700">
@@ -269,5 +274,7 @@ export default function PublicationPage() {
         </div>
       </section>
     </main>
+    </>
+    </>
   );
 }
