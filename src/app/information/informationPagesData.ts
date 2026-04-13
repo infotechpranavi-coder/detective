@@ -30,7 +30,7 @@ export const informationPages: InformationPageData[] = [
     eyebrow: "Red Flag Detection",
     introTitle: "Identifying Deception & Risk",
     introText:
-      'Most crises—whether corporate or personal—start with subtle anomalies. Recognizing these "Red Flags" early can save your reputation, your assets, and your peace of mind. H S Detectives Agency Mumbai identifies the following indicators of concern.',
+      'Most crisesâ€”whether corporate or personalâ€”start with subtle anomalies. Recognizing these "Red Flags" early can save your reputation, your assets, and your peace of mind. H S Detectives Agency Mumbai identifies the following indicators of concern.',
     purpose: 'To act as a "Symptom Checker" for worried clients.',
     image:
       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1920&q=80",
@@ -166,5 +166,5 @@ export const informationPages: InformationPageData[] = [
 export const informationPageLinks = informationPages.map(({ slug, navLabel }) => ({
   slug,
   navLabel,
-  href: slug === "warning-signs" ? "/warning-signs-Red-Flag-Detection" : `/${slug}`,
+  href: slug === "warning-signs" ? "/warning-signs-red-flag-detection" : `/${slug}`,
 }));

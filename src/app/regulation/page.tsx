@@ -21,7 +21,7 @@ export default function RegulationPage() {
           title="Govt. Regulation"
           subtitle="Committed to operational excellence and full compliance with local, national, and international laws, and private investigation regulations."
           image="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop"
-          breadcrumbs={[{ label: "Regulation", href: "/regulation-Private-Detective-Agencies-Regulation-Bill" }]}
+          breadcrumbs={[{ label: "Regulation", href: "/regulation-private-detective-agencies-regulation-bill" }]}
         />
         <RegulationContent />
       </main>

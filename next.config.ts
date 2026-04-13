@@ -44,12 +44,12 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/ethics",
-        destination: "/ethics-HS-Detectives-Standard-Legal-Compliance",
+        destination: "/ethics-hs-detectives-standard-legal-compliance",
         permanent: true,
       },
       {
         source: "/case-study",
-        destination: "/case-Investigation-Notes",
+        destination: "/case-investigation-notes",
         permanent: true,
       },
       {
@@ -59,7 +59,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/regulation",
-        destination: "/regulation-Private-Detective-Agencies-Regulation-Bill",
+        destination: "/regulation-private-detective-agencies-regulation-bill",
         permanent: true,
       },
       {
@@ -118,13 +118,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/information-Intelligence-brief-services",
+        source: "/information-intelligence-brief-services",
         destination: "/public-intelligence-awareness",
         permanent: true,
       },
       {
         source: "/warning-signs",
-        destination: "/warning-signs-Red-Flag-Detection",
+        destination: "/warning-signs-red-flag-detection",
         permanent: true,
       },
       {
@@ -148,19 +148,19 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/about-HS-detectives-mumbai",
+        source: "/about-hs-detectives-mumbai",
         destination: "/about-us",
         permanent: true,
       },
       {
         source:
           "/services/corporate-investigation/fraud-investigation-company-support-services",
-        destination: "/services/Corporate-Fraud-Investigation-services-in-mumbai",
+        destination: "/services/corporate-fraud-investigation-services-in-mumbai",
         permanent: true,
       },
       {
-        source: "/services/Corporate Fraud-Investigation-services-in-mumbai",
-        destination: "/services/Corporate-Fraud-Investigation-services-in-mumbai",
+        source: "/services/corporate-fraud-investigation-services-in-mumbai",
+        destination: "/services/corporate-fraud-investigation-services-in-mumbai",
         permanent: true,
       },
       {
@@ -213,11 +213,11 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: "/ethics-HS-Detectives-Standard-Legal-Compliance",
+        source: "/ethics-hs-detectives-standard-legal-compliance",
         destination: "/ethics",
       },
       {
-        source: "/case-Investigation-Notes",
+        source: "/case-investigation-notes",
         destination: "/case-study",
       },
       {
@@ -225,7 +225,7 @@ const nextConfig: NextConfig = {
         destination: "/certificate",
       },
       {
-        source: "/regulation-Private-Detective-Agencies-Regulation-Bill",
+        source: "/regulation-private-detective-agencies-regulation-bill",
         destination: "/regulation",
       },
       {
@@ -273,11 +273,11 @@ const nextConfig: NextConfig = {
         destination: "/about",
       },
       {
-        source: "/warning-signs-Red-Flag-Detection",
+        source: "/warning-signs-red-flag-detection",
         destination: "/warning-signs",
       },
       {
-        source: "/services/Corporate-Fraud-Investigation-services-in-mumbai",
+        source: "/services/corporate-fraud-investigation-services-in-mumbai",
         destination:
           "/services/corporate-investigation/fraud-investigation-company-support",
       },

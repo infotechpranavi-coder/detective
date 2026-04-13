@@ -20,7 +20,7 @@ export const metadata = createPageMetadata({
     "business risk assessment Mumbai",
     "investigative services Mumbai",
   ],
-  canonical: "https://www.hsdetectives.com/warning-signs-Red-Flag-Detection",
+  canonical: "https://www.hsdetectives.com/warning-signs-red-flag-detection",
 });
 
 export default function WarningSignsPage() {

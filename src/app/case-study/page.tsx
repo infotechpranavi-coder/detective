@@ -122,7 +122,7 @@ export default function CaseStudyPage() {
           title="Case Study"
           subtitle="Selected investigation scenarios that reflect our approach to confidential intelligence, field verification, and technical support."
           image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80"
-          breadcrumbs={[{ label: "Case Study", href: "/case-Investigation-Notes" }]}
+          breadcrumbs={[{ label: "Case Study", href: "/case-investigation-notes" }]}
         />
 
         <section className="py-24 bg-white">

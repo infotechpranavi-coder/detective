@@ -495,6 +495,12 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
   }
 
   const { name: locationName, intro, description, highlights, extraSections } = location;
+  const cityMapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${locationName}, India`
+  )}`;
+  const cityMapEmbedLink = `https://www.google.com/maps?q=${encodeURIComponent(
+    `${locationName}, India`
+  )}&output=embed`;
   const locationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -606,6 +612,50 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
                   )}
                 </div>
               ))}
+              <div className="border-t border-foreground/10 pt-12">
+                <h3 className="font-playfair text-2xl text-foreground uppercase tracking-wide mb-4">
+                  Map Section
+                </h3>
+                <p className="font-inter text-foreground/70 leading-relaxed mb-6">
+                  Open Google Maps for {locationName} to view city location details.
+                </p>
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                  <div className="overflow-hidden rounded-2xl border border-foreground/10 bg-card shadow-2xl">
+                    <iframe
+                      title={`${locationName} Google Map Preview`}
+                      src={cityMapEmbedLink}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="h-[320px] w-full"
+                    />
+                  </div>
+
+                  <div className="rounded-2xl border border-foreground/10 bg-card p-6 md:p-8 shadow-2xl">
+                    <h4 className="font-playfair text-xl text-foreground uppercase tracking-wide mb-5">
+                      City Wise Location
+                    </h4>
+                    <ul className="space-y-3 mb-8">
+                      <li className="font-inter text-foreground/80 text-sm">
+                        <span className="font-semibold text-foreground">City:</span> {locationName}
+                      </li>
+                      <li className="font-inter text-foreground/80 text-sm">
+                        <span className="font-semibold text-foreground">Region:</span> India
+                      </li>
+                      <li className="font-inter text-foreground/80 text-sm">
+                        <span className="font-semibold text-foreground">Service Area:</span> {locationName} and nearby areas
+                      </li>
+                    </ul>
+                    <a
+                      href={cityMapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 font-space text-xs uppercase tracking-widest text-background transition-opacity hover:opacity-90"
+                    >
+                      View {locationName} on Google Maps
+                    </a>
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>

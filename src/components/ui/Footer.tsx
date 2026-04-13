@@ -138,10 +138,10 @@ export default function Footer() {
             <ul className="space-y-3 font-inter text-base">
               <li><Link href="/publication-media-channels-hs-detectives" className="text-white/70 hover:text-white transition-colors">Publication</Link></li>
               <li><Link href="/faq" className="text-white/70 hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link href="/regulation-Private-Detective-Agencies-Regulation-Bill" className="text-white/70 hover:text-white transition-colors">Govt. Regulation</Link></li>
+              <li><Link href="/regulation-private-detective-agencies-regulation-bill" className="text-white/70 hover:text-white transition-colors">Govt. Regulation</Link></li>
               <li><Link href="/membership-detectives-association" className="text-white/70 hover:text-white transition-colors">Membership</Link></li>
               <li><Link href="/certificate-of-hs-detectives" className="text-white/70 hover:text-white transition-colors">Certification</Link></li>
-              <li><Link href="/case-Investigation-Notes" className="text-white/70 hover:text-white transition-colors">Case Study</Link></li>
+              <li><Link href="/case-investigation-notes" className="text-white/70 hover:text-white transition-colors">Case Study</Link></li>
               <li><Link href="/ethics" className="text-white/70 hover:text-white transition-colors">Our Ethics</Link></li>
               <li><Link href="/public-intelligence-awareness" className="text-white/70 hover:text-white transition-colors">Information</Link></li>
             </ul>
