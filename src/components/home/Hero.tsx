@@ -4,13 +4,12 @@ import { motion, useScroll, useTransform, AnimatePresence, Variants } from "fram
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const HERO_SLIDES = [
   {
-    image: "https://img.freepik.com/premium-photo/poster-banner-thriller-movie-with-man-detective-hat-generative-ai-illustration_118086-10493.jpg",
+    image:
+      "https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?auto=format&fit=crop&w=1920&q=70",
     badge: "India's Premier Detective Agency",
     title1: "Uncovering Truth With",
     titleHighlight: "Absolute Certainty",
@@ -27,7 +26,8 @@ const HERO_SLIDES = [
     }
   },
   {
-    image: "https://img.freepik.com/premium-photo/detective-investigate-concept-job-spy-background_1279562-19980.jpg",
+    image:
+      "https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=1920&q=70",
     badge: "Covert Surveillance Operations",
     title1: "Operating Within The",
     titleHighlight: "Shadows",
@@ -44,7 +44,8 @@ const HERO_SLIDES = [
     }
   },
   {
-    image: "https://img.freepik.com/premium-photo/focused-detective-studying-photographs-immersed-solving-case-dark-setting-ai-generative_186802-13162.jpg",
+    image:
+      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1920&q=70",
     badge: "Forensics & Intelligence",
     title1: "Finding Truth Where",
     titleHighlight: "Others Fail",
@@ -72,16 +73,9 @@ export default function Hero() {
   const parallaxY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-  const [init, setInit] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
-    
     // Auto-advance slider every 6 seconds
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % HERO_SLIDES.length);
@@ -98,7 +92,7 @@ export default function Hero() {
           <AnimatePresence mode="popLayout">
             <motion.div
               key={currentImageIndex}
-              initial="initial"
+              initial={false}
               animate="animate"
               exit="exit"
               variants={HERO_SLIDES[currentImageIndex].imageAnim as Variants}
@@ -111,6 +105,7 @@ export default function Hero() {
                 priority={true}
                 className="object-cover img-noir"
                 sizes="100vw"
+                quality={68}
               />
               <div className="absolute inset-0 bg-black/60" />
             </motion.div>
@@ -121,37 +116,7 @@ export default function Hero() {
       {/* Layer 2: Gradient to black at bottom */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black z-1" />
 
-      {/* Layer 3: tsParticles */}
-      {init && (
-        <div className="absolute inset-0 z-2 opacity-50 mix-blend-screen pointer-events-none">
-          <Particles
-            id="tsparticles"
-            options={{
-              background: { color: { value: "transparent" } },
-              fpsLimit: 60,
-              particles: {
-                color: { value: "#ffffff" },
-                links: { enable: false },
-                move: {
-                  direction: "none",
-                  enable: true,
-                  outModes: { default: "out" },
-                  random: true,
-                  speed: 0.2,
-                  straight: false,
-                },
-                number: { density: { enable: true, width: 800 }, value: 30 },
-                opacity: { value: { min: 0.1, max: 0.5 } },
-                shape: { type: "circle" },
-                size: { value: { min: 1, max: 3 } },
-              },
-              detectRetina: true,
-            }}
-          />
-        </div>
-      )}
-
-      {/* Layer 4: Radar Sweep SVG */}
+      {/* Layer 3: Radar Sweep SVG */}
       <div className="absolute right-[-18vw] top-[14vh] z-2 hidden h-[60vw] w-[60vw] max-h-[800px] max-w-[800px] animate-spin-slow pointer-events-none mix-blend-screen opacity-20 sm:block sm:right-[-10vw] sm:top-[10vh]">
         <svg viewBox="0 0 100 100" className="w-full h-full text-accent">
           <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.5" className="opacity-30" />
@@ -201,7 +166,7 @@ export default function Hero() {
           </Link>
           <Link href="/services" className="group flex items-center justify-center gap-2 border-2 border-white bg-transparent px-6 py-4 font-space text-[11px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:border-accent hover:bg-accent sm:px-8 sm:text-sm sm:tracking-widest">
             Our Services
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
+            <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
           </Link>
         </motion.div>
       </motion.div>

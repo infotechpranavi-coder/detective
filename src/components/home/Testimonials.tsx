@@ -3,15 +3,41 @@
 import Script from "next/script";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export default function Testimonials() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [shouldLoadWidget, setShouldLoadWidget] = useState(false);
+
+  useEffect(() => {
+    const target = sectionRef.current;
+    if (!target || shouldLoadWidget) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setShouldLoadWidget(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "500px 0px" }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [shouldLoadWidget]);
+
   return (
-    <section className="relative overflow-hidden border-t-2 border-black bg-white py-24 md:py-32">
-      <Script
-        src="https://elfsightcdn.com/platform.js"
-        strategy="afterInteractive"
-      />
+    <section ref={sectionRef} className="relative overflow-hidden border-t-2 border-black bg-white py-24 md:py-32">
+      {shouldLoadWidget ? (
+        <Script
+          src="https://elfsightcdn.com/platform.js"
+          strategy="lazyOnload"
+        />
+      ) : null}
 
       {/* Blurred Background Texture */}
       <div className="absolute inset-0 z-0 pointer-events-none mix-blend-screen opacity-[0.04]">
@@ -43,10 +69,14 @@ export default function Testimonials() {
 
         <div className="relative mx-auto max-w-6xl px-4 md:px-0">
           <div className="border-2 border-black bg-white p-4 shadow-[10px_10px_0_#000] sm:p-6 md:p-8">
-            <div
-              className="elfsight-app-aabda62e-073a-4ada-8810-0d0711169303 min-h-[260px]"
-              data-elfsight-app-lazy
-            />
+            {shouldLoadWidget ? (
+              <div
+                className="elfsight-app-aabda62e-073a-4ada-8810-0d0711169303 min-h-[260px]"
+                data-elfsight-app-lazy
+              />
+            ) : (
+              <div className="min-h-[260px] animate-pulse bg-neutral-100" aria-hidden="true" />
+            )}
           </div>
         </div>
       </div>

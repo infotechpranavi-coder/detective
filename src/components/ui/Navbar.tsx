@@ -139,10 +139,11 @@ export default function Navbar() {
           >
             <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border-2 border-black bg-white p-1 shadow-[2px_2px_0px_#000] transition-all duration-500 group-hover:border-accent group-hover:shadow-[2px_2px_0px_#cc0000] sm:h-14 sm:w-14">
               <Image
-                src="/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png"
+                src="/HS-Logo.svg"
                 alt="HS Detectives Logo"
-                fill
-                className="object-contain p-1.5"
+                width={56}
+                height={56}
+                className="h-full w-full object-contain p-1.5"
                 priority
               />
             </div>
