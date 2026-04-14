@@ -41,6 +41,84 @@ const normalizeLocationSlug = (rawSlug: string) => {
 
 export const SERVICE_LOCATIONS: ServiceLocation[] = [
   {
+    name: "Ahmedabad",
+    slug: "ahmedabad",
+    intro: "HS Detectives provides discreet and professional private investigation services in Ahmedabad for personal, corporate, and legal matters.",
+    description: "Our Ahmedabad team supports high-sensitivity investigations with verified reporting, field intelligence, and strict confidentiality. We handle personal checks, corporate due diligence, surveillance assignments, and risk-focused investigations with legal and ethical discipline.",
+    highlights: [
+      "100% Confidential & Discreet Investigations",
+      "Experienced & Skilled Private Detectives",
+      "Use of Advanced Surveillance Technology",
+      "Quick Turnaround Time",
+      "Transparent & Affordable Pricing",
+      "Strong Local Presence in Ahmedabad",
+    ],
+    extraSections: [
+      {
+        title: "Ahmedabad Office Address",
+        items: [
+          "412, Sumel Business Park 7",
+          "Opposite Soni Ni Chali BRTS Stop",
+          "Rakhial, Ahmedabad, Gujarat - 380023",
+        ],
+      },
+    ],
+    title: "Trusted Private Detective Agency in Ahmedabad | H S Detectives",
+    metaDescription: "Professional detective agency in Ahmedabad offering confidential personal, matrimonial, surveillance, and corporate investigation services with reliable reporting.",
+  },
+  {
+    name: "Surat",
+    slug: "surat",
+    intro: "HS Detectives offers trusted and confidential investigation services in Surat for personal, matrimonial, and corporate requirements.",
+    description: "Our Surat operations deliver accurate intelligence, discreet surveillance, and evidence-backed investigation reports for clients who need clarity in sensitive matters. We combine local field expertise with proven investigative methods to support informed decisions.",
+    highlights: [
+      "100% Confidential & Discreet Investigations",
+      "Experienced & Skilled Private Detectives",
+      "Use of Advanced Surveillance Technology",
+      "Quick Turnaround Time",
+      "Transparent & Affordable Pricing",
+      "Strong Local Presence in Surat",
+    ],
+    extraSections: [
+      {
+        title: "Surat Office Address",
+        items: [
+          "Shop No. 230, 2nd Floor, Punjan Plaza",
+          "Opp. Gita Nagar, Puna-Kumbhariya BRTS Road",
+          "Puna, Surat, Gujarat - 395010",
+        ],
+      },
+    ],
+    title: "Best Private Detective Agency in Surat | H S Detectives",
+    metaDescription: "Confidential detective services in Surat for matrimonial, surveillance, background verification, and corporate investigations with professional discretion.",
+  },
+  {
+    name: "West Bengal",
+    slug: "west-bengal",
+    intro: "HS Detectives offers discreet and professional private investigation support across West Bengal for personal and corporate needs.",
+    description: "Our West Bengal operations deliver confidential investigations, surveillance support, and verified reporting for sensitive assignments. We combine field intelligence with ethical methods to help clients make informed and legally safe decisions.",
+    highlights: [
+      "100% Confidential & Discreet Investigations",
+      "Experienced & Skilled Private Detectives",
+      "Use of Advanced Surveillance Technology",
+      "Quick Turnaround Time",
+      "Transparent & Affordable Pricing",
+      "Strong Local Presence in West Bengal",
+    ],
+    extraSections: [
+      {
+        title: "West Bengal Office Address",
+        items: [
+          "3/22, Suhatta Mall",
+          "City Centre, P.S. Durgapur",
+          "Durgapur, West Bengal - 713216",
+        ],
+      },
+    ],
+    title: "Trusted Private Detective Agency in West Bengal | H S Detectives",
+    metaDescription: "Professional detective agency services in West Bengal for confidential matrimonial, surveillance, background verification, and corporate investigation cases.",
+  },
+  {
     name: "Hyderabad",
     slug: "hyderabad",
     intro: "HS Detectives offers reliable and discreet detective services in Hyderabad for personal, corporate, and legal matters.",

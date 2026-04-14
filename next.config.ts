@@ -1,11 +1,13 @@
 import type { NextConfig } from "next";
 
 const locationSeoSlugs = [
+  "ahmedabad",
   "mumbai",
   "thane",
   "navi-mumbai",
   "pune",
   "delhi",
+  "surat",
   "hyderabad",
   "palghar",
   "mira-bhayandar",
@@ -25,6 +27,7 @@ const locationSeoSlugs = [
   "malad",
   "juhu",
   "santacruz",
+  "west-bengal",
 ];
 
 const serviceCategorySeoSlugs = [
@@ -167,11 +170,6 @@ const nextConfig: NextConfig = {
       {
         source:
           "/services/corporate-investigation/fraud-investigation-company-support-services",
-        destination: "/services/corporate-fraud-investigation-services-in-mumbai",
-        permanent: true,
-      },
-      {
-        source: "/services/corporate-fraud-investigation-services-in-mumbai",
         destination: "/services/corporate-fraud-investigation-services-in-mumbai",
         permanent: true,
       },

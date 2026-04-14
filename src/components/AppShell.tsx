@@ -2,6 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import OurClients from "@/components/home/OurClients";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -24,8 +26,12 @@ export default function AppShell({ children, navbar, footer }: AppShellProps) {
 
   return (
     <>
+      <BreadcrumbSchema />
       {navbar}
-      {children}
+      <div className="relative">
+        <Breadcrumbs />
+        {children}
+      </div>
       {showClientsSection ? <OurClients /> : null}
       {footer}
     </>

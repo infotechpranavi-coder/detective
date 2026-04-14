@@ -83,6 +83,33 @@ const OFFICES: readonly Office[] = [
     phone: "+91 99304 03115",
     email: "info@hsdetectives.com",
   },
+  {
+    name: "Surat",
+    type: "BRANCH",
+    image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&h=400&q=80",
+    address: "Shop No. 230, 2nd Floor, Punjan Plaza, Opp. Gita Nagar, Puna-Kumbhariya BRTS Road, Puna, Surat, Gujarat - 395010",
+    cardHref: "/locations-detectives-agency-in-surat",
+    phone: "+91 99304 03115",
+    email: "info@hsdetectives.com",
+  },
+  {
+    name: "Ahmedabad",
+    type: "BRANCH",
+    image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=700&h=400&q=80",
+    address: "412, Sumel Business Park 7, Opposite Soni Ni Chali BRTS Stop, Rakhial, Ahmedabad, Gujarat - 380023",
+    cardHref: "/locations-detectives-agency-in-ahmedabad",
+    phone: "+91 99304 03115",
+    email: "info@hsdetectives.com",
+  },
+  {
+    name: "West Bengal",
+    type: "BRANCH",
+    image: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=700&h=400&q=80",
+    address: "3/22, Suhatta Mall, City Centre, P.S. Durgapur, Durgapur, West Bengal - 713216",
+    cardHref: "/locations-detectives-agency-in-west-bengal",
+    phone: "+91 99304 03115",
+    email: "info@hsdetectives.com",
+  },
 ] as const;
 
 function OfficeCard({

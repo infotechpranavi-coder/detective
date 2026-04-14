@@ -20,6 +20,60 @@ const LOCATION_PAGE_SEO: Record<
   string,
   { title: string; description: string; keywords: string[] }
 > = {
+  ahmedabad: {
+    title: "Detective Agency in Ahmedabad - HS Detectives",
+    description:
+      "HS Detectives Mumbai provides confidential detective agency services in Ahmedabad for surveillance, background checks, matrimonial verification, and corporate investigations.",
+    keywords: [
+      "detective agency Ahmedabad",
+      "private detective Ahmedabad",
+      "investigation services Ahmedabad",
+      "best detective agency Ahmedabad",
+      "hire private investigator Ahmedabad",
+      "surveillance services Ahmedabad",
+      "background verification Ahmedabad",
+      "corporate investigation Ahmedabad",
+      "personal investigation Ahmedabad",
+      "matrimonial investigation Ahmedabad",
+      "private investigator near me Ahmedabad",
+    ],
+  },
+  surat: {
+    title: "Detective Agency in Surat - HS Detectives",
+    description:
+      "HS Detectives Mumbai offers reliable and discreet detective agency services in Surat for personal, matrimonial, surveillance, and corporate investigation needs.",
+    keywords: [
+      "detective agency Surat",
+      "private detective Surat",
+      "investigation services Surat",
+      "best detective agency Surat",
+      "hire private investigator Surat",
+      "surveillance services Surat",
+      "background verification Surat",
+      "corporate investigation Surat",
+      "personal investigation Surat",
+      "matrimonial investigation Surat",
+      "private investigator near me Surat",
+    ],
+  },
+  "west-bengal": {
+    title: "Detective Agency in West Bengal - HS Detectives",
+    description:
+      "HS Detectives Mumbai provides confidential detective agency services in West Bengal for surveillance, background checks, matrimonial verification, and corporate investigations.",
+    keywords: [
+      "detective agency West Bengal",
+      "private detective West Bengal",
+      "investigation services West Bengal",
+      "best detective agency West Bengal",
+      "hire private investigator West Bengal",
+      "surveillance services West Bengal",
+      "background verification West Bengal",
+      "corporate investigation West Bengal",
+      "personal investigation West Bengal",
+      "matrimonial investigation West Bengal",
+      "private investigator near me West Bengal",
+    ],
+  },
   hyderabad: {
     title: "Detective Agency in Hyderabad - HS Detectives",
     description:
