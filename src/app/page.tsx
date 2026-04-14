@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Hero from "@/components/home/Hero";
-import Marquee from "@/components/shared/Marquee";
-import AboutPreview from "@/components/home/AboutPreview";
-import ServicesSlider from "@/components/home/ServicesSlider";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
-import StatsBand from "@/components/home/StatsBand";
-import Testimonials from "@/components/home/Testimonials";
-import CtaBanner from "@/components/home/CtaBanner";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
 import GoogleTagHead from "@/components/GoogleTagHead";
+
+const Marquee = dynamic(() => import("@/components/shared/Marquee"));
+const AboutPreview = dynamic(() => import("@/components/home/AboutPreview"));
+const ServicesSlider = dynamic(() => import("@/components/home/ServicesSlider"));
+const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs"));
+const StatsBand = dynamic(() => import("@/components/home/StatsBand"));
+const Testimonials = dynamic(() => import("@/components/home/Testimonials"));
+const CtaBanner = dynamic(() => import("@/components/home/CtaBanner"));
 
 const homePageSchema = {
   "@context": "https://schema.org",

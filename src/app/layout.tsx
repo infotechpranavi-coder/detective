@@ -5,23 +5,27 @@ import "./globals.css";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 const spaceMono = Space_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-space",
+  display: "swap",
 });
 
 const bebasNeue = Bebas_Neue({
   weight: ["400"],
   subsets: ["latin"],
   variable: "--font-bebas",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -53,7 +57,6 @@ import Cursor from "@/components/ui/Cursor";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import Scanline from "@/components/ui/Scanline";
-import PageTransition from "@/components/ui/PageTransition";
 import FloatingContactButtons from "@/components/ui/FloatingContactButtons";
 import AppShell from "../components/AppShell";
 
@@ -65,6 +68,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <style
           id="critical-css"
           dangerouslySetInnerHTML={{

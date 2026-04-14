@@ -8,10 +8,21 @@
     "start": "next start",
     "lint": "eslint"
   },
-  "browserslist": [
-    "defaults",
-    "not IE 11"
-  ],
+  "browserslist": {
+    "production": [
+      "chrome >= 114",
+      "edge >= 114",
+      "firefox >= 115",
+      "safari >= 16.4",
+      "ios_saf >= 16.4",
+      "not dead"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",

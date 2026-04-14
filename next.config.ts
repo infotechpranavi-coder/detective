@@ -40,6 +40,13 @@ const serviceCategorySeoSlugs = [
 
 const nextConfig: NextConfig = {
   compress: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
   async redirects() {
     return [
       {
@@ -325,6 +332,8 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       {
         protocol: 'https',
@@ -416,7 +425,7 @@ const nextConfig: NextConfig = {
       }
     ],
     formats: ['image/avif', 'image/webp'],
-    qualities: [68, 75],
+    qualities: [55, 68, 75],
   },
 };
 
