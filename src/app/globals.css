@@ -6,10 +6,10 @@
   --color-secondary-bg: var(--secondary-bg);
   --color-surface: var(--surface);
   --color-card: var(--card);
-  --color-accent: #C9A84C;
-  --color-primary: #C9A84C;
-  --color-accent-light: #D4B96A;
-  --color-accent-dark: #A68A3E;
+  --color-accent: #8a6a24;
+  --color-primary: #8a6a24;
+  --color-accent-light: #a88637;
+  --color-accent-dark: #6e5218;
   --color-text-primary: var(--foreground);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
@@ -115,66 +115,6 @@ footer {
   }
 }
 
-/* Image Treatment CSS */
-.img-noir {
-  filter: grayscale(15%) contrast(1.1) brightness(0.85);
-  transition: filter 0.6s ease;
-}
-
-.img-noir:hover {
-  filter: grayscale(0%) contrast(1.05) brightness(0.9);
-}
-
-/* Custom Selection */
-::selection {
-  background: rgba(238, 57, 57, 0.4);
-  color: var(--selection-text);
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 .img-noir {
   filter: var(--img-filter);
 }
-
-/* Accent gradient text helper */
-.accent-text {
-  background: linear-gradient(to right, #EE3939, #FF5555, #CC2E2E);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Hero overlay */
-:root .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6) !important;
-}
-
-/* Scanlines */
-:root .scanline-el { opacity: 0.03; }
-
-/* Background opacity helpers */
-:root .bg-background\/50 { background-color: rgba(0, 0, 0, 0.5); }
-:root .bg-background\/70 { background-color: rgba(0, 0, 0, 0.7); }
-:root .bg-background\/80 { background-color: rgba(0, 0, 0, 0.8); }
-:root .bg-background\/90 { background-color: rgba(0, 0, 0, 0.9); }
-
-/* White background helpers */
-:root .bg-white\/50 { background-color: rgba(255, 255, 255, 0.5); }
-:root .bg-white\/70 { background-color: rgba(255, 255, 255, 0.7); }
-:root .bg-white\/80 { background-color: rgba(255, 255, 255, 0.8); }
-:root .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
-
-/* gradient fixes for hero section */
-:root .from-background\/30 { --tw-gradient-from: rgba(0, 0, 0, 0.3); }
-:root .via-background\/50 { --tw-gradient-via: rgba(0, 0, 0, 0.5); }
-:root .to-background { --tw-gradient-to: rgb(0, 0, 0); }

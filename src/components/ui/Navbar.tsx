@@ -456,6 +456,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <div className="flex items-center gap-4 z-[101] min-[992px]:hidden">
             <button
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               className={mobileMenuOpen ? "text-accent" : scrolled ? "text-black" : "text-white"}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -492,6 +493,7 @@ export default function Navbar() {
               {/* Services accordion */}
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                aria-label={mobileServicesOpen ? "Collapse services menu" : "Expand services menu"}
                 className="flex items-center justify-center gap-2 font-playfair text-2xl uppercase tracking-wider py-2 text-black"
               >
                 Services
@@ -604,6 +606,7 @@ export default function Navbar() {
               {/* Information accordion */}
               <button
                 onClick={() => setMobileInfoOpen(!mobileInfoOpen)}
+                aria-label={mobileInfoOpen ? "Collapse information menu" : "Expand information menu"}
                 className="flex items-center justify-center gap-2 font-playfair text-2xl uppercase tracking-wider py-2 text-black"
               >
                 Information

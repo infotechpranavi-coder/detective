@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const OFFICES = [
@@ -57,9 +58,11 @@ export default function OfficeMiniCards() {
                 rel="noopener noreferrer"
                 className="relative block h-[160px] overflow-hidden border border-foreground/10 md:h-[200px]"
               >
-                <img 
-                  src={office.img} 
-                  alt={office.name} 
+                <Image
+                  src={office.img}
+                  alt={office.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="h-full w-full object-cover img-noir transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-background/60 transition-colors duration-500 group-hover:bg-background/40" />

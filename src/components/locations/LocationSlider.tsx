@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -116,9 +117,16 @@ function OfficeCard({
       }
       role={cardHref ? "link" : undefined}
       tabIndex={cardHref ? 0 : undefined}
+      aria-label={cardHref ? `Open ${office.name} office details` : undefined}
     >
       <div className={`relative w-full overflow-hidden shrink-0 ${imageHeightClass}`}>
-        <img src={office.image} alt={office.name} className="w-full h-full object-cover img-noir group-hover:scale-[1.06] transition-transform duration-700" />
+        <Image
+          src={office.image}
+          alt={office.name}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          className="w-full h-full object-cover img-noir group-hover:scale-[1.06] transition-transform duration-700"
+        />
         <div className="absolute inset-0 bg-background/40 group-hover:bg-background/30 transition-colors duration-500" />
 
         <div className="absolute bottom-4 left-6 z-10">

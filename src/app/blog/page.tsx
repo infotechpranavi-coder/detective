@@ -3,6 +3,7 @@
 import GoogleTagHead from "@/components/GoogleTagHead";
 
 import Link from "next/link";
+import Image from "next/image";
 import { blogPosts } from "./blogPosts";
 
 export default function BlogIndex() {
@@ -23,9 +24,11 @@ export default function BlogIndex() {
               className="group block overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="h-48 w-full overflow-hidden bg-black">
-                <img
+                <Image
                   src={post.image}
                   alt={post.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>

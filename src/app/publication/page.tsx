@@ -3,6 +3,7 @@
 import GoogleTagHead from "@/components/GoogleTagHead";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { Building2 } from "lucide-react";
 import { newPublications, latestPublications } from "./publicationsData";
@@ -203,9 +204,11 @@ function SourceLogo({ source, url }: { source: string; url: string }) {
 
   return (
     <div className="flex h-14 w-14 items-center justify-center rounded-full border border-black/10 bg-white p-2">
-      <img
+      <Image
         src={candidates[index]}
         alt={`${source} logo`}
+        width={40}
+        height={40}
         className="h-10 w-10 object-contain"
         onError={handleError}
       />

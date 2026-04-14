@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect } from "react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
@@ -83,11 +84,11 @@ export default function OurClients() {
                 className="min-w-0 flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] xl:flex-[0_0_20%] px-4"
               >
                 <div className="flex h-28 items-center justify-center rounded-[24px] border border-black/10 bg-white px-8 py-6 shadow-sm">
-                  <img
+                  <Image
                     src={client.logo}
                     alt={client.name}
-                    loading="lazy"
-                    decoding="async"
+                    width={180}
+                    height={72}
                     className="h-14 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                   />
                 </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../blogPosts";
@@ -41,10 +42,14 @@ export default async function BlogPost({ params }: Props) {
         <p className="text-sm uppercase tracking-wider text-accent mb-4">{post.date}</p>
         <h1 className="text-4xl font-bold text-zinc-900 mb-6">{post.title}</h1>
         <div className="mb-6 overflow-hidden rounded-lg">
-          <img
+          <Image
             src={post.image}
             alt={post.title}
+            width={1200}
+            height={640}
+            sizes="(max-width: 1024px) 100vw, 1024px"
             className="h-80 w-full object-cover"
+            priority
           />
         </div>
         <article className="max-w-none">

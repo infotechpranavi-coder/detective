@@ -1,5 +1,6 @@
 import PageTransition from "@/components/ui/PageTransition";
 import GoogleTagHead from "@/components/GoogleTagHead";
+import Image from "next/image";
 
 export const metadata = {
   title: "Memberships | H S Detectives",
@@ -168,9 +169,11 @@ export default function MembershipPage() {
                   <div className="flex md:block items-center justify-center">
                     <div className="w-28 h-28 mx-auto rounded-full border border-white/20 bg-white flex items-center justify-center overflow-hidden p-2">
                       {item.logo ? (
-                        <img
+                        <Image
                           src={item.logo}
                           alt={`${item.shortName} Logo`}
+                          width={112}
+                          height={112}
                           className="w-full h-full object-contain"
                         />
                       ) : (

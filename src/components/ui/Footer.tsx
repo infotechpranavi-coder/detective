@@ -93,7 +93,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div className="relative w-14 h-14 rounded-full border-2 border-accent bg-white overflow-hidden flex items-center justify-center p-1">
                   <Image
-                    src="/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png"
+                    src="/HS-Logo.svg"
                     alt="H S Detectives Logo"
                     width={56}
                     height={56}
@@ -134,7 +134,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="font-space text-sm text-accent tracking-widest uppercase">Quick Links</h4>
+            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Quick Links</h3>
             <ul className="space-y-3 font-inter text-base">
               <li><Link href="/publication-media-channels-hs-detectives" className="text-white/70 hover:text-white transition-colors">Publication</Link></li>
               <li><Link href="/faq" className="text-white/70 hover:text-white transition-colors">FAQ</Link></li>
@@ -149,7 +149,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div className="space-y-6 -ml-2">
-            <h4 className="font-space text-sm text-accent tracking-widest uppercase">Service Areas</h4>
+            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Service Areas</h3>
             <ul className="space-y-3 font-inter text-base">
               {serviceAreas.map((service) => (
                 <li key={service.href}>
@@ -162,7 +162,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h4 className="font-space text-sm text-accent tracking-widest uppercase">Top Services</h4>
+            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Top Services</h3>
             <ul className="space-y-3 font-inter text-base">
               {serviceLinksOne.map((service) => (
                 <li key={service.href}>
@@ -176,7 +176,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="space-y-6">
-            <h4 className="font-space text-sm text-accent tracking-widest uppercase">Contact Us</h4>
+            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Contact Us</h3>
             <div className="space-y-4 font-inter text-base text-white/70">
               <a
                 href="https://www.google.com/maps?q=H+S+Detectives+Agency+Mumbai,+crystal+plaza,+A/514,+New+Link+Rd,+Veera+Desai+Industrial+Estate,+Andheri+West,+Mumbai,+Maharashtra+400053&ftid=0x3be7b06618f08abb:0xc675e5f7f07f1ecd&entry=gps&shh=CAE&lucs=,94259550,94297699,94284457,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjEwLjIuODc3MzE3OTEwMBgAINeCAypRLDk0MjU5NTUwLDk0Mjk3Njk5LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=d87bc999-7f57-468b-8340-e5d438ebe1a2&g_st=iwb"
@@ -206,7 +206,7 @@ export default function Footer() {
         <div className="mx-auto mb-8 w-full max-w-2xl rounded-[20px] border border-white/10 bg-white/5 p-3 sm:mb-10 sm:max-w-3xl sm:p-4">
           <div className="mb-4 flex items-center gap-3">
             <div className="h-px w-8 bg-accent" />
-            <h4 className="font-space text-[11px] text-accent tracking-[0.18em] uppercase">Reviews & Listings</h4>
+            <h3 className="font-space text-[11px] text-accent tracking-[0.18em] uppercase">Reviews & Listings</h3>
           </div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
             <a

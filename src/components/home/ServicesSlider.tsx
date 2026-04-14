@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CustomImage from "@/components/ui/CustomImage";
 import Link from "next/link";
+import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, User, Briefcase, Heart, Search, Shield } from "lucide-react";
@@ -100,6 +100,7 @@ export default function ServicesSlider() {
           <button 
             onClick={scrollPrev} 
             disabled={!prevBtnEnabled}
+            aria-label="Previous service"
             className={`w-12 h-12 flex items-center justify-center border-2 transition-all ${prevBtnEnabled ? 'border-black text-black hover:bg-accent hover:border-accent hover:text-white' : 'border-black/20 text-black/20 cursor-not-allowed'}`}
           >
             <ChevronLeft size={20} />
@@ -107,6 +108,7 @@ export default function ServicesSlider() {
           <button 
             onClick={scrollNext} 
             disabled={!nextBtnEnabled}
+            aria-label="Next service"
             className={`w-12 h-12 flex items-center justify-center border-2 transition-all ${nextBtnEnabled ? 'border-black text-black hover:bg-accent hover:border-accent hover:text-white' : 'border-black/20 text-black/20 cursor-not-allowed'}`}
           >
             <ChevronRight size={20} />
@@ -130,11 +132,11 @@ export default function ServicesSlider() {
                   >
                     {/* Top Image Half */}
                     <div className="relative h-[220px] w-full overflow-hidden bg-black">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        loading="lazy"
-                        decoding="async"
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />

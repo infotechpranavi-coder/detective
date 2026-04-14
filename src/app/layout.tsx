@@ -64,6 +64,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <style
+          id="critical-css"
+          dangerouslySetInnerHTML={{
+            __html:
+              "html{font-size:16px;-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}body{background-color:#000;color:#fff;overflow-x:hidden;min-width:320px}.img-noir{filter:grayscale(15%) contrast(1.1) brightness(.85)}",
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/non-critical.css';l.media='print';l.onload=function(){this.media='all'};document.head.appendChild(l);}());",
+          }}
+        />
+        <noscript>
+          <link rel="stylesheet" href="/non-critical.css" />
+        </noscript>
+      </head>
       <body
         className={`${playfair.variable} ${inter.variable} ${spaceMono.variable} ${bebasNeue.variable} bg-background pb-20 font-sans text-foreground antialiased overflow-x-hidden lg:pb-0`}
       >

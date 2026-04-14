@@ -333,6 +333,82 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'img.freepik.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'th.bing.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse1.explicit.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse1.mm.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse2.mm.bing.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.wixstatic.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'companieslogo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.brandfetch.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'logo.clearbit.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.google.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'nida.nih.gov',
+      },
+      {
+        protocol: 'http',
+        hostname: 'www.madhavmineral.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'www.firstintelligence.co.uk',
+      },
+      {
+        protocol: 'https',
+        hostname: 'insidepulse.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.freepnglogos.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'logonoid.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.law.asia',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dharab.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.yourstory.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
       }
     ],
     formats: ['image/avif', 'image/webp'],

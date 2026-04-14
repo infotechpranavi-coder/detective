@@ -1,0 +1,81 @@
+/* Decorative and non-critical styles loaded after initial paint */
+.img-noir {
+  transition: filter 0.6s ease;
+}
+
+.img-noir:hover {
+  filter: grayscale(0%) contrast(1.05) brightness(0.9);
+}
+
+::selection {
+  background: rgba(238, 57, 57, 0.4);
+  color: #000;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.accent-text {
+  background: linear-gradient(to right, #ee3939, #ff5555, #cc2e2e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+:root .hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+:root .scanline-el {
+  opacity: 0.03;
+}
+
+:root .bg-background\/50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+:root .bg-background\/70 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+:root .bg-background\/80 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+:root .bg-background\/90 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+:root .bg-white\/50 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+:root .bg-white\/70 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+:root .bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+:root .bg-white\/90 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+:root .from-background\/30 {
+  --tw-gradient-from: rgba(0, 0, 0, 0.3);
+}
+
+:root .via-background\/50 {
+  --tw-gradient-via: rgba(0, 0, 0, 0.5);
+}
+
+:root .to-background {
+  --tw-gradient-to: rgb(0, 0, 0);
+}

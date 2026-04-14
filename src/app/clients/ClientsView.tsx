@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Building2 } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const clients = [
   { name: "JKumar", domain: "jkumar.com", isLarge: true },
@@ -167,10 +168,13 @@ function ClientCard({ client, idx }: { client: { name: string; domain: string; l
                  <Building2 size={32} className="text-neutral-100 animate-pulse" />
               </div>
             )}
-            <img 
+            <Image
               key={logoSrc}
-              src={logoSrc} 
+              src={logoSrc}
               alt={client.name}
+              width={140}
+              height={96}
+              sizes="140px"
               className={`object-contain transition-opacity duration-500 ${imgStatus === 'success' ? 'opacity-100' : 'opacity-0'} ${client.isLarge ? 'h-24 w-auto scale-110' : 'h-16 w-auto'}`}
               onLoad={() => setImgStatus('success')}
               onError={handleImgError}

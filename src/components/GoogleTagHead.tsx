@@ -8,14 +8,13 @@ export default function GoogleTagHead() {
       <Script
         id="gtag-src"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       />
-      <Script id="gtag-init" strategy="beforeInteractive">
+      <Script id="gtag-init" strategy="afterInteractive">
         {`
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
 gtag('config', '${GA_ID}');
         `}
       </Script>

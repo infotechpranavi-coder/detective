@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { User, Briefcase, Radar, Shield } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -76,7 +77,13 @@ export default function ServicesGrid() {
                 className="group bg-white border-2 border-black flex flex-col h-full hover:border-accent transition-colors duration-500 overflow-hidden"
               >
                 <div className="relative h-[220px] w-full overflow-hidden shrink-0 bg-black">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[700ms]" />
+                  <Image
+                    src={s.img}
+                    alt={s.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[700ms]"
+                  />
                   <div className="absolute inset-0 bg-black/40" />
                   <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent pointer-events-none" />
 
