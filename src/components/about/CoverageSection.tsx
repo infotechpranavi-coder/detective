@@ -55,7 +55,7 @@ export default function CoverageSection() {
           </div>
 
           <motion.div variants={fadeUp} className="mt-16">
-            <a href="/hs-detectivs-locations" className="inline-flex items-center gap-2 font-space text-[11px] uppercase tracking-widest text-accent hover:text-foreground transition-colors border-b border-accent/30 hover:border-foreground/40 pb-1">
+            <a href="/hs-detectives-locations" className="inline-flex items-center gap-2 font-space text-[11px] uppercase tracking-widest text-accent hover:text-foreground transition-colors border-b border-accent/30 hover:border-foreground/40 pb-1">
               View All Locations <span className="text-lg leading-none">→</span>
             </a>
           </motion.div>
@@ -65,3 +65,4 @@ export default function CoverageSection() {
     </section>
   );
 }
+

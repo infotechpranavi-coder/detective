@@ -30,30 +30,30 @@ export const informationPages: InformationPageData[] = [
     eyebrow: "Red Flag Detection",
     introTitle: "Identifying Deception & Risk",
     introText:
-      'Most crisesâ€”whether corporate or personalâ€”start with subtle anomalies. Recognizing these "Red Flags" early can save your reputation, your assets, and your peace of mind. H S Detectives Agency Mumbai identifies the following indicators of concern.',
-    purpose: 'To act as a "Symptom Checker" for worried clients.',
+      "Most crises, whether corporate or personal, begin with subtle anomalies. Recognizing these red flags early can protect your reputation, assets, and peace of mind. H S Detectives Agency Mumbai identifies the following indicators of concern.",
+    purpose: "To help clients identify risk early and take informed action.",
     image:
       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1920&q=80",
     points: [
       {
         label: "Matrimonial Red Flags",
         text:
-          'Sudden secrecy with mobile devices, unexplained financial withdrawals, or significant "gaps" in their professional or family history.',
+          "Sudden secrecy around mobile devices, unexplained financial withdrawals, or major gaps in professional or family history.",
       },
       {
         label: "Corporate Internal Threats",
         text:
-          'Employees with unexplained lifestyle changes, unauthorized access to sensitive data after hours, or suspicious "close" relationships with competitors.',
+          "Employees with unexplained lifestyle changes, unauthorized after-hours access to sensitive data, or unusually close relationships with competitors.",
       },
       {
         label: "Asset Leakage",
         text:
-          'If your business partners are reporting lower profits while their personal wealth grows, it is a sign of "Silent Siphoning."',
+          "If partners consistently report lower profits while personal wealth rises, it can indicate silent siphoning of assets.",
       },
       {
         label: "The H S Detectives Tip",
         text:
-          "If your intuition says something is wrong, it usually is. Do not confront the suspect; instead, begin documenting observations quietly before calling our elite team.",
+          "If your intuition says something is wrong, take it seriously. Do not confront the suspect. Quietly document observations and contact our team for a confidential assessment.",
       },
     ],
   },

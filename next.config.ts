@@ -7,6 +7,8 @@ const locationSeoSlugs = [
   "navi-mumbai",
   "pune",
   "delhi",
+  "bhopal",
+  "chandigarh",
   "surat",
   "hyderabad",
   "palghar",
@@ -104,12 +106,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/locations",
-        destination: "/hs-detectivs-locations",
+        destination: "/hs-detectives-locations",
         permanent: true,
       },
       {
         source: "/locations-detectives-agency-in-mumbai",
-        destination: "/hs-detectivs-locations",
+        destination: "/hs-detectives-locations",
+        permanent: true,
+      },
+      {
+        source: "/hs-detectivs-locations",
+        destination: "/hs-detectives-locations",
         permanent: true,
       },
       {
@@ -195,7 +202,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/locations-detetcives-agency-in-mumbai",
-        destination: "/hs-detectivs-locations",
+        destination: "/hs-detectives-locations",
         permanent: true,
       },
       ...locationSeoSlugs.map((slug) => ({
@@ -253,6 +260,10 @@ const nextConfig: NextConfig = {
       {
         source: "/investigation-packages-india",
         destination: "/packages",
+      },
+      {
+        source: "/hs-detectives-locations",
+        destination: "/locations",
       },
       {
         source: "/hs-detectivs-locations",

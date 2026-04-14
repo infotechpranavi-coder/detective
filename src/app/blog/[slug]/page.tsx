@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../blogPosts";
@@ -34,9 +35,49 @@ export default async function BlogPost({ params }: Props) {
   const post = blogPosts.find((p) => p.id === slug);
   if (!post) return notFound();
 
+  const postUrl = `https://www.hsdetectives.com/blog/${post.id}`;
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    headline: post.title,
+    description: post.excerpt,
+    image: {
+      "@type": "ImageObject",
+      url: post.image,
+      width: 1200,
+      height: 640,
+    },
+    author: {
+      "@type": "Person",
+      name: "Wahid Shaikh",
+      url: "https://www.wahidshaikh.com",
+    },
+    publisher: {
+      "@id": "https://www.hsdetectives.com/#organization",
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    keywords: "TSCM, Private Investigator Mumbai, Asset Tracing, Corporate Intelligence",
+    articleSection: "Investigative Intelligence",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".article-body", ".key-takeaways"],
+    },
+  };
+
   return (
     <>
       <GoogleTagHead />
+      <Script
+        id={`blogposting-schema-${post.id}`}
+        strategy="beforeInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <main className="min-h-screen bg-background px-6 py-24 md:px-12">
       <section className="mx-auto max-w-4xl bg-white rounded-2xl border border-black/10 p-8 shadow-sm">
         <p className="text-sm uppercase tracking-wider text-accent mb-4">{post.date}</p>
@@ -52,7 +93,7 @@ export default async function BlogPost({ params }: Props) {
             priority
           />
         </div>
-        <article className="max-w-none">
+        <article className="article-body max-w-none">
           <div className="space-y-5">
             {post.intro.map((paragraph) => (
               <p key={paragraph} className="text-base leading-8 text-zinc-700">
@@ -61,7 +102,7 @@ export default async function BlogPost({ params }: Props) {
             ))}
           </div>
 
-          <div className="mt-10 space-y-10">
+          <div className="key-takeaways mt-10 space-y-10">
             {post.sections.map((section) => (
               <section key={section.title}>
                 <h2 className="mb-4 text-2xl font-semibold text-zinc-900">{section.title}</h2>

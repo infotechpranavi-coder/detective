@@ -55,11 +55,11 @@ export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHe
           ))}
         </motion.div>
 
-        <motion.h1 variants={fadeUp} className="mb-4 font-playfair text-3xl leading-tight tracking-wide text-white uppercase sm:text-4xl md:text-6xl lg:text-7xl lg:tracking-wider">
+        <motion.h1 variants={fadeUp} className="expert-highlight mb-4 font-playfair text-3xl leading-tight tracking-wide text-white uppercase sm:text-4xl md:text-6xl lg:text-7xl lg:tracking-wider">
           {title}
         </motion.h1>
 
-        <motion.p variants={fadeUp} className="max-w-2xl font-inter text-sm leading-relaxed text-white/90 sm:text-base md:text-lg">
+        <motion.p variants={fadeUp} className="voice-summary max-w-2xl font-inter text-sm leading-relaxed text-white/90 sm:text-base md:text-lg">
           {subtitle}
         </motion.p>
       </motion.div>

@@ -80,7 +80,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About us", path: "/about-us" },
     { name: "Packages", path: "/investigation-packages-india" },
-    { name: "Location", path: "/hs-detectivs-locations" },
+    { name: "Location", path: "/hs-detectives-locations" },
     { name: "Clients", path: "/our-corporate-clients" },
     { name: "Blogs", path: "/blog" },
     { name: "Contact", path: "/contact-us" },
@@ -671,3 +671,4 @@ export default function Navbar() {
     </>
   );
 }
+

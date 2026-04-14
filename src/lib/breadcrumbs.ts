@@ -5,6 +5,7 @@ const ROUTE_LABELS: Record<string, string> = {
   services: "Services",
   "contact-us": "Contact Us",
   "investigation-packages-india": "Investigation Packages",
+  "hs-detectives-locations": "Locations",
   "hs-detectivs-locations": "Locations",
   "our-corporate-clients": "Corporate Clients",
   "public-intelligence-awareness": "Information Hub",

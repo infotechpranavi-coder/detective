@@ -29,7 +29,25 @@ const contactPageSchema = {
   url: "https://www.hsdetectives.com/contact-us",
   about: {
     "@type": "Organization",
-    name: "HS Detectives",
+    "@id": "https://www.hsdetectives.com/#organization",
+    name: "H S Detectives",
+    telephone: "+91 99304 03115",
+    email: "info@hsdetectives.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Crystal Plaza, A/514, New Link Rd, Andheri West",
+      addressLocality: "Mumbai",
+      addressRegion: "Maharashtra",
+      postalCode: "400053",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.facebook.com/hsdetectives/",
+      "https://in.linkedin.com/company/hsdetectives",
+      "https://www.instagram.com/hsdetectives/",
+      "https://www.youtube.com/@hsdetectives7128",
+      "https://x.com/hsdetectives",
+    ],
   },
 };
 

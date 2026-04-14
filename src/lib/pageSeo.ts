@@ -5,6 +5,7 @@ type SeoConfig = {
   description: string;
   keywords: string[];
   canonical: string;
+  lastReviewed?: string;
 };
 
 const ROBOTS = {
@@ -12,11 +13,18 @@ const ROBOTS = {
   follow: true,
 };
 
-export const createPageMetadata = ({ title, description, keywords, canonical }: SeoConfig): Metadata => ({
+export const createPageMetadata = ({
+  title,
+  description,
+  keywords,
+  canonical,
+  lastReviewed,
+}: SeoConfig): Metadata => ({
   title,
   description,
   keywords,
   robots: ROBOTS,
+  ...(lastReviewed ? { other: { "last-reviewed": lastReviewed } } : {}),
   alternates: {
     canonical,
   },

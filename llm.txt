@@ -33,7 +33,7 @@ H S Detectives is an India-based private investigation agency website. It presen
 - Service detail pages (SEO): /services/<category>/<sub-service>-services
 - Contact: /contact-us
 - Packages: /investigation-packages-india
-- Locations hub: /hs-detectivs-locations
+- Locations hub: /hs-detectives-locations
 - Clients: /our-corporate-clients
 - Information hub: /public-intelligence-awareness
 - Blog: /blog

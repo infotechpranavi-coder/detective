@@ -85,7 +85,7 @@ const clients = [
     name: "Urban Money", 
     domain: "urbanmoney.com", 
     isLarge: true,
-    logo: "https://cdn.brandfetch.io/idpaC5ECxY/w/1080/h/1081/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1750212049715"
+    logo: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1470&q=80"
   },
   { name: "Aeon Credit", domain: "aeoncredit.com.my" },
   { name: "Maria Decor", domain: "mariadecor.com", isLarge: true },

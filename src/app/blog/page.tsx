@@ -1,17 +1,11 @@
 "use client";
 
-import GoogleTagHead from "@/components/GoogleTagHead";
-
 import Link from "next/link";
-import Image from "next/image";
 import { blogPosts } from "./blogPosts";
 
 export default function BlogIndex() {
   return (
-    <>
-      <GoogleTagHead />
-      <>
-      <main className="min-h-screen bg-background px-6 py-24 md:px-12">
+    <main className="min-h-screen bg-background px-6 py-24 md:px-12">
       <section className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-6">Blog</h1>
         <p className="mb-12 text-zinc-700">Latest research, case studies, and investigator stories from H S Detectives.</p>
@@ -24,11 +18,9 @@ export default function BlogIndex() {
               className="group block overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="h-48 w-full overflow-hidden bg-black">
-                <Image
+                <img
                   src={post.image}
                   alt={post.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -43,7 +35,5 @@ export default function BlogIndex() {
         </div>
       </section>
     </main>
-    </>
-    </>
   );
 }

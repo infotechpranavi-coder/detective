@@ -22,7 +22,7 @@ export const getLocationRouteSlug = (slug: string) => `${LOCATION_ROUTE_PREFIX}$
 
 export const getLocationPath = (slug: string) =>
   slug === "mumbai"
-    ? "/hs-detectivs-locations"
+    ? "/hs-detectives-locations"
     : `/locations-${getLocationRouteSlug(slug)}`;
 
 const normalizeLocationSlug = (rawSlug: string) => {
@@ -165,6 +165,58 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
     ],
     title: "Professional Private Detective Agency in Delhi | H S Detectives",
     metaDescription: "Trusted private detective agency in Delhi offering professional matrimonial, surveillance, corporate, and background investigation services with full discretion.",
+  },
+  {
+    name: "Bhopal",
+    slug: "bhopal",
+    intro: "HS Detectives provides confidential and professional investigation services in Bhopal for personal and corporate matters.",
+    description: "Our Bhopal team supports sensitive investigations with discreet fieldwork, verified reporting, and strict confidentiality. We handle matrimonial verification, corporate checks, surveillance assignments, and background investigations using ethical and legally compliant methods.",
+    highlights: [
+      "100% Confidential & Discreet Investigations",
+      "Experienced & Skilled Private Detectives",
+      "Use of Advanced Surveillance Technology",
+      "Quick Turnaround Time",
+      "Transparent & Affordable Pricing",
+      "Strong Local Presence in Bhopal",
+    ],
+    extraSections: [
+      {
+        title: "Bhopal Office Address",
+        items: [
+          "Shop No. 3, Sabri Nagar",
+          "Rasla Khedi",
+          "Bhopal, Madhya Pradesh - 462038",
+        ],
+      },
+    ],
+    title: "Trusted Private Detective Agency in Bhopal | H S Detectives",
+    metaDescription: "Professional detective agency in Bhopal offering confidential personal, matrimonial, surveillance, and corporate investigation services with reliable reporting.",
+  },
+  {
+    name: "Chandigarh",
+    slug: "chandigarh",
+    intro: "HS Detectives delivers trusted and discreet investigation services in Chandigarh for individuals, families, and businesses.",
+    description: "Our Chandigarh operations provide accurate intelligence, confidential surveillance, and evidence-backed reporting for high-sensitivity personal and corporate cases. We combine local field expertise with structured investigative methods to support informed decisions.",
+    highlights: [
+      "100% Confidential & Discreet Investigations",
+      "Experienced & Skilled Private Detectives",
+      "Use of Advanced Surveillance Technology",
+      "Quick Turnaround Time",
+      "Transparent & Affordable Pricing",
+      "Strong Local Presence in Chandigarh",
+    ],
+    extraSections: [
+      {
+        title: "Chandigarh Office Address",
+        items: [
+          "203-A, Second Floor, SCO 139-140",
+          "Madhya Marg, Sector 9-C",
+          "Chandigarh - 160009",
+        ],
+      },
+    ],
+    title: "Best Private Detective Agency in Chandigarh | H S Detectives",
+    metaDescription: "Confidential detective services in Chandigarh for matrimonial, surveillance, background verification, and corporate investigations with professional discretion.",
   },
   {
     name: "Mumbai",

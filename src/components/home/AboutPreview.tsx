@@ -95,7 +95,7 @@ export default function AboutPreview() {
 
             {/* Floating Stats Grid - Bottom Right (overlapping) */}
             <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:absolute lg:-right-8 lg:bottom-12 lg:mt-0 lg:grid-cols-1 z-10">
-              {[...aboutStats.map((stat) => ({ label: stat, href: "/about-us" })), ...locationStats.map((stat) => ({ label: stat, href: "/hs-detectivs-locations" }))].map((stat, i) => (
+              {[...aboutStats.map((stat) => ({ label: stat, href: "/about-us" })), ...locationStats.map((stat) => ({ label: stat, href: "/hs-detectives-locations" }))].map((stat, i) => (
                 <Link key={stat.label} href={stat.href}>
                 <motion.div 
                   variants={scaleUp}
@@ -113,3 +113,4 @@ export default function AboutPreview() {
     </section>
   );
 }
+

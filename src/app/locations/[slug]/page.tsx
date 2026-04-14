@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
@@ -10,11 +11,149 @@ import {
   getLocationPath,
   getLocationRouteSlug,
 } from "@/lib/locations";
-import { CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import { CheckCircle2, ShieldCheck } from "lucide-react";
 
 type LocationPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+const DEFAULT_KNOWS_ABOUT = [
+  "Private Investigations",
+  "Corporate Investigation",
+  "Surveillance and Shadowing",
+  "Background Verification",
+];
+
+const LOCATION_COORDINATES: Record<string, { latitude: number; longitude: number }> = {
+  mumbai: { latitude: 19.076, longitude: 72.8777 },
+  thane: { latitude: 19.2183, longitude: 72.9781 },
+  "navi-mumbai": { latitude: 19.033, longitude: 73.0297 },
+  pune: { latitude: 18.5204, longitude: 73.8567 },
+  delhi: { latitude: 28.6139, longitude: 77.209 },
+  hyderabad: { latitude: 17.385, longitude: 78.4867 },
+  surat: { latitude: 21.1702, longitude: 72.8311 },
+  ahmedabad: { latitude: 23.0225, longitude: 72.5714 },
+  "west-bengal": { latitude: 23.5204, longitude: 87.3119 },
+  bhopal: { latitude: 23.2599, longitude: 77.4126 },
+  chandigarh: { latitude: 30.7333, longitude: 76.7794 },
+  palghar: { latitude: 19.6967, longitude: 72.7699 },
+  "mira-bhayandar": { latitude: 19.2952, longitude: 72.8544 },
+  andheri: { latitude: 19.1136, longitude: 72.8697 },
+  bandra: { latitude: 19.0596, longitude: 72.8295 },
+  bkc: { latitude: 19.0679, longitude: 72.8695 },
+  borivali: { latitude: 19.2307, longitude: 72.8567 },
+  churchgate: { latitude: 18.935, longitude: 72.8276 },
+  dadar: { latitude: 19.0178, longitude: 72.8478 },
+  vashi: { latitude: 19.0771, longitude: 72.9986 },
+  panvel: { latitude: 18.9894, longitude: 73.1175 },
+  "mumbai-central": { latitude: 18.969, longitude: 72.8194 },
+  powai: { latitude: 19.1187, longitude: 72.9059 },
+  mulund: { latitude: 19.1726, longitude: 72.9567 },
+  kurla: { latitude: 19.0726, longitude: 72.8826 },
+  goregaon: { latitude: 19.1663, longitude: 72.8526 },
+  malad: { latitude: 19.1864, longitude: 72.8493 },
+  juhu: { latitude: 19.1075, longitude: 72.8263 },
+  santacruz: { latitude: 19.0798, longitude: 72.8413 },
+};
+
+const LOCATION_ADDRESS_OVERRIDES: Record<
+  string,
+  { streetAddress: string; addressRegion: string; postalCode?: string }
+> = {
+  mumbai: {
+    streetAddress: "Crystal Plaza, A/514, New Link Rd, Andheri West",
+    addressRegion: "Maharashtra",
+    postalCode: "400053",
+  },
+  thane: {
+    streetAddress: "Shop No. 66, Ground Floor, Cinewonder Mall, Kapurbawdi, Thane West",
+    addressRegion: "Maharashtra",
+    postalCode: "400607",
+  },
+  "navi-mumbai": {
+    streetAddress: "F-01 A/16, Haware Centurion Mall, Sect - 19, Nerul (E), Navi Mumbai",
+    addressRegion: "Maharashtra",
+    postalCode: "400706",
+  },
+  pune: {
+    streetAddress: "Raw House No. 1, Elite Brookland, Baner - Balewadi Road, Baner",
+    addressRegion: "Maharashtra",
+    postalCode: "411045",
+  },
+  delhi: {
+    streetAddress: "105, Shiva Rd, Pocket 14, Sector 8D, Rohini",
+    addressRegion: "Delhi",
+    postalCode: "110085",
+  },
+  hyderabad: {
+    streetAddress: "14th Road, Fortune Enclave, Sri Ram Nagar Colony, Banjara Hills",
+    addressRegion: "Telangana",
+    postalCode: "500873",
+  },
+  surat: {
+    streetAddress: "Shop No. 230, 2nd Floor, Punjan Plaza, Puna",
+    addressRegion: "Gujarat",
+    postalCode: "395010",
+  },
+  ahmedabad: {
+    streetAddress: "412, Sumel Business Park 7, Opposite Soni Ni Chali BRTS Stop, Rakhial",
+    addressRegion: "Gujarat",
+    postalCode: "380023",
+  },
+  "west-bengal": {
+    streetAddress: "3/22, Suhatta Mall, City Centre, P.S. Durgapur",
+    addressRegion: "West Bengal",
+    postalCode: "713216",
+  },
+  bhopal: {
+    streetAddress: "Shop No. 3, Sabri Nagar, Rasla Khedi",
+    addressRegion: "Madhya Pradesh",
+    postalCode: "462038",
+  },
+  chandigarh: {
+    streetAddress: "203-A, Second Floor, SCO 139-140, Madhya Marg, Sector 9-C",
+    addressRegion: "Chandigarh",
+    postalCode: "160009",
+  },
+};
+
+const LOCATION_KNOWS_ABOUT_OVERRIDES: Record<string, string[]> = {
+  pune: ["Matrimonial Checking", "Personal Surveillance", "Background Verification", "Asset Verification"],
+  delhi: ["Corporate Investigation", "Fraud Investigation", "Due Diligence", "Asset Tracing"],
+  hyderabad: ["Technical Surveillance Counter-Measures (TSCM)", "Corporate Investigation", "Risk Management"],
+  mumbai: ["Technical Surveillance Counter-Measures (TSCM)", "Corporate Investigation", "Matrimonial Checking", "Surveillance and Shadowing"],
+};
+
+const REGION_BY_SLUG: Record<string, string> = {
+  delhi: "Delhi",
+  hyderabad: "Telangana",
+  surat: "Gujarat",
+  ahmedabad: "Gujarat",
+  "west-bengal": "West Bengal",
+  bhopal: "Madhya Pradesh",
+  chandigarh: "Chandigarh",
+};
+
+const LANDMARKS_BY_SLUG: Record<string, string[]> = {
+  mumbai: ["Andheri West Metro", "New Link Road", "Veera Desai Industrial Estate"],
+  thane: ["Cinewonder Mall", "Kapurbawdi Junction", "Ghodbunder Road"],
+  "navi-mumbai": ["Seawoods Railway Station", "Nerul (East)", "Haware Centurion Mall"],
+  pune: ["Baner-Balewadi Road", "Balewadi High Street", "Pune IT Corridor"],
+  delhi: ["Rohini Sector 8", "Shiva Road", "North Delhi Metro Connectivity"],
+  hyderabad: ["Banjara Hills", "Fortune Enclave", "Sri Ram Nagar Colony"],
+  surat: ["Punjan Plaza", "Puna-Kumbhariya BRTS Road", "Gita Nagar Junction"],
+  ahmedabad: ["Sumel Business Park 7", "Soni Ni Chali BRTS Stop", "Rakhial Industrial Belt"],
+  "west-bengal": ["Suhatta Mall", "City Centre Durgapur", "Durgapur Core Market Area"],
+  bhopal: ["Sabri Nagar", "Rasla Khedi", "Bhopal City Access Corridors"],
+  chandigarh: ["SCO 139-140", "Madhya Marg", "Sector 9-C Commercial Zone"],
+};
+
+const getNearbyLandmarks = (slug: string, city: string) =>
+  LANDMARKS_BY_SLUG[slug] ?? [
+    `${city} Railway Station Zone`,
+    `${city} Main Business District`,
+    `${city} Airport Connectivity Corridor`,
+  ];
 
 const LOCATION_PAGE_SEO: Record<
   string,
@@ -124,6 +263,42 @@ const LOCATION_PAGE_SEO: Record<
       "personal investigation Delhi",
       "matrimonial investigation Delhi",
       "private investigator near me Delhi",
+    ],
+  },
+  bhopal: {
+    title: "Detective Agency in Bhopal - HS Detectives",
+    description:
+      "HS Detectives offers confidential detective agency services in Bhopal for matrimonial, surveillance, personal, and corporate investigation requirements.",
+    keywords: [
+      "detective agency Bhopal",
+      "private detective Bhopal",
+      "investigation services Bhopal",
+      "best detective agency Bhopal",
+      "hire private investigator Bhopal",
+      "surveillance services Bhopal",
+      "background verification Bhopal",
+      "corporate investigation Bhopal",
+      "personal investigation Bhopal",
+      "matrimonial investigation Bhopal",
+      "private investigator near me Bhopal",
+    ],
+  },
+  chandigarh: {
+    title: "Detective Agency in Chandigarh - HS Detectives",
+    description:
+      "HS Detectives provides discreet and professional detective agency services in Chandigarh for personal, matrimonial, surveillance, and corporate cases.",
+    keywords: [
+      "detective agency Chandigarh",
+      "private detective Chandigarh",
+      "investigation services Chandigarh",
+      "best detective agency Chandigarh",
+      "hire private investigator Chandigarh",
+      "surveillance services Chandigarh",
+      "background verification Chandigarh",
+      "corporate investigation Chandigarh",
+      "personal investigation Chandigarh",
+      "matrimonial investigation Chandigarh",
+      "private investigator near me Chandigarh",
     ],
   },
   mumbai: {
@@ -540,6 +715,17 @@ export async function generateStaticParams() {
   return SERVICE_LOCATIONS.map((location) => ({ slug: getLocationRouteSlug(location.slug) }));
 }
 
+const getStreetAddressFromExtraSections = (
+  extraSections: (typeof SERVICE_LOCATIONS)[number]["extraSections"]
+) => {
+  const officeSection = extraSections?.find(
+    (section) => /office address/i.test(section.title) && section.items && section.items.length > 0
+  );
+
+  if (!officeSection?.items) return undefined;
+  return officeSection.items.join(", ");
+};
+
 export default async function LocationDetailsPage({ params }: LocationPageProps) {
   const { slug } = await params;
   const location = GET_LOCATION_BY_SLUG(slug);
@@ -555,29 +741,73 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
   const cityMapEmbedLink = `https://www.google.com/maps?q=${encodeURIComponent(
     `${locationName}, India`
   )}&output=embed`;
+  const addressOverride = LOCATION_ADDRESS_OVERRIDES[location.slug];
+  const streetAddress =
+    addressOverride?.streetAddress ?? getStreetAddressFromExtraSections(extraSections);
+  const addressRegion = addressOverride?.addressRegion ?? REGION_BY_SLUG[location.slug] ?? "Maharashtra";
+  const postalCode = addressOverride?.postalCode;
+  const coordinates = LOCATION_COORDINATES[location.slug];
+  const knowsAbout = LOCATION_KNOWS_ABOUT_OVERRIDES[location.slug] ?? DEFAULT_KNOWS_ABOUT;
+  const nearbyLandmarks = getNearbyLandmarks(location.slug, locationName);
+
   const locationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: `Detective Agency in ${locationName} - HS Detectives`,
-    image: `https://www.hsdetectives.com/${location.slug}.jpg`,
+    name: `HS Detectives ${locationName}`,
+    url: `https://www.hsdetectives.com${getLocationPath(location.slug)}`,
+    image: "https://www.hsdetectives.com/certification-hero.png",
+    telephone: "+91 99304 03115",
+    priceRange: "$$",
+    description: location.metaDescription,
+    parentOrganization: {
+      "@id": "https://www.hsdetectives.com/#organization",
+    },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Crystal Plaza, A/514, New Link Rd, Veera Desai Industrial Estate, Andheri West",
-      addressLocality: "Mumbai",
-      addressRegion: "MH",
-      postalCode: "400053",
+      ...(streetAddress ? { streetAddress } : {}),
+      addressLocality: locationName,
+      addressRegion,
+      ...(postalCode ? { postalCode } : {}),
       addressCountry: "IN",
     },
-    telephone: "+91 99304 03115",
+    ...(coordinates
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: `${coordinates.latitude}`,
+            longitude: `${coordinates.longitude}`,
+          },
+        }
+      : {}),
+    areaServed: {
+      "@type": "City",
+      name: locationName,
+    },
+    knowsAbout,
+  };
+  const locationSpeakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `H S Detectives ${locationName} Branch`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".voice-summary", ".expert-highlight"],
+    },
     url: `https://www.hsdetectives.com${getLocationPath(location.slug)}`,
-    areaServed: locationName,
-    priceRange: "$$",
   };
 
   return (
     <>
       <GoogleTagHead />
-      <script
+      <Script
+        id={`location-speakable-schema-${location.slug}`}
+        strategy="beforeInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSpeakableSchema) }}
+      />
+      <Script
+        id={`location-professional-service-schema-${location.slug}`}
+        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
       />
@@ -588,7 +818,7 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
           subtitle={intro}
           image="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
           breadcrumbs={[
-            { label: "Locations", href: "/hs-detectivs-locations" },
+            { label: "Locations", href: "/hs-detectives-locations" },
             { label: locationName, href: getLocationPath(location.slug) },
           ]}
         />
@@ -699,6 +929,18 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
                         <span className="font-semibold text-foreground">Service Area:</span> {locationName} and nearby areas
                       </li>
                     </ul>
+                    <div className="mb-8">
+                      <h5 className="mb-3 font-space text-[11px] uppercase tracking-[0.18em] text-accent">
+                        Nearby Landmarks
+                      </h5>
+                      <ul className="space-y-2">
+                        {nearbyLandmarks.map((landmark) => (
+                          <li key={landmark} className="font-inter text-foreground/75 text-sm">
+                            {landmark}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                     <a
                       href={cityMapLink}
                       target="_blank"
@@ -720,4 +962,5 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
     </>
   );
 }
+
 

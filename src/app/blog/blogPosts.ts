@@ -123,8 +123,9 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: {
       label: "Explore Our Locations",
-      href: "/hs-detectivs-locations",
+      href: "/hs-detectives-locations",
       text: "From Mumbai to the rest of India, get local expertise with national scale.",
     },
   },
 ];
+

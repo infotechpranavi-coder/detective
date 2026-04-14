@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import { CheckCheck, FileText, ShieldCheck, Sparkles } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
@@ -12,6 +13,16 @@ type ServiceDetailPageProps = {
 
 export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
   const linkedSubServices = subServicesByParent[service.slug] ?? [];
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `${service.heroTitle} | H S Detectives`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".voice-summary", ".expert-highlight"],
+    },
+    url: `https://www.hsdetectives.com/services/${service.slug}`,
+  };
 
   const getSubServiceHref = (item: string) => {
     const directLink = service.serviceIncludeLinks?.[item];
@@ -31,6 +42,11 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
 
   return (
     <PageTransition>
+      <Script
+        id={`service-speakable-schema-${service.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
       <main className="min-h-screen bg-white">
         <PageHero
           title={service.heroTitle}

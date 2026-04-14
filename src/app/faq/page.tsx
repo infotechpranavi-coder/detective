@@ -25,7 +25,7 @@ const faqSections = [
       {
         question: "3. How much does a private detective charge in Mumbai?",
         answer:
-          "Our professional investigation services start from ₹45,000/- onwards. The final cost depends on the complexity and duration of the case. We offer structured 5, 10, and 15-day surveillance packages to suit different needs.",
+          "Our professional investigation services start from Rs.45,000/- onwards. The final cost depends on the complexity and duration of the case. We offer structured 5, 10, and 15-day surveillance packages to suit different needs.",
       },
       {
         question: "4. What does a private detective agency in Mumbai do?",
@@ -319,7 +319,7 @@ const faqSections = [
       {
         question: "53. What happens if the target finds out they are being watched?",
         answer:
-          "Our investigators are trained in 'covert surveillance' to remain undetected. If a situation becomes compromised, we immediately abort the operation to protect the client’s interests and privacy. We never use illegal methods like phone tapping or trespassing, which could make evidence inadmissible in court.",
+          "Our investigators are trained in covert surveillance to remain undetected. If a situation becomes compromised, we immediately abort the operation to protect the client's interests and privacy. We never use illegal methods like phone tapping or trespassing, which could make evidence inadmissible in court.",
       },
       {
         question: "54. How is the fee structure determined?",
@@ -327,43 +327,29 @@ const faqSections = [
           "Fees primarily cover operational costs, manpower, and technical resources deployed during the investigation. While we cannot 'guarantee' a specific outcome (as we only report factual truths), we provide transparent daily updates so you can decide whether to continue or pivot the strategy.",
       },
       {
-        question: "55. Can you track a person’s 'digital footprint' without hacking their accounts?",
+        question: "55. Can you track a person's digital footprint without hacking their accounts?",
         answer:
-          "Yes. We use Open Source Intelligence (OSINT) to legally analyze public social media activity, forum posts, and archived digital records. This provides a comprehensive view of a person’s lifestyle and associations without violating the IT Act.",
+          "Yes. We use Open Source Intelligence (OSINT) to legally analyze public social media activity, forum posts, and archived digital records. This provides a comprehensive view of a person's lifestyle and associations without violating the IT Act.",
       },
     ],
   },
 ];
 
+const stripQuestionNumber = (question: string) => question.replace(/^\d+\.\s*/, "");
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
+  mainEntity: faqSections.flatMap((section) =>
+    section.items.map((item) => ({
       "@type": "Question",
-      name: "Is hiring a detective legal in India?",
+      name: stripQuestionNumber(item.question),
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, hiring a private detective agency is legal in India for personal and corporate investigations.",
+        text: item.answer,
       },
-    },
-    {
-      "@type": "Question",
-      name: "How confidential are your services?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We maintain 100% confidentiality and privacy for all clients.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the cost of hiring a detective?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The cost depends on the type and duration of the investigation. Contact us for a custom quote.",
-      },
-    },
-  ],
+    }))
+  ),
 };
 
 export default function FaqPage() {
@@ -423,3 +409,5 @@ export default function FaqPage() {
     </>
   );
 }
+
+

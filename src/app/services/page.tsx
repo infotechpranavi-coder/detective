@@ -2,6 +2,7 @@ import PageHero from "@/components/shared/PageHero";
 import Testimonials from "@/components/home/Testimonials";
 import PageTransition from "@/components/ui/PageTransition";
 import Link from "next/link";
+import Script from "next/script";
 import { serviceDetails } from "./serviceData";
 import GoogleTagHead from "@/components/GoogleTagHead";
 import ServicesSchema from "@/components/ServicesSchema";
@@ -11,11 +12,28 @@ export const metadata = {
   description: "Four core investigation divisions covering personal, corporate, technical sweep, and surveillance operations.",
 };
 
+const servicesSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "H S Detectives Services",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".voice-summary", ".expert-highlight"],
+  },
+  url: "https://www.hsdetectives.com/services",
+};
+
 export default function ServicesPage() {
   return (
     <>
       <GoogleTagHead />
       <ServicesSchema />
+      <Script
+        id="services-speakable-schema"
+        strategy="beforeInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSpeakableSchema) }}
+      />
       <>
       <PageTransition>
       <main className="min-h-screen bg-white">

@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const HERO_SLIDES = [
   {
     image:
-      "https://static.vecteezy.com/system/resources/thumbnails/029/269/225/small_2x/gritty-detective-s-office-ai-generative-photo.jpg",
+      "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1470&q=80",
     badge: "India's Premier Detective Agency",
     title1: "Uncovering Truth With",
     titleHighlight: "Absolute Certainty",
@@ -16,7 +16,7 @@ const HERO_SLIDES = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&w=1440&q=60",
+      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1470&q=80",
     badge: "Covert Surveillance Operations",
     title1: "Operating Within The",
     titleHighlight: "Shadows",
@@ -25,7 +25,7 @@ const HERO_SLIDES = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1440&q=60",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1470&q=80",
     badge: "Forensics & Intelligence",
     title1: "Finding Truth Where",
     titleHighlight: "Others Fail",
@@ -73,11 +73,11 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="mb-5 max-w-5xl font-playfair text-3xl leading-[1.1] tracking-wide text-white uppercase sm:text-4xl md:mb-6 md:text-6xl lg:text-7xl lg:tracking-wider">
+        <h1 className="expert-highlight mb-5 max-w-5xl font-playfair text-3xl leading-[1.1] tracking-wide text-white uppercase sm:text-4xl md:mb-6 md:text-6xl lg:text-7xl lg:tracking-wider">
           {active.title1} <span className="text-accent italic">{active.titleHighlight}</span>
         </h1>
 
-        <p className="mx-auto mb-8 max-w-2xl font-inter text-sm leading-relaxed text-white/90 sm:text-base md:mb-10 md:text-lg">
+        <p className="voice-summary mx-auto mb-8 max-w-2xl font-inter text-sm leading-relaxed text-white/90 sm:text-base md:mb-10 md:text-lg">
           {active.description}
         </p>
 

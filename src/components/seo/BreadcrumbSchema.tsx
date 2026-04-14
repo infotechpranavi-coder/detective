@@ -2,12 +2,15 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { getBreadcrumbItems } from "@/lib/breadcrumbs";
+import { SITE_URL, getBreadcrumbItems } from "@/lib/breadcrumbs";
 
 export default function BreadcrumbSchema() {
   const pathname = usePathname();
 
   const jsonLd = useMemo(() => {
+    // Skip homepage and non-content utility routes.
+    if (!pathname || pathname === "/" || pathname.startsWith("/api")) return null;
+
     const breadcrumbs = getBreadcrumbItems(pathname);
     if (!breadcrumbs.length) return null;
 
@@ -21,6 +24,7 @@ export default function BreadcrumbSchema() {
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": `${SITE_URL}${pathname}#breadcrumb`,
       itemListElement,
     };
   }, [pathname]);

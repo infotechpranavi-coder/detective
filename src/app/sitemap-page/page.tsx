@@ -15,7 +15,7 @@ const sitemapSections = [
       { label: "About", href: "/about-us" },
       { label: "Services", href: "/services" },
       { label: "Packages", href: "/investigation-packages-india" },
-      { label: "Locations", href: "/hs-detectivs-locations" },
+      { label: "Locations", href: "/hs-detectives-locations" },
       { label: "Clients", href: "/our-corporate-clients" },
       { label: "Blog", href: "/blog" },
       { label: "Case Study", href: "/case-investigation-notes" },
@@ -69,7 +69,7 @@ const sitemapSections = [
   {
     title: "Locations",
     links: [
-      { label: "Mumbai", href: "/hs-detectivs-locations" },
+      { label: "Mumbai", href: "/hs-detectives-locations" },
       { label: "Thane", href: "/locations-detectives-agency-in-thane" },
       { label: "Navi Mumbai", href: "/locations-detectives-agency-in-navi-mumbai" },
       { label: "Pune", href: "/locations-detectives-agency-in-pune" },
@@ -141,4 +141,5 @@ export default function SitemapPage() {
     </>
   );
 }
+
 
