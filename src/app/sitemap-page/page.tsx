@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageTransition from "@/components/ui/PageTransition";
 import GoogleTagHead from "@/components/GoogleTagHead";
+import { SERVICE_LOCATIONS, getLocationPath } from "@/lib/locations";
 
 export const metadata = {
   title: "Sitemap | H S Detectives",
@@ -69,12 +70,10 @@ const sitemapSections = [
   {
     title: "Locations",
     links: [
-      { label: "Mumbai", href: "/hs-detectives-locations" },
-      { label: "Thane", href: "/locations-detectives-agency-in-thane" },
-      { label: "Navi Mumbai", href: "/locations-detectives-agency-in-navi-mumbai" },
-      { label: "Pune", href: "/locations-detectives-agency-in-pune" },
-      { label: "Delhi", href: "/locations-detectives-agency-in-delhi" },
-      { label: "Hyderabad", href: "/locations-detectives-agency-in-hyderabad" },
+      ...SERVICE_LOCATIONS.map((location) => ({
+        label: location.name,
+        href: getLocationPath(location.slug),
+      })),
     ],
   },
   {
