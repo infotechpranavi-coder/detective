@@ -9,7 +9,7 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const HERO_SLIDES = [
   {
     image:
-      "https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?auto=format&fit=crop&w=1920&q=70",
+      "https://static.vecteezy.com/system/resources/thumbnails/029/269/225/small_2x/gritty-detective-s-office-ai-generative-photo.jpg",
     badge: "India's Premier Detective Agency",
     title1: "Uncovering Truth With",
     titleHighlight: "Absolute Certainty",

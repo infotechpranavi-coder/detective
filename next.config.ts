@@ -409,9 +409,14 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'via.placeholder.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.vecteezy.com',
       }
     ],
     formats: ['image/avif', 'image/webp'],
+    qualities: [68, 75],
   },
 };
 
