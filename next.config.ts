@@ -66,6 +66,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/robot.txt",
+        destination: "/robots.txt",
+        permanent: true,
+      },
+      {
         source: "/case-study",
         destination: "/case-investigation-notes",
         permanent: true,

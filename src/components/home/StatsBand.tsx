@@ -10,7 +10,7 @@ const STATS = [
   { count: 15, suffix: "+", label: "Years Experience" },
   { count: 100, suffix: "%", label: "Confidentiality" },
   { count: 10000, suffix: "+", label: "Cases Solved" },
-  { count: 7, suffix: "", label: "Offices Pan India" },
+  { count: 13, suffix: "", label: "Offices Pan India" },
 ];
 
 export default function StatsBand() {
@@ -40,3 +40,4 @@ export default function StatsBand() {
     </section>
   );
 }
+

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { fadeUp, fadeRight, staggerContainer, scaleUp } from "@/lib/animations";
 
 const aboutStats = ["100% Success", "15+ Yrs"];
-const locationStats = ["7 Offices", "Pan India"];
+const locationStats = ["13 Offices", "Pan India"];
 
 export default function AboutPreview() {
   return (
@@ -113,4 +113,5 @@ export default function AboutPreview() {
     </section>
   );
 }
+
 
