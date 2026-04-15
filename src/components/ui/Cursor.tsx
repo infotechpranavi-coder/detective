@@ -1,76 +1,72 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, useSpring } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Cursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
-  const springX = useSpring(0, { stiffness: 500, damping: 28 });
-  const springY = useSpring(0, { stiffness: 500, damping: 28 });
-
-  useEffect(() => {
-    springX.set(mousePosition.x);
-    springY.set(mousePosition.y);
-  }, [mousePosition, springX, springY]);
+  const dotRef = useRef<HTMLDivElement | null>(null);
+  const ringRef = useRef<HTMLDivElement | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const targetXRef = useRef(0);
+  const targetYRef = useRef(0);
+  const ringXRef = useRef(0);
+  const ringYRef = useRef(0);
 
   useEffect(() => {
-    const mouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+    if (typeof window === "undefined" || window.matchMedia("(pointer: coarse)").matches) {
+      return;
+    }
+
+    const dot = dotRef.current;
+    const ring = ringRef.current;
+    if (!dot || !ring) return;
+
+    let isHovering = false;
+
+    const setScale = () => {
+      dot.style.transform = `translate3d(${targetXRef.current}px, ${targetYRef.current}px, 0) translate(-50%, -50%) scale(${isHovering ? 2.5 : 1})`;
+      ring.style.transform = `translate3d(${ringXRef.current}px, ${ringYRef.current}px, 0) translate(-50%, -50%) scale(${isHovering ? 1.5 : 1})`;
+      dot.style.opacity = isHovering ? "0.5" : "1";
     };
 
-    const mouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (
-        target.tagName.toLowerCase() === "a" ||
-        target.tagName.toLowerCase() === "button" ||
-        target.closest("a") ||
-        target.closest("button")
-      ) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
+    const onMouseMove = (event: MouseEvent) => {
+      targetXRef.current = event.clientX;
+      targetYRef.current = event.clientY;
+      dot.style.transform = `translate3d(${targetXRef.current}px, ${targetYRef.current}px, 0) translate(-50%, -50%) scale(${isHovering ? 2.5 : 1})`;
     };
 
-    window.addEventListener("mousemove", mouseMove);
-    window.addEventListener("mouseover", mouseOver);
+    const onMouseOver = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      isHovering = !!target && (target.closest("a") !== null || target.closest("button") !== null);
+      setScale();
+    };
+
+    const animate = () => {
+      ringXRef.current += (targetXRef.current - ringXRef.current) * 0.2;
+      ringYRef.current += (targetYRef.current - ringYRef.current) * 0.2;
+      ring.style.transform = `translate3d(${ringXRef.current}px, ${ringYRef.current}px, 0) translate(-50%, -50%) scale(${isHovering ? 1.5 : 1})`;
+      rafRef.current = window.requestAnimationFrame(animate);
+    };
+
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseover", onMouseOver);
+    rafRef.current = window.requestAnimationFrame(animate);
 
     return () => {
-      window.removeEventListener("mousemove", mouseMove);
-      window.removeEventListener("mouseover", mouseOver);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseover", onMouseOver);
+      if (rafRef.current !== null) window.cancelAnimationFrame(rafRef.current);
     };
   }, []);
 
   return (
     <>
-      <motion.div
-        className="fixed top-0 left-0 w-4 h-4 rounded-full bg-accent pointer-events-none z-[9999] mix-blend-difference"
-        style={{
-          x: springX,
-          y: springY,
-          translateX: "-50%",
-          translateY: "-50%",
-        }}
-        animate={{
-          scale: isHovering ? 2.5 : 1,
-          opacity: isHovering ? 0.5 : 1,
-        }}
-        transition={{ duration: 0.15 }}
+      <div
+        ref={dotRef}
+        className="pointer-events-none fixed left-0 top-0 z-[9999] h-4 w-4 rounded-full bg-accent mix-blend-difference transition-opacity duration-150"
       />
-      <motion.div
-        className="fixed top-0 left-0 w-10 h-10 rounded-full border border-accent opacity-30 pointer-events-none z-[9998]"
-        style={{
-          x: springX,
-          y: springY,
-          translateX: "-50%",
-          translateY: "-50%",
-        }}
-        animate={{
-          scale: isHovering ? 1.5 : 1,
-        }}
-        transition={{ duration: 0.2 }}
+      <div
+        ref={ringRef}
+        className="pointer-events-none fixed left-0 top-0 z-[9998] h-10 w-10 rounded-full border border-accent opacity-30"
       />
     </>
   );

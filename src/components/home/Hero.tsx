@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HERO_SLIDES = [
   {
-    image:
-      "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1470&q=80",
+    image: "/certification-hero.png",
     badge: "India's Premier Detective Agency",
     title1: "Uncovering Truth With",
     titleHighlight: "Absolute Certainty",
@@ -15,8 +13,7 @@ const HERO_SLIDES = [
       "Licensed professional investigators bringing clarity to complex personal and commercial cases since 2011. Confidentiality guaranteed.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1470&q=80",
+    image: "/fac.jpg",
     badge: "Covert Surveillance Operations",
     title1: "Operating Within The",
     titleHighlight: "Shadows",
@@ -24,8 +21,7 @@ const HERO_SLIDES = [
       "Deploying highly trained field operatives for discrete tracking, background verification, and gathering unshakeable evidence.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1470&q=80",
+    image: "/wad.jpg",
     badge: "Forensics & Intelligence",
     title1: "Finding Truth Where",
     titleHighlight: "Others Fail",
@@ -49,16 +45,13 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[720px] w-full items-center justify-center overflow-hidden bg-background pt-20 sm:min-h-screen">
       <div className="absolute inset-0 z-0">
-        <Image
+        <img
           key={active.image}
           src={active.image}
           alt={`Detective Hero Slide ${currentSlide + 1}`}
-          fill
-          priority
-          quality={55}
+          loading="eager"
           fetchPriority="high"
-          sizes="100vw"
-          className="object-cover img-noir"
+          className="h-full w-full object-cover img-noir"
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>

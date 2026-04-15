@@ -53,7 +53,6 @@ export const viewport: Viewport = {
 };
 
 
-import Cursor from "@/components/ui/Cursor";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import Scanline from "@/components/ui/Scanline";
@@ -90,7 +89,6 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} ${spaceMono.variable} ${bebasNeue.variable} bg-background pb-20 font-sans text-foreground antialiased overflow-x-hidden lg:pb-0`}
       >
-        <Cursor />
         <Scanline />
         <FloatingContactButtons />
         <AppShell navbar={<Navbar />} footer={<Footer />}>
