@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Block admin and private folders
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /thank-you/
+
+# Host and Sitemap
+Host: https://www.hsdetectives.com
 Sitemap: https://www.hsdetectives.com/sitemap.xml
