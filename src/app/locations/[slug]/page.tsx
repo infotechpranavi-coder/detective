@@ -754,8 +754,9 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: `HS Detectives ${locationName}`,
+    "@id": `https://www.hsdetectives.com${getLocationPath(location.slug)}`,
     url: `https://www.hsdetectives.com${getLocationPath(location.slug)}`,
-    image: "https://www.hsdetectives.com/certification-hero.png",
+    image: "https://www.hsdetectives.com/HS-Logo.svg",
     telephone: "+91 99304 03115",
     priceRange: "$$",
     description: location.metaDescription,
@@ -774,14 +775,42 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
       ? {
           geo: {
             "@type": "GeoCoordinates",
-            latitude: `${coordinates.latitude}`,
-            longitude: `${coordinates.longitude}`,
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude,
           },
         }
       : {}),
     areaServed: {
       "@type": "City",
       name: locationName,
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "00:00",
+      closes: "23:59",
+    },
+    sameAs: [
+      "https://www.facebook.com/hsdetectives/",
+      "https://www.instagram.com/hsdetectives/",
+      "https://in.linkedin.com/company/hsdetectives",
+      "https://x.com/hsdetectives",
+      "https://www.youtube.com/@hsdetectives7128",
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "163",
+      bestRating: "5",
+      worstRating: "1",
     },
     knowsAbout,
   };

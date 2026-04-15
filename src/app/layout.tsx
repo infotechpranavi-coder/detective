@@ -33,9 +33,12 @@ export const metadata: Metadata = {
   description: "H S Detectives is a premier private investigation agency in Mumbai offering 100% confidential personal, corporate, and surveillance services since 2011. Professional investigators for matrimonial, fraud, and technical sweeping cases.",
   keywords: "Private Detective Mumbai, Private Investigator Thane, Investigation Agency Navi Mumbai, Matrimonial Investigation Mumbai, Corporate Detective India, HS Detectives",
   icons: {
-    icon: "/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png",
-    shortcut: "/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png",
-    apple: "/h-s-detectives-agency-goa-1603869378-5619610-removebg-preview (1).png",
+    icon: [
+      { url: "/favicon-white.svg", type: "image/svg+xml" },
+      { url: "/HS-Logo.webp", type: "image/webp" },
+    ],
+    shortcut: "/favicon-white.svg",
+    apple: "/HS-Logo.webp",
   },
   openGraph: {
     title: "H S Detectives | Expert Private Investigation Services in Mumbai",

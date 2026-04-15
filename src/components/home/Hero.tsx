@@ -13,7 +13,8 @@ const HERO_SLIDES = [
       "Licensed professional investigators bringing clarity to complex personal and commercial cases since 2011. Confidentiality guaranteed.",
   },
   {
-    image: "/fac.jpg",
+    image:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1470&q=80",
     badge: "Covert Surveillance Operations",
     title1: "Operating Within The",
     titleHighlight: "Shadows",
@@ -21,7 +22,8 @@ const HERO_SLIDES = [
       "Deploying highly trained field operatives for discrete tracking, background verification, and gathering unshakeable evidence.",
   },
   {
-    image: "/wad.jpg",
+    image:
+      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1470&q=80",
     badge: "Forensics & Intelligence",
     title1: "Finding Truth Where",
     titleHighlight: "Others Fail",
