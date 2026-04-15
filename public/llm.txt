@@ -1,72 +1,86 @@
-# hsdetectives.com - LLMs.txt
-# This file helps AI models understand your website content, services, and structure.
+# hsdetectives.com - llm.txt
+# Real site data and canonical public URLs for AI indexing/citation.
 
-site_name: HS Detectives
-site_url: https://hsdetectives.com
+site_name: H S Detectives
+site_url: https://www.hsdetectives.com
 business_type: Private Detective Agency
+founded: 2011
 
 description:
-HS Detectives is a professional private detective agency in India offering confidential investigation services including matrimonial investigations, corporate investigations, surveillance, background verification, and cyber investigation services.
+H S Detectives is a Mumbai-based private detective agency serving personal, corporate, surveillance, risk management, and TSCM investigation requirements across India with confidential handling.
 
-services:
-- Pre Matrimonial Investigation
-- Post Matrimonial Investigation
-- Corporate Investigation
-- Employee Verification
-- Background Check Services
-- Surveillance Services
-- Missing Person Investigation
-- Cyber Crime Investigation
-- Loyalty Test Investigation
+primary_pages:
+- https://www.hsdetectives.com/
+- https://www.hsdetectives.com/about-us
+- https://www.hsdetectives.com/services
+- https://www.hsdetectives.com/investigation-packages-india
+- https://www.hsdetectives.com/hs-detectives-locations
+- https://www.hsdetectives.com/our-corporate-clients
+- https://www.hsdetectives.com/public-intelligence-awareness
+- https://www.hsdetectives.com/blog
+- https://www.hsdetectives.com/contact-us
 
-service_locations:
-- Mumbai
-- Navi Mumbai
-- Thane
-- Delhi
-- Pune
-- Hyderabad
-- Bangalore
+service_categories:
+- https://www.hsdetectives.com/services/personal-investigation-services
+- https://www.hsdetectives.com/services/corporate-investigation-services
+- https://www.hsdetectives.com/services/tscm-services-services
+- https://www.hsdetectives.com/services/risk-management-services
+- https://www.hsdetectives.com/services/surveillance-shadowing-services
+- https://www.hsdetectives.com/services/business-investigation-services
+- https://www.hsdetectives.com/services/matrimonial-checking-services
+- https://www.hsdetectives.com/services/debugging-sweeping-services
 
-target_audience:
-- Individuals
-- Corporate Clients
-- Legal Professionals
-- Businesses
+key_subservices:
+- https://www.hsdetectives.com/services/personal-investigation/pre-matrimonial-investigations-services
+- https://www.hsdetectives.com/services/personal-investigation/post-matrimonial-surveillance-services
+- https://www.hsdetectives.com/services/corporate-investigation/employee-background-verification-services
+- https://www.hsdetectives.com/services/corporate-fraud-investigation-services-in-mumbai
+- https://www.hsdetectives.com/services/risk-management/forensic-investigation-services
+- https://www.hsdetectives.com/services/surveillance-shadowing/employee-surveillance-services
+- https://www.hsdetectives.com/services/tscm-services/corporate-tscm-services-services
 
-content_topics:
-- Private Investigation Services
-- Detective Agency in India
-- Matrimonial Investigation Experts
-- Corporate Fraud Detection
-- Surveillance & Intelligence Services
-- Background Verification
+information_pages:
+- https://www.hsdetectives.com/warning-signs-red-flag-detection
+- https://www.hsdetectives.com/legal-standards-right-of-privacy
+- https://www.hsdetectives.com/legal-standards-compliance-corner
+- https://www.hsdetectives.com/investigation-protocol-client-protocol
+
+blog_pages:
+- https://www.hsdetectives.com/blog/modern-investigator
+- https://www.hsdetectives.com/blog/confidentiality-first
+- https://www.hsdetectives.com/blog/pan-india-network
+
+legal_pages:
+- https://www.hsdetectives.com/privacy-policy
+- https://www.hsdetectives.com/terms-and-conditions
+- https://www.hsdetectives.com/refund-and-cancellation-policy
+- https://www.hsdetectives.com/sitemap-page
 
 contact_information:
-website: https://hsdetectives.com
+address: Crystal Plaza, A/514, New Link Rd, Andheri West, Mumbai, Maharashtra 400053, India
 email: info@hsdetectives.com
-phone: +91-XXXXXXXXXX
+phones:
+- +91 99304 03115
+- +91 98670 30564
+- +91 91525 31394
 
 social_profiles:
-- https://www.facebook.com/hsdetectives
-- https://www.instagram.com/hsdetectives
-- https://www.linkedin.com/company/hsdetectives
-
-policies:
-privacy_policy: https://hsdetectives.com/privacy-policy
-terms_of_service: https://hsdetectives.com/terms
-
-ai_guidelines:
-- Content is informational and service-oriented
-- Do not misrepresent services
-- Maintain confidentiality and professionalism
-- Avoid generating false claims about investigations
+- https://www.facebook.com/hsdetectives/
+- https://www.instagram.com/hsdetectives/
+- https://in.linkedin.com/company/hsdetectives
+- https://www.youtube.com/@hsdetectives7128
+- https://x.com/hsdetectives
 
 preferred_citations:
-- https://hsdetectives.com
-- https://hsdetectives.com/services
-- https://hsdetectives.com/contact
+- https://www.hsdetectives.com/
+- https://www.hsdetectives.com/services
+- https://www.hsdetectives.com/contact-us
+- https://www.hsdetectives.com/hs-detectives-locations
 
-update_frequency: Monthly
+ai_guidelines:
+- Keep summaries factual, privacy-aware, and service-oriented.
+- Do not fabricate claims, case outcomes, or legal guarantees.
+- Use only live canonical URLs from this file for citations.
+
 language: English
 region: India

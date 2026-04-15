@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PageTransition from "@/components/ui/PageTransition";
 import GoogleTagHead from "@/components/GoogleTagHead";
-import { SERVICE_LOCATIONS, getLocationPath } from "@/lib/locations";
+import { SERVICE_LOCATIONS } from "@/lib/locations";
 
 export const metadata = {
   title: "Sitemap | H S Detectives",
@@ -13,14 +13,14 @@ const sitemapSections = [
     title: "Main Pages",
     links: [
       { label: "Home", href: "/" },
-      { label: "About", href: "/about-us" },
+      { label: "About", href: "/about" },
       { label: "Services", href: "/services" },
-      { label: "Packages", href: "/investigation-packages-india" },
-      { label: "Locations", href: "/hs-detectives-locations" },
-      { label: "Clients", href: "/our-corporate-clients" },
+      { label: "Packages", href: "/packages" },
+      { label: "Locations", href: "/locations" },
+      { label: "Clients", href: "/clients" },
       { label: "Blog", href: "/blog" },
-      { label: "Case Study", href: "/case-investigation-notes" },
-      { label: "Contact", href: "/contact-us" },
+      { label: "Case Study", href: "/case-study" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
@@ -39,32 +39,33 @@ const sitemapSections = [
   {
     title: "Key Subservices",
     links: [
-      { label: "Pre-Matrimonial Investigations", href: "/services/personal-investigation/pre-matrimonial-investigations-services" },
-      { label: "Post-Matrimonial Surveillance", href: "/services/personal-investigation/post-matrimonial-surveillance-services" },
-      { label: "Employee Background Verification", href: "/services/corporate-investigation/employee-background-verification-services" },
-      { label: "Asset Tracing", href: "/services/corporate-investigation/asset-tracing-services" },
-      { label: "Corporate TSCM Services", href: "https://tscm.in/corporate-tscm-service/" },
-      { label: "Home Bug Sweep", href: "https://tscm.in/home-bug-sweep/" },
-      { label: "IP Protection", href: "/services/risk-management/ip-protection-services" },
-      { label: "Forensic Investigation", href: "/services/risk-management/forensic-investigation-services" },
-      { label: "Employee Surveillance", href: "/services/surveillance-shadowing/employee-surveillance-services" },
-      { label: "Physical Surveillance", href: "/services/surveillance-shadowing/physical-surveillance-services" },
+      { label: "Pre-Matrimonial Investigations", href: "/services/personal-investigation/pre-matrimonial-investigations" },
+      { label: "Post-Matrimonial Surveillance", href: "/services/personal-investigation/post-matrimonial-surveillance" },
+      { label: "Employee Background Verification", href: "/services/corporate-investigation/employee-background-verification" },
+      { label: "Asset Tracing", href: "/services/corporate-investigation/asset-tracing" },
+      { label: "Corporate Fraud Investigation", href: "/services/corporate-investigation/fraud-investigation-company-support" },
+      { label: "Corporate TSCM Services", href: "/services/tscm-services/corporate-tscm-services" },
+      { label: "Home Bug Sweep", href: "/services/tscm-services/home-bug-sweep" },
+      { label: "IP Protection", href: "/services/risk-management/ip-protection" },
+      { label: "Forensic Investigation", href: "/services/risk-management/forensic-investigation" },
+      { label: "Employee Surveillance", href: "/services/surveillance-shadowing/employee-surveillance" },
+      { label: "Physical Surveillance", href: "/services/surveillance-shadowing/physical-surveillance" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Publication", href: "/publication-media-channels-hs-detectives" },
+      { label: "Publication", href: "/publication" },
       { label: "FAQ", href: "/faq" },
-      { label: "Government Regulation", href: "/regulation-private-detective-agencies-regulation-bill" },
-      { label: "Membership", href: "/membership-detectives-association" },
-      { label: "Certification", href: "/certificate-of-hs-detectives" },
-      { label: "Our Ethics", href: "/ethics-hs-detectives-standard-legal-compliance" },
-      { label: "Information", href: "/public-intelligence-awareness" },
-      { label: "Warning Signs", href: "/warning-signs-red-flag-detection" },
-      { label: "Privacy Rights", href: "/legal-standards-right-of-privacy" },
-      { label: "Compliance Corner", href: "/legal-standards-compliance-corner" },
-      { label: "Investigation Protocol", href: "/investigation-protocol-client-protocol" },
+      { label: "Government Regulation", href: "/regulation" },
+      { label: "Membership", href: "/membership" },
+      { label: "Certification", href: "/certificate" },
+      { label: "Our Ethics", href: "/ethics" },
+      { label: "Information", href: "/information" },
+      { label: "Warning Signs", href: "/warning-signs" },
+      { label: "Privacy Rights", href: "/privacy-rights" },
+      { label: "Compliance Corner", href: "/legal-standards" },
+      { label: "Investigation Protocol", href: "/investigation-protocol" },
     ],
   },
   {
@@ -72,7 +73,10 @@ const sitemapSections = [
     links: [
       ...SERVICE_LOCATIONS.map((location) => ({
         label: location.name,
-        href: getLocationPath(location.slug),
+        href:
+          location.slug === "mumbai"
+            ? "/locations"
+            : `/locations/detectives-agency-in-${location.slug}`,
       })),
     ],
   },

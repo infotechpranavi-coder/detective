@@ -55,6 +55,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "hsdetectives.com" }],
+        destination: "https://www.hsdetectives.com/:path*",
+        permanent: true,
+      },
+      {
         source: "/ethics",
         destination: "/ethics-hs-detectives-standard-legal-compliance",
         permanent: true,
