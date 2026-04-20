@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../blogPosts";
@@ -72,9 +71,8 @@ export default async function BlogPost({ params }: Props) {
   return (
     <>
       <GoogleTagHead />
-      <Script
+      <script
         id={`blogposting-schema-${post.id}`}
-        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
       />

@@ -1,4 +1,4 @@
-# hsdetectives.com - llm.txt
+# hsdetectives.com - llms.txt
 # Real site data and canonical public URLs for AI indexing/citation.
 
 site_name: H S Detectives
@@ -57,7 +57,7 @@ legal_pages:
 - https://www.hsdetectives.com/sitemap-page
 
 contact_information:
-address: Crystal Plaza, A/514, New Link Rd, Andheri West, Mumbai, Maharashtra 400053, India
+address: A/514, Crystal Plaza, New Link Rd, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053, India
 email: info@hsdetectives.com
 phones:
 - +91 99304 03115

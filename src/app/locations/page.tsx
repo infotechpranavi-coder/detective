@@ -3,7 +3,6 @@ import LocationSlider from "@/components/locations/LocationSlider";
 import IndiaMap from "@/components/locations/IndiaMap";
 import PillCloud from "@/components/locations/PillCloud";
 import PageTransition from "@/components/ui/PageTransition";
-import Script from "next/script";
 import GoogleTagHead from "@/components/GoogleTagHead";
 
 export const metadata = {
@@ -79,14 +78,13 @@ export default function LocationsPage() {
   return (
     <>
       <GoogleTagHead />
-      <Script
+      <script
         id="locations-speakable-schema"
-        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationsSpeakableSchema) }}
       />
-      <>
       <script
+        id="locations-professional-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationsPageSchema) }}
       />
@@ -103,7 +101,6 @@ export default function LocationsPage() {
         <PillCloud />
       </main>
     </PageTransition>
-    </>
     </>
   );
 }

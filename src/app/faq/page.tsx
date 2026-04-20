@@ -356,13 +356,13 @@ export default function FaqPage() {
   return (
     <>
       <GoogleTagHead />
-      <>
+      <script
+        id="faq-page-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageTransition>
       <main className="min-h-screen bg-linear-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-foreground">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
         <section className="container mx-auto px-6 lg:px-12 py-24 lg:py-28">
           <div className="max-w-5xl rounded-2xl border border-white/20 bg-white/90 p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
             <h1 className="font-playfair text-4xl md:text-5xl uppercase tracking-wide text-neutral-950">
@@ -405,7 +405,6 @@ export default function FaqPage() {
         </section>
       </main>
     </PageTransition>
-    </>
     </>
   );
 }

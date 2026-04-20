@@ -59,7 +59,6 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
       />
-      <>
       <PageTransition>
       <main className="min-h-screen bg-background">
         <PageHero 
@@ -73,7 +72,6 @@ export default function ContactPage() {
         <OfficeMiniCards />
       </main>
     </PageTransition>
-    </>
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
@@ -828,15 +827,13 @@ export default async function LocationDetailsPage({ params }: LocationPageProps)
   return (
     <>
       <GoogleTagHead />
-      <Script
+      <script
         id={`location-speakable-schema-${location.slug}`}
-        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSpeakableSchema) }}
       />
-      <Script
+      <script
         id={`location-professional-service-schema-${location.slug}`}
-        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
       />

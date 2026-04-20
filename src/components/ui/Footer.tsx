@@ -209,7 +209,7 @@ export default function Footer() {
             <h3 className="font-space text-[11px] text-accent tracking-[0.18em] uppercase">Reviews & Listings</h3>
           </div>
           <p className="mb-4 font-inter text-xs text-white/70">
-            Rated 4.9/5 based on 163 verified client reviews.
+            4.7 / 5 based on 3000 + verified reviews 
           </p>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
             <a

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Script from "next/script";
 import { CheckCheck, FileText, ShieldCheck, Sparkles } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
@@ -42,7 +41,7 @@ export default function ServiceDetailPage({ service }: ServiceDetailPageProps) {
 
   return (
     <PageTransition>
-      <Script
+      <script
         id={`service-speakable-schema-${service.slug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}

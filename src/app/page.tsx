@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import Script from "next/script";
 import Hero from "@/components/home/Hero";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
@@ -156,23 +155,20 @@ export default function Home() {
   return (
     <>
       <GoogleTagHead />
-      <Script
+      <script
         id="home-professional-service-schema"
-        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(homePageSchema),
         }}
       />
-      <Script
+      <script
         id="home-speakable-schema"
-        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(homeSpeakableSchema),
         }}
       />
-      <>
       <PageTransition>
       <main className="min-h-screen bg-background">
         <Hero />
@@ -185,7 +181,6 @@ export default function Home() {
         <CtaBanner />
       </main>
     </PageTransition>
-    </>
     </>
   );
 }

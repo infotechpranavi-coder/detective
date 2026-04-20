@@ -2,7 +2,6 @@ import PageHero from "@/components/shared/PageHero";
 import Testimonials from "@/components/home/Testimonials";
 import PageTransition from "@/components/ui/PageTransition";
 import Link from "next/link";
-import Script from "next/script";
 import { serviceDetails } from "./serviceData";
 import GoogleTagHead from "@/components/GoogleTagHead";
 import ServicesSchema from "@/components/ServicesSchema";
@@ -28,13 +27,11 @@ export default function ServicesPage() {
     <>
       <GoogleTagHead />
       <ServicesSchema />
-      <Script
+      <script
         id="services-speakable-schema"
-        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSpeakableSchema) }}
       />
-      <>
       <PageTransition>
       <main className="min-h-screen bg-white">
         <PageHero
@@ -91,7 +88,6 @@ export default function ServicesPage() {
         <Testimonials />
       </main>
     </PageTransition>
-    </>
     </>
   );
 }
