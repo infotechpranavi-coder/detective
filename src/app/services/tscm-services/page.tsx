@@ -14,9 +14,7 @@ export default function TscmServicesPage() {
     <>
       <GoogleTagHead />
       <ServicesSchema />
-      <>
       <ServiceDetailPage service={serviceDetailMap["tscm-services"]} />
-    </>
     </>
   );
 }

@@ -131,6 +131,26 @@ const homePageSchema = {
   ],
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "HS Detectives",
+  image: "https://www.hsdetectives.com/HS-Logo.webp",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "A/514, Crystal Plaza, New Link Rd, Veera Desai Industrial Estate, Andheri West",
+    addressLocality: "Mumbai",
+    postalCode: "400053",
+    addressCountry: "IN",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.7",
+    bestRating: "5",
+    ratingCount: "3000",
+  },
+};
+
 export const metadata = createPageMetadata({
   title: "Hs detective in Mumbai - HS Detectives",
   description:
@@ -167,6 +187,13 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(homeSpeakableSchema),
+        }}
+      />
+      <script
+        id="home-local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
         }}
       />
       <PageTransition>

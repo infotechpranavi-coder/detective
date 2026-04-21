@@ -6,6 +6,25 @@ import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
 import GoogleTagHead from "@/components/GoogleTagHead";
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Pre-Matrimonial Investigation Package",
+  image: "https://www.hsdetectives.com/HS-Logo.webp",
+  description: "Comprehensive background check including family, character, and financial verification.",
+  brand: {
+    "@type": "Brand",
+    name: "HS Detectives",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://www.hsdetectives.com/investigation-packages-india",
+    priceCurrency: "INR",
+    price: "Contact for Quote",
+    availability: "https://schema.org/InStock",
+  },
+};
+
 export const metadata = createPageMetadata({
   title: "Hs Detectives Investigation Packages - HS Detectives",
   description:
@@ -28,7 +47,11 @@ export default function PackagesPage() {
   return (
     <>
       <GoogleTagHead />
-      <>
+      <script
+        id="packages-product-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <PageTransition>
       <main className="min-h-screen bg-white">
         <PageHero 
@@ -42,7 +65,6 @@ export default function PackagesPage() {
         <PackageCta />
       </main>
     </PageTransition>
-    </>
     </>
   );
 }

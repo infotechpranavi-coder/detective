@@ -10,104 +10,104 @@ export const metadata = {
 
 const caseStudies = [
   {
-    category: "Personal Investigation",
-    title: "Private Individual Information Leak",
+    category: "Corporate Fraud Investigation",
+    title: "The Phantom Vendor Fraud (One BKC, Mumbai)",
     problem:
-      "A private individual in South Mumbai suspected a close associate of leaking travel schedules and sensitive personal information to competitors.",
+      "A multi-national firm at One BKC, Bandra Kurla Complex, noticed a steady 12% leak in procurement budget over 18 months. Internal audits remained inconclusive.",
     action:
-      "H S Detectives Agency Mumbai deployed a discreet surveillance team to monitor the associate's physical movements and digital interactions without raising suspicion.",
+      "We initiated Asset Tracing and forensic accounting, discovering three shell companies registered to a senior procurement officer's distant relative. Surveillance confirmed the officer meeting these 'vendors' at Phoenix Marketcity, Kurla.",
     result:
-      "Within 10 days, we identified the source of the leak as an undercover operative working for a rival. The client received video evidence and moved quickly toward legal action.",
+      "The forensic depth provided saved over ₹10 crores in annual recurring losses. Their discretion within BKC was impeccable. – CFO, Logistics Firm",
   },
   {
-    category: "Corporate Investigation",
-    title: "Supply Chain Kickback Exposure",
+    category: "Pre-Matrimonial Investigation",
+    title: "The Hidden Liability (Delhi-NCR)",
     problem:
-      "A multinational firm in BKC noticed a 20% drop in procurement efficiency and suspected internal kickbacks in its supply chain department.",
+      "A family in Golf Links, New Delhi was finalizing a high-profile alliance. Despite the groom's family claiming a pristine business reputation in Cyber Hub, Gurugram, certain inconsistencies in lifestyle vs. declared income surfaced.",
     action:
-      "We conducted a deep-dive corporate audit and undercover mystery-shopping operation within the vendor network to identify inflated invoices and hidden coordination.",
+      "Through physical surveillance across Delhi-NCR and tracking business activity in Udyog Vihar, we revealed pending litigation for insolvency and a previous undisclosed marriage in another state.",
     result:
-      "H S Detectives Agency Mumbai uncovered a nexus between two senior managers and a local vendor. The firm restructured procurement and saved an estimated Rs 2.5 crores annually.",
+      "They uncovered truths that two months of social meetings couldn't. We were saved from a devastating mistake. – Private Client",
   },
   {
     category: "TSCM Services",
-    title: "Boardroom Listening Device Detection",
+    title: "The Boardroom Breach (Manyata Tech Park, Bangalore)",
     problem:
-      "Before a critical merger meeting, an Andheri West corporate office suspected its boardroom had been compromised.",
+      "A leading AI startup in Manyata Tech Park, Bangalore, found their proprietary R&D strategies being leaked to competitors within 48 hours of board meetings.",
     action:
-      "Our technical team performed a comprehensive TSCM sweep using military-grade frequency analyzers to detect hidden transmitters and infinity microphones.",
+      "Our technicians performed corporate TSCM using near-field detection and thermal imaging, identifying GSM-enabled bugs hidden inside a power strip and a gifted desk clock in the main conference room.",
     result:
-      "We discovered a GSM-based listening device hidden inside a decorative wall clock. The sweep helped keep the merger discussions fully confidential.",
-  },
-  {
-    category: "Risk Management",
-    title: "Threat Response for Real Estate Project",
-    problem:
-      "A real estate developer was receiving anonymous threats and faced possible project sabotage at a new Thane development.",
-    action:
-      "H S Detectives Agency Mumbai carried out a 360-degree risk assessment, identified physical security gaps, and vetted site contractors.",
-    result:
-      "After implementing our recommended protocols and checks, the threats stopped and the project was completed three months ahead of schedule without further incidents.",
-  },
-  {
-    category: "Surveillance",
-    title: "Non-Compete Breach Documentation",
-    problem:
-      "A client needed proof that a business partner had breached a non-compete clause through a secret warehouse operation in Navi Mumbai.",
-    action:
-      "Using high-definition long-range lenses and night-vision equipment, our surveillance team monitored the warehouse activity continuously for 72 hours.",
-    result:
-      "We captured clear photographic evidence of the partner directing operations at the rival site, giving the legal team strong evidence for enforcement.",
-  },
-  {
-    category: "Brand Protection",
-    title: "Counterfeit Apparel Supply Chain Trace",
-    problem:
-      "A luxury apparel brand found high-quality first-copy versions of its latest collection being sold in Mumbai markets.",
-    action:
-      "H S Detectives Agency Mumbai conducted an intellectual property investigation to trace the fakes to an unauthorized manufacturing unit in Bhiwandi.",
-    result:
-      "We coordinated with local law enforcement on a raid that seized counterfeit goods worth Rs 80 lakhs and shut down the core distribution hub.",
-  },
-  {
-    category: "Forensic Investigation",
-    title: "Source Code Recovery Before Launch",
-    problem:
-      "An IT firm suffered a large-scale wipe of proprietary source code just days before a major product launch.",
-    action:
-      "Our digital forensic experts recovered ghost data from formatted drives and analyzed server logs to isolate the exact timestamp and IP address involved in the breach.",
-    result:
-      "H S Detectives Agency Mumbai identified a disgruntled employee who had bypassed internal controls. The code was recovered and the launch stayed on schedule.",
+      "Professional, thorough, and invisible to our employees. They secured our IP when it mattered most. – CTO, Tech Solutions",
   },
   {
     category: "Asset Tracing",
-    title: "Hidden Property Recovery Support",
+    title: "Recovering Ghost Assets (Hyderabad)",
     problem:
-      "A creditor was unable to recover a large loan from a debtor claiming bankruptcy while reportedly living a luxury lifestyle under a family identity.",
+      "Following a messy partnership dissolution in HITEC City, Hyderabad, one partner claimed zero liquidity, stalling a court-ordered buyout.",
     action:
-      "We tracked the debtor's lifestyle and uncovered three benami properties in Goa and Pune hidden behind shell company names.",
+      "We utilized deep-web forensic tools and physical verification of Benami properties near Outer Ring Road (ORR), linking three luxury villas and a fleet of high-end vehicles back to the partner through shadow directors.",
     result:
-      "With our asset report in hand, the creditor successfully moved the court to freeze the properties and recovered the full loan amount.",
+      "Their ability to find what was 'lost' changed the trajectory of our legal battle. – Managing Partner, Legal Associate",
   },
   {
-    category: "Post Matrimonial",
-    title: "Undisclosed Assets After Marriage",
+    category: "Employee Surveillance",
+    title: "The Inventory Leak (Chennai Port Trust)",
     problem:
-      "A client suspected a spouse of maintaining a secret second life and hiding major financial assets after marriage.",
+      "A logistics giant near Chennai Port was facing consistent shrinkage of high-value electronics during transit to warehouses in Sriperumbudur.",
     action:
-      "H S Detectives Agency Mumbai carried out a discreet lifestyle audit and shadow surveillance operation over a three-week period.",
+      "We deployed surveillance units to follow transport vehicles, identifying an unauthorized stop at a godown near Madhavaram where drivers were swapping genuine goods with counterfeits.",
     result:
-      "We uncovered a secret apartment and an undisclosed business venture, giving the client clarity and documented proof for future decisions.",
+      "The video evidence provided was irrefutable. It led to a complete overhaul of our transit security. – Operations Manager",
   },
   {
-    category: "Fraud Investigation",
-    title: "Insurance Claim Fraud Ring",
+    category: "Business Investigation",
+    title: "The Kickback Scheme (Gurugram Cyber City)",
     problem:
-      "An insurance company noticed a rise in suspicious total-loss vehicle claims tied to a garage in North Mumbai.",
+      "A leading tech firm in DLF Cyber City, Gurugram suspected a senior procurement manager of favoring specific vendors despite higher quotes and lower quality.",
     action:
-      "We deployed an undercover agent posing as a customer to document the garage's process of intentionally damaging vehicles to support inflated insurance payouts.",
+      "We conducted employee background verification revealing a hidden family connection between the manager and the vendor. Asset Tracing identified a luxury apartment in Golf Course Road purchased under a relative's name.",
     result:
-      "H S Detectives Agency Mumbai produced video evidence of the fraud ring. The insurer blacklisted the garage and avoided more than Rs 50 lakhs in fraudulent claims.",
+      "The evidence was airtight. We were able to terminate the corrupt link and recover our losses without any legal blowback. – HR Director, Global Tech",
+  },
+  {
+    category: "Corporate TSCM",
+    title: "The Silent Listener (Bandra Kurla Complex)",
+    problem:
+      "During a high-stakes merger negotiation at BKC, Mumbai, sensitive board discussions were being leaked to a rival firm in Nariman Point within hours.",
+    action:
+      "Our team performed debugging and sweeping using advanced spectrum analyzers, detecting a GSM bug planted inside a VoIP phone and a hidden camera in the executive dining area.",
+    result:
+      "Absolute professionals. Their technical expertise secured our most sensitive negotiation environment. – MD, Infrastructure Giant",
+  },
+  {
+    category: "Matrimonial Investigation",
+    title: "The Hidden Liability (South Delhi & Noida)",
+    problem:
+      "A family in Greater Kailash, Delhi was considering a proposal. The groom claimed to be a self-made entrepreneur with a flourishing startup in Noida Sector 62.",
+    action:
+      "Through physical surveillance across South Delhi, Noida, and Chandigarh, we discovered the subject was not the owner but a mid-level freelancer with a history of heavy debt and a pending criminal case for fraud.",
+    result:
+      "They looked beyond the social media profile. Their findings saved our daughter from a life of hardship. – Concerned Parent",
+  },
+  {
+    category: "Post-Matrimonial Surveillance",
+    title: "The Adultery Evidence (Bengaluru Indiranagar)",
+    problem:
+      "A client in Indiranagar, Bengaluru suspected their spouse of infidelity, often citing late shifts at a software park in Whitefield.",
+    action:
+      "We deployed surveillance teams tracking movements between Whitefield, Koramangala, and weekend 'business trips' to Mysuru, documenting the spouse meeting a third party at a boutique hotel near MG Road.",
+    result:
+      "Discreet and highly effective. They provided clear video evidence that was crucial for my peace of mind. – Private Client",
+  },
+  {
+    category: "Risk Management",
+    title: "The Ghost Inventory (Chennai Sriperumbudur)",
+    problem:
+      "An automobile manufacturing plant near Sriperumbudur, Chennai reported a consistent 5% inventory mismatch in high-grade steel components.",
+    action:
+      "Our employee surveillance team monitored the night shift. Forensic investigation of digital logs showed manual weighbridge overrides. We caught a syndicate of guards and drivers diverting trucks to a local yard.",
+    result:
+      "Their multi-disciplinary approach solved a mystery that our internal security missed for a year. – Plant Manager",
   },
 ];
 
