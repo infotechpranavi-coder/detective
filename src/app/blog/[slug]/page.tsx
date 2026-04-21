@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "../blogPosts";
 import GoogleTagHead from "@/components/GoogleTagHead";
+import authorImage from "../../../../public/1679054315569.jpg";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -127,23 +128,29 @@ export default async function BlogPost({ params }: Props) {
             ))}
           </div>
 
-          <div className="mt-8 flex items-center gap-4 rounded-xl border border-zinc-200 bg-zinc-50 p-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white font-semibold text-lg">
-              WS
-            </div>
-            <div>
-              <p className="font-semibold text-zinc-900">Wahid Shaikh</p>
-              <span className="inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">
-                Chief Investigative Officer
-              </span>
-              <a
-                href="https://in.linkedin.com/in/wahid-shaikh-0b677455"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-1 block text-sm text-red-600 hover:text-red-700"
-              >
-                View LinkedIn Profile →
-              </a>
+          <div className="mt-8 flex justify-end">
+            <div className="inline-flex items-center gap-4 rounded-xl border border-zinc-700 bg-black p-4">
+              <Image
+                src={authorImage}
+                alt="Wahid Shaikh"
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-full object-cover"
+              />
+              <div>
+                <p className="font-semibold text-white">Wahid Shaikh</p>
+                <span className="inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">
+                  Chief Investigative Officer
+                </span>
+                <a
+                  href="https://in.linkedin.com/in/wahid-shaikh-0b677455"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-sm text-red-600 hover:text-red-700"
+                >
+                  View LinkedIn Profile →
+                </a>
+              </div>
             </div>
           </div>
 

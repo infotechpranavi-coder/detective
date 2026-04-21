@@ -1,6 +1,8 @@
 import PageHero from "@/components/shared/PageHero";
 import PageTransition from "@/components/ui/PageTransition";
 import GoogleTagHead from "@/components/GoogleTagHead";
+import Image from "next/image";
+import authorImage from "../../../public/1679054315569.jpg";
 
 export const metadata = {
   title: "Case Study | H S Detectives",
@@ -213,13 +215,17 @@ export default function CaseStudyPage() {
                         {study.result}
                       </p>
                     </div>
-                    <div className="mt-4 flex items-center gap-3 rounded-xl border border-black/10 bg-neutral-100 p-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white font-semibold text-sm">
-                        WS
-                      </div>
+                    <div className="mt-4 inline-flex items-center gap-3 rounded-xl border border-zinc-700 bg-black p-3">
+                      <Image
+                        src={authorImage}
+                        alt="Wahid Shaikh"
+                        width={40}
+                        height={40}
+                        className="h-10 w-10 rounded-full object-cover"
+                      />
                       <div>
-                        <p className="font-semibold text-sm text-black">Wahid Shaikh</p>
-                        <p className="text-xs text-black/60">Chief Investigative Officer</p>
+                        <p className="font-semibold text-sm text-white">Wahid Shaikh</p>
+                        <p className="text-xs text-white/60">Chief Investigative Officer</p>
                         <a
                           href="https://in.linkedin.com/in/wahid-shaikh-0b677455"
                           target="_blank"
@@ -238,7 +244,6 @@ export default function CaseStudyPage() {
         </section>
       </main>
     </PageTransition>
-    </>
     </>
   );
 }
