@@ -22,8 +22,8 @@ export default function ServicesSchema() {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "163",
+      ratingValue: "4.7",
+      reviewCount: "21987",
       bestRating: "5",
       worstRating: "1",
     },

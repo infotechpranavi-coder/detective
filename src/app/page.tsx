@@ -111,8 +111,8 @@ const homePageSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "163",
+    ratingValue: "4.7",
+    reviewCount: "21987",
     bestRating: "5",
     worstRating: "1",
   },
@@ -146,8 +146,8 @@ const localBusinessSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.7",
+    reviewCount: "21987",
     bestRating: "5",
-    ratingCount: "3000",
   },
 };
 
