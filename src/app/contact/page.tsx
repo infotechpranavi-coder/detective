@@ -82,6 +82,26 @@ const faqPageSchema = {
   ],
 };
 
+const contactSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Contact H S Detectives",
+  url: "https://www.hsdetectives.com/contact-us",
+  description: "Contact a trusted detective agency in Mumbai for confidential investigation services, quick response, and professional support for personal and corporate cases.",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".voice-summary", ".expert-highlight"],
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
+};
+
 export default function ContactPage() {
   return (
     <>
@@ -93,6 +113,11 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+      <script
+        id="contact-speakable-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSpeakableSchema) }}
       />
       <PageTransition>
       <main className="min-h-screen bg-background">

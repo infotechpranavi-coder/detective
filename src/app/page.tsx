@@ -16,11 +16,20 @@ const homeSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "HS Detectives - India's Premier Private Investigation Agency",
+  url: "https://www.hsdetectives.com/",
+  description: "ISO Certified private detective agency in India specializing in TSCM, corporate intelligence, matrimonial investigations, and high-end surveillance with strict confidentiality.",
   speakable: {
     "@type": "SpeakableSpecification",
-    cssSelector: [".voice-summary", ".expert-highlight"],
+    cssSelector: [".voice-summary", ".expert-highlight", "#about-us-summary", "#service-highlights"],
   },
-  url: "https://www.hsdetectives.com/",
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
 };
 
 const homePageSchema = {

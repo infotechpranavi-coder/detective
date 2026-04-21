@@ -7,6 +7,72 @@ export const metadata = {
   keywords: "Private Detective FAQ, Investigation Costs Mumbai, How to Hire a Detective, Matrimonial Investigation Help",
 };
 
+const faqSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Private Detective FAQ | H S Detectives",
+  url: "https://www.hsdetectives.com/faq",
+  description: "Get answers to frequently asked questions about private investigation costs, matrimonial checks, and corporate surveillance in Mumbai and India.",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".voice-summary", ".expert-highlight"],
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
+};
+
+const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What makes H S Detectives different from other agencies in Mumbai?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our agency operates under the strategic guidance of a Retired Deputy Commissioner of Police (DCP) from Maharashtra, ensuring all investigations are handled with high-level law enforcement expertise and legal compliance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide bug sweeping or anti-spying services?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Through our technical arm, Indiebim Technology Solutions, we provide USA and Israel-trained TSCM services to detect hidden cameras, audio bugs, and GPS trackers in boardrooms and private residences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does a private detective charge in Mumbai?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our professional investigation services start from Rs.45,000/- onwards. The final cost depends on the complexity and duration of the case. We offer structured 5, 10, and 15-day surveillance packages to suit different needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What does a private detective agency in Mumbai do?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A private detective agency investigates personal and corporate matters such as background checks, surveillance, fraud investigations, and missing person cases.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is hiring a private detective in India legal?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, hiring a private detective for legal investigations like background verification or surveillance in public places is allowed in India.",
+      },
+    },
+  ],
+};
 
 const faqSections = [
   {
@@ -356,6 +422,16 @@ export default function FaqPage() {
   return (
     <>
       <GoogleTagHead />
+      <script
+        id="faq-speakable-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSpeakableSchema) }}
+      />
+      <script
+        id="faq-page-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
       <script
         id="faq-page-schema"
         type="application/ld+json"

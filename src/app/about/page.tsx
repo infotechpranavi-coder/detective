@@ -180,6 +180,26 @@ const aboutSchema = {
   ],
 };
 
+const aboutSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "About H S Detectives - Private Investigation Agency",
+  url: "https://www.hsdetectives.com/about-us",
+  description: "India's premier private investigation agency with 15+ years of experience in corporate intelligence, TSCM, and matrimonial investigations.",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".voice-summary", ".expert-highlight"],
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
+};
+
 export default function AboutPage() {
   return (
     <>
@@ -187,6 +207,11 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        id="about-speakable-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSpeakableSchema) }}
       />
       <PageTransition>
       <main className="min-h-screen bg-background text-foreground">

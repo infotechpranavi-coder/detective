@@ -231,8 +231,8 @@ export default function LocationSlider() {
   const [mumbaiOffice, ...branchOffices] = OFFICES;
 
   return (
-    <section className="py-24 md:py-32 bg-background border-t border-foreground/5 relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-12 flex flex-col items-center">
+    <section className="py-24 md:py-32 bg-background border-t border-foreground/5 relative overflow-visible">
+      <div className="container mx-auto px-6 lg:px-12 flex flex-col items-center overflow-visible">
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16"
           variants={staggerContainer}
@@ -252,21 +252,22 @@ export default function LocationSlider() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.05 }}
-            className="max-w-[760px] mx-auto"
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: 0.05, duration: 0.5 }}
+            className="max-w-[760px] mx-auto will-change-transform"
           >
             <OfficeCard office={mumbaiOffice} imageHeightClass="h-[300px]" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 min-h-[200px]">
             {branchOffices.map((office, i) => (
               <motion.div
                 key={office.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: Math.min(i * 0.05, 0.3), duration: 0.4 }}
+                className="will-change-transform"
               >
                 <OfficeCard office={office} imageHeightClass="h-[260px]" />
               </motion.div>

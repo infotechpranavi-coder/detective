@@ -15,11 +15,20 @@ const servicesSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "H S Detectives Services",
+  url: "https://www.hsdetectives.com/services",
+  description: "Four core investigation divisions covering personal, corporate, technical sweep, and surveillance operations.",
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: [".voice-summary", ".expert-highlight"],
   },
-  url: "https://www.hsdetectives.com/services",
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
 };
 
 export default function ServicesPage() {

@@ -53,7 +53,8 @@ export default async function BlogPost({ params }: Props) {
     author: {
       "@type": "Person",
       name: "Wahid Shaikh",
-      url: "https://www.wahidshaikh.com",
+      jobTitle: "Chief Investigative Officer",
+      url: "https://in.linkedin.com/in/wahid-shaikh-0b677455",
     },
     publisher: {
       "@id": "https://www.hsdetectives.com/#organization",
@@ -126,7 +127,27 @@ export default async function BlogPost({ params }: Props) {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-red-200 bg-red-50 p-6">
+          <div className="mt-8 flex items-center gap-4 rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white font-semibold text-lg">
+              WS
+            </div>
+            <div>
+              <p className="font-semibold text-zinc-900">Wahid Shaikh</p>
+              <span className="inline-block rounded-full bg-red-100 px-2 py-0.5 text-xs font-semibold text-red-700">
+                Chief Investigative Officer
+              </span>
+              <a
+                href="https://in.linkedin.com/in/wahid-shaikh-0b677455"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block text-sm text-red-600 hover:text-red-700"
+              >
+                View LinkedIn Profile →
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-6">
             <p className="mb-4 text-base leading-7 text-zinc-700">{post.cta.text}</p>
             <Link
               href={post.cta.href}

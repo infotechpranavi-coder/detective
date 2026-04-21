@@ -25,6 +25,26 @@ const productSchema = {
   },
 };
 
+const packagesSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Investigation Packages | H S Detectives",
+  url: "https://www.hsdetectives.com/investigation-packages-india",
+  description: "Professional investigation packages for matrimonial, corporate, and personal cases. Transparent pricing and confidential services.",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".voice-summary", ".expert-highlight"],
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
+};
+
 export const metadata = createPageMetadata({
   title: "Hs Detectives Investigation Packages - HS Detectives",
   description:
@@ -47,6 +67,11 @@ export default function PackagesPage() {
   return (
     <>
       <GoogleTagHead />
+      <script
+        id="packages-speakable-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(packagesSpeakableSchema) }}
+      />
       <script
         id="packages-product-schema"
         type="application/ld+json"

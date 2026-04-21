@@ -2,11 +2,82 @@
 
 import Link from "next/link";
 import { blogPosts } from "./blogPosts";
+import GoogleTagHead from "@/components/GoogleTagHead";
+
+const blogSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Investigator's Journal | H S Detectives Blog",
+  url: "https://www.hsdetectives.com/blog",
+  description: "Expert insights on private investigation, detective services, surveillance technology, and case studies from India's premier investigation agency.",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".voice-summary", ".expert-highlight"],
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
+};
+
+const blogArticlesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Investigator's Journal | H S Detectives Blog",
+  url: "https://www.hsdetectives.com/blog",
+  description: "Expert insights on private investigation, detective services, surveillance technology, and case studies from India's premier investigation agency.",
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
+  blogPost: blogPosts.map((post) => ({
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    url: `https://www.hsdetectives.com/blog/${post.id}`,
+    image: post.image,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Wahid Shaikh",
+      jobTitle: "Chief Investigative Officer",
+      url: "https://in.linkedin.com/in/wahid-shaikh-0b677455",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "H S Detectives",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.hsdetectives.com/HS-Logo.webp",
+      },
+    },
+  })),
+};
 
 export default function BlogIndex() {
   return (
-    <main className="min-h-screen bg-background px-6 py-24 md:px-12">
-      <section className="mx-auto max-w-6xl">
+    <>
+      <GoogleTagHead />
+      <script
+        id="blog-speakable-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSpeakableSchema) }}
+      />
+      <script
+        id="blog-articles-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogArticlesSchema) }}
+      />
+      <main className="min-h-screen bg-background px-6 py-24 md:px-12">
+        <section className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-6">Blog</h1>
         <p className="mb-12 text-zinc-700">Latest research, case studies, and investigator stories from H S Detectives.</p>
 
@@ -35,5 +106,6 @@ export default function BlogIndex() {
         </div>
       </section>
     </main>
+    </>
   );
 }

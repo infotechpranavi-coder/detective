@@ -67,11 +67,20 @@ const locationsSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "H S Detectives Location Network",
+  url: "https://www.hsdetectives.com/hs-detectives-locations",
+  description: "A Pan-India presence with 13 offices to ensure swift, localized intelligence gathering.",
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: [".voice-summary", ".expert-highlight"],
   },
-  url: "https://www.hsdetectives.com/hs-detectives-locations",
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
 };
 
 export default function LocationsPage() {

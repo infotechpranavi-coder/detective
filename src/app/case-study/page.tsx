@@ -8,6 +8,26 @@ export const metadata = {
     "Selected case studies from H S Detectives covering corporate, matrimonial, surveillance, and technical investigations.",
 };
 
+const caseStudySpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Case Studies | H S Detectives",
+  url: "https://www.hsdetectives.com/case-investigation-notes",
+  description: "Real-world case studies demonstrating our investigative expertise across matrimonial, corporate, TSCM, and surveillance operations.",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".voice-summary", ".expert-highlight"],
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "H S Detectives",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hsdetectives.com/HS-Logo.webp",
+    },
+  },
+};
+
 const caseStudies = [
   {
     category: "Corporate Fraud Investigation",
@@ -115,7 +135,11 @@ export default function CaseStudyPage() {
   return (
     <>
       <GoogleTagHead />
-      <>
+      <script
+        id="casestudy-speakable-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySpeakableSchema) }}
+      />
       <PageTransition>
       <main className="min-h-screen bg-white">
         <PageHero
@@ -188,6 +212,23 @@ export default function CaseStudyPage() {
                       <p className="font-inter text-sm md:text-base text-black/75 leading-relaxed">
                         {study.result}
                       </p>
+                    </div>
+                    <div className="mt-4 flex items-center gap-3 rounded-xl border border-black/10 bg-neutral-100 p-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white font-semibold text-sm">
+                        WS
+                      </div>
+                      <div>
+                        <p className="font-semibold text-sm text-black">Wahid Shaikh</p>
+                        <p className="text-xs text-black/60">Chief Investigative Officer</p>
+                        <a
+                          href="https://in.linkedin.com/in/wahid-shaikh-0b677455"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-red-600 hover:text-red-700"
+                        >
+                          LinkedIn Profile →
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </article>
