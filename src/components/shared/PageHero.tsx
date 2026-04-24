@@ -8,8 +8,31 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHeroProps) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.hsdetectives.com/",
+      },
+      ...breadcrumbs.map((crumb, index) => ({
+        "@type": "ListItem",
+        position: index + 2,
+        name: crumb.label,
+        item: `https://www.hsdetectives.com${crumb.href}`,
+      })),
+    ],
+  };
+
   return (
     <section className="relative flex min-h-[420px] w-full items-end overflow-hidden pb-14 pt-24 sm:h-[60vh] sm:min-h-[460px] sm:pb-20 sm:pt-28 lg:h-[65vh] lg:min-h-[500px] lg:pb-24 lg:pt-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="absolute inset-0 z-0">
         <img src={image} alt={title} className="h-full w-full object-cover img-noir" loading="eager" />
       </div>

@@ -194,7 +194,7 @@ function OfficeCard({
         </div>
       </div>
 
-      <div className="p-8 md:p-10 flex flex-col grow relative bg-white dark:bg-[#0D0D0D] z-20">
+      <div className="p-8 md:p-10 flex flex-col grow relative bg-[#0D0D0D] z-20">
         <h3 className="font-playfair text-2xl text-foreground uppercase tracking-wider mb-6 group-hover:text-accent transition-colors">
           {office.name}
         </h3>

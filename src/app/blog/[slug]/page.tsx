@@ -38,36 +38,23 @@ export default async function BlogPost({ params }: Props) {
   const postUrl = `https://www.hsdetectives.com/blog/${post.id}`;
   const blogPostingSchema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": postUrl,
-    },
+    "@type": "Article",
     headline: post.title,
-    description: post.excerpt,
-    image: {
-      "@type": "ImageObject",
-      url: post.image,
-      width: 1200,
-      height: 640,
-    },
+    image: `https://www.hsdetectives.com${post.image}`,
     author: {
-      "@type": "Person",
-      name: "Wahid Shaikh",
-      jobTitle: "Chief Investigative Officer",
-      url: "https://in.linkedin.com/in/wahid-shaikh-0b677455",
+      "@type": "Organization",
+      name: "HS Detectives",
     },
     publisher: {
-      "@id": "https://www.hsdetectives.com/#organization",
+      "@type": "Organization",
+      name: "HS Detectives",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.hsdetectives.com/HS-Logo.webp",
+      },
     },
     datePublished: post.date,
-    dateModified: post.date,
-    keywords: "TSCM, Private Investigator Mumbai, Asset Tracing, Corporate Intelligence",
-    articleSection: "Investigative Intelligence",
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: [".article-body", ".key-takeaways"],
-    },
+    description: post.excerpt,
   };
 
   return (

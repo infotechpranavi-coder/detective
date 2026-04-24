@@ -27,52 +27,6 @@ const faqSpeakableSchema = {
   },
 };
 
-const faqPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What makes H S Detectives different from other agencies in Mumbai?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our agency operates under the strategic guidance of a Retired Deputy Commissioner of Police (DCP) from Maharashtra, ensuring all investigations are handled with high-level law enforcement expertise and legal compliance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide bug sweeping or anti-spying services?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Through our technical arm, Indiebim Technology Solutions, we provide USA and Israel-trained TSCM services to detect hidden cameras, audio bugs, and GPS trackers in boardrooms and private residences.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does a private detective charge in Mumbai?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our professional investigation services start from Rs.45,000/- onwards. The final cost depends on the complexity and duration of the case. We offer structured 5, 10, and 15-day surveillance packages to suit different needs.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What does a private detective agency in Mumbai do?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A private detective agency investigates personal and corporate matters such as background checks, surveillance, fraud investigations, and missing person cases.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is hiring a private detective in India legal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, hiring a private detective for legal investigations like background verification or surveillance in public places is allowed in India.",
-      },
-    },
-  ],
-};
 
 const faqSections = [
   {
@@ -430,21 +384,16 @@ export default function FaqPage() {
       <script
         id="faq-page-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
-      />
-      <script
-        id="faq-page-schema"
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PageTransition>
       <main className="min-h-screen bg-linear-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-foreground">
         <section className="container mx-auto px-6 lg:px-12 py-24 lg:py-28">
           <div className="max-w-5xl rounded-2xl border border-white/20 bg-white/90 p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-            <h1 className="font-playfair text-4xl md:text-5xl uppercase tracking-wide text-neutral-950">
+            <h1 className="font-playfair text-4xl md:text-5xl uppercase tracking-wide text-neutral-950 expert-highlight">
               Frequently Asked Questions
             </h1>
-            <p className="mt-4 font-inter text-sm md:text-base text-neutral-700 max-w-3xl">
+            <p className="mt-4 font-inter text-sm md:text-base text-neutral-700 max-w-3xl voice-summary">
               Answers to common questions about private detective services in
               Mumbai, including matrimonial, surveillance, and corporate
               investigations.
