@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import OurClients from "@/components/home/OurClients";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import LastReviewed from "@/components/seo/LastReviewed";
+import CommonFaqSection from "@/components/shared/CommonFaqSection";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 interface AppShellProps {
@@ -35,6 +36,7 @@ export default function AppShell({ children, navbar, footer }: AppShellProps) {
       </div>
       {showClientsSection ? <OurClients /> : null}
       <LastReviewed />
+      <CommonFaqSection />
       {footer}
     </>
   );
