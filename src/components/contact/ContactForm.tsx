@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CustomImage from "@/components/ui/CustomImage";
 import { fadeUp, fadeRight, staggerContainer, scaleUp } from "@/lib/animations";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -33,6 +32,10 @@ const INITIAL_CAPTCHA = {
   right: 7,
   answer: "15",
 };
+
+/** Same art as before; composited in one layer so iOS Safari paints a solid dimmer (avoids broken stacked overlays). */
+const CONTACT_SECTION_BG =
+  "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80";
 
 export default function ContactForm() {
   const {
@@ -104,17 +107,15 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="relative overflow-hidden border-b border-foreground/10 py-16 sm:py-20 md:py-32">
-      <CustomImage 
-        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
-        alt="Dark City Lights"
-        animation="none"
-        containerClassName="absolute inset-0 z-0 h-full w-full"
-        className="object-cover object-center"
-        overlay="bg-white/88 dark:bg-black/95"
-      />
-
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+    <section
+      className="relative overflow-hidden border-b border-foreground/10 bg-cover bg-center bg-no-repeat py-16 sm:py-20 md:py-32"
+      style={{
+        // Single background stack: dimmer + image (no separate overlay div / blend modes on the section).
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url('${CONTACT_SECTION_BG}')`,
+        transform: "translateZ(0)",
+      }}
+    >
+      <div className="container relative z-10 mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-24">
           
           {/* LEFT COLUMN - INFO */}
