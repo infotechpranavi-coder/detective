@@ -14,15 +14,15 @@ const faqItems = [
     question: "2. Is hiring a private detective in India legal?",
     answer:
       "Yes. Hiring a private detective for lawful investigations such as background verification, surveillance in public places, and due diligence is allowed in India.",
-    href: "/faq",
-    cta: "Read FAQ",
+    href: "/hs-detectives-locations",
+    cta: "Explore Locations",
   },
   {
     question: "3. Are private detective services confidential?",
     answer:
       "Yes. All client details and investigation work are handled with complete confidentiality and discretion.",
-    href: "/contact-us",
-    cta: "Contact Us",
+    href: "/services",
+    cta: "Explore Services",
   },
 ];
 
@@ -64,6 +64,15 @@ export default function CommonFaqSection() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div className="flex justify-center pt-4">
+            <Link
+              href="/faq"
+              className="inline-flex items-center justify-center px-10 py-4 bg-accent text-white font-space text-xs uppercase tracking-[0.2em] transition-colors hover:bg-black sm:text-sm sm:tracking-[0.25em]"
+            >
+              View FAQ
+            </Link>
           </div>
         </div>
       </div>
