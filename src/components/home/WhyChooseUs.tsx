@@ -40,12 +40,14 @@ export default function WhyChooseUs() {
   return (
     <section ref={containerRef} className="relative py-32 overflow-hidden">
       <CustomImage 
-        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80"
+        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1440&q=60"
         alt="Moody Building Dark"
         animation="parallax"
         parallaxY={parallaxY}
         containerClassName="absolute inset-0 z-0"
         overlay="bg-black/80"
+        quality={48}
+        sizes="100vw"
       />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -58,7 +60,7 @@ export default function WhyChooseUs() {
             className="max-w-xl"
           >
             <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
-              <div className="h-[1px] w-12 bg-accent" />
+              <div className="h-px w-12 bg-accent" />
               <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">The Advantage</span>
             </motion.div>
             <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-white uppercase tracking-wider leading-[1.1]">

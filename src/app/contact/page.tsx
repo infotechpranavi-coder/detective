@@ -51,37 +51,6 @@ const contactPageSchema = {
   },
 };
 
-const faqPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is my information kept confidential?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, HS Detectives guarantees 100% confidentiality. We use military-grade encryption and strict protocols to ensure your identity and case details remain private.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are your private investigators licensed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, our team consists of licensed professional investigators, including former intelligence officers, ensuring all evidence gathered is legally admissible.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide detective services outside of Mumbai?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we have a Pan India network with 13 offices across the country, allowing us to conduct investigations in any city or state.",
-      },
-    },
-  ],
-};
-
 const contactSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -109,10 +78,6 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
       <script
         id="contact-speakable-schema"

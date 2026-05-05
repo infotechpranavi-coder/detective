@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter, Space_Mono, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
+/** Self-hosted via `next/font` (no render-blocking CSS from fonts.gstatic.com). `display: swap` avoids invisible text. */
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -70,8 +71,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <style
           id="critical-css"
           dangerouslySetInnerHTML={{

@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { informationPageLinks } from "@/app/information/informationPagesData";
-import { serviceDetails } from "@/app/services/serviceData";
 import { subServicesByParent } from "@/app/services/subServiceData";
 
 // ── Mega-menu service tree data ───────────────────────────────────────────────
@@ -125,7 +124,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
+        className={`fixed top-0 w-full z-100 transition-all duration-500 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md border-b-2 border-black py-3 sm:py-4"
             : "bg-transparent py-4 sm:py-6"
@@ -135,7 +134,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="group z-[101] mr-auto flex min-w-0 flex-shrink items-center gap-2 sm:gap-3"
+            className="group z-101 mr-auto flex min-w-0 shrink items-center gap-2 sm:gap-3"
           >
             <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border-2 border-black bg-white p-1 shadow-[2px_2px_0px_#000] transition-all duration-500 group-hover:border-accent group-hover:shadow-[2px_2px_0px_#cc0000] sm:h-14 sm:w-14">
               <Image
@@ -232,7 +231,7 @@ export default function Navbar() {
                   >
                     <div className="flex h-full">
                       {/* Left column – parent services */}
-                      <div className="w-[240px] flex-shrink-0 bg-neutral-50 border-r border-black/8 py-3">
+                      <div className="w-[240px] shrink-0 bg-neutral-50 border-r border-black/8 py-3">
                         <p className="px-5 pb-2 font-space text-[9px] uppercase tracking-[0.22em] text-black/35">
                           Service Areas
                         </p>
@@ -288,7 +287,7 @@ export default function Navbar() {
                                 href={`/services/${activeParent}`}
                                 className="flex items-center gap-2 px-4 py-2.5 mb-1 rounded-xl hover:bg-red-50 group transition-colors"
                               >
-                                <div className="w-1.5 h-1.5 rounded-full bg-red-600 flex-shrink-0" />
+                                <div className="h-1.5 w-1.5 rounded-full bg-red-600 shrink-0" />
                                 <span className="font-inter text-[12px] font-bold text-black group-hover:text-red-600 transition-colors">
                                   {serviceTree.find((s) => s.slug === activeParent)?.label} Overview
                                 </span>
@@ -316,7 +315,7 @@ export default function Navbar() {
                                   }
                                   className="flex items-start gap-3 px-4 py-2.5 rounded-xl hover:bg-neutral-50 group transition-colors"
                                 >
-                                  <div className="mt-1.5 w-1 h-1 rounded-full bg-black/20 group-hover:bg-red-500 flex-shrink-0 transition-colors" />
+                                  <div className="mt-1.5 h-1 w-1 rounded-full bg-black/20 group-hover:bg-red-500 shrink-0 transition-colors" />
                                   <span className="font-inter text-[12px] font-medium text-black/70 group-hover:text-black transition-colors leading-tight">
                                     {sub.navLabel}
                                   </span>
@@ -371,7 +370,7 @@ export default function Navbar() {
                     : baseNavClass
                 }`}
               >
-                Information
+                Public Intelligence Awareness
                 <ChevronDown
                   size={14}
                   className={`transition-transform ${informationOpen ? "rotate-180" : ""}`}
@@ -454,7 +453,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile hamburger */}
-          <div className="flex items-center gap-4 z-[101] min-[992px]:hidden">
+          <div className="z-101 flex items-center gap-4 min-[992px]:hidden">
             <button
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               className={mobileMenuOpen ? "text-accent" : scrolled ? "text-black" : "text-white"}

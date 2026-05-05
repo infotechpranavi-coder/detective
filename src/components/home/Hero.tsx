@@ -1,64 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
-const HERO_SLIDES = [
-  {
-    image: "/certification-hero.png",
-    badge: "India's Premier Detective Agency",
-    title1: "Uncovering Truth With",
-    titleHighlight: "Absolute Certainty",
-    description:
-      "Licensed professional investigators bringing clarity to complex personal and commercial cases since 2011. Confidentiality guaranteed.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1470&q=80",
-    badge: "Covert Surveillance Operations",
-    title1: "Operating Within The",
-    titleHighlight: "Shadows",
-    description:
-      "Deploying highly trained field operatives for discrete tracking, background verification, and gathering unshakeable evidence.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1470&q=80",
-    badge: "Forensics & Intelligence",
-    title1: "Finding Truth Where",
-    titleHighlight: "Others Fail",
-    description:
-      "From deep-dive corporate due diligence to complex matrimonial investigations. We leave no stone unturned in the pursuit of facts.",
-  },
-];
+const HERO_CONTENT = {
+  image: "/certification-hero.png",
+  badge: "India's Premier Detective Agency",
+  title1: "Uncovering Truth With",
+  titleHighlight: "Absolute Certainty",
+  description:
+    "Licensed professional investigators bringing clarity to complex personal and commercial cases since 2011. Confidentiality guaranteed.",
+};
 
 export default function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 7000);
-    return () => window.clearInterval(interval);
-  }, []);
-
-  const active = HERO_SLIDES[currentSlide];
+  const active = HERO_CONTENT;
 
   return (
     <section className="relative flex min-h-[720px] w-full items-center justify-center overflow-hidden bg-background pt-20 sm:min-h-screen">
       <div className="absolute inset-0 z-0">
         <img
-          key={active.image}
           src={active.image}
-          alt={`Detective Hero Slide ${currentSlide + 1}`}
+          alt="Detective Hero Slide 1"
           loading="eager"
-          fetchPriority="high"
-          className="h-full w-full object-cover img-noir"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover img-noir"
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/40 to-black z-1" />
 
       <div className="container relative z-10 mx-auto mt-6 flex h-auto min-h-[360px] flex-col items-center justify-center px-6 pb-28 text-center sm:mt-10 sm:h-[300px] sm:pb-24 md:h-[400px] lg:px-12">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-black/80 px-3 py-1.5 backdrop-blur-md sm:mb-6 sm:px-4">

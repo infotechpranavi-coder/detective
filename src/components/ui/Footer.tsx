@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
 const FOOTER_BADGE_LINK = "https://www.sulekha.com/h-s-detectives-andheri-west-mumbai-contact-address";
@@ -75,11 +74,12 @@ export default function Footer() {
       {/* Top Thin Image Strip Above Main Footer */}
       <div className="absolute top-0 left-0 w-full h-[120px] overflow-hidden -z-10">
         <motion.div style={{ y, height: "150%" }} className="relative w-full">
-          <Image
+          <img
             src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1920&q=80"
             alt="Dark City Overlay"
-            fill
-            className="object-cover object-[center_60%] opacity-40 mix-blend-luminosity"
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover object-[center_60%] opacity-40 mix-blend-luminosity"
           />
           <div className="absolute inset-0 bg-linear-to-b from-background/40 to-background" />
         </motion.div>
@@ -92,18 +92,17 @@ export default function Footer() {
             <Link href="/" className="inline-block relative">
               <div className="flex items-center gap-3">
                 <div className="relative w-14 h-14 rounded-full border-2 border-accent bg-white overflow-hidden flex items-center justify-center p-1">
-                  <Image
+                  <img
                     src="/HS-Logo.svg"
                     alt="H S Detectives Logo"
-                    width={56}
-                    height={56}
+                    loading="eager"
+                    decoding="async"
                     className="object-contain"
-                    priority
                   />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-playfair text-xl uppercase tracking-wider text-white">H S Detectives</span>
-                  <span className="font-space text-sm text-accent tracking-widest uppercase">Since 2011</span>
+                  <span className="font-space text-sm text-[#ffd08a] tracking-widest uppercase">Since 2011</span>
                 </div>
               </div>
             </Link>
@@ -134,7 +133,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Quick Links</h3>
+            <h3 className="font-space text-sm text-[#ffd08a] tracking-widest uppercase">Quick Links</h3>
             <ul className="space-y-3 font-inter text-base">
               <li><Link href="/publication-media-channels-hs-detectives" className="text-white/70 hover:text-white transition-colors">Publication</Link></li>
               <li><Link href="/faq" className="text-white/70 hover:text-white transition-colors">FAQ</Link></li>
@@ -143,13 +142,13 @@ export default function Footer() {
               <li><Link href="/certificate-of-hs-detectives" className="text-white/70 hover:text-white transition-colors">Certification</Link></li>
               <li><Link href="/case-investigation-notes" className="text-white/70 hover:text-white transition-colors">Case Study</Link></li>
               <li><Link href="/ethics" className="text-white/70 hover:text-white transition-colors">Our Ethics</Link></li>
-              <li><Link href="/public-intelligence-awareness" className="text-white/70 hover:text-white transition-colors">Information</Link></li>
+              <li><Link href="/public-intelligence-awareness" className="text-white/70 hover:text-white transition-colors">Public Intelligence Awareness</Link></li>
             </ul>
           </div>
 
           {/* Service Areas */}
           <div className="space-y-6 -ml-2">
-            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Service Areas</h3>
+            <h3 className="font-space text-sm text-[#ffd08a] tracking-widest uppercase">Service Areas</h3>
             <ul className="space-y-3 font-inter text-base">
               {serviceAreas.map((service) => (
                 <li key={service.href}>
@@ -162,7 +161,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Top Services</h3>
+            <h3 className="font-space text-sm text-[#ffd08a] tracking-widest uppercase">Top Services</h3>
             <ul className="space-y-3 font-inter text-base">
               {serviceLinksOne.map((service) => (
                 <li key={service.href}>
@@ -176,7 +175,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="space-y-6">
-            <h3 className="font-space text-sm text-accent tracking-widest uppercase">Contact Us</h3>
+            <h3 className="font-space text-sm text-[#ffd08a] tracking-widest uppercase">Contact Us</h3>
             <div className="space-y-4 font-inter text-base text-white/70">
               <a
                 href="https://www.google.com/maps?q=H+S+Detectives+Agency+Mumbai,+crystal+plaza,+A/514,+New+Link+Rd,+Veera+Desai+Industrial+Estate,+Andheri+West,+Mumbai,+Maharashtra+400053&ftid=0x3be7b06618f08abb:0xc675e5f7f07f1ecd&entry=gps&shh=CAE&lucs=,94259550,94297699,94284457,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI2LjEwLjIuODc3MzE3OTEwMBgAINeCAypRLDk0MjU5NTUwLDk0Mjk3Njk5LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=d87bc999-7f57-468b-8340-e5d438ebe1a2&g_st=iwb"
@@ -205,8 +204,8 @@ export default function Footer() {
 
         <div className="mx-auto mb-8 w-full max-w-2xl rounded-[20px] border border-white/10 bg-white/5 p-3 sm:mb-10 sm:max-w-3xl sm:p-4">
           <div className="mb-4 flex items-center gap-3">
-            <div className="h-px w-8 bg-accent" />
-            <h3 className="font-space text-[11px] text-accent tracking-[0.18em] uppercase">Reviews & Listings</h3>
+            <div className="h-px w-8 bg-[#ffd08a]" />
+            <h3 className="font-space text-[11px] text-[#ffd08a] tracking-[0.18em] uppercase">Reviews & Listings</h3>
           </div>
           <p className="mb-4 font-inter text-xs text-white/70">
             4.7 / 5 based on 21987+ verified reviews 
@@ -219,11 +218,11 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open H S Detectives listing on Sulekha"
             >
-              <Image
+              <img
                 src="/1979530-removebg-preview.png"
                 alt="H S Detectives Sulekha listing"
-                width={140}
-                height={56}
+                loading="lazy"
+                decoding="async"
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -234,11 +233,11 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Google Reviews for H S Detectives"
             >
-              <Image
+              <img
                 src="/images-removebg-preview.png"
                 alt="Google review badge"
-                width={140}
-                height={56}
+                loading="lazy"
+                decoding="async"
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -249,11 +248,11 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Justdial listing for H S Detectives"
             >
-              <Image
+              <img
                 src="/jdlogosvg.svg"
                 alt="Justdial listing badge"
-                width={140}
-                height={56}
+                loading="lazy"
+                decoding="async"
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -264,11 +263,11 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Facebook reviews for H S Detectives"
             >
-              <Image
+              <img
                 src="/fac.jpg"
                 alt="Facebook review badge"
-                width={140}
-                height={56}
+                loading="lazy"
+                decoding="async"
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -279,11 +278,11 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Trustpilot reviews for H S Detectives"
             >
-              <Image
+              <img
                 src="/logo-white.svg"
                 alt="Trustpilot review badge"
-                width={140}
-                height={56}
+                loading="lazy"
+                decoding="async"
                 className="h-auto w-full object-contain"
               />
             </a>

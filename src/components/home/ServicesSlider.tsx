@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, User, Briefcase, Heart, Search, Shield } from "lucide-react";
@@ -82,7 +81,7 @@ export default function ServicesSlider() {
           className="max-w-2xl"
         >
           <div className="flex items-center gap-4 mb-4">
-            <div className="h-[1px] w-12 bg-accent" />
+            <div className="h-px w-12 bg-accent" />
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Core Expertise</span>
           </div>
           <h2 className="font-playfair text-4xl md:text-5xl text-black uppercase tracking-wider">
@@ -132,12 +131,12 @@ export default function ServicesSlider() {
                   >
                     {/* Top Image Half */}
                     <div className="relative h-[220px] w-full overflow-hidden bg-black">
-                      <Image
+                      <img
                         src={service.image}
                         alt={service.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
                       
@@ -153,14 +152,15 @@ export default function ServicesSlider() {
                     </div>
 
                     {/* Bottom Content Half */}
-                    <div className="relative flex flex-grow flex-col bg-white p-6 sm:p-8">
+                    <div className="relative flex grow flex-col bg-white p-6 sm:p-8">
                       <h3 className="font-playfair text-xl text-black mb-4 uppercase tracking-wider group-hover:text-accent transition-colors">{service.title}</h3>
-                      <p className="font-inter text-sm text-black/70 leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                      <p className="mb-6 grow font-inter text-sm leading-relaxed text-black/70">{service.desc}</p>
                       <Link 
                         href={service.href} 
+                        aria-label={`Know more about ${service.title}`}
                         className="inline-flex items-center gap-2 font-space text-[11px] uppercase tracking-widest text-accent hover:text-black transition-colors mt-auto w-max"
                       >
-                        Know More <span className="text-lg leading-none">→</span>
+                        Know More: {service.title} <span className="text-lg leading-none">→</span>
                       </Link>
                       
                       {/* Hover subtle gradient overlay */}

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { imageReveal, imageRevealRight, imageScale, scaleUp, imageScaleSlow } from "@/lib/animations";
@@ -16,6 +15,8 @@ interface CustomImageProps {
   containerClassName?: string;
   overlay?: string;
   priority?: boolean;
+  quality?: number;
+  sizes?: string;
   animation?: "hero" | "revealLeft" | "revealRight" | "scaleUp" | "parallax" | "none";
   parallaxY?: any; // Framer motion useTransform value
 }
@@ -30,6 +31,8 @@ export default function CustomImage({
   containerClassName,
   overlay = "bg-background/50",
   priority = false,
+  quality = 60,
+  sizes = "(max-width: 768px) 100vw, 100vw",
   animation = "none",
   parallaxY,
 }: CustomImageProps) {
@@ -83,17 +86,19 @@ export default function CustomImage({
         animate={isInView ? "visible" : "hidden"}
         style={{ ...animationStyles }}
       >
-        <Image
+        <img
           src={src}
           alt={alt}
-          fill={isFill}
           width={isFill ? undefined : width}
           height={isFill ? undefined : height}
-          className={cn("img-noir object-cover", className)}
-          priority={priority}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" // purely black 1px
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+          className={cn(
+            "img-noir object-cover",
+            isFill ? "absolute inset-0 h-full w-full" : "",
+            className
+          )}
+          style={isFill ? undefined : { width: "100%", height: "auto" }}
         />
         {/* Theme-specific overlay applied on top */}
         <div className={cn("absolute inset-0 pointer-events-none mix-blend-multiply", overlay)} />

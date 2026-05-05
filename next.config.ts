@@ -1,5 +1,14 @@
 import type { NextConfig } from "next";
 
+/**
+ * Production performance defaults:
+ * - `compress`: enables response compression where the runtime supports it (host may add Brotli).
+ * - `compiler.removeConsole`: strips console.* in production builds.
+ * - `experimental.optimizeCss` + Critters: critical CSS inlining path for styled output.
+ * - `experimental.optimizePackageImports`: tree-shake heavy icon/animation barrels.
+ * - Long `Cache-Control` on `/_next/static` and hashed assets (immutable).
+ */
+
 const locationSeoSlugs = [
   "ahmedabad",
   "mumbai",
@@ -44,6 +53,8 @@ const serviceCategorySeoSlugs = [
 ];
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  poweredByHeader: false,
   compress: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -352,6 +363,7 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    unoptimized: true,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
@@ -445,7 +457,7 @@ const nextConfig: NextConfig = {
       }
     ],
     formats: ['image/avif', 'image/webp'],
-    qualities: [55, 68, 75],
+    qualities: [48, 52, 55, 60, 68, 75],
   },
 };
 

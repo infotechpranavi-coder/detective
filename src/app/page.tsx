@@ -1,16 +1,8 @@
-import dynamic from "next/dynamic";
 import Hero from "@/components/home/Hero";
+import HomePageBelowFold from "@/components/home/HomePageBelowFold";
 import PageTransition from "@/components/ui/PageTransition";
 import { createPageMetadata } from "@/lib/pageSeo";
 import GoogleTagHead from "@/components/GoogleTagHead";
-
-const Marquee = dynamic(() => import("@/components/shared/Marquee"));
-const AboutPreview = dynamic(() => import("@/components/home/AboutPreview"));
-const ServicesSlider = dynamic(() => import("@/components/home/ServicesSlider"));
-const WhyChooseUs = dynamic(() => import("@/components/home/WhyChooseUs"));
-const StatsBand = dynamic(() => import("@/components/home/StatsBand"));
-const Testimonials = dynamic(() => import("@/components/home/Testimonials"));
-const CtaBanner = dynamic(() => import("@/components/home/CtaBanner"));
 
 const homeSpeakableSchema = {
   "@context": "https://schema.org",
@@ -128,7 +120,10 @@ const homePageSchema = {
   review: [
     {
       "@type": "Review",
-      author: "Corporate Client",
+      author: {
+        "@type": "Person",
+        name: "Corporate Client",
+      },
       datePublished: "2026-03-20",
       reviewBody:
         "Professional and discreet service. Highly recommended for corporate TSCM assignments in Mumbai.",
@@ -206,17 +201,11 @@ export default function Home() {
         }}
       />
       <PageTransition>
-      <main className="min-h-screen bg-background">
-        <Hero />
-        <Marquee />
-        <AboutPreview />
-        <ServicesSlider />
-        <WhyChooseUs />
-        <StatsBand />
-        <Testimonials />
-        <CtaBanner />
-      </main>
-    </PageTransition>
+        <main className="min-h-screen bg-background">
+          <Hero />
+          <HomePageBelowFold />
+        </main>
+      </PageTransition>
     </>
   );
 }

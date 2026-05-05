@@ -18,16 +18,18 @@ export default function CtaBanner() {
   return (
     <section ref={containerRef} className="relative py-32 md:py-40 overflow-hidden border-t-2 border-black">
       <CustomImage 
-        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1920&q=80"
+        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1440&q=60"
         alt="Dark City Lights"
         animation="parallax"
         parallaxY={parallaxY}
         containerClassName="absolute inset-0 z-0"
         overlay="bg-black/80"
+        quality={48}
+        sizes="100vw"
       />
       
       {/* Overlay Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/80 to-black pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-linear-to-br from-black/60 via-black/80 to-black pointer-events-none z-1" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <motion.div 

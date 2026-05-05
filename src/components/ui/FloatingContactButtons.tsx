@@ -23,7 +23,7 @@ function WhatsAppIcon({ className = "" }: { className?: string }) {
 export default function FloatingContactButtons() {
   return (
     <>
-      <div className="fixed inset-x-0 bottom-4 z-[90] px-4 lg:hidden">
+      <div className="fixed inset-x-0 bottom-4 z-90 px-4 lg:hidden">
         <div className="mx-auto flex max-w-md items-center justify-between">
           <motion.a
             href={CALL_LINK}
@@ -71,7 +71,7 @@ export default function FloatingContactButtons() {
         </div>
       </div>
 
-      <div className="fixed bottom-6 right-4 z-[80] hidden flex-col gap-3 lg:flex">
+      <div className="fixed bottom-6 right-4 z-80 hidden flex-col gap-3 lg:flex">
         <motion.a
           href={WHATSAPP_LINK}
           target="_blank"

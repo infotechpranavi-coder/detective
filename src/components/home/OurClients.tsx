@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect } from "react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
@@ -63,9 +62,9 @@ export default function OurClients() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-[1px] w-12 bg-accent" />
+            <div className="h-px w-12 bg-accent" />
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Our Clients</span>
-            <div className="h-[1px] w-12 bg-accent" />
+            <div className="h-px w-12 bg-accent" />
           </motion.div>
           <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-black tracking-tight">
             Our Clients
@@ -84,11 +83,11 @@ export default function OurClients() {
                 className="min-w-0 flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] xl:flex-[0_0_20%] px-4"
               >
                 <div className="flex h-28 items-center justify-center rounded-[24px] border border-black/10 bg-white px-8 py-6 shadow-sm">
-                  <Image
+                  <img
                     src={client.logo}
                     alt={client.name}
-                    width={180}
-                    height={72}
+                    loading="lazy"
+                    decoding="async"
                     className="h-14 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                   />
                 </div>

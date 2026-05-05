@@ -2,7 +2,6 @@
 
 import Script from "next/script";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -41,11 +40,12 @@ export default function Testimonials() {
 
       {/* Blurred Background Texture */}
       <div className="absolute inset-0 z-0 pointer-events-none mix-blend-screen opacity-[0.04]">
-        <Image
+        <img
           src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1920&q=80"
           alt="Texture"
-          fill
-          className="object-cover blur-[40px]"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover blur-2xl"
         />
       </div>
 
@@ -58,9 +58,9 @@ export default function Testimonials() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-4 mb-4">
-            <div className="h-[1px] w-12 bg-accent" />
+            <div className="h-px w-12 bg-accent" />
             <span className="font-space text-accent text-sm tracking-[0.2em] uppercase">Client Feedback</span>
-            <div className="h-[1px] w-12 bg-accent" />
+            <div className="h-px w-12 bg-accent" />
           </motion.div>
           <motion.h2 variants={fadeUp} className="font-playfair text-4xl md:text-5xl text-black uppercase tracking-wider">
             Words Of <span className="text-accent italic">Trust</span>
