@@ -1,6 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import { IMAGE_SIZES_GRID } from "@/lib/imageConstants";
+
 import { blogPosts } from "./blogPosts";
 import GoogleTagHead from "@/components/GoogleTagHead";
 
@@ -82,17 +85,21 @@ export default function BlogIndex() {
         <p className="mb-12 text-zinc-700">Latest research, case studies, and investigator stories from H S Detectives.</p>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {blogPosts.map((post) => (
+          {blogPosts.map((post, index) => (
             <Link
               key={post.id}
               href={`/blog/${post.id}`}
               className="group block overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="h-48 w-full overflow-hidden bg-black">
-                <img
+              <div className="relative h-48 w-full overflow-hidden bg-black">
+                <Image
                   src={post.image}
                   alt={post.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes={IMAGE_SIZES_GRID}
+                  quality={60}
+                  priority={index === 0}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6">

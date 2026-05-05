@@ -1,16 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, User, Briefcase, Heart, Search, Shield } from "lucide-react";
 
+import { IMAGE_SIZES_GRID } from "@/lib/imageConstants";
+
 const SERVICES = [
   {
     title: "Personal Investigation",
     desc: "Discrete surveillance, pre-matrimonial checks, loyalty tests, missing person tracing, and background verifications for individuals.",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=60",
     icon: User,
     category: "01 // INDIVIDUAL",
     href: "/services/personal-investigation",
@@ -18,7 +22,8 @@ const SERVICES = [
   {
     title: "Corporate Investigation",
     desc: "Protecting your business through employee background verification, fraud investigation, due diligence, asset tracing, and undercover operations.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=60",
     icon: Briefcase,
     category: "02 // CORPORATE",
     href: "/services/corporate-investigation",
@@ -26,7 +31,8 @@ const SERVICES = [
   {
     title: "TSCM Services",
     desc: "Advanced bug sweeping, hidden camera detection, RF signal analysis, and electronic counter-surveillance for offices, homes, and vehicles.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=60",
     icon: Shield,
     category: "03 // TECHNICAL",
     href: "/services/tscm-services",
@@ -34,7 +40,8 @@ const SERVICES = [
   {
     title: "Risk Management",
     desc: "Comprehensive IP protection, brand protection, risk advisory, business continuity support, and forensic investigation services.",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=60",
     icon: Search,
     category: "04 // RISK",
     href: "/services/risk-management",
@@ -42,7 +49,8 @@ const SERVICES = [
   {
     title: "Surveillance",
     desc: "Expert physical surveillance, employee monitoring, matrimonial surveillance, fraud investigation monitoring, and real-time field intelligence.",
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80",
+    image:
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=60",
     icon: Heart,
     category: "05 // SURVEILLANCE",
     href: "/services/surveillance-shadowing",
@@ -131,12 +139,13 @@ export default function ServicesSlider() {
                   >
                     {/* Top Image Half */}
                     <div className="relative h-[220px] w-full overflow-hidden bg-black">
-                      <img
+                      <Image
                         src={service.image}
                         alt={service.title}
-                        loading="lazy"
-                        decoding="async"
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        fill
+                        sizes={IMAGE_SIZES_GRID}
+                        quality={60}
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
                       

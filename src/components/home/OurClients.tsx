@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect } from "react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import { IMAGE_SIZES_LOGO_STRIP } from "@/lib/imageConstants";
 
 const CLIENTS = [
   {
@@ -29,7 +31,7 @@ const CLIENTS = [
   },
   {
     name: "Urban Money",
-    logo: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1470&q=80",
+    logo: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=60",
   },
 ];
 
@@ -83,12 +85,14 @@ export default function OurClients() {
                 className="min-w-0 flex-[0_0_75%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] xl:flex-[0_0_20%] px-4"
               >
                 <div className="flex h-28 items-center justify-center rounded-[24px] border border-black/10 bg-white px-8 py-6 shadow-sm">
-                  <img
+                  <Image
                     src={client.logo}
                     alt={client.name}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-14 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    width={200}
+                    height={64}
+                    sizes={IMAGE_SIZES_LOGO_STRIP}
+                    quality={60}
+                    className="h-14 md:h-16 w-auto max-w-full object-contain grayscale transition-all duration-300 hover:grayscale-0"
                   />
                 </div>
               </motion.div>

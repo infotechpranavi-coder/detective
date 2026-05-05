@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
       "The shift from traditional shadowing to high-tech intelligence at H S Detectives Agency Mumbai.",
     date: "2026-04-03",
     image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "The image of a private eye with a magnifying glass is a relic of the past. In 2026, the Modern Investigator in Mumbai is a blend of a data strategist, a tech specialist, and a local field expert.",
       "At H S Detectives Agency Mumbai, we have spent 15 years evolving our methodology to bridge the gap between traditional boots on the ground investigation and cutting-edge digital intelligence.",
@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
       "Why data privacy, encrypted workflows, and disciplined handling are central to every investigation we run.",
     date: "2026-04-03",
     image:
-      "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "In an era of data leaks and digital vulnerability, confidentiality is not just a policy. It is our core architecture.",
       "At H S Detectives Agency Mumbai, we understand that when you hire a private investigator, you are entrusting us with your reputation, your family's peace, or your company's future. We do not take that responsibility lightly.",
@@ -99,7 +99,7 @@ export const blogPosts: BlogPost[] = [
       "How our 7-city infrastructure helps deploy local investigative expertise quickly across India's key metros.",
     date: "2026-04-03",
     image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "High-stakes investigations do not wait for travel plans. Whether it is a corporate fraud case in Delhi, a matrimonial check in Pune, or a TSCM sweep in Goa, time is the enemy.",
       "H S Detectives Agency Mumbai has solved the geographic gap by building a Pan-India Rapid Response Network that puts experts on the ground in major Indian metros within 4 hours.",
@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
     title: "Personal Investigation: Empowering Truth in Private Lives",
     excerpt: "Discover how personal investigation services help resolve family disputes, locate missing persons, and verify individual integrity with professional discretion across India.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Personal investigation involves the discreet gathering of facts regarding an individual's background, activities, and associations. It is a vital tool for resolving family disputes, locating missing persons, or verifying the integrity of individuals entering your inner circle.",
       "We utilize a combination of digital footprint analysis and physical intelligence to uncover the truth while maintaining complete confidentiality.",
@@ -171,7 +171,7 @@ export const blogPosts: BlogPost[] = [
     title: "Corporate Investigation: Safeguarding Business Integrity",
     excerpt: "Learn how corporate investigation services protect business interests from internal fraud, due diligence failures, and systemic leaks within organizations.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Corporate investigation is a specialized service designed to protect business interests from internal and external threats. It encompasses due diligence, whistle-blower verification, and uncovering systemic leaks within an organization.",
       "Our experts employ forensic accounting and covert intelligence to safeguard your corporate assets.",
@@ -210,7 +210,7 @@ export const blogPosts: BlogPost[] = [
     title: "TSCM Services: The Science of Digital Privacy",
     excerpt: "Explore how Technical Surveillance Counter-Measures (TSCM) detect bugs, hidden cameras, and unauthorized listening devices to protect executive privacy.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Technical Surveillance Counter-Measures (TSCM) is the process of detecting bugs, hidden cameras, and unauthorized listening devices. It is the gold standard for protecting executive privacy in boardrooms, residences, and secure facilities.",
       "Using high-end spectrum analyzers and non-linear junction detectors, we scan RF environments to ensure complete privacy.",
@@ -249,7 +249,7 @@ export const blogPosts: BlogPost[] = [
     title: "Risk Management: Proactive Defense for Modern Enterprises",
     excerpt: "Discover how strategic risk management solutions identify and mitigate threats to business operations, reputation, and assets across India.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Risk management is the strategic identification and mitigation of potential threats to a business's operations, reputation, and assets. It ensures long-term business continuity and operational excellence.",
       "We perform deep-dive vulnerability assessments to identify and neutralize risks before they materialize.",
@@ -288,7 +288,7 @@ export const blogPosts: BlogPost[] = [
     title: "Surveillance & Shadowing: The Art of Invisible Observation",
     excerpt: "Learn how professional surveillance and shadowing services provide irrefutable visual evidence through 24/7 covert monitoring.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Surveillance and shadowing is the 24/7 covert monitoring of a subject's movements and associations to gather visual evidence and behavioral patterns. It provides irrefutable proof for legal and personal matters.",
       "Our field agents utilize high-definition optics and discreet tracking to document activities without detection.",
@@ -327,7 +327,7 @@ export const blogPosts: BlogPost[] = [
     title: "Business Investigation: Deep-Dive Intelligence",
     excerpt: "Understand how business investigation services verify the legitimacy of entities, their financial health, and promoter backgrounds across India.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Business investigation focuses on verifying the legitimacy of business entities, their financial health, and the background of their promoters. It acts as your first line of defense against commercial deception.",
       "We analyze ROC filings, conduct site visits, and perform market reputation checks to ensure business integrity.",
@@ -366,7 +366,7 @@ export const blogPosts: BlogPost[] = [
     title: "Matrimonial Checking: Securing Your Family's Future",
     excerpt: "Learn how pre-matrimonial investigation services ensure your life partner is who they claim to be, protecting against matrimonial fraud.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Matrimonial checking ensures that a prospective life partner is who they claim to be, covering their character, finances, and past history. It is essential for protecting against matrimonial fraud.",
       "We verify educational degrees, employment status, and conduct discreet neighborhood checks while maintaining complete confidentiality.",
@@ -405,7 +405,7 @@ export const blogPosts: BlogPost[] = [
     title: "Debugging & Sweeping: Restoring Your Sanctum",
     excerpt: "Discover how debugging and sweeping services remove spyware, hidden cameras, and audio recorders to ensure your privacy at home and office.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Debugging and sweeping is the physical and electronic inspection of a space to remove spyware, hidden cameras, and audio recorders. It ensures your home and office remain sanctuaries of privacy.",
       "Our experts use thermal imaging to find heat signatures of hidden electronics and neutralize all surveillance threats.",
@@ -444,7 +444,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Invisible Threat: Why Corporate TSCM is the New Standard for Mumbai's Boardrooms",
     excerpt: "Explore why Technical Surveillance Counter-Measures are essential for protecting proprietary data in Mumbai's high-stakes corporate environment.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Technical Surveillance Counter-Measures (TSCM), commonly known as bug sweeping, is the professional practice of detecting and neutralizing electronic eavesdropping devices. In the high-stakes environment of Bandra Kurla Complex (BKC) or the corporate towers of Lower Parel, information is the ultimate currency.",
       "Corporate TSCM involves a physical and electronic sweep of boardrooms, executive cabins, and communication lines to ensure proprietary data remains secure.",
@@ -483,7 +483,7 @@ export const blogPosts: BlogPost[] = [
     title: "Pre-Matrimonial Investigation: Navigating Trust in Modern India",
     excerpt: "Understand why pre-matrimonial background checks are essential for protecting your family's future in an age of curated social media profiles.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "In the complex social fabric of India, a marriage is more than a union of two people; it is the merging of two legacies. A Pre-Matrimonial Investigation is a comprehensive background check that verifies the claims made by a prospective bride, groom, or their family.",
       "This includes checking employment history, financial standing, previous marital status, and social reputation.",
@@ -521,7 +521,7 @@ export const blogPosts: BlogPost[] = [
     title: "Corporate Fraud & Asset Tracing: Protecting Your Business Interests in Bengaluru",
     excerpt: "Learn how forensic investigation and asset tracing help uncover embezzlement, kickbacks, and recover illegally diverted funds in India's Silicon Valley.",
     date: "2026-04-21",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60",
     intro: [
       "Corporate fraud encompasses everything from embezzlement and kickbacks to intellectual property theft. In India's Silicon Valley, Bengaluru, the risk of internal theft—whether it's physical inventory or digital code—is at an all-time high.",
       "Asset tracing is the subsequent process of locating and recovering funds or property that have been illegally diverted.",

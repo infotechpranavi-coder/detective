@@ -7,12 +7,14 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
+  adjustFontFallback: true,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  adjustFontFallback: true,
 });
 
 const spaceMono = Space_Mono({
@@ -20,6 +22,7 @@ const spaceMono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-space",
   display: "swap",
+  adjustFontFallback: true,
 });
 
 const bebasNeue = Bebas_Neue({
@@ -27,6 +30,7 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   variable: "--font-bebas",
   display: "swap",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -71,6 +75,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        {/* First fetch from these origins is faster with early connection setup. */}
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://th.bing.com" />
+        <link rel="dns-prefetch" href="https://tse1.explicit.bing.net" />
         <style
           id="critical-css"
           dangerouslySetInnerHTML={{

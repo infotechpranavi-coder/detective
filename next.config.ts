@@ -7,6 +7,7 @@ import type { NextConfig } from "next";
  * - `experimental.optimizeCss` + Critters: critical CSS inlining path for styled output.
  * - `experimental.optimizePackageImports`: tree-shake heavy icon/animation barrels.
  * - Long `Cache-Control` on `/_next/static` and hashed assets (immutable).
+ * - SWC minification is always enabled in Next.js 16+ (legacy `swcMinify` option removed).
  */
 
 const locationSeoSlugs = [
@@ -61,7 +62,11 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ["lucide-react", "framer-motion"],
+    optimizePackageImports: [
+      "lucide-react",
+      "framer-motion",
+      "embla-carousel-react",
+    ],
   },
   async redirects() {
     return [
@@ -363,7 +368,7 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
-    unoptimized: true,
+    // Default `sharp` optimization (`/_next/image`) reduces transferred bytes vs raw <img>.
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [

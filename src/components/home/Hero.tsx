@@ -1,6 +1,7 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
+
+import { IMAGE_SIZES_FULL_WIDTH } from "@/lib/imageConstants";
 
 const HERO_CONTENT = {
   image: "/certification-hero.png",
@@ -17,12 +18,16 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[720px] w-full items-center justify-center overflow-hidden bg-background pt-20 sm:min-h-screen">
       <div className="absolute inset-0 z-0">
-        <img
+        {/* `priority` + `/_next/image` keeps LCP image on the fast path without extra <link> boilerplate. */}
+        <Image
           src={active.image}
           alt="Detective Hero Slide 1"
-          loading="eager"
-          decoding="async"
-          className="absolute inset-0 h-full w-full object-cover img-noir"
+          priority
+          fetchPriority="high"
+          quality={60}
+          fill
+          sizes={IMAGE_SIZES_FULL_WIDTH}
+          className="object-cover img-noir"
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>

@@ -1,9 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
+
+import { IMAGE_SIZES_FULL_WIDTH } from "@/lib/imageConstants";
 
 const FOOTER_BADGE_LINK = "https://www.sulekha.com/h-s-detectives-andheri-west-mumbai-contact-address";
 const GOOGLE_REVIEW_LINK = "https://www.google.com/maps/place/H+S+Detectives+Agency+Mumbai/@19.1408821,72.8322471,17z/data=!3m1!5s0x3be7b63c8ca7ede1:0x13b840c0c5a5b631!4m8!3m7!1s0x3be7b06618f08abb:0xc675e5f7f07f1ecd!8m2!3d19.1408821!4d72.8322471!9m1!1b1!16s%2Fg%2F11b7fy77fm?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D";
@@ -74,12 +77,13 @@ export default function Footer() {
       {/* Top Thin Image Strip Above Main Footer */}
       <div className="absolute top-0 left-0 w-full h-[120px] overflow-hidden -z-10">
         <motion.div style={{ y, height: "150%" }} className="relative w-full">
-          <img
-            src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1920&q=80"
+          <Image
+            src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1200&q=60"
             alt="Dark City Overlay"
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-[center_60%] opacity-40 mix-blend-luminosity"
+            fill
+            sizes={IMAGE_SIZES_FULL_WIDTH}
+            quality={55}
+            className="object-cover object-[center_60%] opacity-40 mix-blend-luminosity"
           />
           <div className="absolute inset-0 bg-linear-to-b from-background/40 to-background" />
         </motion.div>
@@ -92,11 +96,12 @@ export default function Footer() {
             <Link href="/" className="inline-block relative">
               <div className="flex items-center gap-3">
                 <div className="relative w-14 h-14 rounded-full border-2 border-accent bg-white overflow-hidden flex items-center justify-center p-1">
-                  <img
+                  <Image
                     src="/HS-Logo.svg"
                     alt="H S Detectives Logo"
-                    loading="eager"
-                    decoding="async"
+                    width={48}
+                    height={48}
+                    unoptimized
                     className="object-contain"
                   />
                 </div>
@@ -218,11 +223,12 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open H S Detectives listing on Sulekha"
             >
-              <img
+              <Image
                 src="/1979530-removebg-preview.png"
                 alt="H S Detectives Sulekha listing"
-                loading="lazy"
-                decoding="async"
+                width={240}
+                height={80}
+                quality={60}
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -233,11 +239,12 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Google Reviews for H S Detectives"
             >
-              <img
+              <Image
                 src="/images-removebg-preview.png"
                 alt="Google review badge"
-                loading="lazy"
-                decoding="async"
+                width={240}
+                height={80}
+                quality={60}
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -248,11 +255,12 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Justdial listing for H S Detectives"
             >
-              <img
+              <Image
                 src="/jdlogosvg.svg"
                 alt="Justdial listing badge"
-                loading="lazy"
-                decoding="async"
+                width={240}
+                height={80}
+                unoptimized
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -263,11 +271,12 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Facebook reviews for H S Detectives"
             >
-              <img
+              <Image
                 src="/fac.jpg"
                 alt="Facebook review badge"
-                loading="lazy"
-                decoding="async"
+                width={240}
+                height={80}
+                quality={60}
                 className="h-auto w-full object-contain"
               />
             </a>
@@ -278,11 +287,12 @@ export default function Footer() {
               className="flex items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 p-1 transition-colors hover:border-accent/80 hover:bg-white/10"
               aria-label="Open Trustpilot reviews for H S Detectives"
             >
-              <img
+              <Image
                 src="/logo-white.svg"
                 alt="Trustpilot review badge"
-                loading="lazy"
-                decoding="async"
+                width={240}
+                height={80}
+                unoptimized
                 className="h-auto w-full object-contain"
               />
             </a>

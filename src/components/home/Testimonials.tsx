@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Script from "next/script";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import { IMAGE_SIZES_FULL_WIDTH } from "@/lib/imageConstants";
 
 export default function Testimonials() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -40,12 +42,13 @@ export default function Testimonials() {
 
       {/* Blurred Background Texture */}
       <div className="absolute inset-0 z-0 pointer-events-none mix-blend-screen opacity-[0.04]">
-        <img
-          src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1920&q=80"
+        <Image
+          src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1200&q=60"
           alt="Texture"
-          loading="lazy"
-          decoding="async"
-          className="absolute inset-0 h-full w-full object-cover blur-2xl"
+          fill
+          sizes={IMAGE_SIZES_FULL_WIDTH}
+          quality={55}
+          className="object-cover blur-2xl"
         />
       </div>
 

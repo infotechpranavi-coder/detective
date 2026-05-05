@@ -1,7 +1,9 @@
 "use client";
 
+import type { MotionValue } from "framer-motion";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import { imageReveal, imageRevealRight, imageScale, scaleUp, imageScaleSlow } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
@@ -18,15 +20,15 @@ interface CustomImageProps {
   quality?: number;
   sizes?: string;
   animation?: "hero" | "revealLeft" | "revealRight" | "scaleUp" | "parallax" | "none";
-  parallaxY?: any; // Framer motion useTransform value
+  parallaxY?: MotionValue<string> | MotionValue<number> | number;
 }
 
-export default function CustomImage({
+function CustomImageInner({
   src,
   alt,
   width,
   height,
-  fill = false,
+  fill: fillProp = false,
   className,
   containerClassName,
   overlay = "bg-background/50",
@@ -39,7 +41,7 @@ export default function CustomImage({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
 
-  const isFill = fill || (!width && !height);
+  const isFill = fillProp || (!width && !height);
 
   let animationVariant;
   let animationStyles = {};
@@ -65,44 +67,63 @@ export default function CustomImage({
   }
 
   if (parallaxY && animation === "parallax") {
-    // If it's pure parallax with no entrance animation
     animationStyles = { y: parallaxY, height: "120%", top: "-10%" };
-  } else if (parallaxY && (animation === "hero" || animation === "revealLeft" || animation === "revealRight" || animation === "scaleUp")) {
-    // Both animations and Parallax combination
+  } else if (
+    parallaxY &&
+    (animation === "hero" ||
+      animation === "revealLeft" ||
+      animation === "revealRight" ||
+      animation === "scaleUp")
+  ) {
     animationStyles = { y: parallaxY, height: "120%", top: "-10%" };
-  } else if (!parallaxY && (animation === "hero" || animation.includes("reveal"))) {
+  } else if (
+    !parallaxY &&
+    (animation === "hero" || (typeof animation === "string" && animation.includes("reveal")))
+  ) {
     animationStyles = { width: "100%", height: "100%", objectFit: "cover" };
   }
 
+  const imageEl =
+    !isFill && width != null && height != null ? (
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        sizes={sizes}
+        quality={quality}
+        priority={priority}
+        className={cn("img-noir object-cover", className)}
+        style={{ width: "100%", height: "auto" }}
+      />
+    ) : (
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes={sizes}
+        quality={quality}
+        priority={priority}
+        className={cn("img-noir object-cover absolute inset-0 h-full w-full", className)}
+      />
+    );
+
   return (
-    <div
-      ref={ref}
-      className={cn("relative overflow-hidden group", containerClassName)}
-    >
+    <div ref={ref} className={cn("group relative overflow-hidden", containerClassName)}>
       <motion.div
-        className="w-full h-full absolute inset-0 text-[0] leading-none"
+        className="absolute inset-0 text-[0] leading-none"
         variants={animationVariant}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         style={{ ...animationStyles }}
       >
-        <img
-          src={src}
-          alt={alt}
-          width={isFill ? undefined : width}
-          height={isFill ? undefined : height}
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
-          className={cn(
-            "img-noir object-cover",
-            isFill ? "absolute inset-0 h-full w-full" : "",
-            className
-          )}
-          style={isFill ? undefined : { width: "100%", height: "auto" }}
-        />
-        {/* Theme-specific overlay applied on top */}
-        <div className={cn("absolute inset-0 pointer-events-none mix-blend-multiply", overlay)} />
+        {imageEl}
+        <div className={cn("pointer-events-none absolute inset-0 mix-blend-multiply", overlay)} />
       </motion.div>
     </div>
   );
 }
+
+const CustomImage = memo(CustomImageInner);
+
+export default CustomImage;

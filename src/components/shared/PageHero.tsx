@@ -1,4 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
+
+import { IMAGE_SIZES_FULL_WIDTH } from "@/lib/imageConstants";
 
 interface PageHeroProps {
   title: string;
@@ -34,7 +37,15 @@ export default function PageHero({ title, subtitle, image, breadcrumbs }: PageHe
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="absolute inset-0 z-0">
-        <img src={image} alt={title} className="h-full w-full object-cover img-noir" loading="eager" />
+        <Image
+          src={image}
+          alt={title}
+          fill
+          priority
+          quality={60}
+          sizes={IMAGE_SIZES_FULL_WIDTH}
+          className="object-cover img-noir"
+        />
       </div>
 
       <div className="absolute inset-0 z-[1] bg-black/70" />

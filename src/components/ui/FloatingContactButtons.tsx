@@ -1,12 +1,10 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { PhoneCall } from "lucide-react";
 
 const PHONE_NUMBER = "+919930403115";
 const WHATSAPP_LINK = "https://wa.me/919930403115";
 const CALL_LINK = `tel:${PHONE_NUMBER}`;
 
+/** Pure markup + CSS (no Framer Motion) so the browser is not running layout reads every frame. */
 function WhatsAppIcon({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -25,100 +23,54 @@ export default function FloatingContactButtons() {
     <>
       <div className="fixed inset-x-0 bottom-4 z-90 px-4 lg:hidden">
         <div className="mx-auto flex max-w-md items-center justify-between">
-          <motion.a
+          <a
             href={CALL_LINK}
             aria-label="Call +91 99304 03115"
-            className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#ff5a5a,#d62828)] text-white shadow-[0_14px_34px_rgba(220,38,38,0.35)]"
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: [1, 1.03, 1] }}
-            transition={{
-              opacity: { duration: 0.35, ease: "easeOut" },
-              y: { duration: 0.35, ease: "easeOut" },
-              scale: { duration: 3.6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-            }}
-            whileTap={{ scale: 0.96 }}
+            className="floating-cta group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#ff5a5a,#d62828)] text-white shadow-[0_14px_34px_rgba(220,38,38,0.35)] transition-transform duration-200 active:scale-95"
           >
-            <motion.span
-              className="absolute inset-1 rounded-full bg-white/12 blur-[2px]"
-              animate={{ scale: [1, 1.07, 1], opacity: [0.16, 0.3, 0.16] }}
-              transition={{ duration: 2.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            />
+            <span className="absolute inset-1 rounded-full bg-white/12 blur-[2px]" aria-hidden />
             <PhoneCall size={20} className="relative z-10 h-6 w-6" />
-          </motion.a>
+          </a>
 
-          <motion.a
+          <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
-            className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#34d97b,#1fa855)] text-white shadow-[0_14px_34px_rgba(37,211,102,0.38)]"
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: [1, 1.04, 1] }}
-            transition={{
-              opacity: { duration: 0.35, delay: 0.08, ease: "easeOut" },
-              y: { duration: 0.35, delay: 0.08, ease: "easeOut" },
-              scale: { duration: 3.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-            }}
-            whileTap={{ scale: 0.96 }}
+            className="floating-cta group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#34d97b,#1fa855)] text-white shadow-[0_14px_34px_rgba(37,211,102,0.38)] transition-transform duration-200 active:scale-95"
           >
-            <motion.span
-              className="absolute inset-1 rounded-full bg-white/12 blur-[2px]"
-              animate={{ scale: [1, 1.08, 1], opacity: [0.18, 0.34, 0.18] }}
-              transition={{ duration: 2.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            />
+            <span className="absolute inset-1 rounded-full bg-white/12 blur-[2px]" aria-hidden />
             <WhatsAppIcon className="relative z-10 h-[26px] w-[26px]" />
-          </motion.a>
+          </a>
         </div>
       </div>
 
       <div className="fixed bottom-6 right-4 z-80 hidden flex-col gap-3 lg:flex">
-        <motion.a
+        <a
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
-          className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#34d97b,#1fa855)] text-white shadow-[0_14px_34px_rgba(37,211,102,0.38)] transition-all duration-300 hover:-translate-y-1 hover:scale-105"
-          initial={{ opacity: 0, x: 20, scale: 0.9 }}
-          animate={{ opacity: 1, x: 0, scale: [1, 1.04, 1], y: [0, -5, 0] }}
-          transition={{
-            opacity: { duration: 0.35, ease: "easeOut" },
-            x: { duration: 0.35, ease: "easeOut" },
-            scale: { duration: 3.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-            y: { duration: 3.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-          }}
-          whileHover={{ y: -6, scale: 1.08 }}
-          whileTap={{ scale: 0.96 }}
+          className="floating-cta group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#34d97b,#1fa855)] text-white shadow-[0_14px_34px_rgba(37,211,102,0.38)] transition-all duration-300 hover:-translate-y-1 hover:scale-105"
         >
-          <motion.span
-            className="absolute inset-1 rounded-full bg-white/12 blur-[2px] transition-opacity duration-300 group-hover:opacity-80"
-            animate={{ scale: [1, 1.08, 1], opacity: [0.18, 0.34, 0.18] }}
-            transition={{ duration: 2.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          <span
+            className="absolute inset-1 rounded-full bg-white/12 blur-[2px] opacity-40 transition-opacity duration-300 group-hover:opacity-70"
+            aria-hidden
           />
           <WhatsAppIcon className="relative z-10 h-[26px] w-[26px]" />
-        </motion.a>
+        </a>
 
-        <motion.a
+        <a
           href={CALL_LINK}
           aria-label="Call +91 99304 03115"
-          className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#ff5a5a,#d62828)] text-white shadow-[0_14px_34px_rgba(220,38,38,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105"
-          initial={{ opacity: 0, x: 20, scale: 0.9 }}
-          animate={{ opacity: 1, x: 0, scale: [1, 1.03, 1], y: [0, -4, 0] }}
-          transition={{
-            opacity: { duration: 0.35, delay: 0.08, ease: "easeOut" },
-            x: { duration: 0.35, delay: 0.08, ease: "easeOut" },
-            scale: { duration: 3.6, delay: 0.25, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-            y: { duration: 3.6, delay: 0.25, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-          }}
-          whileHover={{ y: -6, scale: 1.08 }}
-          whileTap={{ scale: 0.96 }}
+          className="floating-cta group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-[linear-gradient(135deg,#ff5a5a,#d62828)] text-white shadow-[0_14px_34px_rgba(220,38,38,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105"
         >
-          <motion.span
-            className="absolute inset-1 rounded-full bg-white/12 blur-[2px] transition-opacity duration-300 group-hover:opacity-80"
-            animate={{ scale: [1, 1.07, 1], opacity: [0.16, 0.3, 0.16] }}
-            transition={{ duration: 2.8, delay: 0.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+          <span
+            className="absolute inset-1 rounded-full bg-white/12 blur-[2px] opacity-35 transition-opacity duration-300 group-hover:opacity-65"
+            aria-hidden
           />
           <PhoneCall size={20} className="relative z-10 h-6 w-6" />
-        </motion.a>
+        </a>
       </div>
     </>
   );
